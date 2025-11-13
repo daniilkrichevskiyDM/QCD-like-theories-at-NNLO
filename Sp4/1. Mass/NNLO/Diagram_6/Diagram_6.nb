@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    163190,       4064]
-NotebookOptionsPosition[    161413,       4032]
-NotebookOutlinePosition[    161823,       4048]
-CellTagsIndexPosition[    161780,       4045]
+NotebookDataLength[    163288,       4066]
+NotebookOptionsPosition[    161511,       4034]
+NotebookOutlinePosition[    161921,       4050]
+CellTagsIndexPosition[    161878,       4047]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -3017,7 +3017,8 @@ Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"Diagram6", "=", 
   RowBox[{
-   RowBox[{"s6", "*", 
+   RowBox[{
+    RowBox[{"1", "/", "s6"}], "*", 
     RowBox[{"I", "^", "2"}], "*", 
     RowBox[{"Integrate", "[", 
      RowBox[{"M1integratedAndSummed", ",", 
@@ -3033,8 +3034,9 @@ Cell[BoxData[
      RowBox[{"so", " ", "the", " ", "integral", " ", "is", " ", "trivial"}]}],
      "*)"}]}]}]], "Input",
  CellChangeTimes->{{3.972045639449848*^9, 3.9720456816984386`*^9}, {
-  3.9720457896601048`*^9, 3.972045813105382*^9}},
- CellLabel->"In[57]:=",ExpressionUUID->"29fa956d-7f32-4da0-9b80-178f457809dd"],
+  3.9720457896601048`*^9, 3.972045813105382*^9}, {3.972046214834381*^9, 
+  3.972046215070839*^9}},
+ CellLabel->"In[58]:=",ExpressionUUID->"29fa956d-7f32-4da0-9b80-178f457809dd"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -3043,9 +3045,9 @@ Cell[BoxData[
     FractionBox["1", 
      RowBox[{"24", " ", 
       SuperscriptBox["F", "4"], " ", 
-      SuperscriptBox["\[Pi]", "2"]}]], 
+      SuperscriptBox["\[Pi]", "2"], " ", "s6"}]], 
     RowBox[{"\[ImaginaryI]", " ", 
-     SuperscriptBox["m\[Pi]LO", "4"], " ", "s6", " ", 
+     SuperscriptBox["m\[Pi]LO", "4"], " ", 
      RowBox[{"(", 
       RowBox[{
        RowBox[{"12", " ", 
@@ -3255,9 +3257,9 @@ Cell[BoxData[
     FractionBox["1", 
      RowBox[{"24", " ", 
       SuperscriptBox["F", "4"], " ", 
-      SuperscriptBox["\[Pi]", "2"]}]], 
+      SuperscriptBox["\[Pi]", "2"], " ", "s6"}]], 
     RowBox[{"\[ImaginaryI]", " ", 
-     SuperscriptBox["m\[Pi]LO", "4"], " ", "s6", " ", 
+     SuperscriptBox["m\[Pi]LO", "4"], " ", 
      RowBox[{"(", 
       RowBox[{
        RowBox[{"12", " ", 
@@ -3467,9 +3469,9 @@ Cell[BoxData[
     FractionBox["1", 
      RowBox[{"12", " ", 
       SuperscriptBox["F", "4"], " ", 
-      SuperscriptBox["\[Pi]", "2"]}]], 
+      SuperscriptBox["\[Pi]", "2"], " ", "s6"}]], 
     RowBox[{"\[ImaginaryI]", " ", 
-     SuperscriptBox["m\[Pi]LO", "4"], " ", "s6", " ", 
+     SuperscriptBox["m\[Pi]LO", "4"], " ", 
      RowBox[{"(", 
       RowBox[{
        FractionBox[
@@ -3605,9 +3607,9 @@ Cell[BoxData[
     FractionBox["1", 
      RowBox[{"24", " ", 
       SuperscriptBox["F", "4"], " ", 
-      SuperscriptBox["\[Pi]", "2"]}]], 
+      SuperscriptBox["\[Pi]", "2"], " ", "s6"}]], 
     RowBox[{"\[ImaginaryI]", " ", 
-     SuperscriptBox["m\[Pi]LO", "4"], " ", "s6", " ", 
+     SuperscriptBox["m\[Pi]LO", "4"], " ", 
      RowBox[{"(", 
       RowBox[{
        RowBox[{"12", " ", 
@@ -3817,9 +3819,9 @@ Cell[BoxData[
     FractionBox["1", 
      RowBox[{"24", " ", 
       SuperscriptBox["F", "4"], " ", 
-      SuperscriptBox["\[Pi]", "2"]}]], 
+      SuperscriptBox["\[Pi]", "2"], " ", "s6"}]], 
     RowBox[{"\[ImaginaryI]", " ", 
-     SuperscriptBox["m\[Pi]LO", "4"], " ", "s6", " ", 
+     SuperscriptBox["m\[Pi]LO", "4"], " ", 
      RowBox[{"(", 
       RowBox[{
        RowBox[{"12", " ", 
@@ -4026,12 +4028,12 @@ Cell[BoxData[
          RowBox[{"(", 
           RowBox[{"md", "+", "mu"}], ")"}], "2"]]}], ")"}]}]}]}], 
   "}"}]], "Output",
- CellChangeTimes->{3.972045813468816*^9},
- CellLabel->"Out[57]=",ExpressionUUID->"c740ebe3-ed0d-4c00-b333-6c60a5b0f0b2"]
+ CellChangeTimes->{3.972045813468816*^9, 3.9720462164868793`*^9},
+ CellLabel->"Out[58]=",ExpressionUUID->"30ca49c2-c373-4461-8341-a4a30b0187e8"]
 }, Open  ]]
 },
 WindowSize->{930, 850},
-WindowMargins->{{Automatic, 268}, {-99, Automatic}},
+WindowMargins->{{Automatic, 268}, {-81, Automatic}},
 FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->FrontEnd`FileName[{"Report"}, "StandardReport.nb", 
   CharacterEncoding -> "UTF-8"]
@@ -4063,8 +4065,8 @@ Cell[120365, 2897, 847, 24, 41, "Input",ExpressionUUID->"6d3464b0-4d66-4fb2-bc9f
 Cell[121215, 2923, 2561, 68, 126, "Input",ExpressionUUID->"9de7c7b8-607c-495b-9c63-c64811b7236f"],
 Cell[123779, 2993, 746, 19, 105, "Input",ExpressionUUID->"b96c6bdc-b20a-47e6-a4ee-9ccd54f38f60"],
 Cell[CellGroupData[{
-Cell[124550, 3016, 797, 20, 63, "Input",ExpressionUUID->"29fa956d-7f32-4da0-9b80-178f457809dd"],
-Cell[125350, 3038, 36047, 991, 1490, "Output",ExpressionUUID->"c740ebe3-ed0d-4c00-b333-6c60a5b0f0b2"]
+Cell[124550, 3016, 871, 22, 63, "Input",ExpressionUUID->"29fa956d-7f32-4da0-9b80-178f457809dd"],
+Cell[125424, 3040, 36071, 991, 1490, "Output",ExpressionUUID->"30ca49c2-c373-4461-8341-a4a30b0187e8"]
 }, Open  ]]
 }
 ]
