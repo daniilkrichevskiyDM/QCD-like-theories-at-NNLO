@@ -1,0 +1,5 @@
+Name space for temp files exhausted
+Please remove files of the type /export/scratch/bijnens/tempform/xformxxxx or t
+ry a different directory
+Program terminating in thread 0 at MM1.frm Line 1 --> 
+Terminate called from startup.c:836 (ReserveTempFiles)

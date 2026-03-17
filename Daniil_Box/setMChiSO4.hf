@@ -1,0 +1,47 @@
+
+id Chi(?a,1,1) = muu;
+id Chi(?a,2,2) = mdd;
+id Chi(?a,3,3) = muu;
+id Chi(?a,4,4) = mdd;
+id Chi(?a) = 0;
+
+id M(?a,1,1) = phi(?a,3)/2; 
+id M(?a,1,2) = (phi(?a,1)-i_*phi(?a,2))/2; 
+id M(?a,1,3) = (phi(?a,6)+i_*phi(?a,7))/sqrt2;
+id M(?a,1,4) = (phi(?a,4)+i_*phi(?a,5))/2;
+id M(?a,2,1) = (phi(?a,1)+i_*phi(?a,2))/2; 
+id M(?a,2,2) = -phi(?a,3)/2; 
+id M(?a,2,3) = (+phi(?a,4)+i_*phi(?a,5))/2;
+id M(?a,2,4) = (phi(?a,8)+i_*phi(?a,9))/sqrt2;
+id M(?a,3,1) = (phi(?a,6)-i_*phi(?a,7))/sqrt2;
+id M(?a,3,2) = (phi(?a,4)-i_*phi(?a,5))/2;
+id M(?a,3,3) = phi(?a,3)/2; 
+id M(?a,3,4) = (phi(?a,1)+i_*phi(?a,2))/2; 
+id M(?a,4,1) = (phi(?a,4)-i_*phi(?a,5))/2;
+id M(?a,4,2) = (phi(?a,8)-i_*phi(?a,9))/sqrt2;
+id M(?a,4,3) = (phi(?a,1)-i_*phi(?a,2))/2; 
+id M(?a,4,4) = -phi(?a,3)/2; 
+
+id a(?a,1,1) = phiA(?a,3)/2; 
+id a(?a,1,2) = (phiA(?a,1)-i_*phiA(?a,2))/2; 
+id a(?a,1,3) = (phiA(?a,6)+i_*phiA(?a,7))/sqrt2;
+id a(?a,1,4) = (phiA(?a,4)+i_*phiA(?a,5))/2;
+id a(?a,2,1) = (phiA(?a,1)+i_*phiA(?a,2))/2; 
+id a(?a,2,2) = -phiA(?a,3)/2; 
+id a(?a,2,3) = (+phiA(?a,4)+i_*phiA(?a,5))/2;
+id a(?a,2,4) = (phiA(?a,8)+i_*phiA(?a,9))/sqrt2;
+id a(?a,3,1) = (phiA(?a,6)-i_*phiA(?a,7))/sqrt2;
+id a(?a,3,2) = (phiA(?a,4)-i_*phiA(?a,5))/2;
+id a(?a,3,3) = phiA(?a,3)/2; 
+id a(?a,3,4) = (phiA(?a,1)+i_*phiA(?a,2))/2; 
+id a(?a,4,1) = (phiA(?a,4)-i_*phiA(?a,5))/2;
+id a(?a,4,2) = (phiA(?a,8)-i_*phiA(?a,9))/sqrt2;
+id a(?a,4,3) = (phiA(?a,1)-i_*phiA(?a,2))/2; 
+id a(?a,4,4) = -phiA(?a,3)/2; 
+
+id sext(?a,1,1) = phiS(?a,1);
+id sext(?a,2,2) = phiS(?a,2);
+id sext(?a,3,3) = phiS(?a,1);
+id sext(?a,4,4) = phiS(?a,2);
+id sext(?a) = 0;
+
