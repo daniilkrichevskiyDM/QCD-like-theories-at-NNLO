@@ -11,7 +11,7 @@ FORM="tform -l -w6 -t ./tempform"
 for SX4 in SP4 SO4
 do
 #for VERTEX in 2Mp2 4Mp2 6Mp2 2Mp4 4Mp4 2Mp6
-for VERTEX in 2Mp2 4Mp2 2Mp4
+for VERTEX in 2Mp2 2Mp4 2Mp6 4Mp2 4Mp4 6Mp2
 do
   $FORM -l -d VERTEX=$VERTEX -d SX4=$SX4 makefullvertex.frm
   mv makefullvertex.log log/makefullvertex$VERTEX$SX4.log  

@@ -17,7 +17,7 @@ skip; nskip `A';
 * this contracts two fields so no extra 1/2 needed
 
 if(match(prop(i1?,`Q'))==0);
-*we enter the do-loop if there are no propagators in the terms
+*we enter the do-loop if there are no propagators in the terms with II
 
 #do NNM=2,`NM'
 if(match(phi(`II',`P'1?`PP'))==`NNM');

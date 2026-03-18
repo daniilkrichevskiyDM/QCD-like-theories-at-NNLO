@@ -1,4 +1,4 @@
-TFORM 5.0.0 (Jan 27 2026, v5.0.0) 6 workers      Run: Wed Mar 11 15:50:56 2026
+TFORM 5.0.0 (Jan 27 2026, v5.0.0) 6 workers      Run: Tue Mar 17 13:29:34 2026
     * the tree propagator PP current
     *
     *  ---------p--------
@@ -63,7 +63,7 @@ TFORM 5.0.0 (Jan 27 2026, v5.0.0) 6 workers      Run: Wed Mar 11 15:50:56 2026
     *#define ext1 "1"
     *#define ext2 "1"
     *#define SX4 "SP4"
-    *#define diagram "2Mp2"
+    *#define diagram "2Mp6"
     
     load /Users/daniilkrichevskiy/Desktop/QCD-like-theories-at-NNLO/Calculation_with
     _FORM/Expanded_Lagrangians/Saved_Lagrangians/vertex`diagram'`SX4'.sav;
@@ -73,15 +73,15 @@ TFORM 5.0.0 (Jan 27 2026, v5.0.0) 6 workers      Run: Wed Mar 11 15:50:56 2026
     G MM1x`ext1'`ext2'`SX4'`diagram' =  i_*(
       vertex`diagram'`SX4'
      );
+    
+    
+     
     #call setmom(p,4)
     .sort
 
 Time =       0.00 sec    Generated terms =         52
    MM1x33SP42Mp4         Terms in output =         52
                          Bytes used      =       2612
-    Print MM1x`ext1'`ext2'`SX4';
-MM1.frm Line 25 --> MM1x33SP4 is not the name of an active expression
-    
     
     #include takederiv.hf
     *all momenta in the terms are outgoing

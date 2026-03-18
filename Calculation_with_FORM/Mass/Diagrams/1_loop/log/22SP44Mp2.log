@@ -1,4 +1,4 @@
-TFORM 5.0.0 (Jan 27 2026, v5.0.0) 6 workers      Run: Thu Mar 12 17:22:29 2026
+TFORM 5.0.0 (Jan 27 2026, v5.0.0) 6 workers      Run: Tue Mar 17 13:58:03 2026
     * tadpole diagrams 
     *               _
     *              / \ PP
@@ -9,6 +9,9 @@ TFORM 5.0.0 (Jan 27 2026, v5.0.0) 6 workers      Run: Thu Mar 12 17:22:29 2026
     * <---                         --->
     *
     *
+    
+    Off Statistics;
+    
     #include symbols.hf
     * symbols etc needed for the SU(4)/SO(4) and SU(4)/Sp(4) case
     #define MAXINDEX "20"
@@ -60,19 +63,22 @@ TFORM 5.0.0 (Jan 27 2026, v5.0.0) 6 workers      Run: Thu Mar 12 17:22:29 2026
     #define ext1 "2"
     #define ext2 "2"
     #define SX4 "SP4"
-    #include setdiagram.hf
+    #include setdiagram.hf  
     #define diagram "4Mp2"
+    
+    *basically this is not a diagram but rather a vertex (just terms from Lagrangian
+    )
     
     load /Users/daniilkrichevskiy/Desktop/QCD-like-theories-at-NNLO/Calculation_with
     _FORM/Expanded_Lagrangians/Saved_Lagrangians/vertex`diagram'`SX4'.sav;
  vertex4Mp2SP4 loaded
     
+    
+    
     G MM3x`ext1'`ext2'`SX4'`diagram' = i_^3*(
      vertex`diagram'`SX4'
      );
      
-    *Print MM3x`ext1'`ext2'`SX4'`diagram';
-    
     #call setmom(p,4)
     #include takederiv.hf
     *all momenta in the terms are outgoing
@@ -101,87 +107,15 @@ TFORM 5.0.0 (Jan 27 2026, v5.0.0) 6 workers      Run: Thu Mar 12 17:22:29 2026
     id phi`ii'(p2?,b1?,v1?,p1?) = v1.p2*phi`ii'(b1,v1,p1);
     #enddo
     
+    
     .sort
-
-Time =       0.00 sec    Generated terms =         60
-   MM3x22SP44Mp2         Terms in output =         60
-                         Bytes used      =       5088
     #call pickout(`ext1',p1ext,p,pp,4,MM3x`ext1'`ext2'`SX4'`diagram')
-
-Time =       0.00 sec    Generated terms =         60
-   MM3x22SP44Mp2         Terms in output =         60
-                         Bytes used      =       5088
-
-Time =       0.00 sec    Generated terms =         48
-   MM3x22SP44Mp2         Terms in output =         48
-                         Bytes used      =       4488
-
-Time =       0.00 sec    Generated terms =         48
-   MM3x22SP44Mp2         Terms in output =         48
-                         Bytes used      =       3560
     #call pickout(`ext2',p2ext,p,pp,3,MM3x`ext1'`ext2'`SX4'`diagram')
-
-Time =       0.00 sec    Generated terms =         48
-   MM3x22SP44Mp2         Terms in output =         48
-                         Bytes used      =       3560
-
-Time =       0.00 sec    Generated terms =         64
-   MM3x22SP44Mp2         Terms in output =         64
-                         Bytes used      =       6024
-
-Time =       0.00 sec    Generated terms =         64
-   MM3x22SP44Mp2         Terms in output =         36
-                         Bytes used      =       2312
+    
     .sort
-
-Time =       0.00 sec    Generated terms =         36
-   MM3x22SP44Mp2         Terms in output =         36
-                         Bytes used      =       2312
+    
     #call connectbubble(PP,p,pp,4,MM3x`ext1'`ext2'`SX4'`diagram')
-
-Time =       0.00 sec    Generated terms =         36
-   MM3x22SP44Mp2         Terms in output =         36
-                         Bytes used      =       2312
-
-Time =       0.00 sec    Generated terms =         42
-   MM3x22SP44Mp2         Terms in output =         42
-                         Bytes used      =       2828
-
-Time =       0.00 sec    Generated terms =         42
-   MM3x22SP44Mp2         Terms in output =         42
-                         Bytes used      =       2828
-
-Time =       0.00 sec    Generated terms =         54
-   MM3x22SP44Mp2         Terms in output =         54
-                         Bytes used      =       3492
-
-Time =       0.00 sec    Generated terms =         54
-   MM3x22SP44Mp2         Terms in output =         54
-                         Bytes used      =       3492
-
-Time =       0.00 sec    Generated terms =         60
-   MM3x22SP44Mp2         Terms in output =         60
-                         Bytes used      =       3856
-
-Time =       0.00 sec    Generated terms =         60
-   MM3x22SP44Mp2         Terms in output =         60
-                         Bytes used      =       3856
-
-Time =       0.00 sec    Generated terms =         66
-   MM3x22SP44Mp2         Terms in output =         66
-                         Bytes used      =       4220
-
-Time =       0.00 sec    Generated terms =         66
-   MM3x22SP44Mp2         Terms in output =         66
-                         Bytes used      =       4220
-
-Time =       0.00 sec    Generated terms =         72
-   MM3x22SP44Mp2         Terms in output =         72
-                         Bytes used      =       4584
-
-Time =       0.00 sec    Generated terms =         36
-   MM3x22SP44Mp2         Terms in output =         26
-                         Bytes used      =       1388
+    
     #include setprop.hf
     #if `SX4'==SP4
     id prop(i1?{1,2,3,4,5},PP?) = prop(mp2,PP);
@@ -190,26 +124,16 @@ Time =       0.00 sec    Generated terms =         36
     id prop(i1?{6,7},PP?) = prop(muu,PP);
     id prop(i1?{8,9},PP?) = prop(mdd,PP);
     #endif
+    
     .sort
-
-Time =       0.01 sec    Generated terms =         26
-   MM3x22SP44Mp2         Terms in output =          6
-                         Bytes used      =        336
     #call dointA(PP)
+    
     .sort
-
-Time =       0.01 sec    Generated terms =          4
-   MM3x22SP44Mp2         Terms in output =          4
-                         Bytes used      =        192
     id p2ext = -p1ext;
     *b F,Chi,p1ext,i_;
     b i_,F,A,B;
     print +s;
     .store
-
-Time =       0.01 sec    Generated terms =          4
-   MM3x22SP44Mp2         Terms in output =          4
-                         Bytes used      =        188
 
    MM3x22SP44Mp2 =
 
@@ -223,4 +147,4 @@ Time =       0.01 sec    Generated terms =          4
     save save/MM3_`ext1'`ext2'`SX4'`diagram'.sav 
        MM3x`ext1'`ext2'`SX4'`diagram';
     .end
-  0.01 sec + 0.01 sec: 0.02 sec out of 0.01 sec
+  0.00 sec + 0.01 sec: 0.02 sec out of 0.01 sec

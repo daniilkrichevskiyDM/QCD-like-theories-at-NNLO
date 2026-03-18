@@ -26,12 +26,12 @@ do
         echo '#define ext2 "'$eext2'"' >> setexternal.hf #append to the file
         echo '#define SX4 "'$SX4'"' >> setexternal.hf #append to the file
 
-        for diagramindex in 4Mp2
+        for diagramindex in 6Mp2
         do
             echo '#define diagram "'$diagramindex'"' >| setdiagram.hf
 
-            $FORM MM3.frm
-            mv MM3.log log/$eext1$eext2$indextheory$diagramindex.log  
+            $FORM MM4.frm
+            mv MM4.log log/$eext1$eext2$indextheory$diagramindex.log  
 
         done
     done

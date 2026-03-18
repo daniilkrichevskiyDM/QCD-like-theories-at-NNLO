@@ -12,7 +12,7 @@
 *#define ext1 "1"
 *#define ext2 "1"
 *#define SX4 "SP4"
-*#define diagram "2Mp2"
+*#define diagram "2Mp6"
 
 load /Users/daniilkrichevskiy/Desktop/QCD-like-theories-at-NNLO/Calculation_with_FORM/Expanded_Lagrangians/Saved_Lagrangians/vertex`diagram'`SX4'.sav;
 
@@ -20,10 +20,11 @@ load /Users/daniilkrichevskiy/Desktop/QCD-like-theories-at-NNLO/Calculation_with
 G MM1x`ext1'`ext2'`SX4'`diagram' =  i_*(
   vertex`diagram'`SX4'
  );
+
+
+ 
 #call setmom(p,4)
 .sort
-Print MM1x`ext1'`ext2'`SX4';
-
 
 #include takederiv.hf
 .sort

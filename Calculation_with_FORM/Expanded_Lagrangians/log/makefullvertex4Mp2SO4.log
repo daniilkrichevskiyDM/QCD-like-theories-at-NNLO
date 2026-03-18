@@ -1,4 +1,4 @@
-TFORM 5.0.0 (Jan 27 2026, v5.0.0) 6 workers      Run: Wed Mar 11 11:08:53 2026
+TFORM 5.0.0 (Jan 27 2026, v5.0.0) 6 workers      Run: Tue Mar 17 13:27:19 2026
     * makes the full vertices in terms of the phi fields
     *Daniil: this code gets rid of traces from the Lagrangian
     #include symbols.hf
@@ -55,10 +55,10 @@ TFORM 5.0.0 (Jan 27 2026, v5.0.0) 6 workers      Run: Wed Mar 11 11:08:53 2026
     * choose your vertex
     * SP4 or SO4
     
-    *we comment this on if use the bash file
+    *we comment this out if use the bash file
     
     *choose e.g. for Sp4
-    *#define SX4 "Sp4" 
+    *#define SX4 "SP4" 
     
     * type of vertex, choose e.g. 2Mp2
     *#define VERTEX "2Mp2" 

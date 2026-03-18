@@ -1,4 +1,4 @@
-TFORM 5.0.0 (Jan 27 2026, v5.0.0) 6 workers      Run: Thu Mar 12 17:22:29 2026
+TFORM 5.0.0 (Jan 27 2026, v5.0.0) 6 workers      Run: Tue Mar 17 13:58:04 2026
     * tadpole diagrams 
     *               _
     *              / \ PP
@@ -9,6 +9,9 @@ TFORM 5.0.0 (Jan 27 2026, v5.0.0) 6 workers      Run: Thu Mar 12 17:22:29 2026
     * <---                         --->
     *
     *
+    
+    Off Statistics;
+    
     #include symbols.hf
     * symbols etc needed for the SU(4)/SO(4) and SU(4)/Sp(4) case
     #define MAXINDEX "20"
@@ -60,19 +63,22 @@ TFORM 5.0.0 (Jan 27 2026, v5.0.0) 6 workers      Run: Thu Mar 12 17:22:29 2026
     #define ext1 "7"
     #define ext2 "7"
     #define SX4 "SO4"
-    #include setdiagram.hf
+    #include setdiagram.hf  
     #define diagram "4Mp2"
+    
+    *basically this is not a diagram but rather a vertex (just terms from Lagrangian
+    )
     
     load /Users/daniilkrichevskiy/Desktop/QCD-like-theories-at-NNLO/Calculation_with
     _FORM/Expanded_Lagrangians/Saved_Lagrangians/vertex`diagram'`SX4'.sav;
  vertex4Mp2SO4 loaded
     
+    
+    
     G MM3x`ext1'`ext2'`SX4'`diagram' = i_^3*(
      vertex`diagram'`SX4'
      );
      
-    *Print MM3x`ext1'`ext2'`SX4'`diagram';
-    
     #call setmom(p,4)
     #include takederiv.hf
     *all momenta in the terms are outgoing
@@ -101,119 +107,15 @@ TFORM 5.0.0 (Jan 27 2026, v5.0.0) 6 workers      Run: Thu Mar 12 17:22:29 2026
     id phi`ii'(p2?,b1?,v1?,p1?) = v1.p2*phi`ii'(b1,v1,p1);
     #enddo
     
+    
     .sort
-
-Time =       0.00 sec    Generated terms =        296
-   MM3x77SO44Mp2         Terms in output =        296
-                         Bytes used      =      25060
     #call pickout(`ext1',p1ext,p,pp,4,MM3x`ext1'`ext2'`SX4'`diagram')
-
-Time =       0.00 sec    Generated terms =        296
-   MM3x77SO44Mp2         Terms in output =        296
-                         Bytes used      =      25060
-
-Time =       0.00 sec    Generated terms =        116
-   MM3x77SO44Mp2         Terms in output =        116
-                         Bytes used      =      14260
-
-Time =       0.00 sec    Generated terms =        116
-   MM3x77SO44Mp2         Terms in output =        116
-                         Bytes used      =       8688
     #call pickout(`ext2',p2ext,p,pp,3,MM3x`ext1'`ext2'`SX4'`diagram')
-
-Time =       0.00 sec    Generated terms =        116
-   MM3x77SO44Mp2         Terms in output =        116
-                         Bytes used      =       8688
-
-Time =       0.00 sec    Generated terms =         62
-   MM3x77SO44Mp2         Terms in output =         62
-                         Bytes used      =       6776
-
-Time =       0.00 sec    Generated terms =         62
-   MM3x77SO44Mp2         Terms in output =         36
-                         Bytes used      =       2528
+    
     .sort
-
-Time =       0.00 sec    Generated terms =         36
-   MM3x77SO44Mp2         Terms in output =         36
-                         Bytes used      =       2528
+    
     #call connectbubble(PP,p,pp,4,MM3x`ext1'`ext2'`SX4'`diagram')
-
-Time =       0.00 sec    Generated terms =         36
-   MM3x77SO44Mp2         Terms in output =         36
-                         Bytes used      =       2528
-
-Time =       0.00 sec    Generated terms =         42
-   MM3x77SO44Mp2         Terms in output =         42
-                         Bytes used      =       3044
-
-Time =       0.00 sec    Generated terms =         42
-   MM3x77SO44Mp2         Terms in output =         42
-                         Bytes used      =       3044
-
-Time =       0.00 sec    Generated terms =         48
-   MM3x77SO44Mp2         Terms in output =         48
-                         Bytes used      =       3408
-
-Time =       0.00 sec    Generated terms =         48
-   MM3x77SO44Mp2         Terms in output =         48
-                         Bytes used      =       3408
-
-Time =       0.00 sec    Generated terms =         49
-   MM3x77SO44Mp2         Terms in output =         49
-                         Bytes used      =       3472
-
-Time =       0.00 sec    Generated terms =         49
-   MM3x77SO44Mp2         Terms in output =         49
-                         Bytes used      =       3472
-
-Time =       0.00 sec    Generated terms =         55
-   MM3x77SO44Mp2         Terms in output =         55
-                         Bytes used      =       3836
-
-Time =       0.00 sec    Generated terms =         55
-   MM3x77SO44Mp2         Terms in output =         55
-                         Bytes used      =       3836
-
-Time =       0.00 sec    Generated terms =         61
-   MM3x77SO44Mp2         Terms in output =         61
-                         Bytes used      =       4200
-
-Time =       0.00 sec    Generated terms =         61
-   MM3x77SO44Mp2         Terms in output =         61
-                         Bytes used      =       4200
-
-Time =       0.00 sec    Generated terms =         66
-   MM3x77SO44Mp2         Terms in output =         66
-                         Bytes used      =       4536
-
-Time =       0.00 sec    Generated terms =         66
-   MM3x77SO44Mp2         Terms in output =         66
-                         Bytes used      =       4536
-
-Time =       0.00 sec    Generated terms =         72
-   MM3x77SO44Mp2         Terms in output =         72
-                         Bytes used      =       5032
-
-Time =       0.00 sec    Generated terms =         72
-   MM3x77SO44Mp2         Terms in output =         72
-                         Bytes used      =       5032
-
-Time =       0.00 sec    Generated terms =         72
-   MM3x77SO44Mp2         Terms in output =         72
-                         Bytes used      =       5032
-
-Time =       0.00 sec    Generated terms =         72
-   MM3x77SO44Mp2         Terms in output =         72
-                         Bytes used      =       5032
-
-Time =       0.00 sec    Generated terms =         72
-   MM3x77SO44Mp2         Terms in output =         72
-                         Bytes used      =       5032
-
-Time =       0.01 sec    Generated terms =         36
-   MM3x77SO44Mp2         Terms in output =         31
-                         Bytes used      =       1716
+    
     #include setprop.hf
     #if `SX4'==SP4
     id prop(i1?{1,2,3,4,5},PP?) = prop(mp2,PP);
@@ -222,26 +124,16 @@ Time =       0.01 sec    Generated terms =         36
     id prop(i1?{6,7},PP?) = prop(muu,PP);
     id prop(i1?{8,9},PP?) = prop(mdd,PP);
     #endif
+    
     .sort
-
-Time =       0.01 sec    Generated terms =         31
-   MM3x77SO44Mp2         Terms in output =         11
-                         Bytes used      =        628
     #call dointA(PP)
+    
     .sort
-
-Time =       0.01 sec    Generated terms =          7
-   MM3x77SO44Mp2         Terms in output =          6
-                         Bytes used      =        312
     id p2ext = -p1ext;
     *b F,Chi,p1ext,i_;
     b i_,F,A,B;
     print +s;
     .store
-
-Time =       0.01 sec    Generated terms =          6
-   MM3x77SO44Mp2         Terms in output =          6
-                         Bytes used      =        304
 
    MM3x77SO44Mp2 =
 
@@ -260,4 +152,4 @@ Time =       0.01 sec    Generated terms =          6
     save save/MM3_`ext1'`ext2'`SX4'`diagram'.sav 
        MM3x`ext1'`ext2'`SX4'`diagram';
     .end
-  0.01 sec + 0.01 sec: 0.02 sec out of 0.01 sec
+  0.01 sec + 0.01 sec: 0.03 sec out of 0.02 sec

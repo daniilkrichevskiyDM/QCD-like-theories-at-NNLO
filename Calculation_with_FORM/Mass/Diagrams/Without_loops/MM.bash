@@ -31,7 +31,7 @@ do
         echo '#define ext2 "'$eext2'"' >> setexternal.hf #append to the file
         echo '#define SX4 "'$SX4'"' >> setexternal.hf #append to the file
 
-        for diagramindex in 2Mp2 2Mp4
+        for diagramindex in 2Mp2 2Mp4 2Mp6
         do
             echo '#define diagram "'$diagramindex'"' >| setdiagram.hf
 

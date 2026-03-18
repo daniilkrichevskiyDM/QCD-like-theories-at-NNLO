@@ -1,0 +1,195 @@
+TFORM 5.0.0 (Jan 27 2026, v5.0.0) 6 workers      Run: Tue Mar 17 13:58:04 2026
+    * tadpole diagrams 
+    *               _
+    *              / \ PP
+    *              \ /
+    *  -------------x--------------------
+    * ext1                         ext2
+    * p1ext                        p2ext
+    * <---                         --->
+    *
+    *
+    
+    Off Statistics;
+    
+    #include symbols.hf
+    * symbols etc needed for the SU(4)/SO(4) and SU(4)/Sp(4) case
+    #define MAXINDEX "20"
+    s dim;
+    dimension dim;
+    s sqrt2,aa,aa1,...,aa10;
+    index mu,nu,al,be,ro;
+    set lorentz:mu,nu,al,be,ro;
+    cfunction tr;
+    cfunction M,Chi,a,sext,M1,...,M10;
+    set matrixfields:M,Chi,a,sext;
+    cfunction phi,phiV,phiA,phiS,phiP;
+    set phiset:phi,phiV,phiA,phiS,phiP;
+    
+    index <f1=4>,...,<f`MAXINDEX'=4>;
+    set quarkindex:f1,...,f`MAXINDEX';
+    symbol, <b1>,...,<b`MAXINDEX'>;
+    set flavour:<b1>,...,<b`MAXINDEX'>;
+    symbol i1,...,i15;
+    
+    s F,B0,muu,mdd,mp2,mk2,me2;
+    symbol eps,epsb,epsb2,epsb1,lambda2,lambda1,log4pi,
+        pi,pi16,pi162;
+    cfunction delt,deltm,prop;
+    vector qext,q1ext,q2ext,q3ext,q4ext,q5ext,p1ext,p2ext,p3ext,p4ext;
+    vector aext1,aext2,vext1,vext2,vext3;
+    vector PP,QQ,RR,SS;
+    vector PPM,QQM,RRM,SSM;* (only used in procedure so beware)
+    vector p0,...,p8;
+    set pp:p0,...,p8;
+    vector q0,...,q8;
+    set qq:q0,...,q8;
+    vector r0,...,r8;
+    set rr:r0,...,r8;
+    vector v0,v1,v2,v3;
+    set vvv:v0,v1,v2,v3;
+    vector w0,w1,w2,w3;
+    set www:w0,w1,w2,w3;
+    vector a0,a1,a2,a3;
+    set aaa:a0,a1,a2,a3;
+    
+    symbol KK1,...,KK115;
+    symbol L0,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,H1,H2;
+    set Li:L0,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,H1,H2;
+    vector QQP,QRS,QRS1,QRS2,QRS3;* dummy vectors, use only in procedures
+    cfunction A,B,B1,B21,B22,B31,B32,C,C12,C22,C24,H,HH1,H21,H22,H23,H24,VV;
+    set INTEGRALS:A,B,B1,B21,B22,B31,B32,C,C12,C22,C24,H,HH1,H21,H22,H23,H24,VV;#inc
+    lude setexternal.hf
+    #define ext1 "8"
+    #define ext2 "8"
+    #define SX4 "SO4"
+    #include setdiagram.hf  
+    #define diagram "4Mp4"
+    
+    *basically this is not a diagram but rather a vertex (just terms from Lagrangian
+    )
+    
+    load /Users/daniilkrichevskiy/Desktop/QCD-like-theories-at-NNLO/Calculation_with
+    _FORM/Expanded_Lagrangians/Saved_Lagrangians/vertex`diagram'`SX4'.sav;
+ vertex4Mp4SO4 loaded
+    
+    
+    
+    G MM3x`ext1'`ext2'`SX4'`diagram' = i_^3*(
+     vertex`diagram'`SX4'
+     );
+     
+    #call setmom(p,4)
+    #include takederiv.hf
+    *all momenta in the terms are outgoing
+    
+    repeat;
+    * just takes derivative 
+      id phi?{phi,phiP,phiS}(mu?lorentz,?a,p1?)= i_*p1(mu)*phi(?a,p1);
+    * it can happen that p1(mu)phi(mu,p3) is rewritten as phi(p1,p3). then we want t
+    o restore the normal form
+      id phi?{phi,phiP,phiS}(p3?,?a,p1?)= i_*p1.p3*phi(?a,p1);
+    endrepeat;
+    
+    *this is for vectors;
+    #do ii={V|A}
+    
+    repeat;
+      id phi`ii'(mu?lorentz,?a,nu?lorentz,b1?,v1?,p1?)=
+                                        i_*p1(mu)*phi`ii'(?a,nu,b1,v1,p1);
+      id phi`ii'(p2?,?a,nu?lorentz,b1?,v1?,p1?)=
+                                         i_*p1.p2*phi`ii'(?a,nu,b1,v1,p1);
+      id phi`ii'(mu?lorentz,?a,p3?,b1?,v1?,p1?)= 
+                                         i_*p1(mu)*phi`ii'(?a,p3,b1,v1,p1);
+      id phi`ii'(p2?,?a,p3?,b1?,v1?,p1?)= i_*p1.p2*phi`ii'(?a,p3,b1,v1,p1);
+    endrepeat;
+    id phi`ii'(mu?lorentz,b1?,v1?,p1?) = v1(mu)*phi`ii'(b1,v1,p1);
+    id phi`ii'(p2?,b1?,v1?,p1?) = v1.p2*phi`ii'(b1,v1,p1);
+    #enddo
+    
+    
+    .sort
+    #call pickout(`ext1',p1ext,p,pp,4,MM3x`ext1'`ext2'`SX4'`diagram')
+    #call pickout(`ext2',p2ext,p,pp,3,MM3x`ext1'`ext2'`SX4'`diagram')
+    
+    .sort
+    
+    #call connectbubble(PP,p,pp,4,MM3x`ext1'`ext2'`SX4'`diagram')
+    
+    #include setprop.hf
+    #if `SX4'==SP4
+    id prop(i1?{1,2,3,4,5},PP?) = prop(mp2,PP);
+    #elseif `SX4'==SO4
+    id prop(i1?{1,2,3,4,5},PP?) = prop(mp2,PP);
+    id prop(i1?{6,7},PP?) = prop(muu,PP);
+    id prop(i1?{8,9},PP?) = prop(mdd,PP);
+    #endif
+    
+    .sort
+    #call dointA(PP)
+    
+    .sort
+    id p2ext = -p1ext;
+    *b F,Chi,p1ext,i_;
+    b i_,F,A,B;
+    print +s;
+    .store
+
+   MM3x88SO44Mp4 =
+
+       + A(muu)*i_*F^-4 * (
+          - 32*muu*mdd*L6
+          + 16*muu*mdd*L4
+          - 32*p1ext.p1ext*dim^-1*muu*L2
+          + 16*p1ext.p1ext*muu*L4
+          - 32*p1ext.p1ext*muu*L1
+          )
+
+       + A(mdd)*i_*F^-4 * (
+          - 128/3*mdd^2*L8
+          - 256/3*mdd^2*L6
+          + 32/3*mdd^2*L5
+          + 64/3*mdd^2*L4
+          - 64/3*muu*mdd*L6
+          + 16/3*muu*mdd*L4
+          - 16*p1ext.p1ext*dim^-1*mdd*L3
+          - 48*p1ext.p1ext*dim^-1*mdd*L2
+          - 32*p1ext.p1ext*dim^-1*mdd*L1
+          - 32*p1ext.p1ext*dim^-1*mdd*L0
+          + 32/3*p1ext.p1ext*mdd*L5
+          + 64/3*p1ext.p1ext*mdd*L4
+          - 16*p1ext.p1ext*mdd*L3
+          - 16*p1ext.p1ext*mdd*L2
+          - 32*p1ext.p1ext*mdd*L1
+          + 16/3*p1ext.p1ext*muu*L4
+          )
+
+       + A(mp2)*i_*F^-4 * (
+          + 34/3*mdd*mp2*L5
+          + 136/3*mdd*mp2*L4
+          - 116/3*mdd^2*L8
+          - 16*mdd^2*L7
+          - 64*mdd^2*L6
+          + 4/3*muu*mp2*L5
+          + 16/3*muu*mp2*L4
+          - 56/3*muu*mdd*L8
+          + 16*muu*mdd*L7
+          - 208/3*muu*mdd*L6
+          - 4/3*muu^2*L8
+          - 16/3*muu^2*L6
+          - 24*p1ext.p1ext*dim^-1*mp2*L3
+          - 80*p1ext.p1ext*dim^-1*mp2*L2
+          - 40*p1ext.p1ext*dim^-1*mp2*L0
+          - 20*p1ext.p1ext*mp2*L3
+          - 80*p1ext.p1ext*mp2*L1
+          - 4*p1ext.p1ext*mp2*L0
+          + 26/3*p1ext.p1ext*mdd*L5
+          + 76/3*p1ext.p1ext*mdd*L4
+          + 4*p1ext.p1ext*muu*L5
+          + 76/3*p1ext.p1ext*muu*L4
+          );
+
+    save save/MM3_`ext1'`ext2'`SX4'`diagram'.sav 
+       MM3x`ext1'`ext2'`SX4'`diagram';
+    .end
+  0.01 sec + 0.03 sec: 0.05 sec out of 0.02 sec
