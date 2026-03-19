@@ -1,0 +1,48 @@
+* symbols etc needed for the SU(4)/SO(4) and SU(4)/Sp(4) case
+#define MAXINDEX "20"
+s dim;
+dimension dim;
+s sqrt2,aa,aa1,...,aa10;
+index mu,nu,al,be,ro;
+set lorentz:mu,nu,al,be,ro;
+cfunction tr;
+cfunction M,Chi,a,sext,M1,...,M10;
+set matrixfields:M,Chi,a,sext;
+cfunction phi,phiV,phiA,phiS,phiP;
+set phiset:phi,phiV,phiA,phiS,phiP;
+
+index <f1=4>,...,<f`MAXINDEX'=4>;
+set quarkindex:f1,...,f`MAXINDEX';
+symbol, <b1>,...,<b`MAXINDEX'>;
+set flavour:<b1>,...,<b`MAXINDEX'>;
+symbol i1,...,i15;
+
+s F,B0,muu,mdd,mp2,mk2,me2;
+symbol eps,epsb,epsb2,epsb1,lambda2,lambda1,log4pi,
+    pi,pi16,pi162;
+cfunction delt,deltm,prop;
+vector qext,q1ext,q2ext,q3ext,q4ext,q5ext,p1ext,p2ext,p3ext,p4ext;
+vector aext1,aext2,vext1,vext2,vext3;
+vector PP,QQ,RR,SS;
+vector PPM,QQM,RRM,SSM;* (only used in procedure so beware)
+vector p0,...,p8;
+set pp:p0,...,p8;
+vector q0,...,q8;
+set qq:q0,...,q8;
+vector r0,...,r8;
+set rr:r0,...,r8;
+vector v0,v1,v2,v3;
+set vvv:v0,v1,v2,v3;
+vector w0,w1,w2,w3;
+set www:w0,w1,w2,w3;
+vector a0,a1,a2,a3;
+set aaa:a0,a1,a2,a3;
+
+symbol KK1,...,KK115;
+symbol L0,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,H1,H2;
+set Li:L0,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,H1,H2;
+vector QQP,QRS,QRS1,QRS2,QRS3;* dummy vectors, use only in procedures
+cfunction A,B,B1,B21,B22,B31,B32,C,C12,C22,C24,H,HH1,H21,H22,H23,H24,VV;
+set INTEGRALS:A,B,B1,B21,B22,B31,B32,C,C12,C22,C24,H,HH1,H21,H22,H23,H24,VV;
+
+symbol SymmetryFactorMass1,...,SymmetryFactorMass9; 

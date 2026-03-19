@@ -10,6 +10,7 @@
 
 Off Statistics;
 
+symbol aux1;
 #include symbols.hf
 #include setexternal.hf  
 
@@ -75,7 +76,13 @@ G product = SymmetryFactorMass8 * ComplexUnitFactor * MM8x`ext1'`ext2'`SX4'`diag
 
 G MM8x`ext1'`ext2'`SX4' = product;
 
+
+
 id p2ext = -p1ext;
+.sort
+id H(?aux1,p2ext.p2ext) = H(?aux1,p1ext.p1ext);
+.sort
+
 b i_,F,A,B, H;
 print +s;
 

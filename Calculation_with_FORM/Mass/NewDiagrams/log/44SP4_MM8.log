@@ -118,7 +118,7 @@
           - 2*p1ext.p1ext*SymmetryFactorMass8
           )
 
-       + H(mp2,mp2,mp2,p2ext.p2ext)*i_*F^-4 * (
+       + H(mp2,mp2,mp2,p1ext.p1ext)*i_*F^-4 * (
           - 7/48*mdd^2*SymmetryFactorMass8
           - 7/24*muu*mdd*SymmetryFactorMass8
           - 7/48*muu^2*SymmetryFactorMass8
@@ -131,7 +131,7 @@
           - 2*p1ext.p1ext*SymmetryFactorMass8
           )
 
-       + H(mp2,mp2,mp2,p2ext.p2ext)*i_*F^-4 * (
+       + H(mp2,mp2,mp2,p1ext.p1ext)*i_*F^-4 * (
           - 7/48*mdd^2*SymmetryFactorMass8
           - 7/24*muu*mdd*SymmetryFactorMass8
           - 7/48*muu^2*SymmetryFactorMass8

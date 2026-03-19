@@ -102,7 +102,4 @@ print +s;
 save save/MM5_`ext1'`ext2'`SX4'.sav 
    MM5x`ext1'`ext2'`SX4';
 
-
- 
-
 .end
