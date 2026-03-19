@@ -1,0 +1,29 @@
+
+   MM4x88SO4 =
+
+       + A(muu)*A(mp2)*i_*F^-4 * (
+          + 4/15*mp2*SymmetryFactorMass4
+          - 1/15*mdd*SymmetryFactorMass4
+          - 1/45*muu*SymmetryFactorMass4
+          + 2/45*p1ext.p1ext*SymmetryFactorMass4
+          )
+
+       + A(mdd)^2*i_*F^-4 * (
+          + 101/180*mdd*SymmetryFactorMass4
+          + 16/45*p1ext.p1ext*SymmetryFactorMass4
+          )
+
+       + A(mdd)*A(mp2)*i_*F^-4 * (
+          + 8/45*mp2*SymmetryFactorMass4
+          - 17/45*mdd*SymmetryFactorMass4
+          - 4/45*muu*SymmetryFactorMass4
+          + 2/5*p1ext.p1ext*SymmetryFactorMass4
+          )
+
+       + A(mp2)^2*i_*F^-4 * (
+          + 32/45*mp2*SymmetryFactorMass4
+          - 337/720*mdd*SymmetryFactorMass4
+          - 29/180*muu*SymmetryFactorMass4
+          + 16/45*p1ext.p1ext*SymmetryFactorMass4
+          );
+

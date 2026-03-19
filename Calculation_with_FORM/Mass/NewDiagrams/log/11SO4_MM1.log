@@ -1,0 +1,45 @@
+
+Time =       0.00 sec    Generated terms =         23
+       MM1x11SO4         Terms in output =         23
+                         Bytes used      =       1872
+
+Time =       0.00 sec    Generated terms =         23
+       MM1x11SO4         Terms in output =         23
+                         Bytes used      =       1600
+
+Time =       0.00 sec    Generated terms =         23
+       MM1x11SO4         Terms in output =         23
+                         Bytes used      =       1600
+
+Time =       0.00 sec    Generated terms =          6
+       MM1x11SO4         Terms in output =          6
+                         Bytes used      =        448
+
+Time =       0.00 sec    Generated terms =          6
+       MM1x11SO4         Terms in output =          6
+                         Bytes used      =        336
+
+Time =       0.00 sec    Generated terms =          6
+       MM1x11SO4         Terms in output =          6
+                         Bytes used      =        336
+
+Time =       0.00 sec    Generated terms =          6
+       MM1x11SO4         Terms in output =          6
+                         Bytes used      =        448
+
+Time =       0.00 sec    Generated terms =          6
+       MM1x11SO4         Terms in output =          3
+                         Bytes used      =        148
+
+Time =       0.00 sec    Generated terms =          3
+       MM1x11SO4         Terms in output =          3
+                         Bytes used      =        148
+
+Time =       0.00 sec    Generated terms =          3
+       MM1x11SO4         Terms in output =          3
+                         Bytes used      =        164
+
+   MM1x11SO4 =
+       + i_ * (  - 1/2*mdd*SymmetryFactorMass1 - 1/2*muu*SymmetryFactorMass1
+          + p1ext.p1ext*SymmetryFactorMass1 );
+

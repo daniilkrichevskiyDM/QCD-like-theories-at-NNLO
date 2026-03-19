@@ -1,0 +1,10 @@
+
+   MM4x33SP4 =
+
+       + A(mp2)^2*i_*F^-4 * (
+          + 56/45*mp2*SymmetryFactorMass4
+          - 1/10*mdd*SymmetryFactorMass4
+          - 1/10*muu*SymmetryFactorMass4
+          + 28/45*p1ext.p1ext*SymmetryFactorMass4
+          );
+

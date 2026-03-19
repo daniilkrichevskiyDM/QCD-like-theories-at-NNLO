@@ -1,0 +1,45 @@
+
+Time =       0.00 sec    Generated terms =         23
+       MM1x88SO4         Terms in output =         23
+                         Bytes used      =       1872
+
+Time =       0.00 sec    Generated terms =         23
+       MM1x88SO4         Terms in output =         23
+                         Bytes used      =       1600
+
+Time =       0.00 sec    Generated terms =         23
+       MM1x88SO4         Terms in output =         23
+                         Bytes used      =       1600
+
+Time =       0.00 sec    Generated terms =          4
+       MM1x88SO4         Terms in output =          4
+                         Bytes used      =        376
+
+Time =       0.00 sec    Generated terms =          4
+       MM1x88SO4         Terms in output =          4
+                         Bytes used      =        264
+
+Time =       0.00 sec    Generated terms =          4
+       MM1x88SO4         Terms in output =          4
+                         Bytes used      =        264
+
+Time =       0.00 sec    Generated terms =          4
+       MM1x88SO4         Terms in output =          4
+                         Bytes used      =        376
+
+Time =       0.00 sec    Generated terms =          4
+       MM1x88SO4         Terms in output =          2
+                         Bytes used      =        112
+
+Time =       0.00 sec    Generated terms =          2
+       MM1x88SO4         Terms in output =          2
+                         Bytes used      =        112
+
+Time =       0.00 sec    Generated terms =          2
+       MM1x88SO4         Terms in output =          2
+                         Bytes used      =        128
+
+   MM1x88SO4 =
+       + i_ * (  - mdd*SymmetryFactorMass1 + p1ext.p1ext*SymmetryFactorMass1 )
+         ;
+

@@ -1,0 +1,42 @@
+
+   MM4x22SO4 =
+
+       + A(muu)^2*i_*F^-4 * (
+          - 1/45*mdd*SymmetryFactorMass4
+          + 4/45*muu*SymmetryFactorMass4
+          + 2/45*p1ext.p1ext*SymmetryFactorMass4
+          )
+
+       + A(muu)*A(mdd)*i_*F^-4 * (
+          - 1/90*mdd*SymmetryFactorMass4
+          - 1/90*muu*SymmetryFactorMass4
+          + 2/15*p1ext.p1ext*SymmetryFactorMass4
+          )
+
+       + A(muu)*A(mp2)*i_*F^-4 * (
+          + 2/9*mp2*SymmetryFactorMass4
+          - 11/72*mdd*SymmetryFactorMass4
+          - 1/72*muu*SymmetryFactorMass4
+          + 1/3*p1ext.p1ext*SymmetryFactorMass4
+          )
+
+       + A(mdd)^2*i_*F^-4 * (
+          + 4/45*mdd*SymmetryFactorMass4
+          - 1/45*muu*SymmetryFactorMass4
+          + 2/45*p1ext.p1ext*SymmetryFactorMass4
+          )
+
+       + A(mdd)*A(mp2)*i_*F^-4 * (
+          + 2/9*mp2*SymmetryFactorMass4
+          - 1/72*mdd*SymmetryFactorMass4
+          - 11/72*muu*SymmetryFactorMass4
+          + 1/3*p1ext.p1ext*SymmetryFactorMass4
+          )
+
+       + A(mp2)^2*i_*F^-4 * (
+          + 34/45*mp2*SymmetryFactorMass4
+          - 19/60*mdd*SymmetryFactorMass4
+          - 19/60*muu*SymmetryFactorMass4
+          + 4/15*p1ext.p1ext*SymmetryFactorMass4
+          );
+

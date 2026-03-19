@@ -1,0 +1,49 @@
+
+   ComplexUnitFactor = 0;
+
+   MM5x44SP4Upper = 0;
+
+   MM5x44SP4Lower = 0;
+
+   product =
+
+       + A(mp2)^2*i_*F^-4 * (
+          - 8/3*mp2*SymmetryFactorMass5
+          + 7/9*mdd*SymmetryFactorMass5
+          + 7/9*muu*SymmetryFactorMass5
+          - 8/9*p1ext.p1ext*SymmetryFactorMass5
+          )
+
+       + A(mp2)*B(mp2,mp2,0)*i_*F^-4 * (
+          - 16/9*mp2^2*SymmetryFactorMass5
+          + 7/6*mdd*mp2*SymmetryFactorMass5
+          - 49/288*mdd^2*SymmetryFactorMass5
+          + 7/6*muu*mp2*SymmetryFactorMass5
+          - 49/144*muu*mdd*SymmetryFactorMass5
+          - 49/288*muu^2*SymmetryFactorMass5
+          - 16/9*p1ext.p1ext*mp2*SymmetryFactorMass5
+          + 7/18*p1ext.p1ext*mdd*SymmetryFactorMass5
+          + 7/18*p1ext.p1ext*muu*SymmetryFactorMass5
+          );
+
+   MM5x44SP4 =
+
+       + A(mp2)^2*i_*F^-4 * (
+          - 8/3*mp2*SymmetryFactorMass5
+          + 7/9*mdd*SymmetryFactorMass5
+          + 7/9*muu*SymmetryFactorMass5
+          - 8/9*p1ext.p1ext*SymmetryFactorMass5
+          )
+
+       + A(mp2)*B(mp2,mp2,0)*i_*F^-4 * (
+          - 16/9*mp2^2*SymmetryFactorMass5
+          + 7/6*mdd*mp2*SymmetryFactorMass5
+          - 49/288*mdd^2*SymmetryFactorMass5
+          + 7/6*muu*mp2*SymmetryFactorMass5
+          - 49/144*muu*mdd*SymmetryFactorMass5
+          - 49/288*muu^2*SymmetryFactorMass5
+          - 16/9*p1ext.p1ext*mp2*SymmetryFactorMass5
+          + 7/18*p1ext.p1ext*mdd*SymmetryFactorMass5
+          + 7/18*p1ext.p1ext*muu*SymmetryFactorMass5
+          );
+

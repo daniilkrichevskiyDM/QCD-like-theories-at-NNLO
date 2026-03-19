@@ -1,0 +1,15 @@
+
+   MM3x77SO4 =
+
+       + A(muu)*i_*F^-2 * (
+          - 1/3*muu*SymmetryFactorMass3
+          + 1/3*p1ext.p1ext*SymmetryFactorMass3
+          )
+
+       + A(mp2)*i_*F^-2 * (
+          + 1/3*mp2*SymmetryFactorMass3
+          - 1/6*mdd*SymmetryFactorMass3
+          - 3/4*muu*SymmetryFactorMass3
+          + 1/3*p1ext.p1ext*SymmetryFactorMass3
+          );
+

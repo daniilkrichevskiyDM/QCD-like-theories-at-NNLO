@@ -1,0 +1,32 @@
+
+   MM4x33SO4 =
+
+       + A(muu)^2*i_*F^-4 * (
+          - 1/3*muu*SymmetryFactorMass4
+          )
+
+       + A(muu)*A(mp2)*i_*F^-4 * (
+          + 8/15*mp2*SymmetryFactorMass4
+          - 1/30*mdd*SymmetryFactorMass4
+          - 71/180*muu*SymmetryFactorMass4
+          + 4/45*p1ext.p1ext*SymmetryFactorMass4
+          )
+
+       + A(mdd)^2*i_*F^-4 * (
+          - 1/3*mdd*SymmetryFactorMass4
+          )
+
+       + A(mdd)*A(mp2)*i_*F^-4 * (
+          + 8/15*mp2*SymmetryFactorMass4
+          - 71/180*mdd*SymmetryFactorMass4
+          - 1/30*muu*SymmetryFactorMass4
+          + 4/45*p1ext.p1ext*SymmetryFactorMass4
+          )
+
+       + A(mp2)^2*i_*F^-4 * (
+          + 16/15*mp2*SymmetryFactorMass4
+          - 2/15*mdd*SymmetryFactorMass4
+          - 2/15*muu*SymmetryFactorMass4
+          + 44/45*p1ext.p1ext*SymmetryFactorMass4
+          );
+

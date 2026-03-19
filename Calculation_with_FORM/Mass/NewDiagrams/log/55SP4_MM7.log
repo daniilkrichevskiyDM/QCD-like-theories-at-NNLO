@@ -1,0 +1,31 @@
+
+   MM7x55SP4 =
+
+       + A(mp2)*i_*F^-4 * (
+          + 23/3*mdd*mp2*L5*SymmetryFactorMass7
+          + 92/3*mdd*mp2*L4*SymmetryFactorMass7
+          - 10*mdd^2*L8*SymmetryFactorMass7
+          - 8/3*mdd^2*L7*SymmetryFactorMass7
+          - 112/3*mdd^2*L6*SymmetryFactorMass7
+          + 23/3*muu*mp2*L5*SymmetryFactorMass7
+          + 92/3*muu*mp2*L4*SymmetryFactorMass7
+          - 52/3*muu*mdd*L8*SymmetryFactorMass7
+          + 16/3*muu*mdd*L7*SymmetryFactorMass7
+          - 224/3*muu*mdd*L6*SymmetryFactorMass7
+          - 10*muu^2*L8*SymmetryFactorMass7
+          - 8/3*muu^2*L7*SymmetryFactorMass7
+          - 112/3*muu^2*L6*SymmetryFactorMass7
+          - 8*p1ext.p1ext*dim^-1*mp2*L3*SymmetryFactorMass7
+          - 96*p1ext.p1ext*dim^-1*mp2*L2*SymmetryFactorMass7
+          - 32*p1ext.p1ext*dim^-1*mp2*L1*SymmetryFactorMass7
+          - 40*p1ext.p1ext*dim^-1*mp2*L0*SymmetryFactorMass7
+          - 20*p1ext.p1ext*mp2*L3*SymmetryFactorMass7
+          - 16*p1ext.p1ext*mp2*L2*SymmetryFactorMass7
+          - 80*p1ext.p1ext*mp2*L1*SymmetryFactorMass7
+          + 12*p1ext.p1ext*mp2*L0*SymmetryFactorMass7
+          + 23/3*p1ext.p1ext*mdd*L5*SymmetryFactorMass7
+          + 92/3*p1ext.p1ext*mdd*L4*SymmetryFactorMass7
+          + 23/3*p1ext.p1ext*muu*L5*SymmetryFactorMass7
+          + 92/3*p1ext.p1ext*muu*L4*SymmetryFactorMass7
+          );
+
