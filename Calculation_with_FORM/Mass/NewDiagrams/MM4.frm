@@ -61,6 +61,7 @@ G MM4x`ext1'`ext2'`SX4'= i_^5*SymmetryFactorMass4*(
 
 
 id p2ext = -p1ext;
+#include SymmetryFactorsMass.hf
 *b F,Chi,p1ext,i_;
 b i_,F,A,B;
 print +s;

@@ -94,7 +94,10 @@ G product = SymmetryFactorMass5 * ComplexUnitFactor * MM5x`ext1'`ext2'`SX4'Upper
 
 G MM5x`ext1'`ext2'`SX4' = product;
 
+#include SymmetryFactorsMass.hf
+
 id p2ext = -p1ext;
+#include SymmetryFactorsMass.hf
 b i_,F,A,B;
 print +s;
 

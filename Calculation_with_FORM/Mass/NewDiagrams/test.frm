@@ -1,16 +1,13 @@
 #include symbols.hf
+#define ext1 "1"
+#define ext2 "1"
+#define SX4 "SP4"
 
-*load phi6_Theory.sav;
-*L F1 = phi6Theory;
-*Print;
-*.end
 
-G phi2Theory = Lambda*phi(1)^2;
+load ../Hans_diagrams/save/MM1_`ext1'`ext2'`SX4'.sav;
 
-.sort
+G F1= MM1x`ext1'`ext2'`SX4'Hans;
 
 Print;
-.store
-save phi2_Theory.sav 
-   phi2Theory;
+
 .end

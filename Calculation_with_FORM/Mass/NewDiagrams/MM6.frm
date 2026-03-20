@@ -88,8 +88,10 @@ G product = SymmetryFactorMass6 * ComplexUnitFactor * MM6x`ext1'`ext2'`SX4'`diag
 G MM6x`ext1'`ext2'`SX4' = product;
 
 id p2ext = -p1ext;
+#include SymmetryFactorsMass.hf
 b i_,F,A,B;
 print +s;
+
 
 .store
 save save/MM6_`ext1'`ext2'`SX4'.sav 

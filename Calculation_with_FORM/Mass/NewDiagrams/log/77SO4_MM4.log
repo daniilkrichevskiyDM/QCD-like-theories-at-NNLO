@@ -2,28 +2,28 @@
    MM4x77SO4 =
 
        + A(muu)^2*i_*F^-4 * (
-          + 14/45*muu*SymmetryFactorMass4
-          + 16/45*p1ext.p1ext*SymmetryFactorMass4
+          + 7/45*muu
+          + 8/45*p1ext.p1ext
           )
 
        + A(muu)*A(mp2)*i_*F^-4 * (
-          + 8/45*mp2*SymmetryFactorMass4
-          - 4/45*mdd*SymmetryFactorMass4
-          - 17/45*muu*SymmetryFactorMass4
-          + 2/5*p1ext.p1ext*SymmetryFactorMass4
+          + 4/45*mp2
+          - 2/45*mdd
+          - 17/90*muu
+          + 1/5*p1ext.p1ext
           )
 
        + A(mdd)*A(mp2)*i_*F^-4 * (
-          + 4/15*mp2*SymmetryFactorMass4
-          - 1/45*mdd*SymmetryFactorMass4
-          - 1/15*muu*SymmetryFactorMass4
-          + 2/45*p1ext.p1ext*SymmetryFactorMass4
+          + 2/15*mp2
+          - 1/90*mdd
+          - 1/30*muu
+          + 1/45*p1ext.p1ext
           )
 
        + A(mp2)^2*i_*F^-4 * (
-          + 32/45*mp2*SymmetryFactorMass4
-          - 29/180*mdd*SymmetryFactorMass4
-          - 337/720*muu*SymmetryFactorMass4
-          + 16/45*p1ext.p1ext*SymmetryFactorMass4
+          + 16/45*mp2
+          - 29/360*mdd
+          - 337/1440*muu
+          + 8/45*p1ext.p1ext
           );
 

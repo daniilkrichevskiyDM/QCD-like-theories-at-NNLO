@@ -2,21 +2,21 @@
    MM3x44SO4 =
 
        + A(muu)*i_*F^-2 * (
-          - 1/12*mdd*SymmetryFactorMass3
-          - 1/12*muu*SymmetryFactorMass3
-          + 1/6*p1ext.p1ext*SymmetryFactorMass3
+          - 1/12*mdd
+          - 1/12*muu
+          + 1/6*p1ext.p1ext
           )
 
        + A(mdd)*i_*F^-2 * (
-          - 1/12*mdd*SymmetryFactorMass3
-          - 1/12*muu*SymmetryFactorMass3
-          + 1/6*p1ext.p1ext*SymmetryFactorMass3
+          - 1/12*mdd
+          - 1/12*muu
+          + 1/6*p1ext.p1ext
           )
 
        + A(mp2)*i_*F^-2 * (
-          + 1/3*mp2*SymmetryFactorMass3
-          - 11/24*mdd*SymmetryFactorMass3
-          - 11/24*muu*SymmetryFactorMass3
-          + 1/3*p1ext.p1ext*SymmetryFactorMass3
+          + 1/3*mp2
+          - 11/24*mdd
+          - 11/24*muu
+          + 1/3*p1ext.p1ext
           );
 

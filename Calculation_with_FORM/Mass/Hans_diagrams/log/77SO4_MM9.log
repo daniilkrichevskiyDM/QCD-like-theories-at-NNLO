@@ -1,0 +1,47 @@
+
+Time =       0.00 sec    Generated terms =        271
+   MM9x77SO4Hans         Terms in output =        271
+                         Bytes used      =      10264
+
+Time =       0.00 sec    Generated terms =        271
+   MM9x77SO4Hans         Terms in output =        271
+                         Bytes used      =      10264
+
+Time =       0.00 sec    Generated terms =         44
+   MM9x77SO4Hans         Terms in output =         44
+                         Bytes used      =       1856
+
+Time =       0.00 sec    Generated terms =         44
+   MM9x77SO4Hans         Terms in output =         44
+                         Bytes used      =       1744
+
+Time =       0.00 sec    Generated terms =         44
+   MM9x77SO4Hans         Terms in output =         44
+                         Bytes used      =       1744
+
+Time =       0.00 sec    Generated terms =         44
+   MM9x77SO4Hans         Terms in output =         44
+                         Bytes used      =       1856
+
+Time =       0.00 sec    Generated terms =         44
+   MM9x77SO4Hans         Terms in output =         22
+                         Bytes used      =        852
+
+Time =       0.00 sec    Generated terms =         22
+   MM9x77SO4Hans         Terms in output =         22
+                         Bytes used      =        852
+
+Time =       0.00 sec    Generated terms =         22
+   MM9x77SO4Hans         Terms in output =         22
+                         Bytes used      =        796
+
+   MM9x77SO4Hans =
+       + i_*F^-4 * (  - 192*muu*mdd^2*KK27 - 32*muu*mdd^2*KK26 - 64*muu^2*mdd*
+         KK40 - 384*muu^2*mdd*KK27 - 64*muu^2*mdd*KK26 - 64*muu^3*KK40 - 32*
+         muu^3*KK39 - 192*muu^3*KK27 - 96*muu^3*KK26 - 48*muu^3*KK25 + 64*
+         p1ext.p1ext*mdd^2*KK22 + 32*p1ext.p1ext*mdd^2*KK21 + 128*p1ext.p1ext*
+         muu*mdd*KK22 + 32*p1ext.p1ext*muu*mdd*KK20 + 16*p1ext.p1ext*muu^2*
+         KK23 + 64*p1ext.p1ext*muu^2*KK22 + 32*p1ext.p1ext*muu^2*KK21 + 32*
+         p1ext.p1ext*muu^2*KK20 + 16*p1ext.p1ext*muu^2*KK19 + 64*p1ext.p1ext^2
+         *mdd*KK18 + 64*p1ext.p1ext^2*muu*KK18 + 32*p1ext.p1ext^2*muu*KK17 );
+

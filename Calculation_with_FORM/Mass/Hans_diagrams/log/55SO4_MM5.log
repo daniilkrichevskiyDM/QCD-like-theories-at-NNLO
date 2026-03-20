@@ -1,0 +1,308 @@
+
+Time =       0.00 sec    Generated terms =         76
+            Vtop         Terms in output =         76
+                         Bytes used      =       3524
+
+Time =       0.00 sec    Generated terms =        296
+            Vbot         Terms in output =        296
+                         Bytes used      =      18772
+
+Time =       0.00 sec    Generated terms =        296
+            Vbot         Terms in output =        296
+                         Bytes used      =      23036
+
+Time =       0.00 sec    Generated terms =         76
+            Vtop         Terms in output =         76
+                         Bytes used      =       3540
+
+Time =       0.00 sec    Generated terms =         76
+            Vtop         Terms in output =         76
+                         Bytes used      =       3540
+
+Time =       0.00 sec    Generated terms =        296
+            Vbot         Terms in output =        296
+                         Bytes used      =      23036
+
+Time =       0.00 sec    Generated terms =        152
+            Vbot         Terms in output =        152
+                         Bytes used      =      15764
+
+Time =       0.00 sec    Generated terms =        152
+            Vbot         Terms in output =        152
+                         Bytes used      =      10588
+
+Time =       0.00 sec    Generated terms =         76
+            Vtop         Terms in output =         76
+                         Bytes used      =       3540
+
+Time =       0.00 sec    Generated terms =        152
+            Vbot         Terms in output =        152
+                         Bytes used      =      10588
+
+Time =       0.00 sec    Generated terms =        116
+            Vbot         Terms in output =        116
+                         Bytes used      =      10708
+
+Time =       0.00 sec    Generated terms =        116
+            Vbot         Terms in output =         68
+                         Bytes used      =       4004
+
+Time =       0.00 sec    Generated terms =         76
+            Vtop         Terms in output =         76
+                         Bytes used      =       3540
+
+Time =       0.00 sec    Generated terms =         68
+            Vbot         Terms in output =         68
+                         Bytes used      =       4004
+
+Time =       0.00 sec    Generated terms =       5168
+   MM5x55SO4Hans         Terms in output =       4560
+                         Bytes used      =     225132
+
+Time =       0.00 sec    Generated terms =       4616
+   MM5x55SO4Hans         Terms in output =       4616
+                         Bytes used      =     227976
+
+Time =       0.00 sec    Generated terms =       4672
+   MM5x55SO4Hans         Terms in output =       4672
+                         Bytes used      =     230820
+
+Time =       0.01 sec    Generated terms =       4936
+   MM5x55SO4Hans         Terms in output =       4936
+                         Bytes used      =     243036
+
+Time =       0.01 sec    Generated terms =       5152
+   MM5x55SO4Hans         Terms in output =       5152
+                         Bytes used      =     253908
+
+Time =       0.01 sec    Generated terms =       5488
+   MM5x55SO4Hans         Terms in output =       5488
+                         Bytes used      =     270512
+
+Time =       0.01 sec    Generated terms =       5716
+   MM5x55SO4Hans         Terms in output =       5716
+                         Bytes used      =     283980
+
+Time =       0.01 sec    Generated terms =       5944
+   MM5x55SO4Hans         Terms in output =       5944
+                         Bytes used      =     297448
+
+Time =       0.01 sec    Generated terms =       6172
+   MM5x55SO4Hans         Terms in output =       6172
+                         Bytes used      =     311004
+
+Time =       0.01 sec    Generated terms =       6400
+   MM5x55SO4Hans         Terms in output =       6400
+                         Bytes used      =     324560
+
+Time =       0.01 sec    Generated terms =       1840
+   MM5x55SO4Hans         Terms in output =       1616
+                         Bytes used      =      82024
+
+Time =       0.01 sec    Generated terms =       1616
+   MM5x55SO4Hans         Terms in output =       1616
+                         Bytes used      =      82024
+
+Time =       0.01 sec    Generated terms =       1672
+   MM5x55SO4Hans         Terms in output =       1672
+                         Bytes used      =      84828
+
+Time =       0.02 sec    Generated terms =       1728
+   MM5x55SO4Hans         Terms in output =       1728
+                         Bytes used      =      87452
+
+Time =       0.02 sec    Generated terms =       1992
+   MM5x55SO4Hans         Terms in output =       1992
+                         Bytes used      =      99108
+
+Time =       0.02 sec    Generated terms =       2208
+   MM5x55SO4Hans         Terms in output =       2208
+                         Bytes used      =     109252
+
+Time =       0.02 sec    Generated terms =       2320
+   MM5x55SO4Hans         Terms in output =       2320
+                         Bytes used      =     114500
+
+Time =       0.02 sec    Generated terms =       2456
+   MM5x55SO4Hans         Terms in output =       2456
+                         Bytes used      =     121828
+
+Time =       0.02 sec    Generated terms =       2592
+   MM5x55SO4Hans         Terms in output =       2592
+                         Bytes used      =     129156
+
+Time =       0.02 sec    Generated terms =       2728
+   MM5x55SO4Hans         Terms in output =       2728
+                         Bytes used      =     136484
+
+Time =       0.02 sec    Generated terms =       2864
+   MM5x55SO4Hans         Terms in output =       2864
+                         Bytes used      =     143812
+
+Time =       0.02 sec    Generated terms =       1248
+   MM5x55SO4Hans         Terms in output =        390
+                         Bytes used      =      18280
+
+Time =       0.02 sec    Generated terms =        390
+   MM5x55SO4Hans         Terms in output =        390
+                         Bytes used      =      18280
+
+Time =       0.02 sec    Generated terms =        390
+   MM5x55SO4Hans         Terms in output =        188
+                         Bytes used      =       8556
+
+Time =       0.02 sec    Generated terms =        289
+   MM5x55SO4Hans         Terms in output =        123
+                         Bytes used      =       4868
+
+Time =       0.02 sec    Generated terms =        123
+   MM5x55SO4Hans         Terms in output =        123
+                         Bytes used      =       4868
+
+Time =       0.02 sec    Generated terms =        119
+   MM5x55SO4Hans         Terms in output =        119
+                         Bytes used      =       4684
+
+Time =       0.02 sec    Generated terms =        119
+   MM5x55SO4Hans         Terms in output =        119
+                         Bytes used      =       4404
+
+   MM5x55SO4Hans =
+
+       + A(muu)*i_*F^-4 * (
+          + 4/3*mdd^2*L4
+          + 16/3*muu*mdd*L6
+          + 2/3*muu*mdd*L5
+          + 8/3*muu^2*L8
+          + 16/3*muu^2*L6
+          - 2/3*muu^2*L5
+          - 4/3*muu^2*L4
+          - 8/3*p1ext.p1ext*mdd*L4
+          - 4/3*p1ext.p1ext*muu*L5
+          - 8/3*p1ext.p1ext*muu*L4
+          )
+
+       + A(mdd)*i_*F^-4 * (
+          + 8/3*mdd^2*L8
+          + 16/3*mdd^2*L6
+          - 2/3*mdd^2*L5
+          - 4/3*mdd^2*L4
+          + 16/3*muu*mdd*L6
+          + 2/3*muu*mdd*L5
+          + 4/3*muu^2*L4
+          - 4/3*p1ext.p1ext*mdd*L5
+          - 8/3*p1ext.p1ext*mdd*L4
+          - 8/3*p1ext.p1ext*muu*L4
+          )
+
+       + A(mp2)*i_*F^-4 * (
+          - 8/3*mdd*mp2*L5
+          - 32/3*mdd*mp2*L4
+          + 2*mdd^2*L8
+          + 8/3*mdd^2*L7
+          + 16/3*mdd^2*L6
+          + 11/6*mdd^2*L5
+          + 22/3*mdd^2*L4
+          - 8/3*muu*mp2*L5
+          - 32/3*muu*mp2*L4
+          + 4/3*muu*mdd*L8
+          - 16/3*muu*mdd*L7
+          + 32/3*muu*mdd*L6
+          + 11/3*muu*mdd*L5
+          + 44/3*muu*mdd*L4
+          + 2*muu^2*L8
+          + 8/3*muu^2*L7
+          + 16/3*muu^2*L6
+          + 11/6*muu^2*L5
+          + 22/3*muu^2*L4
+          - 4/3*p1ext.p1ext*mdd*L5
+          - 16/3*p1ext.p1ext*mdd*L4
+          - 4/3*p1ext.p1ext*muu*L5
+          - 16/3*p1ext.p1ext*muu*L4
+          )
+
+       + B(muu,muu,0)*i_*F^-4 * (
+          - 8/3*muu*mdd^2*L6
+          + 4/3*muu*mdd^2*L4
+          - 4/3*muu^2*mdd*L8
+          - 16/3*muu^2*mdd*L6
+          + 2/3*muu^2*mdd*L5
+          + 8/3*muu^2*mdd*L4
+          - 4/3*muu^3*L8
+          - 8/3*muu^3*L6
+          + 2/3*muu^3*L5
+          + 4/3*muu^3*L4
+          + 16/3*p1ext.p1ext*muu*mdd*L6
+          - 8/3*p1ext.p1ext*muu*mdd*L4
+          + 8/3*p1ext.p1ext*muu^2*L8
+          + 16/3*p1ext.p1ext*muu^2*L6
+          - 4/3*p1ext.p1ext*muu^2*L5
+          - 8/3*p1ext.p1ext*muu^2*L4
+          )
+
+       + B(mdd,mdd,0)*i_*F^-4 * (
+          - 4/3*mdd^3*L8
+          - 8/3*mdd^3*L6
+          + 2/3*mdd^3*L5
+          + 4/3*mdd^3*L4
+          - 4/3*muu*mdd^2*L8
+          - 16/3*muu*mdd^2*L6
+          + 2/3*muu*mdd^2*L5
+          + 8/3*muu*mdd^2*L4
+          - 8/3*muu^2*mdd*L6
+          + 4/3*muu^2*mdd*L4
+          + 8/3*p1ext.p1ext*mdd^2*L8
+          + 16/3*p1ext.p1ext*mdd^2*L6
+          - 4/3*p1ext.p1ext*mdd^2*L5
+          - 8/3*p1ext.p1ext*mdd^2*L4
+          + 16/3*p1ext.p1ext*muu*mdd*L6
+          - 8/3*p1ext.p1ext*muu*mdd*L4
+          )
+
+       + B(mp2,mp2,0)*i_*F^-4 * (
+          - 4/3*mdd*mp2^2*L5
+          - 16/3*mdd*mp2^2*L4
+          + 2*mdd^2*mp2*L8
+          + 8/3*mdd^2*mp2*L7
+          + 16/3*mdd^2*mp2*L6
+          + 11/6*mdd^2*mp2*L5
+          + 22/3*mdd^2*mp2*L4
+          - 2*mdd^3*L8
+          - 2/3*mdd^3*L7
+          - 22/3*mdd^3*L6
+          - 4/3*muu*mp2^2*L5
+          - 16/3*muu*mp2^2*L4
+          + 4/3*muu*mdd*mp2*L8
+          - 16/3*muu*mdd*mp2*L7
+          + 32/3*muu*mdd*mp2*L6
+          + 11/3*muu*mdd*mp2*L5
+          + 44/3*muu*mdd*mp2*L4
+          - 16/3*muu*mdd^2*L8
+          + 2/3*muu*mdd^2*L7
+          - 22*muu*mdd^2*L6
+          + 2*muu^2*mp2*L8
+          + 8/3*muu^2*mp2*L7
+          + 16/3*muu^2*mp2*L6
+          + 11/6*muu^2*mp2*L5
+          + 22/3*muu^2*mp2*L4
+          - 16/3*muu^2*mdd*L8
+          + 2/3*muu^2*mdd*L7
+          - 22*muu^2*mdd*L6
+          - 2*muu^3*L8
+          - 2/3*muu^3*L7
+          - 22/3*muu^3*L6
+          - 4/3*p1ext.p1ext*mdd*mp2*L5
+          - 16/3*p1ext.p1ext*mdd*mp2*L4
+          + 2*p1ext.p1ext*mdd^2*L8
+          + 8/3*p1ext.p1ext*mdd^2*L7
+          + 16/3*p1ext.p1ext*mdd^2*L6
+          - 4/3*p1ext.p1ext*muu*mp2*L5
+          - 16/3*p1ext.p1ext*muu*mp2*L4
+          + 4/3*p1ext.p1ext*muu*mdd*L8
+          - 16/3*p1ext.p1ext*muu*mdd*L7
+          + 32/3*p1ext.p1ext*muu*mdd*L6
+          + 2*p1ext.p1ext*muu^2*L8
+          + 8/3*p1ext.p1ext*muu^2*L7
+          + 16/3*p1ext.p1ext*muu^2*L6
+          );
+

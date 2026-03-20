@@ -1,0 +1,138 @@
+
+Time =       0.00 sec    Generated terms =        296
+   MM3x33SO4Hans         Terms in output =        296
+                         Bytes used      =      25060
+
+Time =       0.00 sec    Generated terms =        296
+   MM3x33SO4Hans         Terms in output =        296
+                         Bytes used      =      25060
+
+Time =       0.00 sec    Generated terms =        112
+   MM3x33SO4Hans         Terms in output =        112
+                         Bytes used      =      13540
+
+Time =       0.00 sec    Generated terms =        112
+   MM3x33SO4Hans         Terms in output =        112
+                         Bytes used      =       9300
+
+Time =       0.00 sec    Generated terms =        112
+   MM3x33SO4Hans         Terms in output =        112
+                         Bytes used      =       9300
+
+Time =       0.00 sec    Generated terms =         72
+   MM3x33SO4Hans         Terms in output =         72
+                         Bytes used      =       7156
+
+Time =       0.00 sec    Generated terms =         72
+   MM3x33SO4Hans         Terms in output =         40
+                         Bytes used      =       2652
+
+Time =       0.00 sec    Generated terms =         40
+   MM3x33SO4Hans         Terms in output =         40
+                         Bytes used      =       2652
+
+Time =       0.00 sec    Generated terms =         40
+   MM3x33SO4Hans         Terms in output =         40
+                         Bytes used      =       2652
+
+Time =       0.00 sec    Generated terms =         46
+   MM3x33SO4Hans         Terms in output =         46
+                         Bytes used      =       3168
+
+Time =       0.00 sec    Generated terms =         46
+   MM3x33SO4Hans         Terms in output =         46
+                         Bytes used      =       3168
+
+Time =       0.00 sec    Generated terms =         52
+   MM3x33SO4Hans         Terms in output =         52
+                         Bytes used      =       3532
+
+Time =       0.00 sec    Generated terms =         52
+   MM3x33SO4Hans         Terms in output =         52
+                         Bytes used      =       3532
+
+Time =       0.00 sec    Generated terms =         64
+   MM3x33SO4Hans         Terms in output =         64
+                         Bytes used      =       4196
+
+Time =       0.00 sec    Generated terms =         64
+   MM3x33SO4Hans         Terms in output =         64
+                         Bytes used      =       4196
+
+Time =       0.00 sec    Generated terms =         70
+   MM3x33SO4Hans         Terms in output =         70
+                         Bytes used      =       4560
+
+Time =       0.00 sec    Generated terms =         70
+   MM3x33SO4Hans         Terms in output =         70
+                         Bytes used      =       4560
+
+Time =       0.00 sec    Generated terms =         76
+   MM3x33SO4Hans         Terms in output =         76
+                         Bytes used      =       4924
+
+Time =       0.00 sec    Generated terms =         76
+   MM3x33SO4Hans         Terms in output =         76
+                         Bytes used      =       4924
+
+Time =       0.00 sec    Generated terms =         77
+   MM3x33SO4Hans         Terms in output =         77
+                         Bytes used      =       4988
+
+Time =       0.00 sec    Generated terms =         77
+   MM3x33SO4Hans         Terms in output =         77
+                         Bytes used      =       4988
+
+Time =       0.00 sec    Generated terms =         78
+   MM3x33SO4Hans         Terms in output =         78
+                         Bytes used      =       5052
+
+Time =       0.00 sec    Generated terms =         78
+   MM3x33SO4Hans         Terms in output =         78
+                         Bytes used      =       5052
+
+Time =       0.00 sec    Generated terms =         79
+   MM3x33SO4Hans         Terms in output =         79
+                         Bytes used      =       5116
+
+Time =       0.00 sec    Generated terms =         79
+   MM3x33SO4Hans         Terms in output =         79
+                         Bytes used      =       5116
+
+Time =       0.01 sec    Generated terms =         80
+   MM3x33SO4Hans         Terms in output =         80
+                         Bytes used      =       5180
+
+Time =       0.01 sec    Generated terms =         40
+   MM3x33SO4Hans         Terms in output =         30
+                         Bytes used      =       1644
+
+Time =       0.01 sec    Generated terms =         30
+   MM3x33SO4Hans         Terms in output =          8
+                         Bytes used      =        464
+
+Time =       0.01 sec    Generated terms =          6
+   MM3x33SO4Hans         Terms in output =          6
+                         Bytes used      =        304
+
+Time =       0.01 sec    Generated terms =          6
+   MM3x33SO4Hans         Terms in output =          6
+                         Bytes used      =        340
+
+   MM3x33SO4Hans =
+
+       + A(muu)*i_*F^-2 * (
+          - 1/2*muu
+          )
+
+       + A(mdd)*i_*F^-2 * (
+          - 1/2*mdd
+          )
+
+       + A(mp2)*i_*F^-2 * (
+          + 2/3*mp2
+          - 7/24*mdd
+          - 7/24*muu
+          + 2/3*p1ext.p1ext
+          );
+

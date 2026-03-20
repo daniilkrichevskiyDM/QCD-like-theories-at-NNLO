@@ -8,193 +8,36 @@
    MM8x22SO44Mp2Left =
 
        + F^-2 * (
-          + 1/48*phi(1,q1)*phi(1,q2)*phi(2,q3)*mdd
-          + 1/48*phi(1,q1)*phi(1,q2)*phi(2,q3)*muu
-          + 1/12*phi(1,q1)*phi(1,q2)*phi(2,q3)*p1ext.q3
-          + 1/48*phi(1,q1)*phi(1,q2)*phi(2,q4)*mdd
-          + 1/48*phi(1,q1)*phi(1,q2)*phi(2,q4)*muu
-          + 1/12*phi(1,q1)*phi(1,q2)*phi(2,q4)*p1ext.q4
-          - 1/6*phi(1,q1)*phi(1,q3)*phi(2,q2)*p1ext.q3
-          - 1/6*phi(1,q1)*phi(1,q3)*phi(2,q4)*q3.q4
-          - 1/4*phi(1,q1)*phi(6,q2)*phi(7,q4)*p1ext.q4
-          + 1/12*phi(1,q1)*phi(6,q2)*phi(9,q4)*p1ext.q4
-          + 1/12*phi(1,q1)*phi(6,q3)*phi(9,q4)*mdd
-          + 1/12*phi(1,q1)*phi(6,q3)*phi(9,q4)*muu
-          - 1/6*phi(1,q1)*phi(6,q3)*phi(9,q4)*q3.q4
-          + 1/4*phi(1,q1)*phi(6,q4)*phi(7,q2)*p1ext.q4
-          + 1/12*phi(1,q1)*phi(6,q4)*phi(9,q2)*p1ext.q4
-          - 1/12*phi(1,q1)*phi(7,q2)*phi(8,q4)*p1ext.q4
-          - 1/12*phi(1,q1)*phi(7,q3)*phi(8,q4)*mdd
-          - 1/12*phi(1,q1)*phi(7,q3)*phi(8,q4)*muu
-          + 1/6*phi(1,q1)*phi(7,q3)*phi(8,q4)*q3.q4
-          - 1/12*phi(1,q1)*phi(7,q4)*phi(8,q2)*p1ext.q4
-          + 1/4*phi(1,q1)*phi(8,q2)*phi(9,q4)*p1ext.q4
-          - 1/4*phi(1,q1)*phi(8,q4)*phi(9,q2)*p1ext.q4
-          + 1/12*phi(1,q3)*phi(1,q4)*phi(2,q1)*q3.q4
-          + 1/12*phi(1,q3)*phi(1,q4)*phi(2,q2)*q3.q4
-          - 1/6*phi(1,q3)*phi(6,q1)*phi(9,q2)*p1ext.q3
-          + 1/4*phi(1,q3)*phi(6,q2)*phi(7,q4)*q3.q4
-          + 1/12*phi(1,q3)*phi(6,q2)*phi(9,q4)*q3.q4
-          - 1/4*phi(1,q3)*phi(6,q4)*phi(7,q2)*q3.q4
-          + 1/12*phi(1,q3)*phi(6,q4)*phi(9,q2)*q3.q4
-          + 1/6*phi(1,q3)*phi(7,q1)*phi(8,q2)*p1ext.q3
-          - 1/12*phi(1,q3)*phi(7,q2)*phi(8,q4)*q3.q4
-          - 1/12*phi(1,q3)*phi(7,q4)*phi(8,q2)*q3.q4
-          - 1/4*phi(1,q3)*phi(8,q2)*phi(9,q4)*q3.q4
-          + 1/4*phi(1,q3)*phi(8,q4)*phi(9,q2)*q3.q4
-          + 1/96*phi(2,q1)*phi(2,q2)*phi(2,q3)*mdd
-          + 1/96*phi(2,q1)*phi(2,q2)*phi(2,q3)*muu
-          + 1/96*phi(2,q1)*phi(2,q2)*phi(2,q4)*mdd
-          + 1/96*phi(2,q1)*phi(2,q2)*phi(2,q4)*muu
-          + 1/96*phi(2,q1)*phi(2,q3)*phi(2,q4)*mdd
-          + 1/96*phi(2,q1)*phi(2,q3)*phi(2,q4)*muu
-          - 1/6*phi(2,q1)*phi(3,q2)*phi(3,q4)*p1ext.q4
-          + 1/48*phi(2,q1)*phi(3,q3)*phi(3,q4)*mdd
-          + 1/48*phi(2,q1)*phi(3,q3)*phi(3,q4)*muu
-          + 1/12*phi(2,q1)*phi(3,q3)*phi(3,q4)*q3.q4
-          + 1/16*phi(2,q1)*phi(4,q3)*phi(4,q4)*mdd
-          + 1/16*phi(2,q1)*phi(4,q3)*phi(4,q4)*muu
-          + 1/16*phi(2,q1)*phi(5,q3)*phi(5,q4)*mdd
-          + 1/16*phi(2,q1)*phi(5,q3)*phi(5,q4)*muu
-          - 1/12*phi(2,q1)*phi(6,q2)*phi(6,q4)*p1ext.q4
-          - 1/12*phi(2,q1)*phi(6,q2)*phi(8,q4)*p1ext.q4
-          + 1/48*phi(2,q1)*phi(6,q3)*phi(6,q4)*mdd
-          + 1/16*phi(2,q1)*phi(6,q3)*phi(6,q4)*muu
-          + 1/24*phi(2,q1)*phi(6,q3)*phi(6,q4)*q3.q4
-          - 1/24*phi(2,q1)*phi(6,q3)*phi(8,q4)*mdd
-          - 1/24*phi(2,q1)*phi(6,q3)*phi(8,q4)*muu
-          + 1/12*phi(2,q1)*phi(6,q3)*phi(8,q4)*q3.q4
-          - 1/12*phi(2,q1)*phi(6,q4)*phi(8,q2)*p1ext.q4
-          - 1/12*phi(2,q1)*phi(7,q2)*phi(7,q4)*p1ext.q4
-          - 1/12*phi(2,q1)*phi(7,q2)*phi(9,q4)*p1ext.q4
-          + 1/48*phi(2,q1)*phi(7,q3)*phi(7,q4)*mdd
-          + 1/16*phi(2,q1)*phi(7,q3)*phi(7,q4)*muu
-          + 1/24*phi(2,q1)*phi(7,q3)*phi(7,q4)*q3.q4
-          - 1/24*phi(2,q1)*phi(7,q3)*phi(9,q4)*mdd
-          - 1/24*phi(2,q1)*phi(7,q3)*phi(9,q4)*muu
-          + 1/12*phi(2,q1)*phi(7,q3)*phi(9,q4)*q3.q4
-          - 1/12*phi(2,q1)*phi(7,q4)*phi(9,q2)*p1ext.q4
-          - 1/12*phi(2,q1)*phi(8,q2)*phi(8,q4)*p1ext.q4
-          + 1/16*phi(2,q1)*phi(8,q3)*phi(8,q4)*mdd
-          + 1/48*phi(2,q1)*phi(8,q3)*phi(8,q4)*muu
-          + 1/24*phi(2,q1)*phi(8,q3)*phi(8,q4)*q3.q4
-          - 1/12*phi(2,q1)*phi(9,q2)*phi(9,q4)*p1ext.q4
-          + 1/16*phi(2,q1)*phi(9,q3)*phi(9,q4)*mdd
-          + 1/48*phi(2,q1)*phi(9,q3)*phi(9,q4)*muu
-          + 1/24*phi(2,q1)*phi(9,q3)*phi(9,q4)*q3.q4
-          + 1/96*phi(2,q2)*phi(2,q3)*phi(2,q4)*mdd
-          + 1/96*phi(2,q2)*phi(2,q3)*phi(2,q4)*muu
-          + 1/48*phi(2,q2)*phi(3,q3)*phi(3,q4)*mdd
-          + 1/48*phi(2,q2)*phi(3,q3)*phi(3,q4)*muu
-          + 1/12*phi(2,q2)*phi(3,q3)*phi(3,q4)*q3.q4
-          + 1/16*phi(2,q2)*phi(4,q3)*phi(4,q4)*mdd
-          + 1/16*phi(2,q2)*phi(4,q3)*phi(4,q4)*muu
-          + 1/16*phi(2,q2)*phi(5,q3)*phi(5,q4)*mdd
-          + 1/16*phi(2,q2)*phi(5,q3)*phi(5,q4)*muu
-          + 1/48*phi(2,q2)*phi(6,q3)*phi(6,q4)*mdd
-          + 1/16*phi(2,q2)*phi(6,q3)*phi(6,q4)*muu
-          + 1/24*phi(2,q2)*phi(6,q3)*phi(6,q4)*q3.q4
-          - 1/24*phi(2,q2)*phi(6,q3)*phi(8,q4)*mdd
-          - 1/24*phi(2,q2)*phi(6,q3)*phi(8,q4)*muu
-          + 1/12*phi(2,q2)*phi(6,q3)*phi(8,q4)*q3.q4
-          + 1/48*phi(2,q2)*phi(7,q3)*phi(7,q4)*mdd
-          + 1/16*phi(2,q2)*phi(7,q3)*phi(7,q4)*muu
-          + 1/24*phi(2,q2)*phi(7,q3)*phi(7,q4)*q3.q4
-          - 1/24*phi(2,q2)*phi(7,q3)*phi(9,q4)*mdd
-          - 1/24*phi(2,q2)*phi(7,q3)*phi(9,q4)*muu
-          + 1/12*phi(2,q2)*phi(7,q3)*phi(9,q4)*q3.q4
-          + 1/16*phi(2,q2)*phi(8,q3)*phi(8,q4)*mdd
-          + 1/48*phi(2,q2)*phi(8,q3)*phi(8,q4)*muu
-          + 1/24*phi(2,q2)*phi(8,q3)*phi(8,q4)*q3.q4
-          + 1/16*phi(2,q2)*phi(9,q3)*phi(9,q4)*mdd
-          + 1/48*phi(2,q2)*phi(9,q3)*phi(9,q4)*muu
-          + 1/24*phi(2,q2)*phi(9,q3)*phi(9,q4)*q3.q4
-          + 1/12*phi(2,q3)*phi(3,q1)*phi(3,q2)*p1ext.q3
-          - 1/6*phi(2,q3)*phi(3,q2)*phi(3,q4)*q3.q4
-          + 1/24*phi(2,q3)*phi(6,q1)*phi(6,q2)*p1ext.q3
-          + 1/12*phi(2,q3)*phi(6,q1)*phi(8,q2)*p1ext.q3
-          - 1/12*phi(2,q3)*phi(6,q2)*phi(6,q4)*q3.q4
-          - 1/12*phi(2,q3)*phi(6,q2)*phi(8,q4)*q3.q4
-          - 1/12*phi(2,q3)*phi(6,q4)*phi(8,q2)*q3.q4
-          + 1/24*phi(2,q3)*phi(7,q1)*phi(7,q2)*p1ext.q3
-          + 1/12*phi(2,q3)*phi(7,q1)*phi(9,q2)*p1ext.q3
-          - 1/12*phi(2,q3)*phi(7,q2)*phi(7,q4)*q3.q4
-          - 1/12*phi(2,q3)*phi(7,q2)*phi(9,q4)*q3.q4
-          - 1/12*phi(2,q3)*phi(7,q4)*phi(9,q2)*q3.q4
-          + 1/24*phi(2,q3)*phi(8,q1)*phi(8,q2)*p1ext.q3
-          - 1/12*phi(2,q3)*phi(8,q2)*phi(8,q4)*q3.q4
-          + 1/24*phi(2,q3)*phi(9,q1)*phi(9,q2)*p1ext.q3
-          - 1/12*phi(2,q3)*phi(9,q2)*phi(9,q4)*q3.q4
-          + 1/12*phi(2,q4)*phi(3,q1)*phi(3,q2)*p1ext.q4
-          + 1/24*phi(2,q4)*phi(6,q1)*phi(6,q2)*p1ext.q4
-          + 1/12*phi(2,q4)*phi(6,q1)*phi(8,q2)*p1ext.q4
-          + 1/24*phi(2,q4)*phi(7,q1)*phi(7,q2)*p1ext.q4
-          + 1/12*phi(2,q4)*phi(7,q1)*phi(9,q2)*p1ext.q4
-          + 1/24*phi(2,q4)*phi(8,q1)*phi(8,q2)*p1ext.q4
-          + 1/24*phi(2,q4)*phi(9,q1)*phi(9,q2)*p1ext.q4
-          + 1/6*phi(3,q1)*phi(4,q2)*phi(7,q4)*p1ext.q4*sqrt2^-1
-          + 1/6*phi(3,q1)*phi(4,q2)*phi(9,q4)*p1ext.q4*sqrt2^-1
-          - 1/3*phi(3,q1)*phi(4,q4)*phi(7,q2)*p1ext.q4*sqrt2^-1
-          - 1/3*phi(3,q1)*phi(4,q4)*phi(9,q2)*p1ext.q4*sqrt2^-1
-          - 1/6*phi(3,q1)*phi(5,q2)*phi(6,q4)*p1ext.q4*sqrt2^-1
-          - 1/6*phi(3,q1)*phi(5,q2)*phi(8,q4)*p1ext.q4*sqrt2^-1
-          + 1/3*phi(3,q1)*phi(5,q4)*phi(6,q2)*p1ext.q4*sqrt2^-1
-          + 1/3*phi(3,q1)*phi(5,q4)*phi(8,q2)*p1ext.q4*sqrt2^-1
-          - 1/6*phi(3,q2)*phi(4,q3)*phi(7,q4)*sqrt2^-1*muu
-          + 1/6*phi(3,q2)*phi(4,q3)*phi(7,q4)*q3.q4*sqrt2^-1
-          - 1/6*phi(3,q2)*phi(4,q3)*phi(9,q4)*sqrt2^-1*mdd
-          + 1/6*phi(3,q2)*phi(4,q3)*phi(9,q4)*q3.q4*sqrt2^-1
-          + 1/6*phi(3,q2)*phi(5,q3)*phi(6,q4)*sqrt2^-1*muu
-          - 1/6*phi(3,q2)*phi(5,q3)*phi(6,q4)*q3.q4*sqrt2^-1
-          + 1/6*phi(3,q2)*phi(5,q3)*phi(8,q4)*sqrt2^-1*mdd
-          - 1/6*phi(3,q2)*phi(5,q3)*phi(8,q4)*q3.q4*sqrt2^-1
-          - 1/3*phi(3,q3)*phi(4,q2)*phi(7,q4)*q3.q4*sqrt2^-1
-          - 1/3*phi(3,q3)*phi(4,q2)*phi(9,q4)*q3.q4*sqrt2^-1
-          + 1/6*phi(3,q3)*phi(4,q4)*phi(7,q2)*q3.q4*sqrt2^-1
-          + 1/6*phi(3,q3)*phi(4,q4)*phi(9,q2)*q3.q4*sqrt2^-1
-          + 1/3*phi(3,q3)*phi(5,q2)*phi(6,q4)*q3.q4*sqrt2^-1
-          + 1/3*phi(3,q3)*phi(5,q2)*phi(8,q4)*q3.q4*sqrt2^-1
-          - 1/6*phi(3,q3)*phi(5,q4)*phi(6,q2)*q3.q4*sqrt2^-1
-          - 1/6*phi(3,q3)*phi(5,q4)*phi(8,q2)*q3.q4*sqrt2^-1
-          + 1/6*phi(3,q4)*phi(4,q1)*phi(7,q2)*p1ext.q4*sqrt2^-1
-          + 1/6*phi(3,q4)*phi(4,q1)*phi(9,q2)*p1ext.q4*sqrt2^-1
-          - 1/6*phi(3,q4)*phi(5,q1)*phi(6,q2)*p1ext.q4*sqrt2^-1
-          - 1/6*phi(3,q4)*phi(5,q1)*phi(8,q2)*p1ext.q4*sqrt2^-1
-          );
-
-   MM8x22SO44Mp2Right =
-
-       + F^-2 * (
           + 1/48*phi(1,p1)*phi(1,p2)*phi(2,p3)*mdd
           + 1/48*phi(1,p1)*phi(1,p2)*phi(2,p3)*muu
-          - 1/12*phi(1,p1)*phi(1,p2)*phi(2,p3)*p1ext.p3
+          + 1/12*phi(1,p1)*phi(1,p2)*phi(2,p3)*p1ext.p3
           + 1/48*phi(1,p1)*phi(1,p2)*phi(2,p4)*mdd
           + 1/48*phi(1,p1)*phi(1,p2)*phi(2,p4)*muu
-          - 1/12*phi(1,p1)*phi(1,p2)*phi(2,p4)*p1ext.p4
-          + 1/6*phi(1,p1)*phi(1,p3)*phi(2,p2)*p1ext.p3
+          + 1/12*phi(1,p1)*phi(1,p2)*phi(2,p4)*p1ext.p4
+          - 1/6*phi(1,p1)*phi(1,p3)*phi(2,p2)*p1ext.p3
           - 1/6*phi(1,p1)*phi(1,p3)*phi(2,p4)*p3.p4
-          + 1/4*phi(1,p1)*phi(6,p2)*phi(7,p4)*p1ext.p4
-          - 1/12*phi(1,p1)*phi(6,p2)*phi(9,p4)*p1ext.p4
+          - 1/4*phi(1,p1)*phi(6,p2)*phi(7,p4)*p1ext.p4
+          + 1/12*phi(1,p1)*phi(6,p2)*phi(9,p4)*p1ext.p4
           + 1/12*phi(1,p1)*phi(6,p3)*phi(9,p4)*mdd
           + 1/12*phi(1,p1)*phi(6,p3)*phi(9,p4)*muu
           - 1/6*phi(1,p1)*phi(6,p3)*phi(9,p4)*p3.p4
-          - 1/4*phi(1,p1)*phi(6,p4)*phi(7,p2)*p1ext.p4
-          - 1/12*phi(1,p1)*phi(6,p4)*phi(9,p2)*p1ext.p4
-          + 1/12*phi(1,p1)*phi(7,p2)*phi(8,p4)*p1ext.p4
+          + 1/4*phi(1,p1)*phi(6,p4)*phi(7,p2)*p1ext.p4
+          + 1/12*phi(1,p1)*phi(6,p4)*phi(9,p2)*p1ext.p4
+          - 1/12*phi(1,p1)*phi(7,p2)*phi(8,p4)*p1ext.p4
           - 1/12*phi(1,p1)*phi(7,p3)*phi(8,p4)*mdd
           - 1/12*phi(1,p1)*phi(7,p3)*phi(8,p4)*muu
           + 1/6*phi(1,p1)*phi(7,p3)*phi(8,p4)*p3.p4
-          + 1/12*phi(1,p1)*phi(7,p4)*phi(8,p2)*p1ext.p4
-          - 1/4*phi(1,p1)*phi(8,p2)*phi(9,p4)*p1ext.p4
-          + 1/4*phi(1,p1)*phi(8,p4)*phi(9,p2)*p1ext.p4
+          - 1/12*phi(1,p1)*phi(7,p4)*phi(8,p2)*p1ext.p4
+          + 1/4*phi(1,p1)*phi(8,p2)*phi(9,p4)*p1ext.p4
+          - 1/4*phi(1,p1)*phi(8,p4)*phi(9,p2)*p1ext.p4
           + 1/12*phi(1,p3)*phi(1,p4)*phi(2,p1)*p3.p4
           + 1/12*phi(1,p3)*phi(1,p4)*phi(2,p2)*p3.p4
-          + 1/6*phi(1,p3)*phi(6,p1)*phi(9,p2)*p1ext.p3
+          - 1/6*phi(1,p3)*phi(6,p1)*phi(9,p2)*p1ext.p3
           + 1/4*phi(1,p3)*phi(6,p2)*phi(7,p4)*p3.p4
           + 1/12*phi(1,p3)*phi(6,p2)*phi(9,p4)*p3.p4
           - 1/4*phi(1,p3)*phi(6,p4)*phi(7,p2)*p3.p4
           + 1/12*phi(1,p3)*phi(6,p4)*phi(9,p2)*p3.p4
-          - 1/6*phi(1,p3)*phi(7,p1)*phi(8,p2)*p1ext.p3
+          + 1/6*phi(1,p3)*phi(7,p1)*phi(8,p2)*p1ext.p3
           - 1/12*phi(1,p3)*phi(7,p2)*phi(8,p4)*p3.p4
           - 1/12*phi(1,p3)*phi(7,p4)*phi(8,p2)*p3.p4
           - 1/4*phi(1,p3)*phi(8,p2)*phi(9,p4)*p3.p4
@@ -205,7 +48,7 @@
           + 1/96*phi(2,p1)*phi(2,p2)*phi(2,p4)*muu
           + 1/96*phi(2,p1)*phi(2,p3)*phi(2,p4)*mdd
           + 1/96*phi(2,p1)*phi(2,p3)*phi(2,p4)*muu
-          + 1/6*phi(2,p1)*phi(3,p2)*phi(3,p4)*p1ext.p4
+          - 1/6*phi(2,p1)*phi(3,p2)*phi(3,p4)*p1ext.p4
           + 1/48*phi(2,p1)*phi(3,p3)*phi(3,p4)*mdd
           + 1/48*phi(2,p1)*phi(3,p3)*phi(3,p4)*muu
           + 1/12*phi(2,p1)*phi(3,p3)*phi(3,p4)*p3.p4
@@ -213,29 +56,29 @@
           + 1/16*phi(2,p1)*phi(4,p3)*phi(4,p4)*muu
           + 1/16*phi(2,p1)*phi(5,p3)*phi(5,p4)*mdd
           + 1/16*phi(2,p1)*phi(5,p3)*phi(5,p4)*muu
-          + 1/12*phi(2,p1)*phi(6,p2)*phi(6,p4)*p1ext.p4
-          + 1/12*phi(2,p1)*phi(6,p2)*phi(8,p4)*p1ext.p4
+          - 1/12*phi(2,p1)*phi(6,p2)*phi(6,p4)*p1ext.p4
+          - 1/12*phi(2,p1)*phi(6,p2)*phi(8,p4)*p1ext.p4
           + 1/48*phi(2,p1)*phi(6,p3)*phi(6,p4)*mdd
           + 1/16*phi(2,p1)*phi(6,p3)*phi(6,p4)*muu
           + 1/24*phi(2,p1)*phi(6,p3)*phi(6,p4)*p3.p4
           - 1/24*phi(2,p1)*phi(6,p3)*phi(8,p4)*mdd
           - 1/24*phi(2,p1)*phi(6,p3)*phi(8,p4)*muu
           + 1/12*phi(2,p1)*phi(6,p3)*phi(8,p4)*p3.p4
-          + 1/12*phi(2,p1)*phi(6,p4)*phi(8,p2)*p1ext.p4
-          + 1/12*phi(2,p1)*phi(7,p2)*phi(7,p4)*p1ext.p4
-          + 1/12*phi(2,p1)*phi(7,p2)*phi(9,p4)*p1ext.p4
+          - 1/12*phi(2,p1)*phi(6,p4)*phi(8,p2)*p1ext.p4
+          - 1/12*phi(2,p1)*phi(7,p2)*phi(7,p4)*p1ext.p4
+          - 1/12*phi(2,p1)*phi(7,p2)*phi(9,p4)*p1ext.p4
           + 1/48*phi(2,p1)*phi(7,p3)*phi(7,p4)*mdd
           + 1/16*phi(2,p1)*phi(7,p3)*phi(7,p4)*muu
           + 1/24*phi(2,p1)*phi(7,p3)*phi(7,p4)*p3.p4
           - 1/24*phi(2,p1)*phi(7,p3)*phi(9,p4)*mdd
           - 1/24*phi(2,p1)*phi(7,p3)*phi(9,p4)*muu
           + 1/12*phi(2,p1)*phi(7,p3)*phi(9,p4)*p3.p4
-          + 1/12*phi(2,p1)*phi(7,p4)*phi(9,p2)*p1ext.p4
-          + 1/12*phi(2,p1)*phi(8,p2)*phi(8,p4)*p1ext.p4
+          - 1/12*phi(2,p1)*phi(7,p4)*phi(9,p2)*p1ext.p4
+          - 1/12*phi(2,p1)*phi(8,p2)*phi(8,p4)*p1ext.p4
           + 1/16*phi(2,p1)*phi(8,p3)*phi(8,p4)*mdd
           + 1/48*phi(2,p1)*phi(8,p3)*phi(8,p4)*muu
           + 1/24*phi(2,p1)*phi(8,p3)*phi(8,p4)*p3.p4
-          + 1/12*phi(2,p1)*phi(9,p2)*phi(9,p4)*p1ext.p4
+          - 1/12*phi(2,p1)*phi(9,p2)*phi(9,p4)*p1ext.p4
           + 1/16*phi(2,p1)*phi(9,p3)*phi(9,p4)*mdd
           + 1/48*phi(2,p1)*phi(9,p3)*phi(9,p4)*muu
           + 1/24*phi(2,p1)*phi(9,p3)*phi(9,p4)*p3.p4
@@ -266,37 +109,37 @@
           + 1/16*phi(2,p2)*phi(9,p3)*phi(9,p4)*mdd
           + 1/48*phi(2,p2)*phi(9,p3)*phi(9,p4)*muu
           + 1/24*phi(2,p2)*phi(9,p3)*phi(9,p4)*p3.p4
-          - 1/12*phi(2,p3)*phi(3,p1)*phi(3,p2)*p1ext.p3
+          + 1/12*phi(2,p3)*phi(3,p1)*phi(3,p2)*p1ext.p3
           - 1/6*phi(2,p3)*phi(3,p2)*phi(3,p4)*p3.p4
-          - 1/24*phi(2,p3)*phi(6,p1)*phi(6,p2)*p1ext.p3
-          - 1/12*phi(2,p3)*phi(6,p1)*phi(8,p2)*p1ext.p3
+          + 1/24*phi(2,p3)*phi(6,p1)*phi(6,p2)*p1ext.p3
+          + 1/12*phi(2,p3)*phi(6,p1)*phi(8,p2)*p1ext.p3
           - 1/12*phi(2,p3)*phi(6,p2)*phi(6,p4)*p3.p4
           - 1/12*phi(2,p3)*phi(6,p2)*phi(8,p4)*p3.p4
           - 1/12*phi(2,p3)*phi(6,p4)*phi(8,p2)*p3.p4
-          - 1/24*phi(2,p3)*phi(7,p1)*phi(7,p2)*p1ext.p3
-          - 1/12*phi(2,p3)*phi(7,p1)*phi(9,p2)*p1ext.p3
+          + 1/24*phi(2,p3)*phi(7,p1)*phi(7,p2)*p1ext.p3
+          + 1/12*phi(2,p3)*phi(7,p1)*phi(9,p2)*p1ext.p3
           - 1/12*phi(2,p3)*phi(7,p2)*phi(7,p4)*p3.p4
           - 1/12*phi(2,p3)*phi(7,p2)*phi(9,p4)*p3.p4
           - 1/12*phi(2,p3)*phi(7,p4)*phi(9,p2)*p3.p4
-          - 1/24*phi(2,p3)*phi(8,p1)*phi(8,p2)*p1ext.p3
+          + 1/24*phi(2,p3)*phi(8,p1)*phi(8,p2)*p1ext.p3
           - 1/12*phi(2,p3)*phi(8,p2)*phi(8,p4)*p3.p4
-          - 1/24*phi(2,p3)*phi(9,p1)*phi(9,p2)*p1ext.p3
+          + 1/24*phi(2,p3)*phi(9,p1)*phi(9,p2)*p1ext.p3
           - 1/12*phi(2,p3)*phi(9,p2)*phi(9,p4)*p3.p4
-          - 1/12*phi(2,p4)*phi(3,p1)*phi(3,p2)*p1ext.p4
-          - 1/24*phi(2,p4)*phi(6,p1)*phi(6,p2)*p1ext.p4
-          - 1/12*phi(2,p4)*phi(6,p1)*phi(8,p2)*p1ext.p4
-          - 1/24*phi(2,p4)*phi(7,p1)*phi(7,p2)*p1ext.p4
-          - 1/12*phi(2,p4)*phi(7,p1)*phi(9,p2)*p1ext.p4
-          - 1/24*phi(2,p4)*phi(8,p1)*phi(8,p2)*p1ext.p4
-          - 1/24*phi(2,p4)*phi(9,p1)*phi(9,p2)*p1ext.p4
-          - 1/6*phi(3,p1)*phi(4,p2)*phi(7,p4)*p1ext.p4*sqrt2^-1
-          - 1/6*phi(3,p1)*phi(4,p2)*phi(9,p4)*p1ext.p4*sqrt2^-1
-          + 1/3*phi(3,p1)*phi(4,p4)*phi(7,p2)*p1ext.p4*sqrt2^-1
-          + 1/3*phi(3,p1)*phi(4,p4)*phi(9,p2)*p1ext.p4*sqrt2^-1
-          + 1/6*phi(3,p1)*phi(5,p2)*phi(6,p4)*p1ext.p4*sqrt2^-1
-          + 1/6*phi(3,p1)*phi(5,p2)*phi(8,p4)*p1ext.p4*sqrt2^-1
-          - 1/3*phi(3,p1)*phi(5,p4)*phi(6,p2)*p1ext.p4*sqrt2^-1
-          - 1/3*phi(3,p1)*phi(5,p4)*phi(8,p2)*p1ext.p4*sqrt2^-1
+          + 1/12*phi(2,p4)*phi(3,p1)*phi(3,p2)*p1ext.p4
+          + 1/24*phi(2,p4)*phi(6,p1)*phi(6,p2)*p1ext.p4
+          + 1/12*phi(2,p4)*phi(6,p1)*phi(8,p2)*p1ext.p4
+          + 1/24*phi(2,p4)*phi(7,p1)*phi(7,p2)*p1ext.p4
+          + 1/12*phi(2,p4)*phi(7,p1)*phi(9,p2)*p1ext.p4
+          + 1/24*phi(2,p4)*phi(8,p1)*phi(8,p2)*p1ext.p4
+          + 1/24*phi(2,p4)*phi(9,p1)*phi(9,p2)*p1ext.p4
+          + 1/6*phi(3,p1)*phi(4,p2)*phi(7,p4)*p1ext.p4*sqrt2^-1
+          + 1/6*phi(3,p1)*phi(4,p2)*phi(9,p4)*p1ext.p4*sqrt2^-1
+          - 1/3*phi(3,p1)*phi(4,p4)*phi(7,p2)*p1ext.p4*sqrt2^-1
+          - 1/3*phi(3,p1)*phi(4,p4)*phi(9,p2)*p1ext.p4*sqrt2^-1
+          - 1/6*phi(3,p1)*phi(5,p2)*phi(6,p4)*p1ext.p4*sqrt2^-1
+          - 1/6*phi(3,p1)*phi(5,p2)*phi(8,p4)*p1ext.p4*sqrt2^-1
+          + 1/3*phi(3,p1)*phi(5,p4)*phi(6,p2)*p1ext.p4*sqrt2^-1
+          + 1/3*phi(3,p1)*phi(5,p4)*phi(8,p2)*p1ext.p4*sqrt2^-1
           - 1/6*phi(3,p2)*phi(4,p3)*phi(7,p4)*sqrt2^-1*muu
           + 1/6*phi(3,p2)*phi(4,p3)*phi(7,p4)*p3.p4*sqrt2^-1
           - 1/6*phi(3,p2)*phi(4,p3)*phi(9,p4)*sqrt2^-1*mdd
@@ -313,383 +156,792 @@
           + 1/3*phi(3,p3)*phi(5,p2)*phi(8,p4)*p3.p4*sqrt2^-1
           - 1/6*phi(3,p3)*phi(5,p4)*phi(6,p2)*p3.p4*sqrt2^-1
           - 1/6*phi(3,p3)*phi(5,p4)*phi(8,p2)*p3.p4*sqrt2^-1
-          - 1/6*phi(3,p4)*phi(4,p1)*phi(7,p2)*p1ext.p4*sqrt2^-1
-          - 1/6*phi(3,p4)*phi(4,p1)*phi(9,p2)*p1ext.p4*sqrt2^-1
-          + 1/6*phi(3,p4)*phi(5,p1)*phi(6,p2)*p1ext.p4*sqrt2^-1
-          + 1/6*phi(3,p4)*phi(5,p1)*phi(8,p2)*p1ext.p4*sqrt2^-1
+          + 1/6*phi(3,p4)*phi(4,p1)*phi(7,p2)*p1ext.p4*sqrt2^-1
+          + 1/6*phi(3,p4)*phi(4,p1)*phi(9,p2)*p1ext.p4*sqrt2^-1
+          - 1/6*phi(3,p4)*phi(5,p1)*phi(6,p2)*p1ext.p4*sqrt2^-1
+          - 1/6*phi(3,p4)*phi(5,p1)*phi(8,p2)*p1ext.p4*sqrt2^-1
+          );
+
+   MM8x22SO44Mp2Right =
+
+       + F^-2 * (
+          + 1/48*phi(1,q1)*phi(1,q2)*phi(2,q3)*mdd
+          + 1/48*phi(1,q1)*phi(1,q2)*phi(2,q3)*muu
+          - 1/12*phi(1,q1)*phi(1,q2)*phi(2,q3)*p1ext.q3
+          + 1/48*phi(1,q1)*phi(1,q2)*phi(2,q4)*mdd
+          + 1/48*phi(1,q1)*phi(1,q2)*phi(2,q4)*muu
+          - 1/12*phi(1,q1)*phi(1,q2)*phi(2,q4)*p1ext.q4
+          + 1/6*phi(1,q1)*phi(1,q3)*phi(2,q2)*p1ext.q3
+          - 1/6*phi(1,q1)*phi(1,q3)*phi(2,q4)*q3.q4
+          + 1/4*phi(1,q1)*phi(6,q2)*phi(7,q4)*p1ext.q4
+          - 1/12*phi(1,q1)*phi(6,q2)*phi(9,q4)*p1ext.q4
+          + 1/12*phi(1,q1)*phi(6,q3)*phi(9,q4)*mdd
+          + 1/12*phi(1,q1)*phi(6,q3)*phi(9,q4)*muu
+          - 1/6*phi(1,q1)*phi(6,q3)*phi(9,q4)*q3.q4
+          - 1/4*phi(1,q1)*phi(6,q4)*phi(7,q2)*p1ext.q4
+          - 1/12*phi(1,q1)*phi(6,q4)*phi(9,q2)*p1ext.q4
+          + 1/12*phi(1,q1)*phi(7,q2)*phi(8,q4)*p1ext.q4
+          - 1/12*phi(1,q1)*phi(7,q3)*phi(8,q4)*mdd
+          - 1/12*phi(1,q1)*phi(7,q3)*phi(8,q4)*muu
+          + 1/6*phi(1,q1)*phi(7,q3)*phi(8,q4)*q3.q4
+          + 1/12*phi(1,q1)*phi(7,q4)*phi(8,q2)*p1ext.q4
+          - 1/4*phi(1,q1)*phi(8,q2)*phi(9,q4)*p1ext.q4
+          + 1/4*phi(1,q1)*phi(8,q4)*phi(9,q2)*p1ext.q4
+          + 1/12*phi(1,q3)*phi(1,q4)*phi(2,q1)*q3.q4
+          + 1/12*phi(1,q3)*phi(1,q4)*phi(2,q2)*q3.q4
+          + 1/6*phi(1,q3)*phi(6,q1)*phi(9,q2)*p1ext.q3
+          + 1/4*phi(1,q3)*phi(6,q2)*phi(7,q4)*q3.q4
+          + 1/12*phi(1,q3)*phi(6,q2)*phi(9,q4)*q3.q4
+          - 1/4*phi(1,q3)*phi(6,q4)*phi(7,q2)*q3.q4
+          + 1/12*phi(1,q3)*phi(6,q4)*phi(9,q2)*q3.q4
+          - 1/6*phi(1,q3)*phi(7,q1)*phi(8,q2)*p1ext.q3
+          - 1/12*phi(1,q3)*phi(7,q2)*phi(8,q4)*q3.q4
+          - 1/12*phi(1,q3)*phi(7,q4)*phi(8,q2)*q3.q4
+          - 1/4*phi(1,q3)*phi(8,q2)*phi(9,q4)*q3.q4
+          + 1/4*phi(1,q3)*phi(8,q4)*phi(9,q2)*q3.q4
+          + 1/96*phi(2,q1)*phi(2,q2)*phi(2,q3)*mdd
+          + 1/96*phi(2,q1)*phi(2,q2)*phi(2,q3)*muu
+          + 1/96*phi(2,q1)*phi(2,q2)*phi(2,q4)*mdd
+          + 1/96*phi(2,q1)*phi(2,q2)*phi(2,q4)*muu
+          + 1/96*phi(2,q1)*phi(2,q3)*phi(2,q4)*mdd
+          + 1/96*phi(2,q1)*phi(2,q3)*phi(2,q4)*muu
+          + 1/6*phi(2,q1)*phi(3,q2)*phi(3,q4)*p1ext.q4
+          + 1/48*phi(2,q1)*phi(3,q3)*phi(3,q4)*mdd
+          + 1/48*phi(2,q1)*phi(3,q3)*phi(3,q4)*muu
+          + 1/12*phi(2,q1)*phi(3,q3)*phi(3,q4)*q3.q4
+          + 1/16*phi(2,q1)*phi(4,q3)*phi(4,q4)*mdd
+          + 1/16*phi(2,q1)*phi(4,q3)*phi(4,q4)*muu
+          + 1/16*phi(2,q1)*phi(5,q3)*phi(5,q4)*mdd
+          + 1/16*phi(2,q1)*phi(5,q3)*phi(5,q4)*muu
+          + 1/12*phi(2,q1)*phi(6,q2)*phi(6,q4)*p1ext.q4
+          + 1/12*phi(2,q1)*phi(6,q2)*phi(8,q4)*p1ext.q4
+          + 1/48*phi(2,q1)*phi(6,q3)*phi(6,q4)*mdd
+          + 1/16*phi(2,q1)*phi(6,q3)*phi(6,q4)*muu
+          + 1/24*phi(2,q1)*phi(6,q3)*phi(6,q4)*q3.q4
+          - 1/24*phi(2,q1)*phi(6,q3)*phi(8,q4)*mdd
+          - 1/24*phi(2,q1)*phi(6,q3)*phi(8,q4)*muu
+          + 1/12*phi(2,q1)*phi(6,q3)*phi(8,q4)*q3.q4
+          + 1/12*phi(2,q1)*phi(6,q4)*phi(8,q2)*p1ext.q4
+          + 1/12*phi(2,q1)*phi(7,q2)*phi(7,q4)*p1ext.q4
+          + 1/12*phi(2,q1)*phi(7,q2)*phi(9,q4)*p1ext.q4
+          + 1/48*phi(2,q1)*phi(7,q3)*phi(7,q4)*mdd
+          + 1/16*phi(2,q1)*phi(7,q3)*phi(7,q4)*muu
+          + 1/24*phi(2,q1)*phi(7,q3)*phi(7,q4)*q3.q4
+          - 1/24*phi(2,q1)*phi(7,q3)*phi(9,q4)*mdd
+          - 1/24*phi(2,q1)*phi(7,q3)*phi(9,q4)*muu
+          + 1/12*phi(2,q1)*phi(7,q3)*phi(9,q4)*q3.q4
+          + 1/12*phi(2,q1)*phi(7,q4)*phi(9,q2)*p1ext.q4
+          + 1/12*phi(2,q1)*phi(8,q2)*phi(8,q4)*p1ext.q4
+          + 1/16*phi(2,q1)*phi(8,q3)*phi(8,q4)*mdd
+          + 1/48*phi(2,q1)*phi(8,q3)*phi(8,q4)*muu
+          + 1/24*phi(2,q1)*phi(8,q3)*phi(8,q4)*q3.q4
+          + 1/12*phi(2,q1)*phi(9,q2)*phi(9,q4)*p1ext.q4
+          + 1/16*phi(2,q1)*phi(9,q3)*phi(9,q4)*mdd
+          + 1/48*phi(2,q1)*phi(9,q3)*phi(9,q4)*muu
+          + 1/24*phi(2,q1)*phi(9,q3)*phi(9,q4)*q3.q4
+          + 1/96*phi(2,q2)*phi(2,q3)*phi(2,q4)*mdd
+          + 1/96*phi(2,q2)*phi(2,q3)*phi(2,q4)*muu
+          + 1/48*phi(2,q2)*phi(3,q3)*phi(3,q4)*mdd
+          + 1/48*phi(2,q2)*phi(3,q3)*phi(3,q4)*muu
+          + 1/12*phi(2,q2)*phi(3,q3)*phi(3,q4)*q3.q4
+          + 1/16*phi(2,q2)*phi(4,q3)*phi(4,q4)*mdd
+          + 1/16*phi(2,q2)*phi(4,q3)*phi(4,q4)*muu
+          + 1/16*phi(2,q2)*phi(5,q3)*phi(5,q4)*mdd
+          + 1/16*phi(2,q2)*phi(5,q3)*phi(5,q4)*muu
+          + 1/48*phi(2,q2)*phi(6,q3)*phi(6,q4)*mdd
+          + 1/16*phi(2,q2)*phi(6,q3)*phi(6,q4)*muu
+          + 1/24*phi(2,q2)*phi(6,q3)*phi(6,q4)*q3.q4
+          - 1/24*phi(2,q2)*phi(6,q3)*phi(8,q4)*mdd
+          - 1/24*phi(2,q2)*phi(6,q3)*phi(8,q4)*muu
+          + 1/12*phi(2,q2)*phi(6,q3)*phi(8,q4)*q3.q4
+          + 1/48*phi(2,q2)*phi(7,q3)*phi(7,q4)*mdd
+          + 1/16*phi(2,q2)*phi(7,q3)*phi(7,q4)*muu
+          + 1/24*phi(2,q2)*phi(7,q3)*phi(7,q4)*q3.q4
+          - 1/24*phi(2,q2)*phi(7,q3)*phi(9,q4)*mdd
+          - 1/24*phi(2,q2)*phi(7,q3)*phi(9,q4)*muu
+          + 1/12*phi(2,q2)*phi(7,q3)*phi(9,q4)*q3.q4
+          + 1/16*phi(2,q2)*phi(8,q3)*phi(8,q4)*mdd
+          + 1/48*phi(2,q2)*phi(8,q3)*phi(8,q4)*muu
+          + 1/24*phi(2,q2)*phi(8,q3)*phi(8,q4)*q3.q4
+          + 1/16*phi(2,q2)*phi(9,q3)*phi(9,q4)*mdd
+          + 1/48*phi(2,q2)*phi(9,q3)*phi(9,q4)*muu
+          + 1/24*phi(2,q2)*phi(9,q3)*phi(9,q4)*q3.q4
+          - 1/12*phi(2,q3)*phi(3,q1)*phi(3,q2)*p1ext.q3
+          - 1/6*phi(2,q3)*phi(3,q2)*phi(3,q4)*q3.q4
+          - 1/24*phi(2,q3)*phi(6,q1)*phi(6,q2)*p1ext.q3
+          - 1/12*phi(2,q3)*phi(6,q1)*phi(8,q2)*p1ext.q3
+          - 1/12*phi(2,q3)*phi(6,q2)*phi(6,q4)*q3.q4
+          - 1/12*phi(2,q3)*phi(6,q2)*phi(8,q4)*q3.q4
+          - 1/12*phi(2,q3)*phi(6,q4)*phi(8,q2)*q3.q4
+          - 1/24*phi(2,q3)*phi(7,q1)*phi(7,q2)*p1ext.q3
+          - 1/12*phi(2,q3)*phi(7,q1)*phi(9,q2)*p1ext.q3
+          - 1/12*phi(2,q3)*phi(7,q2)*phi(7,q4)*q3.q4
+          - 1/12*phi(2,q3)*phi(7,q2)*phi(9,q4)*q3.q4
+          - 1/12*phi(2,q3)*phi(7,q4)*phi(9,q2)*q3.q4
+          - 1/24*phi(2,q3)*phi(8,q1)*phi(8,q2)*p1ext.q3
+          - 1/12*phi(2,q3)*phi(8,q2)*phi(8,q4)*q3.q4
+          - 1/24*phi(2,q3)*phi(9,q1)*phi(9,q2)*p1ext.q3
+          - 1/12*phi(2,q3)*phi(9,q2)*phi(9,q4)*q3.q4
+          - 1/12*phi(2,q4)*phi(3,q1)*phi(3,q2)*p1ext.q4
+          - 1/24*phi(2,q4)*phi(6,q1)*phi(6,q2)*p1ext.q4
+          - 1/12*phi(2,q4)*phi(6,q1)*phi(8,q2)*p1ext.q4
+          - 1/24*phi(2,q4)*phi(7,q1)*phi(7,q2)*p1ext.q4
+          - 1/12*phi(2,q4)*phi(7,q1)*phi(9,q2)*p1ext.q4
+          - 1/24*phi(2,q4)*phi(8,q1)*phi(8,q2)*p1ext.q4
+          - 1/24*phi(2,q4)*phi(9,q1)*phi(9,q2)*p1ext.q4
+          - 1/6*phi(3,q1)*phi(4,q2)*phi(7,q4)*p1ext.q4*sqrt2^-1
+          - 1/6*phi(3,q1)*phi(4,q2)*phi(9,q4)*p1ext.q4*sqrt2^-1
+          + 1/3*phi(3,q1)*phi(4,q4)*phi(7,q2)*p1ext.q4*sqrt2^-1
+          + 1/3*phi(3,q1)*phi(4,q4)*phi(9,q2)*p1ext.q4*sqrt2^-1
+          + 1/6*phi(3,q1)*phi(5,q2)*phi(6,q4)*p1ext.q4*sqrt2^-1
+          + 1/6*phi(3,q1)*phi(5,q2)*phi(8,q4)*p1ext.q4*sqrt2^-1
+          - 1/3*phi(3,q1)*phi(5,q4)*phi(6,q2)*p1ext.q4*sqrt2^-1
+          - 1/3*phi(3,q1)*phi(5,q4)*phi(8,q2)*p1ext.q4*sqrt2^-1
+          - 1/6*phi(3,q2)*phi(4,q3)*phi(7,q4)*sqrt2^-1*muu
+          + 1/6*phi(3,q2)*phi(4,q3)*phi(7,q4)*q3.q4*sqrt2^-1
+          - 1/6*phi(3,q2)*phi(4,q3)*phi(9,q4)*sqrt2^-1*mdd
+          + 1/6*phi(3,q2)*phi(4,q3)*phi(9,q4)*q3.q4*sqrt2^-1
+          + 1/6*phi(3,q2)*phi(5,q3)*phi(6,q4)*sqrt2^-1*muu
+          - 1/6*phi(3,q2)*phi(5,q3)*phi(6,q4)*q3.q4*sqrt2^-1
+          + 1/6*phi(3,q2)*phi(5,q3)*phi(8,q4)*sqrt2^-1*mdd
+          - 1/6*phi(3,q2)*phi(5,q3)*phi(8,q4)*q3.q4*sqrt2^-1
+          - 1/3*phi(3,q3)*phi(4,q2)*phi(7,q4)*q3.q4*sqrt2^-1
+          - 1/3*phi(3,q3)*phi(4,q2)*phi(9,q4)*q3.q4*sqrt2^-1
+          + 1/6*phi(3,q3)*phi(4,q4)*phi(7,q2)*q3.q4*sqrt2^-1
+          + 1/6*phi(3,q3)*phi(4,q4)*phi(9,q2)*q3.q4*sqrt2^-1
+          + 1/3*phi(3,q3)*phi(5,q2)*phi(6,q4)*q3.q4*sqrt2^-1
+          + 1/3*phi(3,q3)*phi(5,q2)*phi(8,q4)*q3.q4*sqrt2^-1
+          - 1/6*phi(3,q3)*phi(5,q4)*phi(6,q2)*q3.q4*sqrt2^-1
+          - 1/6*phi(3,q3)*phi(5,q4)*phi(8,q2)*q3.q4*sqrt2^-1
+          - 1/6*phi(3,q4)*phi(4,q1)*phi(7,q2)*p1ext.q4*sqrt2^-1
+          - 1/6*phi(3,q4)*phi(4,q1)*phi(9,q2)*p1ext.q4*sqrt2^-1
+          + 1/6*phi(3,q4)*phi(5,q1)*phi(6,q2)*p1ext.q4*sqrt2^-1
+          + 1/6*phi(3,q4)*phi(5,q1)*phi(8,q2)*p1ext.q4*sqrt2^-1
           );
 
    product =
 
+       + i_*F^-4 * (
+          - 1/9*HH1(muu,muu,mp2,p1ext.p1ext)*p1ext.p1ext*mp2
+          - 1/18*HH1(muu,muu,mp2,p1ext.p1ext)*p1ext.p1ext*mdd
+          - 1/18*HH1(muu,muu,mp2,p1ext.p1ext)*p1ext.p1ext*muu
+          + 2/9*HH1(muu,muu,mp2,p1ext.p1ext)*p1ext.p1ext^2
+          - 2/9*HH1(muu,mdd,mp2,p1ext.p1ext)*p1ext.p1ext*mp2
+          + 2/9*HH1(muu,mdd,mp2,p1ext.p1ext)*p1ext.p1ext*mdd
+          + 2/9*HH1(muu,mdd,mp2,p1ext.p1ext)*p1ext.p1ext*muu
+          - 2/9*HH1(muu,mdd,mp2,p1ext.p1ext)*p1ext.p1ext^2
+          - 2/9*HH1(muu,mp2,mp2,p1ext.p1ext)*p1ext.p1ext*sqrt2^-2*mp2
+          - 4/9*HH1(muu,mp2,mp2,p1ext.p1ext)*p1ext.p1ext^2*sqrt2^-2
+          - 2/9*HH1(mdd,muu,mp2,p1ext.p1ext)*p1ext.p1ext*mp2
+          + 2/9*HH1(mdd,muu,mp2,p1ext.p1ext)*p1ext.p1ext*mdd
+          + 2/9*HH1(mdd,muu,mp2,p1ext.p1ext)*p1ext.p1ext*muu
+          - 2/9*HH1(mdd,muu,mp2,p1ext.p1ext)*p1ext.p1ext^2
+          - 1/9*HH1(mdd,mdd,mp2,p1ext.p1ext)*p1ext.p1ext*mp2
+          - 1/18*HH1(mdd,mdd,mp2,p1ext.p1ext)*p1ext.p1ext*mdd
+          - 1/18*HH1(mdd,mdd,mp2,p1ext.p1ext)*p1ext.p1ext*muu
+          + 2/9*HH1(mdd,mdd,mp2,p1ext.p1ext)*p1ext.p1ext^2
+          - 2/9*HH1(mdd,mp2,mp2,p1ext.p1ext)*p1ext.p1ext*sqrt2^-2*mp2
+          - 4/9*HH1(mdd,mp2,mp2,p1ext.p1ext)*p1ext.p1ext^2*sqrt2^-2
+          + 1/9*HH1(mp2,muu,muu,p1ext.p1ext)*p1ext.p1ext*mp2
+          + 1/18*HH1(mp2,muu,muu,p1ext.p1ext)*p1ext.p1ext*mdd
+          + 1/18*HH1(mp2,muu,muu,p1ext.p1ext)*p1ext.p1ext*muu
+          - 2/9*HH1(mp2,muu,muu,p1ext.p1ext)*p1ext.p1ext^2
+          + 2/9*HH1(mp2,muu,mdd,p1ext.p1ext)*p1ext.p1ext*mp2
+          - 2/9*HH1(mp2,muu,mdd,p1ext.p1ext)*p1ext.p1ext*mdd
+          - 2/9*HH1(mp2,muu,mdd,p1ext.p1ext)*p1ext.p1ext*muu
+          + 2/9*HH1(mp2,muu,mdd,p1ext.p1ext)*p1ext.p1ext^2
+          + 2/9*HH1(mp2,mdd,muu,p1ext.p1ext)*p1ext.p1ext*mp2
+          - 2/9*HH1(mp2,mdd,muu,p1ext.p1ext)*p1ext.p1ext*mdd
+          - 2/9*HH1(mp2,mdd,muu,p1ext.p1ext)*p1ext.p1ext*muu
+          + 2/9*HH1(mp2,mdd,muu,p1ext.p1ext)*p1ext.p1ext^2
+          + 1/9*HH1(mp2,mdd,mdd,p1ext.p1ext)*p1ext.p1ext*mp2
+          + 1/18*HH1(mp2,mdd,mdd,p1ext.p1ext)*p1ext.p1ext*mdd
+          + 1/18*HH1(mp2,mdd,mdd,p1ext.p1ext)*p1ext.p1ext*muu
+          - 2/9*HH1(mp2,mdd,mdd,p1ext.p1ext)*p1ext.p1ext^2
+          + 2/9*HH1(mp2,mp2,muu,p1ext.p1ext)*p1ext.p1ext*sqrt2^-2*mp2
+          + 4/9*HH1(mp2,mp2,muu,p1ext.p1ext)*p1ext.p1ext^2*sqrt2^-2
+          + 2/9*HH1(mp2,mp2,mdd,p1ext.p1ext)*p1ext.p1ext*sqrt2^-2*mp2
+          + 4/9*HH1(mp2,mp2,mdd,p1ext.p1ext)*p1ext.p1ext^2*sqrt2^-2
+          - 1/2*H21(muu,muu,mp2,p1ext.p1ext)*p1ext.p1ext^2
+          - 1/2*H21(muu,mp2,muu,p1ext.p1ext)*p1ext.p1ext^2
+          - 1/2*H21(mdd,mdd,mp2,p1ext.p1ext)*p1ext.p1ext^2
+          - 1/2*H21(mdd,mp2,mdd,p1ext.p1ext)*p1ext.p1ext^2
+          - 1/2*H21(mp2,muu,mdd,p1ext.p1ext)*p1ext.p1ext^2
+          - H21(mp2,muu,mp2,p1ext.p1ext)*p1ext.p1ext^2*sqrt2^-2
+          - 1/2*H21(mp2,mdd,muu,p1ext.p1ext)*p1ext.p1ext^2
+          - H21(mp2,mdd,mp2,p1ext.p1ext)*p1ext.p1ext^2*sqrt2^-2
+          - H21(mp2,mp2,muu,p1ext.p1ext)*p1ext.p1ext^2*sqrt2^-2
+          - H21(mp2,mp2,mdd,p1ext.p1ext)*p1ext.p1ext^2*sqrt2^-2
+          - H21(mp2,mp2,mp2,p1ext.p1ext)*p1ext.p1ext^2
+          - 1/2*H22(muu,muu,mp2,p1ext.p1ext)*p1ext.p1ext
+          - 1/2*H22(muu,mp2,muu,p1ext.p1ext)*p1ext.p1ext
+          - 1/2*H22(mdd,mdd,mp2,p1ext.p1ext)*p1ext.p1ext
+          - 1/2*H22(mdd,mp2,mdd,p1ext.p1ext)*p1ext.p1ext
+          - 1/2*H22(mp2,muu,mdd,p1ext.p1ext)*p1ext.p1ext
+          - H22(mp2,muu,mp2,p1ext.p1ext)*p1ext.p1ext*sqrt2^-2
+          - 1/2*H22(mp2,mdd,muu,p1ext.p1ext)*p1ext.p1ext
+          - H22(mp2,mdd,mp2,p1ext.p1ext)*p1ext.p1ext*sqrt2^-2
+          - H22(mp2,mp2,muu,p1ext.p1ext)*p1ext.p1ext*sqrt2^-2
+          - H22(mp2,mp2,mdd,p1ext.p1ext)*p1ext.p1ext*sqrt2^-2
+          - H22(mp2,mp2,mp2,p1ext.p1ext)*p1ext.p1ext
+          )
+
        + A(muu)^2*i_*F^-4 * (
-          - 1/6*mp2*SymmetryFactorMass8
-          - 1/6*mdd*SymmetryFactorMass8
-          - 1/2*muu*SymmetryFactorMass8
-          - 1/6*p1ext.p1ext*SymmetryFactorMass8
+          - 1/36*mp2
+          - 1/36*mdd
+          - 1/12*muu
+          + 1/12*p1ext.p1ext
           )
 
        + A(muu)*A(mdd)*i_*F^-4 * (
-          - 2/3*mp2*SymmetryFactorMass8
-          + 2/3*mdd*SymmetryFactorMass8
-          + 2/3*muu*SymmetryFactorMass8
-          - 2/3*p1ext.p1ext*SymmetryFactorMass8
+          - 1/9*mp2
+          + 1/9*mdd
+          + 1/9*muu
+          + 1/3*p1ext.p1ext
           )
 
        + A(muu)*A(mp2)*i_*F^-4 * (
-          - 2/3*sqrt2^-2*mp2*SymmetryFactorMass8
-          - 5/3*sqrt2^-2*muu*SymmetryFactorMass8
-          - 1/3*mdd*SymmetryFactorMass8
-          - 2/3*muu*SymmetryFactorMass8
-          - 5/3*p1ext.p1ext*sqrt2^-2*SymmetryFactorMass8
-          - p1ext.p1ext*SymmetryFactorMass8
+          - 1/9*sqrt2^-2*mp2
+          - 5/18*sqrt2^-2*muu
+          - 1/18*mdd
+          - 1/9*muu
+          + 1/2*p1ext.p1ext
+          + 5/6*p1ext.p1ext*sqrt2^-2
           )
 
        + A(mdd)^2*i_*F^-4 * (
-          - 1/6*mp2*SymmetryFactorMass8
-          - 1/2*mdd*SymmetryFactorMass8
-          - 1/6*muu*SymmetryFactorMass8
-          - 1/6*p1ext.p1ext*SymmetryFactorMass8
+          - 1/36*mp2
+          - 1/12*mdd
+          - 1/36*muu
+          + 1/12*p1ext.p1ext
           )
 
        + A(mdd)*A(mp2)*i_*F^-4 * (
-          - 2/3*sqrt2^-2*mp2*SymmetryFactorMass8
-          - 5/3*sqrt2^-2*mdd*SymmetryFactorMass8
-          - 2/3*mdd*SymmetryFactorMass8
-          - 1/3*muu*SymmetryFactorMass8
-          - 5/3*p1ext.p1ext*sqrt2^-2*SymmetryFactorMass8
-          - p1ext.p1ext*SymmetryFactorMass8
+          - 1/9*sqrt2^-2*mp2
+          - 5/18*sqrt2^-2*mdd
+          - 1/9*mdd
+          - 1/18*muu
+          + 1/2*p1ext.p1ext
+          + 5/6*p1ext.p1ext*sqrt2^-2
           )
 
        + A(mp2)^2*i_*F^-4 * (
-          + 1/3*sqrt2^-2*mdd*SymmetryFactorMass8
-          + 1/3*sqrt2^-2*muu*SymmetryFactorMass8
-          - mp2*SymmetryFactorMass8
-          - 2/3*p1ext.p1ext*sqrt2^-2*SymmetryFactorMass8
-          - p1ext.p1ext*SymmetryFactorMass8
+          + 1/18*sqrt2^-2*mdd
+          + 1/18*sqrt2^-2*muu
+          - 1/6*mp2
+          + 1/2*p1ext.p1ext
+          + 1/3*p1ext.p1ext*sqrt2^-2
           )
 
        + H(muu,muu,mp2,p1ext.p1ext)*i_*F^-4 * (
-          - 1/18*mp2^2*SymmetryFactorMass8
-          - 1/18*mdd*mp2*SymmetryFactorMass8
-          - 1/72*mdd^2*SymmetryFactorMass8
-          - 1/18*muu*mp2*SymmetryFactorMass8
-          - 1/36*muu*mdd*SymmetryFactorMass8
-          - 1/72*muu^2*SymmetryFactorMass8
+          - 1/108*mp2^2
+          - 1/108*mdd*mp2
+          - 1/432*mdd^2
+          - 1/108*muu*mp2
+          - 1/216*muu*mdd
+          - 1/432*muu^2
+          + 1/27*p1ext.p1ext*mp2
+          + 1/54*p1ext.p1ext*mdd
+          + 1/54*p1ext.p1ext*muu
+          - 1/27*p1ext.p1ext^2
           )
 
        + H(muu,mdd,mp2,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*mp2^2*SymmetryFactorMass8
-          + 2/9*mdd*mp2*SymmetryFactorMass8
-          - 1/9*mdd^2*SymmetryFactorMass8
-          + 2/9*muu*mp2*SymmetryFactorMass8
-          - 2/9*muu*mdd*SymmetryFactorMass8
-          - 1/9*muu^2*SymmetryFactorMass8
+          - 1/54*mp2^2
+          + 1/27*mdd*mp2
+          - 1/54*mdd^2
+          + 1/27*muu*mp2
+          - 1/27*muu*mdd
+          - 1/54*muu^2
+          + 2/27*p1ext.p1ext*mp2
+          - 2/27*p1ext.p1ext*mdd
+          - 2/27*p1ext.p1ext*muu
+          + 5/54*p1ext.p1ext^2
           )
 
        + H(muu,mp2,muu,p1ext.p1ext)*i_*F^-4 * (
-          - 1/18*mp2^2*SymmetryFactorMass8
-          - 1/18*mdd*mp2*SymmetryFactorMass8
-          - 1/72*mdd^2*SymmetryFactorMass8
-          - 1/18*muu*mp2*SymmetryFactorMass8
-          - 1/36*muu*mdd*SymmetryFactorMass8
-          - 1/72*muu^2*SymmetryFactorMass8
+          - 1/108*mp2^2
+          - 1/108*mdd*mp2
+          - 1/432*mdd^2
+          - 1/108*muu*mp2
+          - 1/216*muu*mdd
+          - 1/432*muu^2
+          - 1/54*p1ext.p1ext*mp2
+          - 1/108*p1ext.p1ext*mdd
+          - 1/108*p1ext.p1ext*muu
+          + 2/27*p1ext.p1ext^2
           )
 
        + H(muu,mp2,mdd,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*mp2^2*SymmetryFactorMass8
-          + 2/9*mdd*mp2*SymmetryFactorMass8
-          - 1/9*mdd^2*SymmetryFactorMass8
-          + 2/9*muu*mp2*SymmetryFactorMass8
-          - 2/9*muu*mdd*SymmetryFactorMass8
-          - 1/9*muu^2*SymmetryFactorMass8
+          - 1/54*mp2^2
+          + 1/27*mdd*mp2
+          - 1/54*mdd^2
+          + 1/27*muu*mp2
+          - 1/27*muu*mdd
+          - 1/54*muu^2
+          - 1/27*p1ext.p1ext*mp2
+          + 1/27*p1ext.p1ext*mdd
+          + 1/27*p1ext.p1ext*muu
+          - 1/54*p1ext.p1ext^2
           )
 
        + H(muu,mp2,mp2,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*sqrt2^-2*mp2^2*SymmetryFactorMass8
+          - 1/54*sqrt2^-2*mp2^2
+          + 1/27*p1ext.p1ext*sqrt2^-2*mp2
+          + 4/27*p1ext.p1ext^2*sqrt2^-2
           )
 
        + H(mdd,muu,mp2,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*mp2^2*SymmetryFactorMass8
-          + 2/9*mdd*mp2*SymmetryFactorMass8
-          - 1/9*mdd^2*SymmetryFactorMass8
-          + 2/9*muu*mp2*SymmetryFactorMass8
-          - 2/9*muu*mdd*SymmetryFactorMass8
-          - 1/9*muu^2*SymmetryFactorMass8
+          - 1/54*mp2^2
+          + 1/27*mdd*mp2
+          - 1/54*mdd^2
+          + 1/27*muu*mp2
+          - 1/27*muu*mdd
+          - 1/54*muu^2
+          + 2/27*p1ext.p1ext*mp2
+          - 2/27*p1ext.p1ext*mdd
+          - 2/27*p1ext.p1ext*muu
+          + 5/54*p1ext.p1ext^2
           )
 
        + H(mdd,mdd,mp2,p1ext.p1ext)*i_*F^-4 * (
-          - 1/18*mp2^2*SymmetryFactorMass8
-          - 1/18*mdd*mp2*SymmetryFactorMass8
-          - 1/72*mdd^2*SymmetryFactorMass8
-          - 1/18*muu*mp2*SymmetryFactorMass8
-          - 1/36*muu*mdd*SymmetryFactorMass8
-          - 1/72*muu^2*SymmetryFactorMass8
+          - 1/108*mp2^2
+          - 1/108*mdd*mp2
+          - 1/432*mdd^2
+          - 1/108*muu*mp2
+          - 1/216*muu*mdd
+          - 1/432*muu^2
+          + 1/27*p1ext.p1ext*mp2
+          + 1/54*p1ext.p1ext*mdd
+          + 1/54*p1ext.p1ext*muu
+          - 1/27*p1ext.p1ext^2
           )
 
        + H(mdd,mp2,muu,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*mp2^2*SymmetryFactorMass8
-          + 2/9*mdd*mp2*SymmetryFactorMass8
-          - 1/9*mdd^2*SymmetryFactorMass8
-          + 2/9*muu*mp2*SymmetryFactorMass8
-          - 2/9*muu*mdd*SymmetryFactorMass8
-          - 1/9*muu^2*SymmetryFactorMass8
+          - 1/54*mp2^2
+          + 1/27*mdd*mp2
+          - 1/54*mdd^2
+          + 1/27*muu*mp2
+          - 1/27*muu*mdd
+          - 1/54*muu^2
+          - 1/27*p1ext.p1ext*mp2
+          + 1/27*p1ext.p1ext*mdd
+          + 1/27*p1ext.p1ext*muu
+          - 1/54*p1ext.p1ext^2
           )
 
        + H(mdd,mp2,mdd,p1ext.p1ext)*i_*F^-4 * (
-          - 1/18*mp2^2*SymmetryFactorMass8
-          - 1/18*mdd*mp2*SymmetryFactorMass8
-          - 1/72*mdd^2*SymmetryFactorMass8
-          - 1/18*muu*mp2*SymmetryFactorMass8
-          - 1/36*muu*mdd*SymmetryFactorMass8
-          - 1/72*muu^2*SymmetryFactorMass8
+          - 1/108*mp2^2
+          - 1/108*mdd*mp2
+          - 1/432*mdd^2
+          - 1/108*muu*mp2
+          - 1/216*muu*mdd
+          - 1/432*muu^2
+          - 1/54*p1ext.p1ext*mp2
+          - 1/108*p1ext.p1ext*mdd
+          - 1/108*p1ext.p1ext*muu
+          + 2/27*p1ext.p1ext^2
           )
 
        + H(mdd,mp2,mp2,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*sqrt2^-2*mp2^2*SymmetryFactorMass8
+          - 1/54*sqrt2^-2*mp2^2
+          + 1/27*p1ext.p1ext*sqrt2^-2*mp2
+          + 4/27*p1ext.p1ext^2*sqrt2^-2
           )
 
        + H(mp2,muu,muu,p1ext.p1ext)*i_*F^-4 * (
-          - 1/18*mp2^2*SymmetryFactorMass8
-          - 1/18*mdd*mp2*SymmetryFactorMass8
-          - 1/72*mdd^2*SymmetryFactorMass8
-          - 1/18*muu*mp2*SymmetryFactorMass8
-          - 1/36*muu*mdd*SymmetryFactorMass8
-          - 1/72*muu^2*SymmetryFactorMass8
+          - 1/108*mp2^2
+          - 1/108*mdd*mp2
+          - 1/432*mdd^2
+          - 1/108*muu*mp2
+          - 1/216*muu*mdd
+          - 1/432*muu^2
+          - 1/54*p1ext.p1ext*mp2
+          - 1/108*p1ext.p1ext*mdd
+          - 1/108*p1ext.p1ext*muu
+          + 2/27*p1ext.p1ext^2
           )
 
        + H(mp2,muu,mdd,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*mp2^2*SymmetryFactorMass8
-          + 2/9*mdd*mp2*SymmetryFactorMass8
-          - 1/9*mdd^2*SymmetryFactorMass8
-          + 2/9*muu*mp2*SymmetryFactorMass8
-          - 2/9*muu*mdd*SymmetryFactorMass8
-          - 1/9*muu^2*SymmetryFactorMass8
+          - 1/54*mp2^2
+          + 1/27*mdd*mp2
+          - 1/54*mdd^2
+          + 1/27*muu*mp2
+          - 1/27*muu*mdd
+          - 1/54*muu^2
+          - 1/27*p1ext.p1ext*mp2
+          + 1/27*p1ext.p1ext*mdd
+          + 1/27*p1ext.p1ext*muu
+          - 1/54*p1ext.p1ext^2
           )
 
        + H(mp2,muu,mp2,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*sqrt2^-2*mp2^2*SymmetryFactorMass8
+          - 1/54*sqrt2^-2*mp2^2
+          + 1/27*p1ext.p1ext*sqrt2^-2*mp2
+          + 4/27*p1ext.p1ext^2*sqrt2^-2
           )
 
        + H(mp2,mdd,muu,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*mp2^2*SymmetryFactorMass8
-          + 2/9*mdd*mp2*SymmetryFactorMass8
-          - 1/9*mdd^2*SymmetryFactorMass8
-          + 2/9*muu*mp2*SymmetryFactorMass8
-          - 2/9*muu*mdd*SymmetryFactorMass8
-          - 1/9*muu^2*SymmetryFactorMass8
+          - 1/54*mp2^2
+          + 1/27*mdd*mp2
+          - 1/54*mdd^2
+          + 1/27*muu*mp2
+          - 1/27*muu*mdd
+          - 1/54*muu^2
+          - 1/27*p1ext.p1ext*mp2
+          + 1/27*p1ext.p1ext*mdd
+          + 1/27*p1ext.p1ext*muu
+          - 1/54*p1ext.p1ext^2
           )
 
        + H(mp2,mdd,mdd,p1ext.p1ext)*i_*F^-4 * (
-          - 1/18*mp2^2*SymmetryFactorMass8
-          - 1/18*mdd*mp2*SymmetryFactorMass8
-          - 1/72*mdd^2*SymmetryFactorMass8
-          - 1/18*muu*mp2*SymmetryFactorMass8
-          - 1/36*muu*mdd*SymmetryFactorMass8
-          - 1/72*muu^2*SymmetryFactorMass8
+          - 1/108*mp2^2
+          - 1/108*mdd*mp2
+          - 1/432*mdd^2
+          - 1/108*muu*mp2
+          - 1/216*muu*mdd
+          - 1/432*muu^2
+          - 1/54*p1ext.p1ext*mp2
+          - 1/108*p1ext.p1ext*mdd
+          - 1/108*p1ext.p1ext*muu
+          + 2/27*p1ext.p1ext^2
           )
 
        + H(mp2,mdd,mp2,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*sqrt2^-2*mp2^2*SymmetryFactorMass8
+          - 1/54*sqrt2^-2*mp2^2
+          + 1/27*p1ext.p1ext*sqrt2^-2*mp2
+          + 4/27*p1ext.p1ext^2*sqrt2^-2
           )
 
        + H(mp2,mp2,muu,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*sqrt2^-2*mp2^2*SymmetryFactorMass8
+          - 1/54*sqrt2^-2*mp2^2
+          - 2/27*p1ext.p1ext*sqrt2^-2*mp2
+          - 2/27*p1ext.p1ext^2*sqrt2^-2
           )
 
        + H(mp2,mp2,mdd,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*sqrt2^-2*mp2^2*SymmetryFactorMass8
+          - 1/54*sqrt2^-2*mp2^2
+          - 2/27*p1ext.p1ext*sqrt2^-2*mp2
+          - 2/27*p1ext.p1ext^2*sqrt2^-2
           )
 
        + H(mp2,mp2,mp2,p1ext.p1ext)*i_*F^-4 * (
-          - 23/48*mdd^2*SymmetryFactorMass8
-          - 23/24*muu*mdd*SymmetryFactorMass8
-          - 23/48*muu^2*SymmetryFactorMass8
+          - 23/288*mdd^2
+          - 23/144*muu*mdd
+          - 23/288*muu^2
+          + 1/9*p1ext.p1ext^2
           );
 
    MM8x22SO4 =
 
+       + i_*F^-4 * (
+          - 1/9*HH1(muu,muu,mp2,p1ext.p1ext)*p1ext.p1ext*mp2
+          - 1/18*HH1(muu,muu,mp2,p1ext.p1ext)*p1ext.p1ext*mdd
+          - 1/18*HH1(muu,muu,mp2,p1ext.p1ext)*p1ext.p1ext*muu
+          + 2/9*HH1(muu,muu,mp2,p1ext.p1ext)*p1ext.p1ext^2
+          - 2/9*HH1(muu,mdd,mp2,p1ext.p1ext)*p1ext.p1ext*mp2
+          + 2/9*HH1(muu,mdd,mp2,p1ext.p1ext)*p1ext.p1ext*mdd
+          + 2/9*HH1(muu,mdd,mp2,p1ext.p1ext)*p1ext.p1ext*muu
+          - 2/9*HH1(muu,mdd,mp2,p1ext.p1ext)*p1ext.p1ext^2
+          - 2/9*HH1(muu,mp2,mp2,p1ext.p1ext)*p1ext.p1ext*sqrt2^-2*mp2
+          - 4/9*HH1(muu,mp2,mp2,p1ext.p1ext)*p1ext.p1ext^2*sqrt2^-2
+          - 2/9*HH1(mdd,muu,mp2,p1ext.p1ext)*p1ext.p1ext*mp2
+          + 2/9*HH1(mdd,muu,mp2,p1ext.p1ext)*p1ext.p1ext*mdd
+          + 2/9*HH1(mdd,muu,mp2,p1ext.p1ext)*p1ext.p1ext*muu
+          - 2/9*HH1(mdd,muu,mp2,p1ext.p1ext)*p1ext.p1ext^2
+          - 1/9*HH1(mdd,mdd,mp2,p1ext.p1ext)*p1ext.p1ext*mp2
+          - 1/18*HH1(mdd,mdd,mp2,p1ext.p1ext)*p1ext.p1ext*mdd
+          - 1/18*HH1(mdd,mdd,mp2,p1ext.p1ext)*p1ext.p1ext*muu
+          + 2/9*HH1(mdd,mdd,mp2,p1ext.p1ext)*p1ext.p1ext^2
+          - 2/9*HH1(mdd,mp2,mp2,p1ext.p1ext)*p1ext.p1ext*sqrt2^-2*mp2
+          - 4/9*HH1(mdd,mp2,mp2,p1ext.p1ext)*p1ext.p1ext^2*sqrt2^-2
+          + 1/9*HH1(mp2,muu,muu,p1ext.p1ext)*p1ext.p1ext*mp2
+          + 1/18*HH1(mp2,muu,muu,p1ext.p1ext)*p1ext.p1ext*mdd
+          + 1/18*HH1(mp2,muu,muu,p1ext.p1ext)*p1ext.p1ext*muu
+          - 2/9*HH1(mp2,muu,muu,p1ext.p1ext)*p1ext.p1ext^2
+          + 2/9*HH1(mp2,muu,mdd,p1ext.p1ext)*p1ext.p1ext*mp2
+          - 2/9*HH1(mp2,muu,mdd,p1ext.p1ext)*p1ext.p1ext*mdd
+          - 2/9*HH1(mp2,muu,mdd,p1ext.p1ext)*p1ext.p1ext*muu
+          + 2/9*HH1(mp2,muu,mdd,p1ext.p1ext)*p1ext.p1ext^2
+          + 2/9*HH1(mp2,mdd,muu,p1ext.p1ext)*p1ext.p1ext*mp2
+          - 2/9*HH1(mp2,mdd,muu,p1ext.p1ext)*p1ext.p1ext*mdd
+          - 2/9*HH1(mp2,mdd,muu,p1ext.p1ext)*p1ext.p1ext*muu
+          + 2/9*HH1(mp2,mdd,muu,p1ext.p1ext)*p1ext.p1ext^2
+          + 1/9*HH1(mp2,mdd,mdd,p1ext.p1ext)*p1ext.p1ext*mp2
+          + 1/18*HH1(mp2,mdd,mdd,p1ext.p1ext)*p1ext.p1ext*mdd
+          + 1/18*HH1(mp2,mdd,mdd,p1ext.p1ext)*p1ext.p1ext*muu
+          - 2/9*HH1(mp2,mdd,mdd,p1ext.p1ext)*p1ext.p1ext^2
+          + 2/9*HH1(mp2,mp2,muu,p1ext.p1ext)*p1ext.p1ext*sqrt2^-2*mp2
+          + 4/9*HH1(mp2,mp2,muu,p1ext.p1ext)*p1ext.p1ext^2*sqrt2^-2
+          + 2/9*HH1(mp2,mp2,mdd,p1ext.p1ext)*p1ext.p1ext*sqrt2^-2*mp2
+          + 4/9*HH1(mp2,mp2,mdd,p1ext.p1ext)*p1ext.p1ext^2*sqrt2^-2
+          - 1/2*H21(muu,muu,mp2,p1ext.p1ext)*p1ext.p1ext^2
+          - 1/2*H21(muu,mp2,muu,p1ext.p1ext)*p1ext.p1ext^2
+          - 1/2*H21(mdd,mdd,mp2,p1ext.p1ext)*p1ext.p1ext^2
+          - 1/2*H21(mdd,mp2,mdd,p1ext.p1ext)*p1ext.p1ext^2
+          - 1/2*H21(mp2,muu,mdd,p1ext.p1ext)*p1ext.p1ext^2
+          - H21(mp2,muu,mp2,p1ext.p1ext)*p1ext.p1ext^2*sqrt2^-2
+          - 1/2*H21(mp2,mdd,muu,p1ext.p1ext)*p1ext.p1ext^2
+          - H21(mp2,mdd,mp2,p1ext.p1ext)*p1ext.p1ext^2*sqrt2^-2
+          - H21(mp2,mp2,muu,p1ext.p1ext)*p1ext.p1ext^2*sqrt2^-2
+          - H21(mp2,mp2,mdd,p1ext.p1ext)*p1ext.p1ext^2*sqrt2^-2
+          - H21(mp2,mp2,mp2,p1ext.p1ext)*p1ext.p1ext^2
+          - 1/2*H22(muu,muu,mp2,p1ext.p1ext)*p1ext.p1ext
+          - 1/2*H22(muu,mp2,muu,p1ext.p1ext)*p1ext.p1ext
+          - 1/2*H22(mdd,mdd,mp2,p1ext.p1ext)*p1ext.p1ext
+          - 1/2*H22(mdd,mp2,mdd,p1ext.p1ext)*p1ext.p1ext
+          - 1/2*H22(mp2,muu,mdd,p1ext.p1ext)*p1ext.p1ext
+          - H22(mp2,muu,mp2,p1ext.p1ext)*p1ext.p1ext*sqrt2^-2
+          - 1/2*H22(mp2,mdd,muu,p1ext.p1ext)*p1ext.p1ext
+          - H22(mp2,mdd,mp2,p1ext.p1ext)*p1ext.p1ext*sqrt2^-2
+          - H22(mp2,mp2,muu,p1ext.p1ext)*p1ext.p1ext*sqrt2^-2
+          - H22(mp2,mp2,mdd,p1ext.p1ext)*p1ext.p1ext*sqrt2^-2
+          - H22(mp2,mp2,mp2,p1ext.p1ext)*p1ext.p1ext
+          )
+
        + A(muu)^2*i_*F^-4 * (
-          - 1/6*mp2*SymmetryFactorMass8
-          - 1/6*mdd*SymmetryFactorMass8
-          - 1/2*muu*SymmetryFactorMass8
-          - 1/6*p1ext.p1ext*SymmetryFactorMass8
+          - 1/36*mp2
+          - 1/36*mdd
+          - 1/12*muu
+          + 1/12*p1ext.p1ext
           )
 
        + A(muu)*A(mdd)*i_*F^-4 * (
-          - 2/3*mp2*SymmetryFactorMass8
-          + 2/3*mdd*SymmetryFactorMass8
-          + 2/3*muu*SymmetryFactorMass8
-          - 2/3*p1ext.p1ext*SymmetryFactorMass8
+          - 1/9*mp2
+          + 1/9*mdd
+          + 1/9*muu
+          + 1/3*p1ext.p1ext
           )
 
        + A(muu)*A(mp2)*i_*F^-4 * (
-          - 2/3*sqrt2^-2*mp2*SymmetryFactorMass8
-          - 5/3*sqrt2^-2*muu*SymmetryFactorMass8
-          - 1/3*mdd*SymmetryFactorMass8
-          - 2/3*muu*SymmetryFactorMass8
-          - 5/3*p1ext.p1ext*sqrt2^-2*SymmetryFactorMass8
-          - p1ext.p1ext*SymmetryFactorMass8
+          - 1/9*sqrt2^-2*mp2
+          - 5/18*sqrt2^-2*muu
+          - 1/18*mdd
+          - 1/9*muu
+          + 1/2*p1ext.p1ext
+          + 5/6*p1ext.p1ext*sqrt2^-2
           )
 
        + A(mdd)^2*i_*F^-4 * (
-          - 1/6*mp2*SymmetryFactorMass8
-          - 1/2*mdd*SymmetryFactorMass8
-          - 1/6*muu*SymmetryFactorMass8
-          - 1/6*p1ext.p1ext*SymmetryFactorMass8
+          - 1/36*mp2
+          - 1/12*mdd
+          - 1/36*muu
+          + 1/12*p1ext.p1ext
           )
 
        + A(mdd)*A(mp2)*i_*F^-4 * (
-          - 2/3*sqrt2^-2*mp2*SymmetryFactorMass8
-          - 5/3*sqrt2^-2*mdd*SymmetryFactorMass8
-          - 2/3*mdd*SymmetryFactorMass8
-          - 1/3*muu*SymmetryFactorMass8
-          - 5/3*p1ext.p1ext*sqrt2^-2*SymmetryFactorMass8
-          - p1ext.p1ext*SymmetryFactorMass8
+          - 1/9*sqrt2^-2*mp2
+          - 5/18*sqrt2^-2*mdd
+          - 1/9*mdd
+          - 1/18*muu
+          + 1/2*p1ext.p1ext
+          + 5/6*p1ext.p1ext*sqrt2^-2
           )
 
        + A(mp2)^2*i_*F^-4 * (
-          + 1/3*sqrt2^-2*mdd*SymmetryFactorMass8
-          + 1/3*sqrt2^-2*muu*SymmetryFactorMass8
-          - mp2*SymmetryFactorMass8
-          - 2/3*p1ext.p1ext*sqrt2^-2*SymmetryFactorMass8
-          - p1ext.p1ext*SymmetryFactorMass8
+          + 1/18*sqrt2^-2*mdd
+          + 1/18*sqrt2^-2*muu
+          - 1/6*mp2
+          + 1/2*p1ext.p1ext
+          + 1/3*p1ext.p1ext*sqrt2^-2
           )
 
        + H(muu,muu,mp2,p1ext.p1ext)*i_*F^-4 * (
-          - 1/18*mp2^2*SymmetryFactorMass8
-          - 1/18*mdd*mp2*SymmetryFactorMass8
-          - 1/72*mdd^2*SymmetryFactorMass8
-          - 1/18*muu*mp2*SymmetryFactorMass8
-          - 1/36*muu*mdd*SymmetryFactorMass8
-          - 1/72*muu^2*SymmetryFactorMass8
+          - 1/108*mp2^2
+          - 1/108*mdd*mp2
+          - 1/432*mdd^2
+          - 1/108*muu*mp2
+          - 1/216*muu*mdd
+          - 1/432*muu^2
+          + 1/27*p1ext.p1ext*mp2
+          + 1/54*p1ext.p1ext*mdd
+          + 1/54*p1ext.p1ext*muu
+          - 1/27*p1ext.p1ext^2
           )
 
        + H(muu,mdd,mp2,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*mp2^2*SymmetryFactorMass8
-          + 2/9*mdd*mp2*SymmetryFactorMass8
-          - 1/9*mdd^2*SymmetryFactorMass8
-          + 2/9*muu*mp2*SymmetryFactorMass8
-          - 2/9*muu*mdd*SymmetryFactorMass8
-          - 1/9*muu^2*SymmetryFactorMass8
+          - 1/54*mp2^2
+          + 1/27*mdd*mp2
+          - 1/54*mdd^2
+          + 1/27*muu*mp2
+          - 1/27*muu*mdd
+          - 1/54*muu^2
+          + 2/27*p1ext.p1ext*mp2
+          - 2/27*p1ext.p1ext*mdd
+          - 2/27*p1ext.p1ext*muu
+          + 5/54*p1ext.p1ext^2
           )
 
        + H(muu,mp2,muu,p1ext.p1ext)*i_*F^-4 * (
-          - 1/18*mp2^2*SymmetryFactorMass8
-          - 1/18*mdd*mp2*SymmetryFactorMass8
-          - 1/72*mdd^2*SymmetryFactorMass8
-          - 1/18*muu*mp2*SymmetryFactorMass8
-          - 1/36*muu*mdd*SymmetryFactorMass8
-          - 1/72*muu^2*SymmetryFactorMass8
+          - 1/108*mp2^2
+          - 1/108*mdd*mp2
+          - 1/432*mdd^2
+          - 1/108*muu*mp2
+          - 1/216*muu*mdd
+          - 1/432*muu^2
+          - 1/54*p1ext.p1ext*mp2
+          - 1/108*p1ext.p1ext*mdd
+          - 1/108*p1ext.p1ext*muu
+          + 2/27*p1ext.p1ext^2
           )
 
        + H(muu,mp2,mdd,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*mp2^2*SymmetryFactorMass8
-          + 2/9*mdd*mp2*SymmetryFactorMass8
-          - 1/9*mdd^2*SymmetryFactorMass8
-          + 2/9*muu*mp2*SymmetryFactorMass8
-          - 2/9*muu*mdd*SymmetryFactorMass8
-          - 1/9*muu^2*SymmetryFactorMass8
+          - 1/54*mp2^2
+          + 1/27*mdd*mp2
+          - 1/54*mdd^2
+          + 1/27*muu*mp2
+          - 1/27*muu*mdd
+          - 1/54*muu^2
+          - 1/27*p1ext.p1ext*mp2
+          + 1/27*p1ext.p1ext*mdd
+          + 1/27*p1ext.p1ext*muu
+          - 1/54*p1ext.p1ext^2
           )
 
        + H(muu,mp2,mp2,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*sqrt2^-2*mp2^2*SymmetryFactorMass8
+          - 1/54*sqrt2^-2*mp2^2
+          + 1/27*p1ext.p1ext*sqrt2^-2*mp2
+          + 4/27*p1ext.p1ext^2*sqrt2^-2
           )
 
        + H(mdd,muu,mp2,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*mp2^2*SymmetryFactorMass8
-          + 2/9*mdd*mp2*SymmetryFactorMass8
-          - 1/9*mdd^2*SymmetryFactorMass8
-          + 2/9*muu*mp2*SymmetryFactorMass8
-          - 2/9*muu*mdd*SymmetryFactorMass8
-          - 1/9*muu^2*SymmetryFactorMass8
+          - 1/54*mp2^2
+          + 1/27*mdd*mp2
+          - 1/54*mdd^2
+          + 1/27*muu*mp2
+          - 1/27*muu*mdd
+          - 1/54*muu^2
+          + 2/27*p1ext.p1ext*mp2
+          - 2/27*p1ext.p1ext*mdd
+          - 2/27*p1ext.p1ext*muu
+          + 5/54*p1ext.p1ext^2
           )
 
        + H(mdd,mdd,mp2,p1ext.p1ext)*i_*F^-4 * (
-          - 1/18*mp2^2*SymmetryFactorMass8
-          - 1/18*mdd*mp2*SymmetryFactorMass8
-          - 1/72*mdd^2*SymmetryFactorMass8
-          - 1/18*muu*mp2*SymmetryFactorMass8
-          - 1/36*muu*mdd*SymmetryFactorMass8
-          - 1/72*muu^2*SymmetryFactorMass8
+          - 1/108*mp2^2
+          - 1/108*mdd*mp2
+          - 1/432*mdd^2
+          - 1/108*muu*mp2
+          - 1/216*muu*mdd
+          - 1/432*muu^2
+          + 1/27*p1ext.p1ext*mp2
+          + 1/54*p1ext.p1ext*mdd
+          + 1/54*p1ext.p1ext*muu
+          - 1/27*p1ext.p1ext^2
           )
 
        + H(mdd,mp2,muu,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*mp2^2*SymmetryFactorMass8
-          + 2/9*mdd*mp2*SymmetryFactorMass8
-          - 1/9*mdd^2*SymmetryFactorMass8
-          + 2/9*muu*mp2*SymmetryFactorMass8
-          - 2/9*muu*mdd*SymmetryFactorMass8
-          - 1/9*muu^2*SymmetryFactorMass8
+          - 1/54*mp2^2
+          + 1/27*mdd*mp2
+          - 1/54*mdd^2
+          + 1/27*muu*mp2
+          - 1/27*muu*mdd
+          - 1/54*muu^2
+          - 1/27*p1ext.p1ext*mp2
+          + 1/27*p1ext.p1ext*mdd
+          + 1/27*p1ext.p1ext*muu
+          - 1/54*p1ext.p1ext^2
           )
 
        + H(mdd,mp2,mdd,p1ext.p1ext)*i_*F^-4 * (
-          - 1/18*mp2^2*SymmetryFactorMass8
-          - 1/18*mdd*mp2*SymmetryFactorMass8
-          - 1/72*mdd^2*SymmetryFactorMass8
-          - 1/18*muu*mp2*SymmetryFactorMass8
-          - 1/36*muu*mdd*SymmetryFactorMass8
-          - 1/72*muu^2*SymmetryFactorMass8
+          - 1/108*mp2^2
+          - 1/108*mdd*mp2
+          - 1/432*mdd^2
+          - 1/108*muu*mp2
+          - 1/216*muu*mdd
+          - 1/432*muu^2
+          - 1/54*p1ext.p1ext*mp2
+          - 1/108*p1ext.p1ext*mdd
+          - 1/108*p1ext.p1ext*muu
+          + 2/27*p1ext.p1ext^2
           )
 
        + H(mdd,mp2,mp2,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*sqrt2^-2*mp2^2*SymmetryFactorMass8
+          - 1/54*sqrt2^-2*mp2^2
+          + 1/27*p1ext.p1ext*sqrt2^-2*mp2
+          + 4/27*p1ext.p1ext^2*sqrt2^-2
           )
 
        + H(mp2,muu,muu,p1ext.p1ext)*i_*F^-4 * (
-          - 1/18*mp2^2*SymmetryFactorMass8
-          - 1/18*mdd*mp2*SymmetryFactorMass8
-          - 1/72*mdd^2*SymmetryFactorMass8
-          - 1/18*muu*mp2*SymmetryFactorMass8
-          - 1/36*muu*mdd*SymmetryFactorMass8
-          - 1/72*muu^2*SymmetryFactorMass8
+          - 1/108*mp2^2
+          - 1/108*mdd*mp2
+          - 1/432*mdd^2
+          - 1/108*muu*mp2
+          - 1/216*muu*mdd
+          - 1/432*muu^2
+          - 1/54*p1ext.p1ext*mp2
+          - 1/108*p1ext.p1ext*mdd
+          - 1/108*p1ext.p1ext*muu
+          + 2/27*p1ext.p1ext^2
           )
 
        + H(mp2,muu,mdd,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*mp2^2*SymmetryFactorMass8
-          + 2/9*mdd*mp2*SymmetryFactorMass8
-          - 1/9*mdd^2*SymmetryFactorMass8
-          + 2/9*muu*mp2*SymmetryFactorMass8
-          - 2/9*muu*mdd*SymmetryFactorMass8
-          - 1/9*muu^2*SymmetryFactorMass8
+          - 1/54*mp2^2
+          + 1/27*mdd*mp2
+          - 1/54*mdd^2
+          + 1/27*muu*mp2
+          - 1/27*muu*mdd
+          - 1/54*muu^2
+          - 1/27*p1ext.p1ext*mp2
+          + 1/27*p1ext.p1ext*mdd
+          + 1/27*p1ext.p1ext*muu
+          - 1/54*p1ext.p1ext^2
           )
 
        + H(mp2,muu,mp2,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*sqrt2^-2*mp2^2*SymmetryFactorMass8
+          - 1/54*sqrt2^-2*mp2^2
+          + 1/27*p1ext.p1ext*sqrt2^-2*mp2
+          + 4/27*p1ext.p1ext^2*sqrt2^-2
           )
 
        + H(mp2,mdd,muu,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*mp2^2*SymmetryFactorMass8
-          + 2/9*mdd*mp2*SymmetryFactorMass8
-          - 1/9*mdd^2*SymmetryFactorMass8
-          + 2/9*muu*mp2*SymmetryFactorMass8
-          - 2/9*muu*mdd*SymmetryFactorMass8
-          - 1/9*muu^2*SymmetryFactorMass8
+          - 1/54*mp2^2
+          + 1/27*mdd*mp2
+          - 1/54*mdd^2
+          + 1/27*muu*mp2
+          - 1/27*muu*mdd
+          - 1/54*muu^2
+          - 1/27*p1ext.p1ext*mp2
+          + 1/27*p1ext.p1ext*mdd
+          + 1/27*p1ext.p1ext*muu
+          - 1/54*p1ext.p1ext^2
           )
 
        + H(mp2,mdd,mdd,p1ext.p1ext)*i_*F^-4 * (
-          - 1/18*mp2^2*SymmetryFactorMass8
-          - 1/18*mdd*mp2*SymmetryFactorMass8
-          - 1/72*mdd^2*SymmetryFactorMass8
-          - 1/18*muu*mp2*SymmetryFactorMass8
-          - 1/36*muu*mdd*SymmetryFactorMass8
-          - 1/72*muu^2*SymmetryFactorMass8
+          - 1/108*mp2^2
+          - 1/108*mdd*mp2
+          - 1/432*mdd^2
+          - 1/108*muu*mp2
+          - 1/216*muu*mdd
+          - 1/432*muu^2
+          - 1/54*p1ext.p1ext*mp2
+          - 1/108*p1ext.p1ext*mdd
+          - 1/108*p1ext.p1ext*muu
+          + 2/27*p1ext.p1ext^2
           )
 
        + H(mp2,mdd,mp2,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*sqrt2^-2*mp2^2*SymmetryFactorMass8
+          - 1/54*sqrt2^-2*mp2^2
+          + 1/27*p1ext.p1ext*sqrt2^-2*mp2
+          + 4/27*p1ext.p1ext^2*sqrt2^-2
           )
 
        + H(mp2,mp2,muu,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*sqrt2^-2*mp2^2*SymmetryFactorMass8
+          - 1/54*sqrt2^-2*mp2^2
+          - 2/27*p1ext.p1ext*sqrt2^-2*mp2
+          - 2/27*p1ext.p1ext^2*sqrt2^-2
           )
 
        + H(mp2,mp2,mdd,p1ext.p1ext)*i_*F^-4 * (
-          - 1/9*sqrt2^-2*mp2^2*SymmetryFactorMass8
+          - 1/54*sqrt2^-2*mp2^2
+          - 2/27*p1ext.p1ext*sqrt2^-2*mp2
+          - 2/27*p1ext.p1ext^2*sqrt2^-2
           )
 
        + H(mp2,mp2,mp2,p1ext.p1ext)*i_*F^-4 * (
-          - 23/48*mdd^2*SymmetryFactorMass8
-          - 23/24*muu*mdd*SymmetryFactorMass8
-          - 23/48*muu^2*SymmetryFactorMass8
+          - 23/288*mdd^2
+          - 23/144*muu*mdd
+          - 23/288*muu^2
+          + 1/9*p1ext.p1ext^2
           );
 

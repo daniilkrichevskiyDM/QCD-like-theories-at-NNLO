@@ -43,6 +43,7 @@ G MM3x`ext1'`ext2'`SX4' = i_^3*SymmetryFactorMass3*(
 
 .sort
 id p2ext = -p1ext;
+#include SymmetryFactorsMass.hf
 *b F,Chi,p1ext,i_;
 b i_,F,A,B;
 print +s;

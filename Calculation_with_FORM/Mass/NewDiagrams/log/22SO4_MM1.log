@@ -33,13 +33,12 @@ Time =       0.00 sec    Generated terms =          6
 
 Time =       0.00 sec    Generated terms =          3
        MM1x22SO4         Terms in output =          3
-                         Bytes used      =        148
+                         Bytes used      =        124
 
 Time =       0.00 sec    Generated terms =          3
        MM1x22SO4         Terms in output =          3
-                         Bytes used      =        164
+                         Bytes used      =        132
 
    MM1x22SO4 =
-       + i_ * (  - 1/2*mdd*SymmetryFactorMass1 - 1/2*muu*SymmetryFactorMass1
-          + p1ext.p1ext*SymmetryFactorMass1 );
+       + i_ * (  - 1/2*mdd - 1/2*muu + p1ext.p1ext );
 

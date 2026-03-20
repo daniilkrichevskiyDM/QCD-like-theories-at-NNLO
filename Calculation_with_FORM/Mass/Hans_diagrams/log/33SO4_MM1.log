@@ -1,0 +1,40 @@
+
+Time =       0.00 sec    Generated terms =         23
+   MM1x33SO4Hans         Terms in output =         23
+                         Bytes used      =       1416
+
+Time =       0.00 sec    Generated terms =         23
+   MM1x33SO4Hans         Terms in output =         23
+                         Bytes used      =       1416
+
+Time =       0.00 sec    Generated terms =          6
+   MM1x33SO4Hans         Terms in output =          6
+                         Bytes used      =        400
+
+Time =       0.00 sec    Generated terms =          6
+   MM1x33SO4Hans         Terms in output =          6
+                         Bytes used      =        288
+
+Time =       0.00 sec    Generated terms =          6
+   MM1x33SO4Hans         Terms in output =          6
+                         Bytes used      =        288
+
+Time =       0.00 sec    Generated terms =          6
+   MM1x33SO4Hans         Terms in output =          6
+                         Bytes used      =        400
+
+Time =       0.00 sec    Generated terms =          6
+   MM1x33SO4Hans         Terms in output =          3
+                         Bytes used      =        124
+
+Time =       0.00 sec    Generated terms =          3
+   MM1x33SO4Hans         Terms in output =          3
+                         Bytes used      =        124
+
+Time =       0.00 sec    Generated terms =          3
+   MM1x33SO4Hans         Terms in output =          3
+                         Bytes used      =        132
+
+   MM1x33SO4Hans =
+       + i_ * (  - 1/2*mdd - 1/2*muu + p1ext.p1ext );
+

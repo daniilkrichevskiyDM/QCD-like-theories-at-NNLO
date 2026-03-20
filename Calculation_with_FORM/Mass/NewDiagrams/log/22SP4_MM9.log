@@ -33,36 +33,23 @@ Time =       0.00 sec    Generated terms =         70
 
 Time =       0.00 sec    Generated terms =         35
        MM9x22SP4         Terms in output =         35
-                         Bytes used      =       1524
+                         Bytes used      =       1244
 
 Time =       0.00 sec    Generated terms =         35
        MM9x22SP4         Terms in output =         35
-                         Bytes used      =       1452
+                         Bytes used      =       1172
 
    MM9x22SP4 =
-       + i_*F^-4 * (  - 16*mdd^3*KK40*SymmetryFactorMass9 - 4*mdd^3*KK39*
-         SymmetryFactorMass9 - 96*mdd^3*KK27*SymmetryFactorMass9 - 32*mdd^3*
-         KK26*SymmetryFactorMass9 - 12*mdd^3*KK25*SymmetryFactorMass9 - 48*muu
-         *mdd^2*KK40*SymmetryFactorMass9 - 12*muu*mdd^2*KK39*
-         SymmetryFactorMass9 - 288*muu*mdd^2*KK27*SymmetryFactorMass9 - 64*muu
-         *mdd^2*KK26*SymmetryFactorMass9 - 12*muu*mdd^2*KK25*
-         SymmetryFactorMass9 - 48*muu^2*mdd*KK40*SymmetryFactorMass9 - 12*
-         muu^2*mdd*KK39*SymmetryFactorMass9 - 288*muu^2*mdd*KK27*
-         SymmetryFactorMass9 - 64*muu^2*mdd*KK26*SymmetryFactorMass9 - 12*
-         muu^2*mdd*KK25*SymmetryFactorMass9 - 16*muu^3*KK40*
-         SymmetryFactorMass9 - 4*muu^3*KK39*SymmetryFactorMass9 - 96*muu^3*
-         KK27*SymmetryFactorMass9 - 32*muu^3*KK26*SymmetryFactorMass9 - 12*
-         muu^3*KK25*SymmetryFactorMass9 + 64*p1ext.p1ext*mdd^2*KK22*
-         SymmetryFactorMass9 + 32*p1ext.p1ext*mdd^2*KK21*SymmetryFactorMass9
-          + 16*p1ext.p1ext*mdd^2*KK20*SymmetryFactorMass9 + 8*p1ext.p1ext*
-         mdd^2*KK19*SymmetryFactorMass9 + 16*p1ext.p1ext*muu*mdd*KK23*
-         SymmetryFactorMass9 + 128*p1ext.p1ext*muu*mdd*KK22*
-         SymmetryFactorMass9 + 32*p1ext.p1ext*muu*mdd*KK20*SymmetryFactorMass9
-          + 64*p1ext.p1ext*muu^2*KK22*SymmetryFactorMass9 + 32*p1ext.p1ext*
-         muu^2*KK21*SymmetryFactorMass9 + 16*p1ext.p1ext*muu^2*KK20*
-         SymmetryFactorMass9 + 8*p1ext.p1ext*muu^2*KK19*SymmetryFactorMass9 + 
-         64*p1ext.p1ext^2*mdd*KK18*SymmetryFactorMass9 + 16*p1ext.p1ext^2*mdd*
-         KK17*SymmetryFactorMass9 + 64*p1ext.p1ext^2*muu*KK18*
-         SymmetryFactorMass9 + 16*p1ext.p1ext^2*muu*KK17*SymmetryFactorMass9 )
-         ;
+       + i_*F^-4 * (  - 16*mdd^3*KK40 - 4*mdd^3*KK39 - 96*mdd^3*KK27 - 32*
+         mdd^3*KK26 - 12*mdd^3*KK25 - 48*muu*mdd^2*KK40 - 12*muu*mdd^2*KK39 - 
+         288*muu*mdd^2*KK27 - 64*muu*mdd^2*KK26 - 12*muu*mdd^2*KK25 - 48*muu^2
+         *mdd*KK40 - 12*muu^2*mdd*KK39 - 288*muu^2*mdd*KK27 - 64*muu^2*mdd*
+         KK26 - 12*muu^2*mdd*KK25 - 16*muu^3*KK40 - 4*muu^3*KK39 - 96*muu^3*
+         KK27 - 32*muu^3*KK26 - 12*muu^3*KK25 + 64*p1ext.p1ext*mdd^2*KK22 + 32
+         *p1ext.p1ext*mdd^2*KK21 + 16*p1ext.p1ext*mdd^2*KK20 + 8*p1ext.p1ext*
+         mdd^2*KK19 + 16*p1ext.p1ext*muu*mdd*KK23 + 128*p1ext.p1ext*muu*mdd*
+         KK22 + 32*p1ext.p1ext*muu*mdd*KK20 + 64*p1ext.p1ext*muu^2*KK22 + 32*
+         p1ext.p1ext*muu^2*KK21 + 16*p1ext.p1ext*muu^2*KK20 + 8*p1ext.p1ext*
+         muu^2*KK19 + 64*p1ext.p1ext^2*mdd*KK18 + 16*p1ext.p1ext^2*mdd*KK17 + 
+         64*p1ext.p1ext^2*muu*KK18 + 16*p1ext.p1ext^2*muu*KK17 );
 

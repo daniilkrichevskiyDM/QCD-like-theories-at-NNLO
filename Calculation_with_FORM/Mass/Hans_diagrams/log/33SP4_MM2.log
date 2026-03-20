@@ -1,0 +1,48 @@
+
+Time =       0.00 sec    Generated terms =         52
+   MM2x33SP4Hans         Terms in output =         52
+                         Bytes used      =       2452
+
+Time =       0.00 sec    Generated terms =         52
+   MM2x33SP4Hans         Terms in output =         52
+                         Bytes used      =       2452
+
+Time =       0.00 sec    Generated terms =         24
+   MM2x33SP4Hans         Terms in output =         24
+                         Bytes used      =       1128
+
+Time =       0.00 sec    Generated terms =         24
+   MM2x33SP4Hans         Terms in output =         24
+                         Bytes used      =       1016
+
+Time =       0.00 sec    Generated terms =         24
+   MM2x33SP4Hans         Terms in output =         24
+                         Bytes used      =       1016
+
+Time =       0.00 sec    Generated terms =         24
+   MM2x33SP4Hans         Terms in output =         24
+                         Bytes used      =       1128
+
+Time =       0.00 sec    Generated terms =         24
+   MM2x33SP4Hans         Terms in output =         12
+                         Bytes used      =        488
+
+Time =       0.00 sec    Generated terms =         12
+   MM2x33SP4Hans         Terms in output =         12
+                         Bytes used      =        488
+
+Time =       0.00 sec    Generated terms =         12
+   MM2x33SP4Hans         Terms in output =         12
+                         Bytes used      =        572
+
+   MM2x33SP4Hans =
+       + i_*F^-2*L8 * (  - 8*mdd^2 - 8*muu^2 )
+
+       + i_*F^-2*L7 * (  - 16*mdd^2 + 32*muu*mdd - 16*muu^2 )
+
+       + i_*F^-2*L6 * (  - 16*mdd^2 - 32*muu*mdd - 16*muu^2 )
+
+       + i_*F^-2*L5 * ( 4*p1ext.p1ext*mdd + 4*p1ext.p1ext*muu )
+
+       + i_*F^-2*L4 * ( 16*p1ext.p1ext*mdd + 16*p1ext.p1ext*muu );
+

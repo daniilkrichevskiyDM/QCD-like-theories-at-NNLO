@@ -32,6 +32,7 @@ G MM1x`ext1'`ext2'`SX4' =  i_*SymmetryFactorMass1*(
 #call pickout(`ext1',p1ext,p,pp,2, MM1x`ext1'`ext2'`SX4')
 #call pickout(`ext2',p2ext,p,pp,2, MM1x`ext1'`ext2'`SX4')
 id p2ext = -p1ext;
+#include SymmetryFactorsMass.hf
 .sort
 *b means bracket
 b A,F,i_,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,H1,H2,sqrt2;

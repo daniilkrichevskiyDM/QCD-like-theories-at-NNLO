@@ -33,20 +33,18 @@ Time =       0.00 sec    Generated terms =         12
 
 Time =       0.00 sec    Generated terms =          6
        MM2x88SO4         Terms in output =          6
-                         Bytes used      =        340
+                         Bytes used      =        292
 
 Time =       0.00 sec    Generated terms =          6
        MM2x88SO4         Terms in output =          6
-                         Bytes used      =        404
+                         Bytes used      =        356
 
    MM2x88SO4 =
-       + i_*F^-2*L8 * (  - 16*mdd^2*SymmetryFactorMass2 )
+       + i_*F^-2*L8 * (  - 16*mdd^2 )
 
-       + i_*F^-2*L6 * (  - 32*mdd^2*SymmetryFactorMass2 - 32*muu*mdd*
-         SymmetryFactorMass2 )
+       + i_*F^-2*L6 * (  - 32*mdd^2 - 32*muu*mdd )
 
-       + i_*F^-2*L5 * ( 8*p1ext.p1ext*mdd*SymmetryFactorMass2 )
+       + i_*F^-2*L5 * ( 8*p1ext.p1ext*mdd )
 
-       + i_*F^-2*L4 * ( 16*p1ext.p1ext*mdd*SymmetryFactorMass2 + 16*
-         p1ext.p1ext*muu*SymmetryFactorMass2 );
+       + i_*F^-2*L4 * ( 16*p1ext.p1ext*mdd + 16*p1ext.p1ext*muu );
 

@@ -33,27 +33,19 @@ Time =       0.00 sec    Generated terms =         44
 
 Time =       0.00 sec    Generated terms =         22
        MM9x88SO4         Terms in output =         22
-                         Bytes used      =       1028
+                         Bytes used      =        852
 
 Time =       0.00 sec    Generated terms =         22
        MM9x88SO4         Terms in output =         22
-                         Bytes used      =        972
+                         Bytes used      =        796
 
    MM9x88SO4 =
-       + i_*F^-4 * (  - 64*mdd^3*KK40*SymmetryFactorMass9 - 32*mdd^3*KK39*
-         SymmetryFactorMass9 - 192*mdd^3*KK27*SymmetryFactorMass9 - 96*mdd^3*
-         KK26*SymmetryFactorMass9 - 48*mdd^3*KK25*SymmetryFactorMass9 - 64*muu
-         *mdd^2*KK40*SymmetryFactorMass9 - 384*muu*mdd^2*KK27*
-         SymmetryFactorMass9 - 64*muu*mdd^2*KK26*SymmetryFactorMass9 - 192*
-         muu^2*mdd*KK27*SymmetryFactorMass9 - 32*muu^2*mdd*KK26*
-         SymmetryFactorMass9 + 16*p1ext.p1ext*mdd^2*KK23*SymmetryFactorMass9
-          + 64*p1ext.p1ext*mdd^2*KK22*SymmetryFactorMass9 + 32*p1ext.p1ext*
-         mdd^2*KK21*SymmetryFactorMass9 + 32*p1ext.p1ext*mdd^2*KK20*
-         SymmetryFactorMass9 + 16*p1ext.p1ext*mdd^2*KK19*SymmetryFactorMass9
-          + 128*p1ext.p1ext*muu*mdd*KK22*SymmetryFactorMass9 + 32*p1ext.p1ext*
-         muu*mdd*KK20*SymmetryFactorMass9 + 64*p1ext.p1ext*muu^2*KK22*
-         SymmetryFactorMass9 + 32*p1ext.p1ext*muu^2*KK21*SymmetryFactorMass9
-          + 64*p1ext.p1ext^2*mdd*KK18*SymmetryFactorMass9 + 32*p1ext.p1ext^2*
-         mdd*KK17*SymmetryFactorMass9 + 64*p1ext.p1ext^2*muu*KK18*
-         SymmetryFactorMass9 );
+       + i_*F^-4 * (  - 64*mdd^3*KK40 - 32*mdd^3*KK39 - 192*mdd^3*KK27 - 96*
+         mdd^3*KK26 - 48*mdd^3*KK25 - 64*muu*mdd^2*KK40 - 384*muu*mdd^2*KK27
+          - 64*muu*mdd^2*KK26 - 192*muu^2*mdd*KK27 - 32*muu^2*mdd*KK26 + 16*
+         p1ext.p1ext*mdd^2*KK23 + 64*p1ext.p1ext*mdd^2*KK22 + 32*p1ext.p1ext*
+         mdd^2*KK21 + 32*p1ext.p1ext*mdd^2*KK20 + 16*p1ext.p1ext*mdd^2*KK19 + 
+         128*p1ext.p1ext*muu*mdd*KK22 + 32*p1ext.p1ext*muu*mdd*KK20 + 64*
+         p1ext.p1ext*muu^2*KK22 + 32*p1ext.p1ext*muu^2*KK21 + 64*p1ext.p1ext^2
+         *mdd*KK18 + 32*p1ext.p1ext^2*mdd*KK17 + 64*p1ext.p1ext^2*muu*KK18 );
 

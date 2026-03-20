@@ -1,0 +1,177 @@
+
+Time =       0.00 sec    Generated terms =         60
+           Vleft         Terms in output =         60
+                         Bytes used      =       4076
+
+Time =       0.00 sec    Generated terms =         60
+          Vright         Terms in output =         60
+                         Bytes used      =       4076
+
+Time =       0.00 sec    Generated terms =         60
+           Vleft         Terms in output =         60
+                         Bytes used      =       4728
+
+Time =       0.00 sec    Generated terms =         60
+          Vright         Terms in output =         60
+                         Bytes used      =       4728
+
+Time =       0.00 sec    Generated terms =         60
+           Vleft         Terms in output =         60
+                         Bytes used      =       4728
+
+Time =       0.00 sec    Generated terms =         60
+          Vright         Terms in output =         60
+                         Bytes used      =       4728
+
+Time =       0.00 sec    Generated terms =         48
+           Vleft         Terms in output =         48
+                         Bytes used      =       4076
+
+Time =       0.00 sec    Generated terms =         48
+           Vleft         Terms in output =         48
+                         Bytes used      =       3324
+
+Time =       0.00 sec    Generated terms =         48
+           Vleft         Terms in output =         48
+                         Bytes used      =       3324
+
+Time =       0.00 sec    Generated terms =         60
+          Vright         Terms in output =         60
+                         Bytes used      =       4728
+
+Time =       0.00 sec    Generated terms =         48
+          Vright         Terms in output =         48
+                         Bytes used      =       4076
+
+Time =       0.00 sec    Generated terms =         48
+          Vright         Terms in output =         48
+                         Bytes used      =       3324
+
+Time =       0.00 sec    Generated terms =         48
+           Vleft         Terms in output =         48
+                         Bytes used      =       3324
+
+Time =       0.00 sec    Generated terms =         48
+          Vright         Terms in output =         48
+                         Bytes used      =       3324
+
+Time =       0.00 sec    Generated terms =       2304
+   MM8x11SP4Hans         Terms in output =       2160
+                         Bytes used      =     161452
+
+Time =       0.00 sec    Generated terms =       5856
+   MM8x11SP4Hans         Terms in output =       5856
+                         Bytes used      =     448964
+
+Time =       0.00 sec    Generated terms =       6240
+   MM8x11SP4Hans         Terms in output =       6240
+                         Bytes used      =     483124
+
+Time =       0.00 sec    Generated terms =       6624
+   MM8x11SP4Hans         Terms in output =       6624
+                         Bytes used      =     517284
+
+Time =       0.01 sec    Generated terms =       7008
+   MM8x11SP4Hans         Terms in output =       7008
+                         Bytes used      =     551444
+
+Time =       0.01 sec    Generated terms =       7392
+   MM8x11SP4Hans         Terms in output =       7392
+                         Bytes used      =     585604
+
+Time =       0.01 sec    Generated terms =       5232
+   MM8x11SP4Hans         Terms in output =       2732
+                         Bytes used      =     192692
+
+Time =       0.01 sec    Generated terms =       2732
+   MM8x11SP4Hans         Terms in output =       2732
+                         Bytes used      =     192692
+
+Time =       0.01 sec    Generated terms =       4700
+   MM8x11SP4Hans         Terms in output =       4700
+                         Bytes used      =     348004
+
+Time =       0.01 sec    Generated terms =       5224
+   MM8x11SP4Hans         Terms in output =       5224
+                         Bytes used      =     384452
+
+Time =       0.01 sec    Generated terms =       5748
+   MM8x11SP4Hans         Terms in output =       5748
+                         Bytes used      =     420900
+
+Time =       0.01 sec    Generated terms =       6272
+   MM8x11SP4Hans         Terms in output =       6272
+                         Bytes used      =     457348
+
+Time =       0.02 sec    Generated terms =       6796
+   MM8x11SP4Hans         Terms in output =       6796
+                         Bytes used      =     493796
+
+Time =       0.02 sec    Generated terms =       4064
+   MM8x11SP4Hans         Terms in output =       1696
+                         Bytes used      =     105160
+
+Time =       0.02 sec    Generated terms =       1696
+   MM8x11SP4Hans         Terms in output =       1696
+                         Bytes used      =     105160
+
+Time =       0.02 sec    Generated terms =       2272
+   MM8x11SP4Hans         Terms in output =       2272
+                         Bytes used      =     141732
+
+Time =       0.02 sec    Generated terms =       2552
+   MM8x11SP4Hans         Terms in output =       2552
+                         Bytes used      =     159108
+
+Time =       0.02 sec    Generated terms =       2832
+   MM8x11SP4Hans         Terms in output =       2832
+                         Bytes used      =     176164
+
+Time =       0.02 sec    Generated terms =       3112
+   MM8x11SP4Hans         Terms in output =       3112
+                         Bytes used      =     193220
+
+Time =       0.02 sec    Generated terms =       3392
+   MM8x11SP4Hans         Terms in output =       3392
+                         Bytes used      =     210276
+
+Time =       0.02 sec    Generated terms =       1696
+   MM8x11SP4Hans         Terms in output =        651
+                         Bytes used      =      35848
+
+Time =       0.02 sec    Generated terms =        651
+   MM8x11SP4Hans         Terms in output =        651
+                         Bytes used      =      35848
+
+Time =       0.02 sec    Generated terms =        651
+   MM8x11SP4Hans         Terms in output =         36
+                         Bytes used      =       2140
+
+Time =       0.02 sec    Generated terms =        965
+   MM8x11SP4Hans         Terms in output =         18
+                         Bytes used      =       1608
+
+Time =       0.02 sec    Generated terms =         32
+   MM8x11SP4Hans         Terms in output =         12
+                         Bytes used      =        988
+
+Time =       0.02 sec    Generated terms =         12
+   MM8x11SP4Hans         Terms in output =          8
+                         Bytes used      =        652
+
+   MM8x11SP4Hans =
+
+       + i_*F^-4 * (
+          - 7/288*H(mp2,mp2,mp2,p1ext.p1ext)*mdd^2
+          - 7/144*H(mp2,mp2,mp2,p1ext.p1ext)*muu*mdd
+          - 7/288*H(mp2,mp2,mp2,p1ext.p1ext)*muu^2
+          + 2/9*H(mp2,mp2,mp2,p1ext.p1ext)*p1ext.p1ext^2
+          - 2*H21(mp2,mp2,mp2,p1ext.p1ext)*p1ext.p1ext^2
+          - 2*H22(mp2,mp2,mp2,p1ext.p1ext)*p1ext.p1ext
+          )
+
+       + A(mp2)^2*i_*F^-4 * (
+          - 1/3*mp2
+          + p1ext.p1ext
+          );
+
