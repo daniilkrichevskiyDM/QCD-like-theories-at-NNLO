@@ -1,15 +1,16 @@
-symbol aux1;
-
 #include symbols.hf
 
-Local F1 = H(muu,mp2,mp2,p2ext.p2ext);
-Local F2 = p2ext.p2ext;
+*load phi6_Theory.sav;
+*L F1 = phi6Theory;
+*Print;
+*.end
 
-id H(?aux1,p2ext.p2ext) = H(?aux1,p1ext.p1ext);
+G phi2Theory = Lambda*phi(1)^2;
 
 .sort
 
-print;
-
-
+Print;
+.store
+save phi2_Theory.sav 
+   phi2Theory;
 .end

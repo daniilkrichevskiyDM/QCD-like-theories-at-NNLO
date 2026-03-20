@@ -35,8 +35,8 @@
 
        + A(mp2)^2*i_*F^-4 * (
           + 34/45*mp2*SymmetryFactorMass4
-          - 19/60*mdd*SymmetryFactorMass4
-          - 19/60*muu*SymmetryFactorMass4
+          - 167/480*mdd*SymmetryFactorMass4
+          - 167/480*muu*SymmetryFactorMass4
           + 4/15*p1ext.p1ext*SymmetryFactorMass4
           );
 

@@ -63,6 +63,9 @@ G NNLOmass = - Sigma6 + Sigma4*DerSigma4;
 id P2 = LOmass(`ext1');
 id H(?aux1,P2) = H(?aux1,LOmass(`ext1'));
 
+.sort
+
+
 
 Print NLOmass, NNLOmass;
 .end

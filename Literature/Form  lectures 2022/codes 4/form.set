@@ -1,0 +1,5 @@
+LargeSize 1G
+SmallSize 200M
+ScratchSize 500M
+TermsInSmall 1M
+MaxTermSize 50K

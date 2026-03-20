@@ -1,0 +1,72 @@
+FORM 4.2 (Jan 21 2020) 64-bits                   Run: Mon Feb 24 12:33:00 2020
+    Symbols D,ep,n1,n2,n3,n4,n5;
+    Dimension D;
+    Symbols x,x1,x2,x3,x4,x5;
+    Vector Q,p,p1,p2,p3,p4,p5;
+    CFunction der,del,Z,Y;
+    Off Statistics;
+    Format nospaces;
+    .global
+    #call IBPforT1
+    Bracket Z;
+    Print +f;
+    .end
+
+   A1=
+      +Z(-1+n1,n2,n3,1+n4,n5)*(-n4)
+      +Z(-1+n1,n2,n3,n4,1+n5)*(-n5)
+      +Z(1+n1,n2,n3,-1+n4,n5)*(n1)
+      +Z(1+n1,n2,n3,n4,n5)*(-n1)
+      +Z(n1,-1+n2,n3,n4,1+n5)*(n5)
+      +Z(n1,n2,-1+n3,n4,1+n5)*(-n5)
+      +Z(n1,n2,n3,-1+n4,1+n5)*(n5)
+      +Z(n1,n2,n3,1+n4,n5)*(n4)
+      +Z(n1,n2,n3,n4,n5)*(n4-n1);
+
+   A2=
+      +Z(-1+n1,n2,n3,1+n4,n5)*(-n4)
+      +Z(-1+n1,n2,n3,n4,1+n5)*(-n5)
+      +Z(n1,-1+n2,n3,n4,1+n5)*(n5)
+      +Z(n1,n2,n3,1+n4,n5)*(n4)
+      +Z(n1,n2,n3,n4,n5)*(-n5-n4-2*n1+D);
+
+   A3=
+      +Z(-1+n1,n2,n3,1+n4,n5)*(-n4)
+      +Z(-1+n1,n2,n3,n4,1+n5)*(-n5)
+      +Z(1+n1,-1+n2,n3,n4,n5)*(-n1)
+      +Z(1+n1,n2,n3,n4,-1+n5)*(n1)
+      +Z(n1,-1+n2,n3,n4,1+n5)*(n5)
+      +Z(n1,n2,-1+n3,1+n4,n5)*(-n4)
+      +Z(n1,n2,n3,1+n4,-1+n5)*(n4)
+      +Z(n1,n2,n3,1+n4,n5)*(n4)
+      +Z(n1,n2,n3,n4,n5)*(n5-n1);
+
+   A4=
+      +Z(-1+n1,n2,n3,n4,1+n5)*(n5)
+      +Z(n1,-1+n2,1+n3,n4,n5)*(-n3)
+      +Z(n1,-1+n2,n3,n4,1+n5)*(-n5)
+      +Z(n1,1+n2,-1+n3,n4,n5)*(n2)
+      +Z(n1,1+n2,n3,n4,n5)*(-n2)
+      +Z(n1,n2,-1+n3,n4,1+n5)*(n5)
+      +Z(n1,n2,1+n3,n4,n5)*(n3)
+      +Z(n1,n2,n3,-1+n4,1+n5)*(-n5)
+      +Z(n1,n2,n3,n4,n5)*(n3-n2);
+
+   A5=
+      +Z(-1+n1,1+n2,n3,n4,n5)*(-n2)
+      +Z(-1+n1,n2,n3,n4,1+n5)*(n5)
+      +Z(n1,-1+n2,1+n3,n4,n5)*(-n3)
+      +Z(n1,-1+n2,n3,n4,1+n5)*(-n5)
+      +Z(n1,1+n2,n3,n4,-1+n5)*(n2)
+      +Z(n1,n2,1+n3,-1+n4,n5)*(-n3)
+      +Z(n1,n2,1+n3,n4,-1+n5)*(n3)
+      +Z(n1,n2,1+n3,n4,n5)*(n3)
+      +Z(n1,n2,n3,n4,n5)*(n5-n2);
+
+   A6=
+      +Z(-1+n1,n2,n3,n4,1+n5)*(n5)
+      +Z(n1,-1+n2,1+n3,n4,n5)*(-n3)
+      +Z(n1,-1+n2,n3,n4,1+n5)*(-n5)
+      +Z(n1,n2,1+n3,n4,n5)*(n3)
+      +Z(n1,n2,n3,n4,n5)*(-n5-n3-2*n2+D);
+  0.00 sec out of 0.00 sec

@@ -48,7 +48,7 @@ nskip MM6x`ext1'`ext2'`SX4'`diagramUpper';
 #call setmom(q,2)
 .sort
 
-* 2 fields in the lower one
+* 4 fields in the lower one
 skip; 
 nskip MM6x`ext1'`ext2'`SX4'`diagramLower';
 #call setmom(p,4)

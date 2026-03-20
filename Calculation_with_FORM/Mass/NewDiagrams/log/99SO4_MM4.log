@@ -9,7 +9,7 @@
           )
 
        + A(mdd)^2*i_*F^-4 * (
-          + 101/180*mdd*SymmetryFactorMass4
+          + 14/45*mdd*SymmetryFactorMass4
           + 16/45*p1ext.p1ext*SymmetryFactorMass4
           )
 
