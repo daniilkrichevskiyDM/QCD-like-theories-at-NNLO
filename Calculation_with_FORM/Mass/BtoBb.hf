@@ -1,0 +1,9 @@
+id B(?a) = pi16/epsb+Bb(?a)+eps*Bb(eps,?a);
+id B1(?a) = pi16/2/epsb+B1b(?a)+eps*B1b(eps,?a);
+id B21(?a) = pi16/3/epsb+B21b(?a)+eps*B21b(eps,?a);
+id B22(mp2?,mk2?,spi?) = pi16/epsb*(mp2/4+mk2/4-spi/12)
+ +B22b(mp2,mk2,spi)+eps*B22b(eps,mp2,mk2,spi);
+id B31(?a) = pi16/epsb/4+B31b(?a)+eps*B31b(eps,?a); 
+id B32(mp2?,mk2?,spi?) = pi16/epsb*(mk2/6+mp2/12-spi/24)
+ +B32b(mp2,mk2,spi)+eps*B32b(eps,mp2,mk2,spi);
+

@@ -37,16 +37,16 @@ skip; nskip Vright;
 #call pickout(`ext2',p2ext,q,qq,4,Vright)
 .sort
 drop Vleft,Vright;
-G MM8x`ext1'`ext2'`SX4'Hans = i_^7*Vleft*Vright;
+G MM8x`ext1'`ext2'`SX4' = i_^7*Vleft*Vright;
 
-#call connectvertex(PP,p,pp,3,q,qq,3,MM8x`ext1'`ext2'`SX4'Hans)
-#call connectvertex(QQ,p,pp,2,q,qq,2,MM8x`ext1'`ext2'`SX4'Hans)
-#call connectvertex(RR,p,pp,1,q,qq,1,MM8x`ext1'`ext2'`SX4'Hans)
+#call connectvertex(PP,p,pp,3,q,qq,3,MM8x`ext1'`ext2'`SX4')
+#call connectvertex(QQ,p,pp,2,q,qq,2,MM8x`ext1'`ext2'`SX4')
+#call connectvertex(RR,p,pp,1,q,qq,1,MM8x`ext1'`ext2'`SX4')
 multiply 1/6;* SYMMETRY FACTOR
 .sort
 #include setprop.hf
 .sort
-#call dointH(PP,QQ,RR,p2ext,MM8x`ext1'`ext2'`SX4'Hans)
+#call dointH(PP,QQ,RR,p2ext,MM8x`ext1'`ext2'`SX4')
 .sort
 id p2ext = -p1ext;
 argument;
@@ -57,5 +57,5 @@ b i_,F,A,B;
 print +s;
 .store
 save save/MM8_`ext1'`ext2'`SX4'.sav 
-   MM8x`ext1'`ext2'`SX4'Hans;
+   MM8x`ext1'`ext2'`SX4';
 .end

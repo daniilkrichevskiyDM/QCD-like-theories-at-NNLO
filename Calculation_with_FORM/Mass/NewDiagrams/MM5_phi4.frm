@@ -75,8 +75,6 @@ G product =  MM5x`ext1'`ext2'`SX4'Upper *  MM5x`ext1'`ext2'`SX4'Lower;
 #call connectvertex(PP,p,pp,2,q,qq,2, product)
 
 
-
-
 *4) now we do the integrals
 
 #include setprop.hf

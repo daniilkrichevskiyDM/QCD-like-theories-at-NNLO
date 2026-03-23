@@ -25,13 +25,11 @@ do
         echo '#define ext2 "'$eext2'"' >> setexternal.hf #append to the file
         echo '#define SX4 "'$SX4'"' >> setexternal.hf #append to the file
 
-        
         infile="CompareDiagrams.frm"
         logfile="CompareDiagrams.log"
 
         $FORM "$infile"
         mv "$logfile" log/Comparediagram${eext1}${eext2}${indextheory}.log
-       
     
     done
 

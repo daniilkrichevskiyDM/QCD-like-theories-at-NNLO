@@ -65,6 +65,7 @@ G diff9 = Diagram9My - Diagram9Hans;
 
 .sort
 *Print Diagram1Hans;
-Print diff1,...,diff9;
+b A;
+Print diff1,...,diff9, Diagram7My, Diagram4Hans ;
 
 .end

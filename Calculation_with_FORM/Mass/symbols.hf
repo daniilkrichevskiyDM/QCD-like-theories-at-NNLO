@@ -18,7 +18,7 @@ set flavour:<b1>,...,<b`MAXINDEX'>;
 symbol i1,...,i15;
 
 s F,B0,muu,mdd,mp2,mk2,me2;
-symbol eps,epsb,epsb2,epsb1,lambda2,lambda1,log4pi,
+symbol eps,epsb,epsb2,epsb1,lambda2,lambda1,log4pi, logmu,
     pi,pi16,pi162;
 cfunction delt,deltm,prop;
 vector qext,q1ext,q2ext,q3ext,q4ext,q5ext,p1ext,p2ext,p3ext,p4ext;
@@ -40,6 +40,7 @@ set aaa:a0,a1,a2,a3;
 
 symbol KK1,...,KK115;
 symbol L0,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,H1,H2;
+symbol Lr0,Lr1,Lr2,Lr3,Lr4,Lr5,Lr6,Lr7,Lr8,Lr9,Lr10,Hr1,Hr2;
 set Li:L0,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,H1,H2;
 vector QQP,QRS,QRS1,QRS2,QRS3;* dummy vectors, use only in procedures
 cfunction A,B,B1,B21,B22,B31,B32,C,C12,C22,C24,H,HH1,H21,H22,H23,H24,VV;

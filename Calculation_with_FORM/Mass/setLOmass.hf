@@ -1,0 +1,19 @@
+#if `SX4'==SP4
+id LOmass(i1?) = mp2;
+argument;
+id LOmass(i1?) = mp2;
+endargument;
+#elseif `SX4'==SO4
+id LOmass(i1?{1,2,3,4,5}) = mp2;
+argument;
+id LOmass(i1?{1,2,3,4,5}) = mp2;
+endargument;
+id LOmass(i1?{6,7}) = muu;
+argument;
+id LOmass(i1?{6,7}) = muu;
+endargument;
+id LOmass(i1?{8,9}) = mdd;
+argument;
+id LOmass(i1?{8,9}) = mdd;
+endargument;
+#endif
