@@ -1,6 +1,7 @@
 Off statistics;
 
-cfunction LOmass,Ab, Bb,B1b,B21b,spi,B22b,B31b,B32b,m1,m2,m3,m4,Hbb,H1bb,H21bb,Hd,Hdd,H1d,H1dd,H21d,H21dd;
+cfunction LOmass,Ab, Bb,B1b,B21b,spi,B22b,B31b,B32b,Hbb,H1bb,H21bb,Hd,Hdd,H1d,H1dd,H21d,H21dd;
+symbol m1,m2,m3,m4;
 symbol P2, aux1, n, L;
 
 #include symbols.hf
@@ -36,9 +37,6 @@ G Sigma4 = (Diagram2 + Diagram3)/i_;
 G Sigma6 = (Diagram4 + Diagram5 + Diagram6 + Diagram7 + Diagram8 + Diagram9)/i_;
 
 
-
-
-
 id p1ext.p1ext = P2;
 argument;
 id p1ext.p1ext = P2;
@@ -59,12 +57,9 @@ G NLOmass = - Sigma4;
 
 *now we take derivative of sigma4
 G DerSigma4 = Sigma4;
-
 #call derivative(DerSigma4,P2)
 
 .sort
-
-
 G NNLOmass = - Sigma6 + Sigma4*DerSigma4;
 
 *we now set the p^2 to the LO mass
@@ -75,7 +70,7 @@ endargument;
 
 #include setLOmass.hf
 
-*consider degenerate case 
+*DEGENERATE CASE
 id muu = mp2;
 id mdd = mp2;
 argument;
@@ -84,28 +79,37 @@ id mdd = mp2;
 endargument;
 
 .sort
+
 *we now consider  the \eps dependense and renormalization
-
 #include Gammas.hf
+
 .sort
-#call HtoHb.hf
-#include AtoAb.hf
+*#include HtoHb.hf
+.sort
 #include BtoBb.hf
+#include AtoAb.hf
 
-id Bb(mp2?) = - pi16 + Ab(mp2)/mp2;
+id Bb(mp2,?a) = - pi16 + Ab(mp2)/mp2;
 
+id H(mp2?,mp2?,mp2?,mp2?) = lambda1*mp2*(5/4*pi16^2 - 3*L*pi16)+3/2*lambda2*mp2*pi16^2+mp2*(3*L^2-5/2*L*pi16+1/4*pi^2*pi16^2+15/8*pi16^2);
+id H21(mp2?,mp2?,mp2?,mp2?) = lambda1*mp2*(11/72*pi16^2 - 2/3*L*pi16)+1/3*lambda2*mp2*pi16^2+mp2*(-11/36*L*pi16 + 1/18*pi^2*pi16^2+493/864*pi16^2);
+id H22(mp2?,mp2?,mp2?,mp2?) = lambda1*mp2^2*(157/288*pi16^2 - 13/12*L*pi16)+13/24*lambda2*mp2^2*pi16^2+mp2^2*(-157/144*L*pi16 + 13*4/12*L^2 +13/144 *pi^2 *pi16^2+2933/3456*pi16^2);
 .sort
+
+id lambda0 = epsb^(-1);
+id lambda1 = epsb^(-1) + log4pi;
+id lambda2 = (epsb^(-1))^2 + log4pi^2;
 
 #do indexLECs = 0, 10
-id L`indexLECs' = - Gamma`indexLECs'*pi16/(2*eps) + ( Lr`indexLECs'  - Gamma`indexLECs'*pi16*log4pi/2 + Gamma`indexLECs'*pi16*logmu)
- + eps*(-2*Lr`indexLECs'*(-1/2*log4pi+logmu)- Gamma`indexLECs'*(-log4pi/2+logmu)^2) ;
+id L`indexLECs' = - Gamma`indexLECs'*pi16/(2*eps) + ( Lr`indexLECs'  + Gamma`indexLECs'*pi16*(- log4pi/2 + logmu))
+-1/4*((log4pi-2*logmu)*(-4*Lr`indexLECs'+log4pi*Gamma`indexLECs'*pi16-2*Gamma`indexLECs'*pi16*logmu))*eps;
 #enddo
 
 .sort
 
-
-
+*lambda0
 id epsb^(-1) = 1/eps + log4pi;
+*finite part of A
 id Ab(mp2?) = L - 2*mp2*pi16*logmu;
 
 .sort
@@ -114,7 +118,7 @@ id eps^n?{1,2,3,4} = 0;
 id dim^-1= 1/4;
 
 .sort
-b F,mp2, eps, L;
+b F,mp2, eps, L, pi16;
 
 
 

@@ -47,4 +47,4 @@ cfunction A,B,B1,B21,B22,B31,B32,C,C12,C22,C24,H,HH1,H21,H22,H23,H24,VV;
 set INTEGRALS:A,B,B1,B21,B22,B31,B32,C,C12,C22,C24,H,HH1,H21,H22,H23,H24,VV;
 
 symbol SymmetryFactorMass1,...,SymmetryFactorMass9; 
-symbol Lambda;
+symbol Lambda, lambda0, lambda1, lambda2;
