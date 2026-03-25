@@ -1,0 +1,13 @@
+#if `SX4'==SO4
+id gamma2  = - pi16^2 * (  - 335/96 + 5/3*sqrt2^-2 );
+id gamma1 = -(mp2^-1*pi16*ABar * (  - 5/3 + 10/3*sqrt2^-2 )+pi16 * ( 116*Lr8 + 336*Lr6 - 56*Lr5 - 224*Lr4 + 46*Lr3
+          + 56*Lr2 + 152*Lr1 + 22*Lr0 )+pi16^2 * ( 173/96 + 19/8*sqrt2^-2 ));
+
+
+#elseif `SX4'==SP4
+
+id gamma2 = pi16^2 * (  + 21/32 );
+id  gamma1 =-( pi16 * ( 36*Lr8 + 144*Lr6 - 24*Lr5 - 96*Lr4 + 22*Lr3 + 
+         40*Lr2 + 88*Lr1 - 2*Lr0 )+ pi16^2 * ( 79/96 )) ;
+
+#endif

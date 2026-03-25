@@ -20,7 +20,7 @@ symbol i1,...,i15;
 s F,B0,muu,mdd,mp2,mk2,me2;
 symbol eps,epsb,epsb2,epsb1,lambda2,lambda1,log4pi, logmu,
     pi,pi16,pi162;
-cfunction delt,deltm,prop;
+cfunction delt,deltm,prop,log;
 vector qext,q1ext,q2ext,q3ext,q4ext,q5ext,p1ext,p2ext,p3ext,p4ext;
 vector aext1,aext2,vext1,vext2,vext3;
 vector PP,QQ,RR,SS;
@@ -48,3 +48,5 @@ set INTEGRALS:A,B,B1,B21,B22,B31,B32,C,C12,C22,C24,H,HH1,H21,H22,H23,H24,VV;
 
 symbol SymmetryFactorMass1,...,SymmetryFactorMass9; 
 symbol Lambda, lambda0, lambda1, lambda2;
+symbol rMT,rMTr,ABar;
+symbol gamma1, gamma2;

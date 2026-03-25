@@ -9,7 +9,7 @@ symbol P2, aux1, n, L;
 
 #define ext1 "1"
 #define ext2 "1"
-#define SX4 "SP4"
+#define SX4 "SO4"
 
 
 
@@ -53,14 +53,18 @@ nskip `expr';
 .sort
 #endprocedure
 
-G NLOmass = - Sigma4;
+
 
 *now we take derivative of sigma4
 G DerSigma4 = Sigma4;
+
+
 #call derivative(DerSigma4,P2)
 
 .sort
-G NNLOmass = - Sigma6 + Sigma4*DerSigma4;
+G NLOmass =  -Sigma4 ; 
+G NNLOmass =  -Sigma6 + Sigma4*DerSigma4; 
+
 
 *we now set the p^2 to the LO mass
 id P2 = LOmass(`ext1');
@@ -84,21 +88,25 @@ endargument;
 #include Gammas.hf
 
 .sort
-*#include HtoHb.hf
+#include HtoHb.hf
 .sort
 #include BtoBb.hf
 #include AtoAb.hf
+.sort
+#include reduceHbb0.hf
 
 id Bb(mp2,?a) = - pi16 + Ab(mp2)/mp2;
-
-id H(mp2?,mp2?,mp2?,mp2?) = lambda1*mp2*(5/4*pi16^2 - 3*L*pi16)+3/2*lambda2*mp2*pi16^2+mp2*(3*L^2-5/2*L*pi16+1/4*pi^2*pi16^2+15/8*pi16^2);
-id H21(mp2?,mp2?,mp2?,mp2?) = lambda1*mp2*(11/72*pi16^2 - 2/3*L*pi16)+1/3*lambda2*mp2*pi16^2+mp2*(-11/36*L*pi16 + 1/18*pi^2*pi16^2+493/864*pi16^2);
-id H22(mp2?,mp2?,mp2?,mp2?) = lambda1*mp2^2*(157/288*pi16^2 - 13/12*L*pi16)+13/24*lambda2*mp2^2*pi16^2+mp2^2*(-157/144*L*pi16 + 13*4/12*L^2 +13/144 *pi^2 *pi16^2+2933/3456*pi16^2);
+id lambda1 = lambda0  + log4pi;
+id lambda2 =  lambda0^2 + log4pi^2;
 .sort
 
+
+id Ab(eps,mp2?) = pi16*mp2*(C^2/2+1/2+pi^2/12+1/2*log(mp2)^2-C*log(mp2));
+.sort 
 id lambda0 = epsb^(-1);
-id lambda1 = epsb^(-1) + log4pi;
-id lambda2 = (epsb^(-1))^2 + log4pi^2;
+id C = log4pi;
+id log(mp2) = L/pi16+2*logmu;
+id pi^2 = 1/16*1/pi16; 
 
 #do indexLECs = 0, 10
 id L`indexLECs' = - Gamma`indexLECs'*pi16/(2*eps) + ( Lr`indexLECs'  + Gamma`indexLECs'*pi16*(- log4pi/2 + logmu))
@@ -110,23 +118,33 @@ id L`indexLECs' = - Gamma`indexLECs'*pi16/(2*eps) + ( Lr`indexLECs'  + Gamma`ind
 *lambda0
 id epsb^(-1) = 1/eps + log4pi;
 *finite part of A
-id Ab(mp2?) = L - 2*mp2*pi16*logmu;
+id Ab(mp2?) = -mp2*L - 2*mp2*pi16*logmu;
 
+id KK40 = 1/128*rMT-1/128*(32*KK39 + 768 *KK27 + 192*KK26 + 48*KK25 - 16*KK23 - 256*KK22 - 64*KK21 - 64*KK20- 16*KK19 - 128*KK18 - 32*KK17);
+
+id rMT = rMTr + gamma2*eps^(-2)+2*gamma1*(log4pi-2*logmu)+2*gamma2*(log4pi-2*logmu)^2
++1/eps*(gamma1+2*log4pi*gamma2-4*gamma2*logmu);
+
+.sort
+id dim^-1 =1/4 + eps/8 + eps^2/16;
 .sort
 id eps^n?{1,2,3,4} = 0;
-.sort
-id dim^-1= 1/4;
+
+
+id L = - ABar/mp2;
+
+#include GammasNNLO.hf
+ 
+id sqrt2^-2 = 1/2;
 
 .sort
-b F,mp2, eps, L, pi16;
+G NNLOmassNormalized = NNLOmass*F^4/mp2;
+.sort
+b F,mp2, eps, ABar, pi16;
 
 
 
-Print NLOmass,  NNLOmass ;
-*id B(mp2,mp2,0) = - pi16 + A(mp2)/mp2;
-*id H(mp2,mp2,mp2,mp2) = lambda1*mp2*(5/4*pi16^2 - 3*L*pi16)+3/2*lambda2*mp2*pi16^2+mp2*(3*L^2-5/2*L*pi16+1/4*pi^2*pi16^2+15/8*pi16^2);
-*id H21(mp2,mp2,mp2,mp2) = lambda1*mp2*(11/72*pi16^2 - 2/3*L*pi16)+1/3*lambda2*mp2*pi16^2+mp2*(-11/36*L*pi16 + 1/18*pi^2*pi16^2+493/864*pi16^2);
-*id H22(mp2,mp2,mp2,mp2) = lambda1*mp2^2*(157/288*pi16^2 - 13/12*L*pi16)+13/24*lambda2*mp2^2*pi16^2+mp2^2*(-157/144*L*pi16 + 13*4/12*L^2 +13/144 *pi^2 *pi16^2+2933/3456*pi16^2);
+Print NLOmass,  NNLOmassNormalized;
 
 
 

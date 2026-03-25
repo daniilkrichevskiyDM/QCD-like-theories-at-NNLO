@@ -1,7 +1,7 @@
 
 * log4pi = log(4pi)-gamma+1
 * dim = 4-2*eps
-* 1/epsb = 1/eps+log4pi
+* 1/epsb = 1/eps+log4pi, i.e. it is lambda0
 
 repeat;
 id H22(m1?,m2?,m3?,m4?) =
