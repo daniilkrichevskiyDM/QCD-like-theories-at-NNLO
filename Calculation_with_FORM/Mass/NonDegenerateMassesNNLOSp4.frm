@@ -1,9 +1,9 @@
 Off statistics;
 
-cfunction ABar, LOmass,Ab, L, ABar,  Bb,B1b,B21b,spi,B22b,B31b,B32b,Hbb,H1bb,H21bb,Hd,Hdd,H1d,H1dd,H21d,H21dd;
-symbol m1,m2,m3,m4,rM3, rM1, rM;
+cfunction ABar, LOmass,Ab, L,  Bb,B1b,B21b,spi,B22b,B31b,B32b,Hbb,H1bb,H21bb,Hd,Hdd,H1d,H1dd,H21d,H21dd;
+symbol m1,m2,m3,m4;
 symbol P2, aux1, n, QuarkMassRatio, RatioR;
-symbol gamma11,gamma21,gamma13,gamma23, rM1r,rMr,rM3r;
+symbol gamma10, gamma20, gamma11, gamma21, gamma12, gamma22, rM0r,rM1r,rM2r, rM0,rM1,rM2;
 
 #include symbols.hf
 #include setexternal.hf
@@ -77,7 +77,7 @@ endargument;
 .sort
 
 *we now consider  the \eps dependense and renormalization
-#include Gammas.hf
+#include GammasNLO.hf
 
 .sort
 #include HtoHb.hf
@@ -113,27 +113,26 @@ id epsb^(-1) = 1/eps + log4pi;
 id Ab(mp2?) = -mp2*L(mp2) - 2*mp2*pi16*logmu;
 
 id KK42 = 1/512*(16* KK19 + 64* KK21 + 16 *KK23 + 64 *KK24 - 144 *KK25 - 192* KK26 - 
-   96* KK39 - 128 *KK40 - 256* KK41 + rM3);
+   96* KK39 - 128 *KK40 - 256* KK41 + rM2);
 .sort
 
 id KK17 = 1/32 *(-128* KK18 - 16 *KK19 - 64 *KK20 - 64 *KK21 - 256 *KK22 - 16* KK23 + 
-    48 *KK25 + 192 *KK26 + 768* KK27 + 32* KK39 + 128* KK40 - rM);
+    48 *KK25 + 192 *KK26 + 768* KK27 + 32* KK39 + 128* KK40 - rM0);
 
 .sort
 
 id KK19 = 1/16* (-64 *KK21 + 16 *KK23 + 48* KK25 + 64 *KK26 - rM1);
 
 
-*id KK40 = 1/128*rMT-1/128*(32*KK39 + 768 *KK27 + 192*KK26 + 48*KK25 - 16*KK23 - 256*KK22 - 64*KK21 - 64*KK20- 16*KK19 - 128*KK18 - 32*KK17);
 
-id rM = rMr + gamma2*eps^(-2)+2*gamma1*(log4pi-2*logmu)+2*gamma2*(log4pi-2*logmu)^2
-+1/eps*(gamma1+2*log4pi*gamma2-4*gamma2*logmu);
+id rM0 = rM0r + gamma20*eps^(-2)+2*gamma10*(log4pi-2*logmu)+2*gamma20*(log4pi-2*logmu)^2
++1/eps*(gamma10+2*log4pi*gamma20-4*gamma20*logmu);
 
 id rM1 = rM1r + gamma21*eps^(-2)+2*gamma11*(log4pi-2*logmu)+2*gamma21*(log4pi-2*logmu)^2
 +1/eps*(gamma11+2*log4pi*gamma21-4*gamma21*logmu);
 
-id rM3 = rM3r + gamma23*eps^(-2)+2*gamma13*(log4pi-2*logmu)+2*gamma23*(log4pi-2*logmu)^2
-+1/eps*(gamma13+2*log4pi*gamma23-4*gamma23*logmu);
+id rM2 = rM2r + gamma22*eps^(-2)+2*gamma12*(log4pi-2*logmu)+2*gamma22*(log4pi-2*logmu)^2
++1/eps*(gamma12+2*log4pi*gamma22-4*gamma22*logmu);
 
 .sort
 id dim^-1 =1/4 + eps/8 + eps^2/16;
@@ -143,30 +142,18 @@ id eps^n?{1,2,3,4} = 0;
 
 id L(mp2?) = - ABar(mp2)/mp2;
 
-*#include GammasNNLO.hf
+#include GammasNNLO.hf
 .sort
 
-id gamma11 = -(gamma1/RatioR^2) - (1/(
-  96* RatioR^2))*(-192 *Lr0* pi16 + 8448* Lr1* pi16 + 3840* Lr2* pi16 + 
-    2112 *Lr3* pi16 - 9216* Lr4* pi16 - 2304* Lr5 *pi16 + 13824* Lr6 *pi16 + 
-    3456* Lr8* pi16 + 79* pi16^2 - 1536* Lr7* pi16 *RatioR^2 - 
-    384* Lr8* pi16* RatioR^2);
 
-id gamma21 = -(gamma2/RatioR^2) + (21* pi16^2)/(32* RatioR^2);
-
-id gamma23 = -(gamma2/RatioR^2) + (21* pi16^2)/(32 *RatioR^2);
-
-id gamma13 = -(gamma1/RatioR^2) - (1/(
-  96* RatioR^2))*(-192* Lr0 *pi16 + 8448 *Lr1 *pi16 + 3840* Lr2 *pi16 + 
-    2112 *Lr3* pi16 - 9216* Lr4* pi16 - 2304* Lr5 *pi16 + 13824* Lr6 *pi16 + 
-    3456* Lr8 *pi16 + 79 *pi16^2 + 19968* Lr7* pi16* RatioR^2 + 
-    4992* Lr8* pi16 *RatioR^2);
  
 id sqrt2^-2 = 1/2;
 
 
 .sort
-G NNLOmassNormalized = NNLOmass*F^4/mp2;
+
+G NLOmassNorm = NLOmass*F^2/mp2;
+G NNLOmassNorm = NNLOmass*F^4/mp2;
 
 id mdd = -mp2*(-1 + RatioR);
 id muu = mp2*(1 + RatioR);
@@ -179,9 +166,13 @@ b F, mp2, eps, ABar, pi16, RatioR;
 
 
 
-Print NLOmass,  NNLOmassNormalized;
+Print NLOmassNorm,  NNLOmassNorm;
+.sort
+G NLOmass`ext1'`SX4' = NLOmass;
+G NNLOmass`ext1'`SX4' = NNLOmass;
 
-
+.store
+save save/Mass_`ext1'`SX4'.sav NLOmass`ext1'`SX4',NNLOmass`ext1'`SX4';
 
 .end
 
