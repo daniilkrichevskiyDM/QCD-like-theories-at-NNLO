@@ -8,8 +8,8 @@ symbol gamma10, gamma20, gamma11, gamma21, gamma12, gamma22, rM0r,rM1r,rM2r, rM0
 #include symbols.hf
 #include setexternal.hf
 
-#define ext1 "3"
-#define ext2 "3"
+#define ext1 "1"
+#define ext2 "1"
 #define SX4 "SP4"
 
 

@@ -11,8 +11,8 @@ symbol RbarM,RbarP;
 #include symbols.hf
 #include setexternal.hf
 
-#define ext1 "1"
-#define ext2 "1"
+#define ext1 "8"
+#define ext2 "8"
 #define SX4 "SO4"
 
 
@@ -56,8 +56,6 @@ nskip `expr';
 .sort
 #endprocedure
 
-
-
 *now we take derivative of sigma4
 G DerSigma4 = Sigma4;
 
@@ -67,7 +65,6 @@ G DerSigma4 = Sigma4;
 .sort
 G NLOmass =  -Sigma4 ; 
 G NNLOmass =  -Sigma6 + Sigma4*DerSigma4; 
-
 
 *we now set the p^2 to the LO mass
 id P2 = LOmass(`ext1');
@@ -117,7 +114,6 @@ id epsb^(-1) = 1/eps + log4pi;
 id Ab(mp2?) = -mp2*L(mp2) - 2*mp2*pi16*logmu;
 
 
-
 id KK42 = 1/512*(16* KK19 + 64* KK21 + 16 *KK23 + 64 *KK24 - 144 *KK25 - 192* KK26 - 
    96* KK39 - 128 *KK40 - 256* KK41 + rM2);
 .sort
@@ -125,7 +121,7 @@ id KK42 = 1/512*(16* KK19 + 64* KK21 + 16 *KK23 + 64 *KK24 - 144 *KK25 - 192* KK
 id KK17 = 1/32 *(-128* KK18 - 16 *KK19 - 64 *KK20 - 64 *KK21 - 256 *KK22 - 16* KK23 + 
    48 *KK25 + 192 *KK26 + 768* KK27 + 32* KK39 + 128* KK40 - rM0);
 
-id KK26 = 1/64* (16 *KK19 + 64 *KK21 - 16* KK23 - 48 *KK25 + rM1);
+id KK26 = 1/64*(16 *KK19 + 64 *KK21 - 16* KK23 - 48 *KK25 + rM1);
 
 id KK18 = 1/128* (64* KK19 - 64 *KK20 + 128* KK21 - 512 *KK22 - 64* KK23 - 192* KK25 + 
     1536* KK27 + 128* KK40 + rM3);
@@ -170,12 +166,13 @@ id sqrt2^-2 = 1/2;
 
 .sort
 
-G NLOmassNorm = NLOmass*F^2;
-G NNLOmassNorm = NNLOmass*F^4;
+G NLOmassNorm = NLOmass*F^2/mdd;
+G NNLOmassNorm = NNLOmass*F^4/mdd;
 
 id mdd = -mp2*(-1 + RatioR);
 id muu = mp2*(1 + RatioR);
 
+*Intriduce definitions
 *RbarM=(-1 + RatioR)^(-1)
 *RbarP=(1 + RatioR)^(-1);
 id mdd^(-1) = -mp2^(-1)*RbarM;
@@ -188,11 +185,32 @@ id RatioR * RbarP = 1 - RbarP;
 id RatioR * RbarM = 1 + RbarM;
 endrepeat;
 
+*we can pretend that logmu =0 and is defined within the H
 
 .sort
 *CHECK DEGENERATE LIMIT
-#include degeneratelimit.hf
+*#include degeneratelimit.hf
 
+
+*use some symmetries
+*The function H is fully symmetric in m21, m22 and m23
+
+id Hbb(muu,mp2,muu,m4?) = Hbb(muu,muu,mp2,m4);
+id Hbb(mdd,mp2,mdd,m4?) = Hbb(mdd,mdd,mp2,m4);
+id Hbb(mp2,muu,mp2,m4?) = Hbb(muu,mp2,mp2,m4);
+id Hbb(mp2,mdd,mp2,m4?) = Hbb(mdd,mp2,mp2,m4);
+id Hbb(mp2,mp2,muu,m4?) = Hbb(muu,mp2,mp2,m4);
+id Hbb(mp2,mp2,mdd,m4?) = Hbb(mdd,mp2,mp2,m4);
+id Hbb(mp2,muu,mdd,m4?) = Hbb(muu,mdd,mp2,m4);
+id Hbb(mp2,mdd,muu,m4?) = Hbb(muu,mdd,mp2,m4);
+id Hbb(mp2,mdd,mdd,m4?) = Hbb(mdd,mdd,mp2,m4);
+id Hbb(mp2,muu,muu,m4?) = Hbb(muu,muu,mp2,m4);
+
+.sort
+*H1, H21 and H22 are symmetric under the interchange of m2 and m3
+id H21bb(m1?,mp2,muu,m4?) = H21bb(m1,muu,mp2,m4);
+id H21bb(m1?,mp2,mdd,m4?) = H21bb(m1,mdd,mp2,m4);
+id H21bb(m1?,mdd,muu,m4?) = H21bb(m1,muu,mdd,m4);
 
 
 .sort
@@ -200,11 +218,13 @@ b F, mp2, eps, ABar, pi16, RatioR;
 *b eps;
 
 
-
 Print NLOmassNorm,  NNLOmassNorm;
 .sort
 G NLOmass`ext1'`SX4' = NLOmass;
 G NNLOmass`ext1'`SX4' = NNLOmass;
+
+
+
 
 .store
 save save/Mass_`ext1'`SX4'.sav NLOmass`ext1'`SX4',NNLOmass`ext1'`SX4';
