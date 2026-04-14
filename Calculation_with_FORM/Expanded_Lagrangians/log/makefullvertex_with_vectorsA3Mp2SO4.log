@@ -1,0 +1,825 @@
+TFORM 5.0.0 (Jan 27 2026, v5.0.0) 6 workers      Run: Tue Apr 14 12:46:52 2026
+    * makes the full vertices in terms of the phi fields
+    *Daniil: this code gets rid of traces from the Lagrangian
+    #include symbols.hf
+    * symbols etc needed for the SU(4)/SO(4) and SU(4)/Sp(4) case
+    #define MAXINDEX "20"
+    s dim;
+    dimension dim;
+    s sqrt2,aa,aa1,...,aa10;
+    index mu,nu,al,be,ro;
+    set lorentz:mu,nu,al,be,ro;
+    cfunction tr;
+    cfunction M,Chi,a,sext,M1,...,M10;
+    set matrixfields:M,Chi,a,sext;
+    cfunction phi,phiV,phiA,phiS,phiP;
+    set phiset:phi,phiV,phiA,phiS,phiP;
+    
+    index <f1=4>,...,<f`MAXINDEX'=4>;
+    set quarkindex:f1,...,f`MAXINDEX';
+    symbol, <b1>,...,<b`MAXINDEX'>;
+    set flavour:<b1>,...,<b`MAXINDEX'>;
+    symbol i1,...,i15;
+    
+    s F,B0,muu,mdd,mp2,mk2,me2;
+    symbol eps,epsb,epsb2,epsb1,lambda2,lambda1,log4pi,
+        pi,pi16,pi162;
+    cfunction delt,deltm,prop;
+    vector qext,q1ext,q2ext,q3ext,q4ext,q5ext,p1ext,p2ext,p3ext,p4ext;
+    vector aext1,aext2,vext1,vext2,vext3;
+    vector PP,QQ,RR,SS;
+    vector PPM,QQM,RRM,SSM;* (only used in procedure so beware)
+    vector p0,...,p8;
+    set pp:p0,...,p8;
+    vector q0,...,q8;
+    set qq:q0,...,q8;
+    vector r0,...,r8;
+    set rr:r0,...,r8;
+    vector v0,v1,v2,v3;
+    set vvv:v0,v1,v2,v3;
+    vector w0,w1,w2,w3;
+    set www:w0,w1,w2,w3;
+    vector a0,a1,a2,a3;
+    set aaa:a0,a1,a2,a3;
+    
+    symbol KK1,...,KK115;
+    symbol L0,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,H1,H2;
+    set Li:L0,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,H1,H2;
+    vector QQP,QRS,QRS1,QRS2,QRS3;* dummy vectors, use only in procedures
+    cfunction A,B,B1,B21,B22,B31,B32,C,C12,C22,C24,H,HH1,H21,H22,H23,H24,VV;
+    set INTEGRALS:A,B,B1,B21,B22,B31,B32,C,C12,C22,C24,H,HH1,H21,H22,H23,H24,VV;
+    #define MAXTRACE "10"
+    
+    * we comment this on if use the bash file
+    
+    * choose your vertex
+    * SP4 or SO4
+    
+    *we comment this out if use the bash file
+    
+    *choose e.g. for Sp4
+    *#define SX4 "SP4" 
+    
+    * type of vertex, choose e.g. 2Mp2
+    *#define VERTEX "A3Mp2" 
+    
+    
+    *Global expression for the terms in the Lagrangian. *Here we call the procedure 
+    file; 
+    *These procedures do not have any arguments
+    
+    #include Lagrangians_with_vectors/vertex`VERTEX'.prc
+    #procedure vertexA3Mp2
+    (
+           + sqrt2^-1*F^-1 * (
+              - 4/3*tr(M,a(mu),M,M(mu))
+              + 2/3*tr(M,M,a(mu),M(mu))
+              + 2/3*tr(M,M,M(mu),a(mu))
+              )
+    )
+    #endprocedure
+    G vertex`VERTEX'`SX4' = 
+    #call vertex`VERTEX'
+     ;
+    
+    *counting the number of elements in a trace
+    *in symbols.hf we have (a set matrixfields which has Chi and so on ) ;
+    id tr(?a)= tr(0,aa,?a);
+    repeat;
+      id tr(aa1?,?a,aa,M?matrixfields(?b),?c) = tr(aa1+1,?a,M(?b),aa,?c);
+      id tr(?a,aa) = tr(?a);
+    endrepeat;
+    .sort
+
+Time =       0.00 sec    Generated terms =          3
+  vertexA3Mp2SO4         Terms in output =          3
+                         Bytes used      =        416
+    ********************************************************************************
+    **************************
+    * testing code now commented out
+    ********************************************************************************
+    **************************
+    * L V2 = V`VERTEX';
+    * .sort
+    * hide V1;
+    * .sort
+    * * brute force, could probably be done smarter
+    * id tr(0) = 4;
+    * id tr(1,M1?(?a)) = sum_(f1,1,4,M(?a,f1,f1));
+    * id tr(2,M1?(?a1),M2?(?a2)) = sum_(f1,1,4,sum_(f2,1,4,M1(?a1,f1,f2)*M2(?a2,f2,f
+    1)));
+    * id tr(3,M1?(?a1),M2?(?a2),M3?(?a3)) = sum_(f1,1,4,sum_(f2,1,4,sum_(f3,1,4,
+    *   M1(?a1,f1,f2)*M2(?a2,f2,f3)*M3(?a3,f3,f1))));
+    * id tr(4,M1?(?a1),M2?(?a2),M3?(?a3),M4?(?a4)) = sum_(f1,1,4,sum_(f2,1,4,sum_(f3
+    ,1,4,sum_(f4,1,4,
+    *   M1(?a1,f1,f2)*M2(?a2,f2,f3)*M3(?a3,f3,f4)*M4(?a4,f4,f1)))));
+    * id tr(5,M1?(?a1),M2?(?a2),M3?(?a3),M4?(?a4),M5?(?a5)) = sum_(f1,1,4,sum_(f2,1,
+    4,sum_(f3,1,4,sum_(f4,1,4,sum_(f5,1,4,
+    *   M1(?a1,f1,f2)*M2(?a2,f2,f3)*M3(?a3,f3,f4)*M4(?a4,f4,f5)*M5(?a5,f5,f1))))));
+    
+    * #include setMChiSP4.hf
+    * .sort
+    * hide V2;
+    * .sort
+    * unhide V`VERTEX';
+    *.sort
+    ********************************************************************************
+    ***************************
+    * worked out in general for all possible size traces
+    id tr(0) = 4;  
+    
+    * put in maximum number of elements in traces here
+    #do i=1,`MAXTRACE'
+    id tr(`i',<M1?(?a1)>,...,<M`i'?(?a`i')>) = 
+    #do j=1,`i'
+      sum_(f`j',1,4,
+    #enddo
+      1
+    #do j=1,{`i'-1}
+       *M`i'(?a`i',f`i',f1)
+    #do j=1,`i'
+      )
+    #enddo
+     ;
+    #enddo
+    .sort
+
+Time =       0.00 sec    Generated terms =        768
+  vertexA3Mp2SO4         Terms in output =        684
+                         Bytes used      =      62512
+    
+    *just a error in case not all the traces were eliminated;
+    if (match(tr(?a))) exit "traces left, increase MAXTRACE=`MAXTRACE' happened for 
+    vertex`VERTEX'`SX4'";
+    
+    *now we read the header files with the elements of the matrix M. 
+    *So we get in the end just terms of the expanded Lagrangian  with fields phi.
+    #include setMChi`SX4'.hf
+    
+    id Chi(?a,1,1) = muu;
+    id Chi(?a,2,2) = mdd;
+    id Chi(?a,3,3) = muu;
+    id Chi(?a,4,4) = mdd;
+    id Chi(?a) = 0;
+    
+    id M(?a,1,1) = phi(?a,3)/2; 
+    id M(?a,1,2) = (phi(?a,1)-i_*phi(?a,2))/2; 
+    id M(?a,1,3) = (phi(?a,6)+i_*phi(?a,7))/sqrt2;
+    id M(?a,1,4) = (phi(?a,4)+i_*phi(?a,5))/2;
+    id M(?a,2,1) = (phi(?a,1)+i_*phi(?a,2))/2; 
+    id M(?a,2,2) = -phi(?a,3)/2; 
+    id M(?a,2,3) = (+phi(?a,4)+i_*phi(?a,5))/2;
+    id M(?a,2,4) = (phi(?a,8)+i_*phi(?a,9))/sqrt2;
+    id M(?a,3,1) = (phi(?a,6)-i_*phi(?a,7))/sqrt2;
+    id M(?a,3,2) = (phi(?a,4)-i_*phi(?a,5))/2;
+    id M(?a,3,3) = phi(?a,3)/2; 
+    id M(?a,3,4) = (phi(?a,1)+i_*phi(?a,2))/2; 
+    id M(?a,4,1) = (phi(?a,4)-i_*phi(?a,5))/2;
+    id M(?a,4,2) = (phi(?a,8)-i_*phi(?a,9))/sqrt2;
+    id M(?a,4,3) = (phi(?a,1)-i_*phi(?a,2))/2; 
+    id M(?a,4,4) = -phi(?a,3)/2; 
+    
+    id a(?a,1,1) = phiA(?a,3)/2; 
+    id a(?a,1,2) = (phiA(?a,1)-i_*phiA(?a,2))/2; 
+    id a(?a,1,3) = (phiA(?a,6)+i_*phiA(?a,7))/sqrt2;
+    id a(?a,1,4) = (phiA(?a,4)+i_*phiA(?a,5))/2;
+    id a(?a,2,1) = (phiA(?a,1)+i_*phiA(?a,2))/2; 
+    id a(?a,2,2) = -phiA(?a,3)/2; 
+    id a(?a,2,3) = (+phiA(?a,4)+i_*phiA(?a,5))/2;
+    id a(?a,2,4) = (phiA(?a,8)+i_*phiA(?a,9))/sqrt2;
+    id a(?a,3,1) = (phiA(?a,6)-i_*phiA(?a,7))/sqrt2;
+    id a(?a,3,2) = (phiA(?a,4)-i_*phiA(?a,5))/2;
+    id a(?a,3,3) = phiA(?a,3)/2; 
+    id a(?a,3,4) = (phiA(?a,1)+i_*phiA(?a,2))/2; 
+    id a(?a,4,1) = (phiA(?a,4)-i_*phiA(?a,5))/2;
+    id a(?a,4,2) = (phiA(?a,8)-i_*phiA(?a,9))/sqrt2;
+    id a(?a,4,3) = (phiA(?a,1)-i_*phiA(?a,2))/2; 
+    id a(?a,4,4) = -phiA(?a,3)/2; 
+    
+    id sext(?a,1,1) = phiS(?a,1);
+    id sext(?a,2,2) = phiS(?a,2);
+    id sext(?a,3,3) = phiS(?a,1);
+    id sext(?a,4,4) = phiS(?a,2);
+    id sext(?a) = 0;
+    
+    
+    
+    id 1/sqrt2^2 = 1/2;
+    .sort
+
+Time =       0.00 sec    Generated terms =       6768
+  vertexA3Mp2SO4         Terms in output =        328
+                         Bytes used      =      23936
+    
+    * the testing code
+    *L V3 = V`VERTEX'-V2;
+    
+    *Bracket phi i.e. factor Phi
+    b phi;
+    print;
+    .store
+
+Time =       0.00 sec    Generated terms =        328
+  vertexA3Mp2SO4         Terms in output =        328
+                         Bytes used      =      27152
+
+   vertexA3Mp2SO4 =
+       + phi(1)^2*phi(mu,2) * ( 2/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(1)^2*phi(mu,3) * ( 2/3*phiA(mu,3)*sqrt2^-1*F^-1 )
+
+       + phi(1)^2*phi(mu,6) * ( 1/3*phiA(mu,6)*sqrt2^-1*F^-1 - 1/3*phiA(mu,8)*
+         sqrt2^-1*F^-1 )
+
+       + phi(1)^2*phi(mu,7) * ( 1/3*phiA(mu,7)*sqrt2^-1*F^-1 - 1/3*phiA(mu,9)*
+         sqrt2^-1*F^-1 )
+
+       + phi(1)^2*phi(mu,8) * (  - 1/3*phiA(mu,6)*sqrt2^-1*F^-1 + 1/3*phiA(mu,
+         8)*sqrt2^-1*F^-1 )
+
+       + phi(1)^2*phi(mu,9) * (  - 1/3*phiA(mu,7)*sqrt2^-1*F^-1 + 1/3*phiA(mu,
+         9)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(2)*phi(mu,1) * (  - 2/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(2)*phi(mu,2) * (  - 2/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(2)*phi(mu,6) * (  - 2/3*phiA(mu,9)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(2)*phi(mu,7) * ( 2/3*phiA(mu,8)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(2)*phi(mu,8) * ( 2/3*phiA(mu,7)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(2)*phi(mu,9) * (  - 2/3*phiA(mu,6)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(3)*phi(mu,1) * (  - 2/3*phiA(mu,3)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(3)*phi(mu,3) * (  - 2/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(3)*phi(mu,4) * (  - 1/3*phiA(mu,6)*F^-1 + 1/3*phiA(mu,8)*
+         F^-1 )
+
+       + phi(1)*phi(3)*phi(mu,5) * (  - 1/3*phiA(mu,7)*F^-1 + 1/3*phiA(mu,9)*
+         F^-1 )
+
+       + phi(1)*phi(3)*phi(mu,6) * (  - 1/3*phiA(mu,4)*F^-1 )
+
+       + phi(1)*phi(3)*phi(mu,7) * (  - 1/3*phiA(mu,5)*F^-1 )
+
+       + phi(1)*phi(3)*phi(mu,8) * ( 1/3*phiA(mu,4)*F^-1 )
+
+       + phi(1)*phi(3)*phi(mu,9) * ( 1/3*phiA(mu,5)*F^-1 )
+
+       + phi(1)*phi(4)*phi(mu,3) * ( 2/3*phiA(mu,6)*F^-1 - 2/3*phiA(mu,8)*F^-1
+          )
+
+       + phi(1)*phi(4)*phi(mu,6) * ( 2/3*phiA(mu,3)*F^-1 )
+
+       + phi(1)*phi(4)*phi(mu,8) * (  - 2/3*phiA(mu,3)*F^-1 )
+
+       + phi(1)*phi(5)*phi(mu,3) * ( 2/3*phiA(mu,7)*F^-1 - 2/3*phiA(mu,9)*F^-1
+          )
+
+       + phi(1)*phi(5)*phi(mu,7) * ( 2/3*phiA(mu,3)*F^-1 )
+
+       + phi(1)*phi(5)*phi(mu,9) * (  - 2/3*phiA(mu,3)*F^-1 )
+
+       + phi(1)*phi(6)*phi(mu,1) * (  - 1/3*phiA(mu,6)*sqrt2^-1*F^-1 + 1/3*
+         phiA(mu,8)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(6)*phi(mu,2) * (  - phiA(mu,7)*sqrt2^-1*F^-1 + 1/3*phiA(mu
+         ,9)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(6)*phi(mu,3) * (  - 1/3*phiA(mu,4)*F^-1 )
+
+       + phi(1)*phi(6)*phi(mu,4) * (  - 1/3*phiA(mu,3)*F^-1 )
+
+       + phi(1)*phi(6)*phi(mu,6) * (  - 1/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(6)*phi(mu,7) * (  - phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(6)*phi(mu,8) * ( 1/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(6)*phi(mu,9) * ( 1/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(7)*phi(mu,1) * (  - 1/3*phiA(mu,7)*sqrt2^-1*F^-1 + 1/3*
+         phiA(mu,9)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(7)*phi(mu,2) * ( phiA(mu,6)*sqrt2^-1*F^-1 - 1/3*phiA(mu,8)
+         *sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(7)*phi(mu,3) * (  - 1/3*phiA(mu,5)*F^-1 )
+
+       + phi(1)*phi(7)*phi(mu,5) * (  - 1/3*phiA(mu,3)*F^-1 )
+
+       + phi(1)*phi(7)*phi(mu,6) * ( phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(7)*phi(mu,7) * (  - 1/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(7)*phi(mu,8) * (  - 1/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(7)*phi(mu,9) * ( 1/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(8)*phi(mu,1) * ( 1/3*phiA(mu,6)*sqrt2^-1*F^-1 - 1/3*phiA(
+         mu,8)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(8)*phi(mu,2) * (  - 1/3*phiA(mu,7)*sqrt2^-1*F^-1 + phiA(mu
+         ,9)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(8)*phi(mu,3) * ( 1/3*phiA(mu,4)*F^-1 )
+
+       + phi(1)*phi(8)*phi(mu,4) * ( 1/3*phiA(mu,3)*F^-1 )
+
+       + phi(1)*phi(8)*phi(mu,6) * ( 1/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(8)*phi(mu,7) * (  - 1/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(8)*phi(mu,8) * (  - 1/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(8)*phi(mu,9) * ( phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(9)*phi(mu,1) * ( 1/3*phiA(mu,7)*sqrt2^-1*F^-1 - 1/3*phiA(
+         mu,9)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(9)*phi(mu,2) * ( 1/3*phiA(mu,6)*sqrt2^-1*F^-1 - phiA(mu,8)
+         *sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(9)*phi(mu,3) * ( 1/3*phiA(mu,5)*F^-1 )
+
+       + phi(1)*phi(9)*phi(mu,5) * ( 1/3*phiA(mu,3)*F^-1 )
+
+       + phi(1)*phi(9)*phi(mu,6) * ( 1/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(9)*phi(mu,7) * ( 1/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(9)*phi(mu,8) * (  - phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(1)*phi(9)*phi(mu,9) * (  - 1/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(2)^2*phi(mu,1) * ( 2/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(2)^2*phi(mu,3) * ( 2/3*phiA(mu,3)*sqrt2^-1*F^-1 )
+
+       + phi(2)^2*phi(mu,6) * ( 1/3*phiA(mu,6)*sqrt2^-1*F^-1 + 1/3*phiA(mu,8)*
+         sqrt2^-1*F^-1 )
+
+       + phi(2)^2*phi(mu,7) * ( 1/3*phiA(mu,7)*sqrt2^-1*F^-1 + 1/3*phiA(mu,9)*
+         sqrt2^-1*F^-1 )
+
+       + phi(2)^2*phi(mu,8) * ( 1/3*phiA(mu,6)*sqrt2^-1*F^-1 + 1/3*phiA(mu,8)*
+         sqrt2^-1*F^-1 )
+
+       + phi(2)^2*phi(mu,9) * ( 1/3*phiA(mu,7)*sqrt2^-1*F^-1 + 1/3*phiA(mu,9)*
+         sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(3)*phi(mu,2) * (  - 2/3*phiA(mu,3)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(3)*phi(mu,3) * (  - 2/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(3)*phi(mu,4) * ( 1/3*phiA(mu,7)*F^-1 + 1/3*phiA(mu,9)*F^-1
+          )
+
+       + phi(2)*phi(3)*phi(mu,5) * (  - 1/3*phiA(mu,6)*F^-1 - 1/3*phiA(mu,8)*
+         F^-1 )
+
+       + phi(2)*phi(3)*phi(mu,6) * (  - 1/3*phiA(mu,5)*F^-1 )
+
+       + phi(2)*phi(3)*phi(mu,7) * ( 1/3*phiA(mu,4)*F^-1 )
+
+       + phi(2)*phi(3)*phi(mu,8) * (  - 1/3*phiA(mu,5)*F^-1 )
+
+       + phi(2)*phi(3)*phi(mu,9) * ( 1/3*phiA(mu,4)*F^-1 )
+
+       + phi(2)*phi(4)*phi(mu,3) * (  - 2/3*phiA(mu,7)*F^-1 - 2/3*phiA(mu,9)*
+         F^-1 )
+
+       + phi(2)*phi(4)*phi(mu,7) * (  - 2/3*phiA(mu,3)*F^-1 )
+
+       + phi(2)*phi(4)*phi(mu,9) * (  - 2/3*phiA(mu,3)*F^-1 )
+
+       + phi(2)*phi(5)*phi(mu,3) * ( 2/3*phiA(mu,6)*F^-1 + 2/3*phiA(mu,8)*F^-1
+          )
+
+       + phi(2)*phi(5)*phi(mu,6) * ( 2/3*phiA(mu,3)*F^-1 )
+
+       + phi(2)*phi(5)*phi(mu,8) * ( 2/3*phiA(mu,3)*F^-1 )
+
+       + phi(2)*phi(6)*phi(mu,1) * ( phiA(mu,7)*sqrt2^-1*F^-1 + 1/3*phiA(mu,9)
+         *sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(6)*phi(mu,2) * (  - 1/3*phiA(mu,6)*sqrt2^-1*F^-1 - 1/3*
+         phiA(mu,8)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(6)*phi(mu,3) * (  - 1/3*phiA(mu,5)*F^-1 )
+
+       + phi(2)*phi(6)*phi(mu,5) * (  - 1/3*phiA(mu,3)*F^-1 )
+
+       + phi(2)*phi(6)*phi(mu,6) * (  - 1/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(6)*phi(mu,7) * ( phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(6)*phi(mu,8) * (  - 1/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(6)*phi(mu,9) * ( 1/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(7)*phi(mu,1) * (  - phiA(mu,6)*sqrt2^-1*F^-1 - 1/3*phiA(mu
+         ,8)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(7)*phi(mu,2) * (  - 1/3*phiA(mu,7)*sqrt2^-1*F^-1 - 1/3*
+         phiA(mu,9)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(7)*phi(mu,3) * ( 1/3*phiA(mu,4)*F^-1 )
+
+       + phi(2)*phi(7)*phi(mu,4) * ( 1/3*phiA(mu,3)*F^-1 )
+
+       + phi(2)*phi(7)*phi(mu,6) * (  - phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(7)*phi(mu,7) * (  - 1/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(7)*phi(mu,8) * (  - 1/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(7)*phi(mu,9) * (  - 1/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(8)*phi(mu,1) * (  - 1/3*phiA(mu,7)*sqrt2^-1*F^-1 - phiA(mu
+         ,9)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(8)*phi(mu,2) * (  - 1/3*phiA(mu,6)*sqrt2^-1*F^-1 - 1/3*
+         phiA(mu,8)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(8)*phi(mu,3) * (  - 1/3*phiA(mu,5)*F^-1 )
+
+       + phi(2)*phi(8)*phi(mu,5) * (  - 1/3*phiA(mu,3)*F^-1 )
+
+       + phi(2)*phi(8)*phi(mu,6) * (  - 1/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(8)*phi(mu,7) * (  - 1/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(8)*phi(mu,8) * (  - 1/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(8)*phi(mu,9) * (  - phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(9)*phi(mu,1) * ( 1/3*phiA(mu,6)*sqrt2^-1*F^-1 + phiA(mu,8)
+         *sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(9)*phi(mu,2) * (  - 1/3*phiA(mu,7)*sqrt2^-1*F^-1 - 1/3*
+         phiA(mu,9)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(9)*phi(mu,3) * ( 1/3*phiA(mu,4)*F^-1 )
+
+       + phi(2)*phi(9)*phi(mu,4) * ( 1/3*phiA(mu,3)*F^-1 )
+
+       + phi(2)*phi(9)*phi(mu,6) * ( 1/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(9)*phi(mu,7) * (  - 1/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(9)*phi(mu,8) * ( phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(2)*phi(9)*phi(mu,9) * (  - 1/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(3)^2*phi(mu,1) * ( 2/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(3)^2*phi(mu,2) * ( 2/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(3)^2*phi(mu,4) * ( 2/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(3)^2*phi(mu,5) * ( 2/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(3)*phi(4)*phi(mu,1) * (  - 1/3*phiA(mu,6)*F^-1 + 1/3*phiA(mu,8)*
+         F^-1 )
+
+       + phi(3)*phi(4)*phi(mu,2) * ( 1/3*phiA(mu,7)*F^-1 + 1/3*phiA(mu,9)*F^-1
+          )
+
+       + phi(3)*phi(4)*phi(mu,3) * (  - 2/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(3)*phi(4)*phi(mu,4) * (  - 2/3*phiA(mu,3)*sqrt2^-1*F^-1 )
+
+       + phi(3)*phi(4)*phi(mu,6) * (  - 1/3*phiA(mu,1)*F^-1 )
+
+       + phi(3)*phi(4)*phi(mu,7) * ( 1/3*phiA(mu,2)*F^-1 )
+
+       + phi(3)*phi(4)*phi(mu,8) * ( 1/3*phiA(mu,1)*F^-1 )
+
+       + phi(3)*phi(4)*phi(mu,9) * ( 1/3*phiA(mu,2)*F^-1 )
+
+       + phi(3)*phi(5)*phi(mu,1) * (  - 1/3*phiA(mu,7)*F^-1 + 1/3*phiA(mu,9)*
+         F^-1 )
+
+       + phi(3)*phi(5)*phi(mu,2) * (  - 1/3*phiA(mu,6)*F^-1 - 1/3*phiA(mu,8)*
+         F^-1 )
+
+       + phi(3)*phi(5)*phi(mu,3) * (  - 2/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(3)*phi(5)*phi(mu,5) * (  - 2/3*phiA(mu,3)*sqrt2^-1*F^-1 )
+
+       + phi(3)*phi(5)*phi(mu,6) * (  - 1/3*phiA(mu,2)*F^-1 )
+
+       + phi(3)*phi(5)*phi(mu,7) * (  - 1/3*phiA(mu,1)*F^-1 )
+
+       + phi(3)*phi(5)*phi(mu,8) * (  - 1/3*phiA(mu,2)*F^-1 )
+
+       + phi(3)*phi(5)*phi(mu,9) * ( 1/3*phiA(mu,1)*F^-1 )
+
+       + phi(3)*phi(6)*phi(mu,1) * ( 2/3*phiA(mu,4)*F^-1 )
+
+       + phi(3)*phi(6)*phi(mu,2) * ( 2/3*phiA(mu,5)*F^-1 )
+
+       + phi(3)*phi(6)*phi(mu,4) * ( 2/3*phiA(mu,1)*F^-1 )
+
+       + phi(3)*phi(6)*phi(mu,5) * ( 2/3*phiA(mu,2)*F^-1 )
+
+       + phi(3)*phi(7)*phi(mu,1) * ( 2/3*phiA(mu,5)*F^-1 )
+
+       + phi(3)*phi(7)*phi(mu,2) * (  - 2/3*phiA(mu,4)*F^-1 )
+
+       + phi(3)*phi(7)*phi(mu,4) * (  - 2/3*phiA(mu,2)*F^-1 )
+
+       + phi(3)*phi(7)*phi(mu,5) * ( 2/3*phiA(mu,1)*F^-1 )
+
+       + phi(3)*phi(8)*phi(mu,1) * (  - 2/3*phiA(mu,4)*F^-1 )
+
+       + phi(3)*phi(8)*phi(mu,2) * ( 2/3*phiA(mu,5)*F^-1 )
+
+       + phi(3)*phi(8)*phi(mu,4) * (  - 2/3*phiA(mu,1)*F^-1 )
+
+       + phi(3)*phi(8)*phi(mu,5) * ( 2/3*phiA(mu,2)*F^-1 )
+
+       + phi(3)*phi(9)*phi(mu,1) * (  - 2/3*phiA(mu,5)*F^-1 )
+
+       + phi(3)*phi(9)*phi(mu,2) * (  - 2/3*phiA(mu,4)*F^-1 )
+
+       + phi(3)*phi(9)*phi(mu,4) * (  - 2/3*phiA(mu,2)*F^-1 )
+
+       + phi(3)*phi(9)*phi(mu,5) * (  - 2/3*phiA(mu,1)*F^-1 )
+
+       + phi(4)^2*phi(mu,3) * ( 2/3*phiA(mu,3)*sqrt2^-1*F^-1 )
+
+       + phi(4)^2*phi(mu,5) * ( 2/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(4)^2*phi(mu,6) * ( 1/3*phiA(mu,6)*sqrt2^-1*F^-1 - 1/3*phiA(mu,8)*
+         sqrt2^-1*F^-1 )
+
+       + phi(4)^2*phi(mu,7) * ( 1/3*phiA(mu,7)*sqrt2^-1*F^-1 + 1/3*phiA(mu,9)*
+         sqrt2^-1*F^-1 )
+
+       + phi(4)^2*phi(mu,8) * (  - 1/3*phiA(mu,6)*sqrt2^-1*F^-1 + 1/3*phiA(mu,
+         8)*sqrt2^-1*F^-1 )
+
+       + phi(4)^2*phi(mu,9) * ( 1/3*phiA(mu,7)*sqrt2^-1*F^-1 + 1/3*phiA(mu,9)*
+         sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(5)*phi(mu,4) * (  - 2/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(5)*phi(mu,5) * (  - 2/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(5)*phi(mu,6) * (  - 2/3*phiA(mu,9)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(5)*phi(mu,7) * (  - 2/3*phiA(mu,8)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(5)*phi(mu,8) * (  - 2/3*phiA(mu,7)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(5)*phi(mu,9) * (  - 2/3*phiA(mu,6)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(6)*phi(mu,1) * (  - 1/3*phiA(mu,3)*F^-1 )
+
+       + phi(4)*phi(6)*phi(mu,3) * (  - 1/3*phiA(mu,1)*F^-1 )
+
+       + phi(4)*phi(6)*phi(mu,4) * (  - 1/3*phiA(mu,6)*sqrt2^-1*F^-1 + 1/3*
+         phiA(mu,8)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(6)*phi(mu,5) * ( phiA(mu,7)*sqrt2^-1*F^-1 + 1/3*phiA(mu,9)
+         *sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(6)*phi(mu,6) * (  - 1/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(6)*phi(mu,7) * ( phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(6)*phi(mu,8) * ( 1/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(6)*phi(mu,9) * ( 1/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(7)*phi(mu,2) * ( 1/3*phiA(mu,3)*F^-1 )
+
+       + phi(4)*phi(7)*phi(mu,3) * ( 1/3*phiA(mu,2)*F^-1 )
+
+       + phi(4)*phi(7)*phi(mu,4) * (  - 1/3*phiA(mu,7)*sqrt2^-1*F^-1 - 1/3*
+         phiA(mu,9)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(7)*phi(mu,5) * (  - phiA(mu,6)*sqrt2^-1*F^-1 + 1/3*phiA(mu
+         ,8)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(7)*phi(mu,6) * (  - phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(7)*phi(mu,7) * (  - 1/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(7)*phi(mu,8) * ( 1/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(7)*phi(mu,9) * (  - 1/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(8)*phi(mu,1) * ( 1/3*phiA(mu,3)*F^-1 )
+
+       + phi(4)*phi(8)*phi(mu,3) * ( 1/3*phiA(mu,1)*F^-1 )
+
+       + phi(4)*phi(8)*phi(mu,4) * ( 1/3*phiA(mu,6)*sqrt2^-1*F^-1 - 1/3*phiA(
+         mu,8)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(8)*phi(mu,5) * ( 1/3*phiA(mu,7)*sqrt2^-1*F^-1 + phiA(mu,9)
+         *sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(8)*phi(mu,6) * ( 1/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(8)*phi(mu,7) * ( 1/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(8)*phi(mu,8) * (  - 1/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(8)*phi(mu,9) * ( phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(9)*phi(mu,2) * ( 1/3*phiA(mu,3)*F^-1 )
+
+       + phi(4)*phi(9)*phi(mu,3) * ( 1/3*phiA(mu,2)*F^-1 )
+
+       + phi(4)*phi(9)*phi(mu,4) * (  - 1/3*phiA(mu,7)*sqrt2^-1*F^-1 - 1/3*
+         phiA(mu,9)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(9)*phi(mu,5) * ( 1/3*phiA(mu,6)*sqrt2^-1*F^-1 - phiA(mu,8)
+         *sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(9)*phi(mu,6) * ( 1/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(9)*phi(mu,7) * (  - 1/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(9)*phi(mu,8) * (  - phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(4)*phi(9)*phi(mu,9) * (  - 1/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(5)^2*phi(mu,3) * ( 2/3*phiA(mu,3)*sqrt2^-1*F^-1 )
+
+       + phi(5)^2*phi(mu,4) * ( 2/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(5)^2*phi(mu,6) * ( 1/3*phiA(mu,6)*sqrt2^-1*F^-1 + 1/3*phiA(mu,8)*
+         sqrt2^-1*F^-1 )
+
+       + phi(5)^2*phi(mu,7) * ( 1/3*phiA(mu,7)*sqrt2^-1*F^-1 - 1/3*phiA(mu,9)*
+         sqrt2^-1*F^-1 )
+
+       + phi(5)^2*phi(mu,8) * ( 1/3*phiA(mu,6)*sqrt2^-1*F^-1 + 1/3*phiA(mu,8)*
+         sqrt2^-1*F^-1 )
+
+       + phi(5)^2*phi(mu,9) * (  - 1/3*phiA(mu,7)*sqrt2^-1*F^-1 + 1/3*phiA(mu,
+         9)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(6)*phi(mu,2) * (  - 1/3*phiA(mu,3)*F^-1 )
+
+       + phi(5)*phi(6)*phi(mu,3) * (  - 1/3*phiA(mu,2)*F^-1 )
+
+       + phi(5)*phi(6)*phi(mu,4) * (  - phiA(mu,7)*sqrt2^-1*F^-1 + 1/3*phiA(mu
+         ,9)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(6)*phi(mu,5) * (  - 1/3*phiA(mu,6)*sqrt2^-1*F^-1 - 1/3*
+         phiA(mu,8)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(6)*phi(mu,6) * (  - 1/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(6)*phi(mu,7) * (  - phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(6)*phi(mu,8) * (  - 1/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(6)*phi(mu,9) * ( 1/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(7)*phi(mu,1) * (  - 1/3*phiA(mu,3)*F^-1 )
+
+       + phi(5)*phi(7)*phi(mu,3) * (  - 1/3*phiA(mu,1)*F^-1 )
+
+       + phi(5)*phi(7)*phi(mu,4) * ( phiA(mu,6)*sqrt2^-1*F^-1 + 1/3*phiA(mu,8)
+         *sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(7)*phi(mu,5) * (  - 1/3*phiA(mu,7)*sqrt2^-1*F^-1 + 1/3*
+         phiA(mu,9)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(7)*phi(mu,6) * ( phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(7)*phi(mu,7) * (  - 1/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(7)*phi(mu,8) * ( 1/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(7)*phi(mu,9) * ( 1/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(8)*phi(mu,2) * (  - 1/3*phiA(mu,3)*F^-1 )
+
+       + phi(5)*phi(8)*phi(mu,3) * (  - 1/3*phiA(mu,2)*F^-1 )
+
+       + phi(5)*phi(8)*phi(mu,4) * ( 1/3*phiA(mu,7)*sqrt2^-1*F^-1 - phiA(mu,9)
+         *sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(8)*phi(mu,5) * (  - 1/3*phiA(mu,6)*sqrt2^-1*F^-1 - 1/3*
+         phiA(mu,8)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(8)*phi(mu,6) * (  - 1/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(8)*phi(mu,7) * ( 1/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(8)*phi(mu,8) * (  - 1/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(8)*phi(mu,9) * (  - phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(9)*phi(mu,1) * ( 1/3*phiA(mu,3)*F^-1 )
+
+       + phi(5)*phi(9)*phi(mu,3) * ( 1/3*phiA(mu,1)*F^-1 )
+
+       + phi(5)*phi(9)*phi(mu,4) * ( 1/3*phiA(mu,6)*sqrt2^-1*F^-1 + phiA(mu,8)
+         *sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(9)*phi(mu,5) * ( 1/3*phiA(mu,7)*sqrt2^-1*F^-1 - 1/3*phiA(
+         mu,9)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(9)*phi(mu,6) * ( 1/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(9)*phi(mu,7) * ( 1/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(9)*phi(mu,8) * ( phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(5)*phi(9)*phi(mu,9) * (  - 1/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(6)^2*phi(mu,1) * ( 1/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(6)^2*phi(mu,2) * ( 1/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(6)^2*phi(mu,4) * ( 1/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(6)^2*phi(mu,5) * ( 1/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(6)^2*phi(mu,7) * ( 4/3*phiA(mu,7)*sqrt2^-1*F^-1 )
+
+       + phi(6)*phi(7)*phi(mu,6) * (  - 4/3*phiA(mu,7)*sqrt2^-1*F^-1 )
+
+       + phi(6)*phi(7)*phi(mu,7) * (  - 4/3*phiA(mu,6)*sqrt2^-1*F^-1 )
+
+       + phi(6)*phi(8)*phi(mu,1) * (  - 2/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(6)*phi(8)*phi(mu,2) * ( 2/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(6)*phi(8)*phi(mu,4) * (  - 2/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(6)*phi(8)*phi(mu,5) * ( 2/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(6)*phi(9)*phi(mu,1) * (  - 2/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(6)*phi(9)*phi(mu,2) * (  - 2/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(6)*phi(9)*phi(mu,4) * (  - 2/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(6)*phi(9)*phi(mu,5) * (  - 2/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(7)^2*phi(mu,1) * ( 1/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(7)^2*phi(mu,2) * ( 1/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(7)^2*phi(mu,4) * ( 1/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(7)^2*phi(mu,5) * ( 1/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(7)^2*phi(mu,6) * ( 4/3*phiA(mu,6)*sqrt2^-1*F^-1 )
+
+       + phi(7)*phi(8)*phi(mu,1) * ( 2/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(7)*phi(8)*phi(mu,2) * ( 2/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(7)*phi(8)*phi(mu,4) * (  - 2/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(7)*phi(8)*phi(mu,5) * (  - 2/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(7)*phi(9)*phi(mu,1) * (  - 2/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(7)*phi(9)*phi(mu,2) * ( 2/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(7)*phi(9)*phi(mu,4) * ( 2/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(7)*phi(9)*phi(mu,5) * (  - 2/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(8)^2*phi(mu,1) * ( 1/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(8)^2*phi(mu,2) * ( 1/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(8)^2*phi(mu,4) * ( 1/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(8)^2*phi(mu,5) * ( 1/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(8)^2*phi(mu,9) * ( 4/3*phiA(mu,9)*sqrt2^-1*F^-1 )
+
+       + phi(8)*phi(9)*phi(mu,8) * (  - 4/3*phiA(mu,9)*sqrt2^-1*F^-1 )
+
+       + phi(8)*phi(9)*phi(mu,9) * (  - 4/3*phiA(mu,8)*sqrt2^-1*F^-1 )
+
+       + phi(9)^2*phi(mu,1) * ( 1/3*phiA(mu,1)*sqrt2^-1*F^-1 )
+
+       + phi(9)^2*phi(mu,2) * ( 1/3*phiA(mu,2)*sqrt2^-1*F^-1 )
+
+       + phi(9)^2*phi(mu,4) * ( 1/3*phiA(mu,4)*sqrt2^-1*F^-1 )
+
+       + phi(9)^2*phi(mu,5) * ( 1/3*phiA(mu,5)*sqrt2^-1*F^-1 )
+
+       + phi(9)^2*phi(mu,8) * ( 4/3*phiA(mu,8)*sqrt2^-1*F^-1 );
+
+    save Saved_Lagrangians_with_vectors/vertex`VERTEX'`SX4'.sav vertex`VERTEX'`SX4';
+    .end
+  0.00 sec + 0.01 sec: 0.02 sec out of 0.01 sec
