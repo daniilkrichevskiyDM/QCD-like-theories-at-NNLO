@@ -1,0 +1,7 @@
+#if `SX4'==SP4
+id prop(i1?{1,2,3,4,5},PP?) = prop(mp2,PP);
+#elseif `SX4'==SO4
+id prop(i1?{1,2,3,4,5},PP?) = prop(mp2,PP);
+id prop(i1?{6,7},PP?) = prop(muu,PP);
+id prop(i1?{8,9},PP?) = prop(mdd,PP);
+#endif
