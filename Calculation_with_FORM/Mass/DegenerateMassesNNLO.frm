@@ -13,7 +13,6 @@ symbol P2, aux1, n;
 #define SX4 "SO4"
 
 
-
 load NewDiagrams/save/MM1_`ext1'`ext2'`SX4'.sav;
 load NewDiagrams/save/MM2_`ext1'`ext2'`SX4'.sav;
 load NewDiagrams/save/MM3_`ext1'`ext2'`SX4'.sav;
