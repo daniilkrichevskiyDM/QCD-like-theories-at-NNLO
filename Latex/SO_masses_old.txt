@@ -1,0 +1,466 @@
+%M1 NNLO
+\begin{align}
+\begin{aligned}
+&\frac{F^4}{M^2_{1}}M^2_{1,\text{NNLO}} =
+M_1^2 \Bigg(
+\frac{1}{4}\overline{H}(M_6^2,M_6^2,M_1^2,M_1^2)
++ \frac{1}{4}\overline{H}(M_6^2,M_8^2,M_1^2,M_1^2)
++ \frac{1}{6}\overline{H}(M_6^2,M_1^2,M_1^2,M_1^2) \\
+&+ \frac{1}{4}\overline{H}(M_8^2,M_8^2,M_1^2,M_1^2)
++ \frac{1}{6}\overline{H}(M_8^2,M_1^2,M_1^2,M_1^2) \\
+&+ \frac{1}{3}\overline{H}_1(M_6^2,M_1^2,M_1^2,M_1^2)
++ \frac{1}{3}\overline{H}_1(M_8^2,M_1^2,M_1^2,M_1^2) \\
+&- \frac{1}{3}\overline{H}_1(M_1^2,M_1^2,M_6^2,M_1^2)
+- \frac{1}{3}\overline{H}_1(M_1^2,M_1^2,M_8^2,M_1^2) \\
+&+ \frac{3}{4}\overline{H}_{21}(M_6^2,M_6^2,M_1^2,M_1^2)
++ \frac{3}{4}\overline{H}_{21}(M_8^2,M_8^2,M_1^2,M_1^2) \\
+&+ \frac{3}{4}\overline{H}_{21}(M_1^2,M_6^2,M_8^2,M_1^2)
++ \frac{3}{4}\overline{H}_{21}(M_1^2,M_6^2,M_1^2,M_1^2)
++ \frac{3}{4}\overline{H}_{21}(M_1^2,M_8^2,M_1^2,M_1^2)
+\Bigg) \\
+%
+&+ M_1^4 \Big(
+-128 L^r_5 L^r_8 -512 L^r_5 L^r_6 + 64 (L^r_5)^2
+-512 L^r_4 L^r_8 -2048 L^r_4 L^r_6 \\
+&\quad +512 L^r_4 L^r_5 +1024 (L^r_4)^2 + r_{M,0}^r
+\Big) \\
+%
+&+ M_1^4 \pi_{16} \Big(
+-\frac{23}{768} -4 L^r_8 -16 L^r_6 +2 L^r_5 +8 L^r_4
++5 L^r_3 +20 L^r_2 +4 L^r_1 +9 L^r_0
+\Big) \\
+%
+&+ M_1^4 \pi_{16}^2 \Big(
+-\frac{1745}{1152} + \frac{185}{24}\log{\mu} -23 (\log{\mu})^2
+\Big) \\
+%
+&+ R\,M_1^2 \Big(
+\frac{1}{4}\overline{H}(M_6^2,M_6^2,M_1^2,M_1^2)
+-\frac{1}{4}\overline{H}(M_8^2,M_8^2,M_1^2,M_1^2)
+\Big) + R^2 M_1^4 (r^r_{M,1}) \\
+%
+&+ R^2 M_1^4 \pi_{16} \Big(
+-\frac{1}{192} +4 L^r_8 +16 L^r_7 +2 L^r_3 +8 L^r_2 +4 L^r_0
+\Big) \\
+%
+&+ R^2 M_1^4 \pi_{16}^2 \Big(
+-\frac{7}{16} +2\log{\mu} -4 (\log{\mu})^2
+\Big)\\& + \overline{A}(M_6^2) M_1^2 \Big(
+16 L^r_8 +32 L^r_6 -8 L^r_5 -32 L^r_4
++10 L^r_3 +8 L^r_2 +32 L^r_1 +4 L^r_0
+\Big) + \overline{A}(M_6^2) M_1^2 \pi_{16} \Big(
+\frac{5}{8} +6\log{\mu}
+\Big) \\
+%
+&+ \overline{A}(M_6^2) R M_1^2 \Big(
+16 L^r_8 +32 L^r_6 -8 L^r_5 -32 L^r_4
++10 L^r_3 +8 L^r_2 +32 L^r_1 +4 L^r_0
+\Big) + \overline{A}(M_6^2) R M_1^2 \pi_{16} (2\log{\mu}) \\
+%
+&+ (\overline{A}(M_6^2))^2 \Big(
+-\frac{1}{4} - \frac{1}{2}(1+R)^{-1}
+\Big) \\
+%
+&+ \overline{A}(M_6^2)\overline{A}(M_8^2)\left(-\frac{1}{4}\right) + \overline{A}(M_6^2)\overline{A}(M_1^2) R \left(-\frac{1}{8}\right) + \overline{A}(M_6^2)\overline{A}(M_1^2)\left(-\frac{5}{8}\right) \\
+%
+&+ \overline{A}(M_8^2) M_1^2 \Big(
+16 L^r_8 +32 L^r_6 -8 L^r_5 -32 L^r_4
++10 L^r_3 +8 L^r_2 +32 L^r_1 +4 L^r_0
+\Big) \\
+%
+&+ \overline{A}(M_8^2) M_1^2 \pi_{16} \Big(
+\frac{5}{8} +6\log{\mu}
+\Big) + \overline{A}(M_8^2) R M_1^2 \Big(
+-16 L^r_8 -32 L^r_6 +8 L^r_5 +32 L^r_4
+-10 L^r_3 -8 L^r_2 -32 L^r_1 -4 L^r_0
+\Big) \\
+%
+&+ \overline{A}(M_8^2) R M_1^2 \pi_{16} (-2\log{\mu}) \\
+%
+&+ (\overline{A}(M_8^2))^2 \Big(
+-\frac{1}{4} + \frac{1}{2}( -1 + R )^{-1}
+\Big) + \overline{A}(M_8^2)\overline{A}(M_1^2) R \left(\frac{1}{8}\right) +\overline{A}(M_8^2)\overline{A}(M_1^2)\left(-\frac{5}{8}\right) \\
+%
+&+ \overline{A}(M_1^2) M_1^2 \Big(
+52 L^r_8 +144 L^r_6 -26 L^r_5 -104 L^r_4
++26 L^r_3 +40 L^r_2 +88 L^r_1 +14 L^r_0
+\Big) \\
+%
+&+ \overline{A}(M_1^2) M_1^2 \pi_{16} \Big(
+\frac{33}{16} +11\log{\mu}
+\Big) + \overline{A}(M_1^2) R^2 M_1^2 (-4 L^r_8 -16 L^r_7) + (\overline{A}(M_1^2))^2 \left(-\frac{19}{32}\right).
+\end{aligned}
+\end{align}
+
+%M3 NNLO
+\begin{align}
+\begin{aligned} 
+    &\frac{F^4}{M^2_{1}}M^2_{3,\text{NNLO}} =
+M_1^2 \Bigg(
+\frac{1}{4}\overline{H}(M_6^2,M_6^2,M_1^2,M_1^2)
++ \frac{1}{3}\overline{H}(M_6^2,M_1^2,M_1^2,M_1^2)
++ \frac{1}{4}\overline{H}(M_8^2,M_8^2,M_1^2,M_1^2)
+\\&+ \frac{1}{3}\overline{H}(M_8^2,M_1^2,M_1^2,M_1^2) - \frac{4}{3}\overline{H}_1(M_6^2,M_1^2,M_1^2,M_1^2)
+- \frac{4}{3}\overline{H}_1(M_8^2,M_1^2,M_1^2,M_1^2)
++ \frac{4}{3}\overline{H}_1(M_1^2,M_1^2,M_6^2,M_1^2)
+\\&
++ \frac{4}{3}\overline{H}_1(M_1^2,M_1^2,M_8^2,M_1^2) + \frac{3}{2}\overline{H}_{21}(M_6^2,M_1^2,M_1^2,M_1^2)
++ \frac{3}{2}\overline{H}_{21}(M_8^2,M_1^2,M_1^2,M_1^2)
+\Bigg) 
+\\
+%
+&+ M_1^4 \Big(
+-128 L^r_5 L^r_8 -512 L^r_5 L^r_6 + 64 (L^r_5)^2
+-512 L^r_4 L^r_8 -2048 L^r_4 L^r_6  +512 L^r_4 L^r_5 +1024 (L^r_4)^2 + r^r_{M,0}
+\Big) \\
+%
+&+ M_1^4 \pi_{16} \Big(
+-\frac{11}{384} -4 L^r_8 -16 L^r_6 +2 L^r_5 +8 L^r_4
++5 L^r_3 +20 L^r_2 +4 L^r_1 +9 L^r_0
+\Big) \\
+%
+&+ M_1^4 \pi_{16}^2 \Big(
+-\frac{179}{144} + \frac{23}{3}\log{\mu} -22 (\log{\mu})^2
+\Big) \\
+%
+&+ R M_1^2 \Big(
+\frac{1}{2}\overline{H}(M_6^2,M_6^2,M_1^2,M_1^2)
++ \frac{5}{6}\overline{H}(M_6^2,M_1^2,M_1^2,M_1^2)
+- \frac{1}{2}\overline{H}(M_8^2,M_8^2,M_1^2,M_1^2)
+\\&- \frac{5}{6}\overline{H}(M_8^2,M_1^2,M_1^2,M_1^2) - \frac{4}{3}\overline{H}_1(M_6^2,M_1^2,M_1^2,M_1^2)
++ \frac{4}{3}\overline{H}_1(M_8^2,M_1^2,M_1^2,M_1^2)
+\\&+ \frac{4}{3}\overline{H}_1(M_1^2,M_1^2,M_6^2,M_1^2)
+- \frac{4}{3}\overline{H}_1(M_1^2,M_1^2,M_8^2,M_1^2)
+\Big) \\
+%
+&+ R^2 M_1^2 \Big(
+\frac{1}{4}\overline{H}(M_6^2,M_6^2,M_1^2,M_1^2)
++ \frac{1}{2}\overline{H}(M_6^2,M_1^2,M_1^2,M_1^2)
++ \frac{1}{4}\overline{H}(M_8^2,M_8^2,M_1^2,M_1^2)
+\\&+ \frac{1}{2}\overline{H}(M_8^2,M_1^2,M_1^2,M_1^2)
+\Big) \\
+%
+&+ R^2 M_1^4 \Big(
+-128 L^r_5 L^r_8 -512 L^r_5 L^r_7 -512 L^r_4 L^r_8
+-2048 L^r_4 L^r_7 + r^r_{M,2}
+\Big) \\
+%
+&+ R^2 M_1^4 \pi_{16} \Big(
+-\frac{19}{384} -52 L^r_8 -16 L^r_7 -64 L^r_6
++24 L^r_5 +32 L^r_4 +4 L^r_3 +8 L^r_2 +4 L^r_0
+\Big) \\
+%
+&+ R^2 M_1^4 \pi_{16}^2 \Big(
+-\frac{37}{8} + \frac{27}{2}\log{\mu} -38 (\log{\mu})^2
+\Big) \\
+%
+&+ \overline{A}(M_6^2) M_1^2 \Big(
+40 L^r_8 +96 L^r_6 -20 L^r_5 -80 L^r_4
++12 L^r_3 +8 L^r_2 +32 L^r_1 +12 L^r_0
+\Big) \\
+%
+&+ \overline{A}(M_6^2) M_1^2 \pi_{16} \Big(
+-\frac{1}{8} + 6\log{\mu}
+\Big) \\
+%
+&+ \overline{A}(M_6^2) R M_1^2 \Big(
+80 L^r_8 +64 L^r_7 +96 L^r_6 -32 L^r_5 -80 L^r_4
++12 L^r_3 +8 L^r_2 +32 L^r_1 +12 L^r_0
+\Big) \\
+%
+&+ \overline{A}(M_6^2) R M_1^2 \pi_{16} \Big(
+-\frac{1}{8} + 10\log{\mu}
+\Big) + \overline{A}(M_6^2) R^2 M_1^2 (40 L^r_8 +64 L^r_7 -12 L^r_5) \\
+%
+&+ \overline{A}(M_6^2) R^2 M_1^2 \pi_{16} (4\log{\mu}) + (\overline{A}(M_6^2))^2 R \left(-\frac{1}{2}\right)
++ (\overline{A}(M_6^2))^2 \left(-\frac{3}{4}\right) \\
+%
+&+ \overline{A}(M_6^2)\overline{A}(M_1^2) R \left(-\frac{5}{8}\right)
++ \overline{A}(M_6^2)\overline{A}(M_1^2) \left(-\frac{5}{8}\right) \\
+%
+&+ \overline{A}(M_8^2) M_1^2 \Big(
+40 L^r_8 +96 L^r_6 -20 L^r_5 -80 L^r_4
++12 L^r_3 +8 L^r_2 +32 L^r_1 +12 L^r_0
+\Big) \\
+%
+&+ \overline{A}(M_8^2) M_1^2 \pi_{16} \Big(
+-\frac{1}{8} + 6\log{\mu}
+\Big) \\
+%
+&+ \overline{A}(M_8^2) R M_1^2 \Big(
+-80 L^r_8 -64 L^r_7 -96 L^r_6 +32 L^r_5 +80 L^r_4
+-12 L^r_3 -8 L^r_2 -32 L^r_1 -12 L^r_0
+\Big) \\
+%
+&+ \overline{A}(M_8^2) R M_1^2 \pi_{16} \Big(
+\frac{1}{8} - 10\log{\mu}
+\Big) \\
+%
+&+ \overline{A}(M_8^2) R^2 M_1^2 (40 L^r_8 +64 L^r_7 -12 L^r_5) + \overline{A}(M_8^2) R^2 M_1^2 \pi_{16} (4\log{\mu}) + (\overline{A}(M_8^2))^2 R \left(\frac{1}{2}\right) \nonumber
+\end{aligned}
+\end{align}
+\begin{align}
+\begin{aligned}
+&+ (\overline{A}(M_8^2))^2 \left(-\frac{3}{4}\right)+ \overline{A}(M_8^2)\overline{A}(M_1^2) R \left(\frac{5}{8}\right)
++ \overline{A}(M_8^2)\overline{A}(M_1^2) \left(-\frac{5}{8}\right) \\
+%
+&+ \overline{A}(M_1^2) M_1^2 \Big(
+4 L^r_8 +16 L^r_6 -2 L^r_5 -8 L^r_4
++22 L^r_3 +40 L^r_2 +88 L^r_1 -2 L^r_0
+\Big) \\
+%
+&+ \overline{A}(M_1^2) M_1^2 \pi_{16} \Big(
+\frac{43}{12} + 10\log{\mu}
+\Big) +\\
+%
+& \overline{A}(M_1^2) R^2 M_1^2 (20 L^r_8 +80 L^r_7) + \overline{A}(M_1^2) R^2 M_1^2 \pi_{16} \Big(
+-\frac{1}{4} + 10\log{\mu}
+\Big) + (\overline{A}(M_1^2))^2 R^2 \left(-\frac{5}{4}\right)
+\\
+%
+&+ (\overline{A}(M_1^2))^2 \left(-\frac{19}{32}\right).
+\end{aligned}
+\end{align}
+
+%M6 NNLO
+\begin{align}
+\begin{aligned}
+&\frac{F^4}{M^2_{6}}M^2_{6,\text{NNLO}}=
+M_1^2 \Bigg(
+\frac{5}{8}\overline{H}(M_6^2,M_1^2,M_1^2,M_6^2)
++ \frac{1}{4}\overline{H}(M_8^2,M_1^2,M_1^2,M_6^2)
++ \frac{1}{6}\overline{H}(M_1^2,M_1^2,M_1^2,M_6^2) \\
+&+ \frac{3}{4}\overline{H}_{21}(M_8^2,M_1^2,M_1^2,M_6^2)
++ \frac{3}{2}\overline{H}_{21}(M_1^2,M_6^2,M_1^2,M_6^2)
++ \frac{3}{4}\overline{H}_{21}(M_1^2,M_1^2,M_1^2,M_6^2)
+\Bigg) \\
+%
+&+ M_1^4 \Big(
+-128 L^r_5 L^r_8 -512 L^r_5 L^r_6 + 64 (L^r_5)^2
+-512 L^r_4 L^r_8 -2048 L^r_4 L^r_6 \\
+&\quad +512 L^r_4 L^r_5 +1024 (L^r_4)^2 + r_{M,0}^r
+\Big) \\
+%
+&+ M_1^4 \pi_{16} \Big(
+-\frac{41}{1536} -4 L^r_8 -16 L^r_6 +2 L^r_5 +8 L^r_4
++5 L^r_3 +20 L^r_2 +4 L^r_1 +9 L^r_0
+\Big) \\
+%
+&+ M_1^4 \pi_{16}^2 \Big(
+-\frac{581}{576} + \frac{169}{24}\log{\mu} - \frac{41}{2}(\log{\mu})^2
+\Big) \\
+%
+&+ R M_1^2 \Big(
+\frac{1}{8}\overline{H}(M_6^2,M_1^2,M_1^2,M_6^2)
+- \frac{1}{4}\overline{H}(M_8^2,M_1^2,M_1^2,M_6^2)
+- \frac{1}{12}\overline{H}(M_1^2,M_1^2,M_1^2,M_6^2) \\
+&+ \frac{3}{4}\overline{H}_{21}(M_8^2,M_1^2,M_1^2,M_6^2)
++ \frac{3}{2}\overline{H}_{21}(M_1^2,M_6^2,M_1^2,M_6^2)
++ \frac{3}{4}\overline{H}_{21}(M_1^2,M_1^2,M_1^2,M_6^2)
+\Big) \\
+%
+&+ R M_1^4 \Big(
+-256 L^r_5 L^r_8 -512 L^r_5 L^r_6 +128 (L^r_5)^2
+-512 L^r_4 L^r_8 +512 L^r_4 L^r_5  + r_{M,3}^r
+\Big) \\
+&+ R M_1^4 \pi_{16} \Big(
+-\frac{3}{256} +4 L^r_3 +4 L^r_2 +8 L^r_1 +8 L^r_0
+\Big) \\
+%
+&+ R M_1^4 \pi_{16}^2 \Big(
+\frac{103}{288} + \frac{1}{12}\log{\mu} - 9(\log{\mu})^2
+\Big) \\
+%
+&+ R^2 M_1^4 \Big(
+-128 L^r_5 L^r_8 +64 (L^r_5)^2 + r_{M,4}^r
+\Big) \\
+%
+&+ R^2 M_1^4 \pi_{16} \Big(
+-\frac{7}{1536} -4 L^r_8 -16 L^r_7 +2 L^r_3 +10 L^r_2
++4 L^r_1 +4 L^r_0
+\Big) \\
+%
+&+ R^2 M_1^4 \pi_{16}^2 \Big(
+\frac{265}{576} + \frac{13}{24}\log{\mu} - \frac{7}{2}(\log{\mu})^2
+\Big) \\
+%
+&+ \overline{A}(M_6^2) M_1^2 \Big(
+32 L^r_8 +64 L^r_6 -16 L^r_5 -32 L^r_4
++20 L^r_3 +28 L^r_2 +40 L^r_1 +8 L^r_0
+\Big) \\
+%
+&+ \overline{A}(M_6^2) M_1^2 \pi_{16} \Big(
+\frac{31}{12} + \frac{9}{2}\log{\mu}
+\Big) \\
+%
+&+ \overline{A}(M_6^2) R M_1^2 \Big(
+32 L^r_8 +64 L^r_6 -16 L^r_5 -32 L^r_4
++20 L^r_3 +28 L^r_2 +40 L^r_1 +8 L^r_0
+\Big) \\
+%
+&+ \overline{A}(M_6^2) R M_1^2 \pi_{16} \Big(
+\frac{25}{12} + \frac{5}{2}\log{\mu}
+\Big) \\
+%
+&+ (\overline{A}(M_6^2))^2 \Big(
+\frac{7}{16} - \frac{1}{4}(1+R)^{-1}
+\Big) + \overline{A}(M_6^2)\overline{A}(M_1^2) R \left(\frac{1}{8}\right)
++ \overline{A}(M_6^2)\overline{A}(M_1^2) \left(-\frac{3}{8}\right) \\
+%
+&+ \overline{A}(M_8^2) M_1^2 \Big(
+32 L^r_6 -32 L^r_4 +8 L^r_2 +32 L^r_1
+\Big)+ \overline{A}(M_8^2) M_1^2 \pi_{16} \Big(
+-\frac{1}{8} + \log{\mu}
+\Big) \\
+%
+&+ \overline{A}(M_8^2) R M_1^2 \Big(
+-32 L^r_6 +32 L^r_4 -8 L^r_2 -32 L^r_1
+\Big) + \overline{A}(M_8^2) R M_1^2 \pi_{16} \Big(
+\frac{1}{8} - \log{\mu}
+\Big) \\
+%
+&+ (\overline{A}(M_8^2))^2 \Big(
+-\frac{1}{8} - \frac{23}{360}(1+R)^{-1}
++ \frac{23}{360}(-1+R)^{-1}
+- \frac{23}{180}(-1+R)^{-1}(1+R)^{-1}
+\Big) \\
+%
+&+ \overline{A}(M_8^2)\overline{A}(M_1^2) R \left(-\frac{1}{8}\right)
++ \overline{A}(M_8^2)\overline{A}(M_1^2) \left(\frac{1}{8}\right) \\
+%
+&+ \overline{A}(M_1^2) M_1^2 \Big(
+52 L^r_8 +112 L^r_6 -26 L^r_5 -104 L^r_4
++26 L^r_3 +20 L^r_2 +80 L^r_1 +14 L^r_0
+\Big) \\
+%
+&+ \overline{A}(M_1^2) M_1^2 \pi_{16} \Big(
+\frac{19}{16} + 15\log{\mu}
+\Big) + \overline{A}(M_1^2) R M_1^2 (16 L^r_8 +32 L^r_7 -4 L^r_5) \\
+%
+&+ \overline{A}(M_1^2) R M_1^2 \pi_{16} \Big(
+-\frac{1}{4} + 4\log{\mu}
+\Big) + \overline{A}(M_1^2) R^2 M_1^2 (4 L^r_8 +16 L^r_7) \\
+%
+&+ (\overline{A}(M_1^2))^2 R \left(-\frac{1}{2}\right)
++ (\overline{A}(M_1^2))^2 \left(-\frac{89}{32}\right).
+\end{aligned}
+\end{align}
+
+
+%M8 NNLO
+\begin{align}
+    \begin{aligned}
+&\frac{F^4}{M^2_{8}}M^2_{8,\text{NNLO}}=
+M_1^2 \Bigg(
+\frac{1}{4}\overline{H}(M_6^2,M_1^2,M_1^2,M_8^2)
++ \frac{5}{8}\overline{H}(M_8^2,M_1^2,M_1^2,M_8^2)
++ \frac{1}{6}\overline{H}(M_1^2,M_1^2,M_1^2,M_8^2) \\
+&+ \frac{3}{4}\overline{H}_{21}(M_6^2,M_1^2,M_1^2,M_8^2)
++ \frac{3}{2}\overline{H}_{21}(M_1^2,M_8^2,M_1^2,M_8^2)
++ \frac{3}{4}\overline{H}_{21}(M_1^2,M_1^2,M_1^2,M_8^2)
+\Bigg) \\
+%
+&+ M_1^4 \Big(
+-128 L^r_5 L^r_8 -512 L^r_5 L^r_6 + 64 (L^r_5)^2
+-512 L^r_4 L^r_8 -2048 L^r_4 L^r_6 \\
+&\quad +512 L^r_4 L^r_5 +1024 (L^r_4)^2 + r_{M,0}^r
+\Big) \\
+%
+&+ M_1^4 \pi_{16} \Big(
+-\frac{41}{1536} -4 L^r_8 -16 L^r_6 +2 L^r_5 +8 L^r_4
++5 L^r_3 +20 L^r_2 +4 L^r_1 +9 L^r_0
+\Big) \\
+%
+&+ M_1^4 \pi_{16}^2 \Big(
+-\frac{581}{576} + \frac{169}{24}\log{\mu} - \frac{41}{2}(\log{\mu})^2
+\Big) \\
+%
+&+ R M_1^2 \Big(
+\frac{1}{4}\overline{H}(M_6^2,M_1^2,M_1^2,M_8^2)
+- \frac{1}{8}\overline{H}(M_8^2,M_1^2,M_1^2,M_8^2)
++ \frac{1}{12}\overline{H}(M_1^2,M_1^2,M_1^2,M_8^2) \\
+&- \frac{3}{4}\overline{H}_{21}(M_6^2,M_1^2,M_1^2,M_8^2)
+- \frac{3}{2}\overline{H}_{21}(M_1^2,M_8^2,M_1^2,M_8^2)
+- \frac{3}{4}\overline{H}_{21}(M_1^2,M_1^2,M_1^2,M_8^2)
+\Big) \\
+%
+&+ R M_1^4 \Big(
+256 L^r_5 L^r_8 +512 L^r_5 L^r_6 -128 (L^r_5)^2
++512 L^r_4 L^r_8 -512 L^r_4 L^r_5 -  r_{M,3}^r
+\Big) \\
+%
+&+ R M_1^4 \pi_{16} \Big(
+\frac{3}{256} -4 L^r_3 -4 L^r_2 -8 L^r_1 -8 L^r_0
+\Big) + R M_1^4 \pi_{16}^2 \Big(
+-\frac{103}{288} - \frac{1}{12}\log{\mu} + 9(\log{\mu})^2
+\Big) \\
+%
+&+ R^2 M_1^4 \Big(
+-128 L^r_5 L^r_8 +64 (L^r_5)^2 + r_{M,4}^r
+\Big) \\
+%
+&+ R^2 M_1^4 \pi_{16} \Big(
+-\frac{7}{1536} -4 L^r_8 -16 L^r_7 +2 L^r_3 +10 L^r_2
++4 L^r_1 +4 L^r_0
+\Big) + R^2 M_1^4 \pi_{16}^2 \Big(
+\frac{265}{576} + \frac{13}{24}\log{\mu} - \frac{7}{2}(\log{\mu})^2
+\Big) \\
+%
+&+ \overline{A}(M_6^2) M_1^2 (32 L^r_6 -32 L^r_4 +8 L^r_2 +32 L^r_1) + \overline{A}(M_6^2) M_1^2 \pi_{16} \Big(
+-\frac{1}{8} + \log{\mu}
+\Big) \\
+%
+&+ \overline{A}(M_6^2) R M_1^2 (32 L^r_6 -32 L^r_4 +8 L^r_2 +32 L^r_1) + \overline{A}(M_6^2) R M_1^2 \pi_{16} \Big(
+-\frac{1}{8} + \log{\mu}
+\Big) \\
+%
+&+ (\overline{A}(M_6^2))^2 \Big(
+-\frac{1}{8}
+- \frac{23}{360}(1+R)^{-1}
++ \frac{23}{360}(-1+R)^{-1}
+- \frac{23}{180}(-1+R)^{-1}(1+R)^{-1}
+\Big) \\
+%
+&+ \overline{A}(M_6^2)\overline{A}(M_1^2) R \left(\frac{1}{8}\right)
++ \overline{A}(M_6^2)\overline{A}(M_1^2) \left(\frac{1}{8}\right) \\
+%
+&+ \overline{A}(M_8^2) M_1^2 \Big(
+32 L^r_8 +64 L^r_6 -16 L^r_5 -32 L^r_4
++20 L^r_3 +28 L^r_2 +40 L^r_1 +8 L^r_0
+\Big) \\
+%
+&+ \overline{A}(M_8^2) M_1^2 \pi_{16} \Big(
+\frac{31}{12} + \frac{9}{2}\log{\mu}
+\Big) \\
+%
+&+ \overline{A}(M_8^2) R M_1^2 \Big(
+-32 L^r_8 -64 L^r_6 +16 L^r_5 +32 L^r_4
+-20 L^r_3 -28 L^r_2 -40 L^r_1 -8 L^r_0
+\Big) \\
+%
+&+ \overline{A}(M_8^2) R M_1^2 \pi_{16} \Big(
+-\frac{25}{12} - \frac{5}{2}\log{\mu}
+\Big) + (\overline{A}(M_8^2))^2 \Big(
+\frac{7}{16} + \frac{1}{4}(-1+R)^{-1}
+\Big) \\
+%
+&+ \overline{A}(M_8^2)\overline{A}(M_1^2) R \left(-\frac{1}{8}\right)
++ \overline{A}(M_8^2)\overline{A}(M_1^2) \left(-\frac{3}{8}\right) \\
+%
+&+ \overline{A}(M_1^2) M_1^2 \Big(
+52 L^r_8 +112 L^r_6 -26 L^r_5 -104 L^r_4
++26 L^r_3 +20 L^r_2 +80 L^r_1 +14 L^r_0
+\Big) \\
+%
+&+ \overline{A}(M_1^2) M_1^2 \pi_{16} \Big(
+\frac{19}{16} + 15\log{\mu}
+\Big) \\
+%
+&+ \overline{A}(M_1^2) R M_1^2 (-16 L^r_8 -32 L^r_7 +4 L^r_5) + \overline{A}(M_1^2) R M_1^2 \pi_{16} \Big(
+\frac{1}{4} - 4\log{\mu}
+\Big) \\
+%
+&+ \overline{A}(M_1^2) R^2 M_1^2 (4 L^r_8 +16 L^r_7) + (\overline{A}(M_1^2))^2 R \left(\frac{1}{2}\right)
++ (\overline{A}(M_1^2))^2 \left(-\frac{89}{32}\right).
+\end{aligned}
+\end{align}

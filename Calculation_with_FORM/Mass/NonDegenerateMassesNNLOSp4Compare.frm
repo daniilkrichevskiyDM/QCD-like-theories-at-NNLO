@@ -2,14 +2,14 @@ Off statistics;
 
 cfunction ABar, LOmass,Ab, L,  Bb,B1b,B21b,spi,B22b,B31b,B32b,Hbb,H1bb,H21bb,Hd,Hdd,H1d,H1dd,H21d,H21dd;
 symbol m1,m2,m3,m4;
-symbol P2, aux1, n, QuarkMassRatio, RatioR;
+symbol P2, aux1, n, QuarkMassRatio, RatioR, rmq;
 symbol gamma10, gamma20, gamma11, gamma21, gamma12, gamma22, rM0r,rM1r,rM2r, rM0,rM1,rM2;
 
 #include symbols.hf
 #include setexternal.hf
 
-#define ext1 "1"
-#define ext2 "1"
+#define ext1 "3"
+#define ext2 "3"
 #define SX4 "SP4"
 
 
@@ -53,18 +53,14 @@ nskip `expr';
 .sort
 #endprocedure
 
-
-
 *now we take derivative of sigma4
 G DerSigma4 = Sigma4;
-
 
 #call derivative(DerSigma4,P2)
 
 .sort
 G NLOmass =  -Sigma4 ; 
 G NNLOmass =  -Sigma6 + Sigma4*DerSigma4; 
-
 
 *we now set the p^2 to the LO mass
 id P2 = LOmass(`ext1');
@@ -96,7 +92,8 @@ id Ab(eps,mp2?) = pi16*mp2*(C^2/2+1/2+pi^2/12+1/2*log(mp2)^2-C*log(mp2));
 .sort 
 id lambda0 = epsb^(-1);
 id C = log4pi;
-id log(mp2) = L(mp2)/pi16+2*logmu;
+*id log(mp2) = L(mp2)/pi16+2*logmu;
+id  log(mp2?) = -1/pi16*1/mp2*Ab(mp2);
 id pi^2 = 1/16*1/pi16; 
 
 #do indexLECs = 0, 10
@@ -105,46 +102,25 @@ id L`indexLECs' = - Gamma`indexLECs'*pi16/(2*eps) + ( Lr`indexLECs'  + Gamma`ind
 #enddo
 
 
-
-
 .sort
 
 *lambda0
 id epsb^(-1) = 1/eps + log4pi;
 *finite part of A
-id Ab(mp2?) = -mp2*L(mp2) - 2*mp2*pi16*logmu;
-
-id KK42 = 1/512*(16* KK19 + 64* KK21 + 16 *KK23 + 64 *KK24 - 144 *KK25 - 192* KK26 - 
-   96* KK39 - 128 *KK40 - 256* KK41 + rM2);
-.sort
-
-id KK17 = 1/32 *(-128* KK18 - 16 *KK19 - 64 *KK20 - 64 *KK21 - 256 *KK22 - 16* KK23 + 
-    48 *KK25 + 192 *KK26 + 768* KK27 + 32* KK39 + 128* KK40 - rM0);
-
-.sort
-
-id KK19 = 1/16* (-64 *KK21 + 16 *KK23 + 48* KK25 + 64 *KK26 - rM1);
+*id Ab(mp2?) = -mp2*L(mp2) - 2*mp2*pi16*logmu;
 
 
-
-id rM0 = rM0r + gamma20*eps^(-2)+2*gamma10*(log4pi-2*logmu)+2*gamma20*(log4pi-2*logmu)^2
-+1/eps*(gamma10+2*log4pi*gamma20-4*gamma20*logmu);
-
-id rM1 = rM1r + gamma21*eps^(-2)+2*gamma11*(log4pi-2*logmu)+2*gamma21*(log4pi-2*logmu)^2
-+1/eps*(gamma11+2*log4pi*gamma21-4*gamma21*logmu);
-
-id rM2 = rM2r + gamma22*eps^(-2)+2*gamma12*(log4pi-2*logmu)+2*gamma22*(log4pi-2*logmu)^2
-+1/eps*(gamma12+2*log4pi*gamma22-4*gamma22*logmu);
 
 .sort
 id dim^-1 =1/4 + eps/8 + eps^2/16;
 .sort
-id eps^n?{1,2,3,4} = 0;
+*id eps^n?{1,2,3,4} = 0;
+
+id logmu = 0;
 
 
-id L(mp2?) = - ABar(mp2)/mp2;
+*id L(mp2?) = - ABar(mp2)/mp2;
 
-#include GammasNNLO.hf
 .sort
 
 
@@ -160,15 +136,35 @@ G NNLOmassNorm = NNLOmass*F^4/mp2;
 id mdd = -mp2*(-1 + RatioR);
 id muu = mp2*(1 + RatioR);
 
+id RatioR = rmq;
+
+
 .sort
 *CHECK DEGENERATE LIMIT
 *id RatioR = 0;
+
+#include HansM11p6SP4.hf
+
+L difference = HansM33p6SP4 - NNLOmass;
+
 .sort
-b F, mp2, eps, ABar, pi16, RatioR;
+id eps^n?{-1,} = 1/epsb1-2*log4pi;
+id eps^n?{-2,} = 1/epsb2+2*(2*log4pi-1/epsb1)*log4pi-2*(log4pi)^2;
+
+.sort
+id epsb1^n?{1,2,3,4} = 0;
+id epsb2^n?{1,2,3,4} = 0;
+id eps^n?{1,2,3,4} = 0;
+
+.sort
+
+
+.sort
+b F, mp2, eps, ABar, pi16, RatioR, epsb1, epsb2;
 
 
 
-Print NLOmassNorm,  NNLOmassNorm;
+Print NLOmass,  NNLOmass, difference;
 .sort
 G NLOmass`ext1'`SX4' = NLOmass;
 G NNLOmass`ext1'`SX4' = NNLOmass;

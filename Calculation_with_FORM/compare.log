@@ -1,4 +1,4 @@
-FORM 5.0.0 (Jan 27 2026, v5.0.0)                 Run: Fri Mar 27 13:34:58 2026
+FORM 5.0.0 (Jan 27 2026, v5.0.0)                 Run: Mon Apr 13 13:15:07 2026
     * just looking at the final nonrenormalized results
     #include symbols.hf
     * symbols etc needed for the SU(4)/SO(4) and SU(4)/Sp(4) case
@@ -24,7 +24,8 @@ FORM 5.0.0 (Jan 27 2026, v5.0.0)                 Run: Fri Mar 27 13:34:58 2026
     symbol eps,epsb,epsb2,epsb1,lambda2,lambda1,log4pi,
         pi,pi16,pi162;
     cfunction delt,deltm,prop;
-    vector qext,q1ext,q2ext,q3ext,q4ext,q5ext,p1ext,p2ext,p3ext,p4ext;
+    vector qext,q1ext,q2ext,q3ext,q4ext,q5ext,p1ext,p2ext,p3ext,p4ext,p12ext,p13ext,
+    p14ext,p23ext,p24ext,p34ext;
     vector aext1,aext2,vext1,vext2,vext3;
     vector PP,QQ,RR,SS;
     vector PPM,QQM,RRM,SSM;* (only used in procedure so beware)
@@ -190,57 +191,57 @@ FORM 5.0.0 (Jan 27 2026, v5.0.0)                 Run: Fri Mar 27 13:34:58 2026
  Fpi6x99SO4 loaded
     
     * the individual results for the different cases
-    L M11p4SP4 = Fpi4x11SP4;
-    L M33p4SP4 = Fpi4x33SP4;
+    L M11p4SP4 = Mass4x11SP4;
+    L M33p4SP4 = Mass4x33SP4;
     
-    L M11p4SO4 = Fpi4x11SO4;
-    L M33p4SO4 = Fpi4x33SO4;
-    L M66p4SO4 = Fpi4x66SO4;
-    L M88p4SO4 = Fpi4x88SO4;
+    L M11p4SO4 = Mass4x11SO4;
+    L M33p4SO4 = Mass4x33SO4;
+    L M66p4SO4 = Mass4x66SO4;
+    L M88p4SO4 = Mass4x88SO4;
     
-    L M11p6SP4 = Fpi4x11SP4;
-    L M33p6SP4 = Fpi4x33SP4;
+    L M11p6SP4 = Mass6x11SP4;
+    L M33p6SP4 = Mass6x33SP4;
     
-    L M11p6SO4 = Fpi6x11SO4;
-    L M33p6SO4 = Fpi6x33SO4;
-    L M66p6SO4 = Fpi6x66SO4;
-    L M88p6SO4 = Fpi6x88SO4;
+    L M11p6SO4 = Mass6x11SO4;
+    L M33p6SO4 = Mass6x33SO4;
+    L M66p6SO4 = Mass6x66SO4;
+    L M88p6SO4 = Mass6x88SO4;
     
     
     * the checking of differences
-    L M12p4SP4 = Fpi4x11SP4-Fpi4x22SP4;
-    L M13p4SP4 = Fpi4x11SP4-Fpi4x33SP4;
-    L M14p4SP4 = Fpi4x11SP4-Fpi4x44SP4;
-    L M15p4SP4 = Fpi4x11SP4-Fpi4x55SP4;
+    L M12p4SP4 = Mass4x11SP4-Mass4x22SP4;
+    L M13p4SP4 = Mass4x11SP4-Mass4x33SP4;
+    L M14p4SP4 = Mass4x11SP4-Mass4x44SP4;
+    L M15p4SP4 = Mass4x11SP4-Mass4x55SP4;
     
-    L M12p6SP4 = Fpi6x11SP4-Fpi6x22SP4;
-    L M13p6SP4 = Fpi6x11SP4-Fpi6x33SP4;
-    L M14p6SP4 = Fpi6x11SP4-Fpi6x44SP4;
-    L M15p6SP4 = Fpi6x11SP4-Fpi6x55SP4;
+    L M12p6SP4 = Mass6x11SP4-Mass6x22SP4;
+    L M13p6SP4 = Mass6x11SP4-Mass6x33SP4;
+    L M14p6SP4 = Mass6x11SP4-Mass6x44SP4;
+    L M15p6SP4 = Mass6x11SP4-Mass6x55SP4;
     
-    L M12p4SO4 = Fpi4x11SO4-Fpi4x22SO4;
-    L M13p4SO4 = Fpi4x11SO4-Fpi4x33SO4;
-    L M14p4SO4 = Fpi4x11SO4-Fpi4x44SO4;
-    L M15p4SO4 = Fpi4x11SO4-Fpi4x55SO4;
-    L M16p4SO4 = Fpi4x11SO4-Fpi4x66SO4;
-    L M36p4SO4 = Fpi4x33SO4-Fpi4x66SO4;
-    L M67p4SO4 = Fpi4x66SO4-Fpi4x77SO4;
-    L M18p4SO4 = Fpi4x11SO4-Fpi4x88SO4;
-    L M38p4SO4 = Fpi4x33SO4-Fpi4x88SO4;
-    L M68p4SO4 = Fpi4x66SO4-Fpi4x88SO4;
-    L M89p4SO4 = Fpi4x88SO4-Fpi4x99SO4;
+    L M12p4SO4 = Mass4x11SO4-Mass4x22SO4;
+    L M13p4SO4 = Mass4x11SO4-Mass4x33SO4;
+    L M14p4SO4 = Mass4x11SO4-Mass4x44SO4;
+    L M15p4SO4 = Mass4x11SO4-Mass4x55SO4;
+    L M16p4SO4 = Mass4x11SO4-Mass4x66SO4;
+    L M36p4SO4 = Mass4x33SO4-Mass4x66SO4;
+    L M67p4SO4 = Mass4x66SO4-Mass4x77SO4;
+    L M18p4SO4 = Mass4x11SO4-Mass4x88SO4;
+    L M38p4SO4 = Mass4x33SO4-Mass4x88SO4;
+    L M68p4SO4 = Mass4x66SO4-Mass4x88SO4;
+    L M89p4SO4 = Mass4x88SO4-Mass4x99SO4;
     
-    L M12p6SO4 = Fpi6x11SO4-Fpi6x22SO4;
-    L M13p6SO4 = Fpi6x11SO4-Fpi6x33SO4;
-    L M14p6SO4 = Fpi6x11SO4-Fpi6x44SO4;
-    L M15p6SO4 = Fpi6x11SO4-Fpi6x55SO4;
-    L M16p6SO4 = Fpi6x11SO4-Fpi6x66SO4;
-    L M36p6SO4 = Fpi6x33SO4-Fpi6x66SO4;
-    L M67p6SO4 = Fpi6x66SO4-Fpi6x77SO4;
-    L M18p6SO4 = Fpi6x11SO4-Fpi6x88SO4;
-    L M38p6SO4 = Fpi6x33SO4-Fpi6x88SO4;
-    L M68p6SO4 = Fpi6x66SO4-Fpi6x88SO4;
-    L M89p6SO4 = Fpi6x88SO4-Fpi6x99SO4;
+    L M12p6SO4 = Mass6x11SO4-Mass6x22SO4;
+    L M13p6SO4 = Mass6x11SO4-Mass6x33SO4;
+    L M14p6SO4 = Mass6x11SO4-Mass6x44SO4;
+    L M15p6SO4 = Mass6x11SO4-Mass6x55SO4;
+    L M16p6SO4 = Mass6x11SO4-Mass6x66SO4;
+    L M36p6SO4 = Mass6x33SO4-Mass6x66SO4;
+    L M67p6SO4 = Mass6x66SO4-Mass6x77SO4;
+    L M18p6SO4 = Mass6x11SO4-Mass6x88SO4;
+    L M38p6SO4 = Mass6x33SO4-Mass6x88SO4;
+    L M68p6SO4 = Mass6x66SO4-Mass6x88SO4;
+    L M89p6SO4 = Mass6x88SO4-Mass6x99SO4;
     
     * the individual results for the different cases
     L F11p4SP4 = Fpi4x11SP4;
@@ -251,8 +252,8 @@ FORM 5.0.0 (Jan 27 2026, v5.0.0)                 Run: Fri Mar 27 13:34:58 2026
     L F66p4SO4 = Fpi4x66SO4;
     L F88p4SO4 = Fpi4x88SO4;
     
-    L F11p6SP4 = Fpi4x11SP4;
-    L F33p6SP4 = Fpi4x33SP4;
+    L F11p6SP4 = Fpi6x11SP4;
+    L F33p6SP4 = Fpi6x33SP4;
     
     L F11p6SO4 = Fpi6x11SO4;
     L F33p6SO4 = Fpi6x33SO4;
@@ -298,171 +299,171 @@ FORM 5.0.0 (Jan 27 2026, v5.0.0)                 Run: Fri Mar 27 13:34:58 2026
     *L TESTSO4 = M11p4SO4-1/2*(M66p4SO4+M88p4SO4);
     .sort
 
-Time =       0.01 sec    Generated terms =          3
-        M11p4SP4         Terms in output =          3
-                         Bytes used      =        132
+Time =       0.01 sec    Generated terms =          5
+        M11p4SP4         Terms in output =          5
+                         Bytes used      =        196
 
-Time =       0.01 sec    Generated terms =          3
-        M33p4SP4         Terms in output =          3
-                         Bytes used      =        132
+Time =       0.01 sec    Generated terms =          7
+        M33p4SP4         Terms in output =          7
+                         Bytes used      =        308
 
 Time =       0.01 sec    Generated terms =          5
         M11p4SO4         Terms in output =          5
-                         Bytes used      =        212
+                         Bytes used      =        196
 
-Time =       0.01 sec    Generated terms =          3
-        M33p4SO4         Terms in output =          3
-                         Bytes used      =        132
+Time =       0.01 sec    Generated terms =         11
+        M33p4SO4         Terms in output =         11
+                         Bytes used      =        500
 
-Time =       0.01 sec    Generated terms =          5
-        M66p4SO4         Terms in output =          5
-                         Bytes used      =        248
+Time =       0.01 sec    Generated terms =         12
+        M66p4SO4         Terms in output =         12
+                         Bytes used      =        576
 
-Time =       0.01 sec    Generated terms =          5
-        M88p4SO4         Terms in output =          5
-                         Bytes used      =        248
+Time =       0.01 sec    Generated terms =         12
+        M88p4SO4         Terms in output =         12
+                         Bytes used      =        576
 
-Time =       0.01 sec    Generated terms =          3
-        M11p6SP4         Terms in output =          3
-                         Bytes used      =        132
+Time =       0.01 sec    Generated terms =         59
+        M11p6SP4         Terms in output =         59
+                         Bytes used      =       2404
 
-Time =       0.01 sec    Generated terms =          3
-        M33p6SP4         Terms in output =          3
-                         Bytes used      =        132
+Time =       0.01 sec    Generated terms =         68
+        M33p6SP4         Terms in output =         68
+                         Bytes used      =       2960
 
-Time =       0.01 sec    Generated terms =        129
-        M11p6SO4         Terms in output =        129
-                         Bytes used      =       6888
+Time =       0.01 sec    Generated terms =        139
+        M11p6SO4         Terms in output =        139
+                         Bytes used      =       7236
 
-Time =       0.01 sec    Generated terms =        107
-        M33p6SO4         Terms in output =        107
-                         Bytes used      =       5544
+Time =       0.02 sec    Generated terms =        162
+        M33p6SO4         Terms in output =        162
+                         Bytes used      =       8324
 
-Time =       0.01 sec    Generated terms =        135
-        M66p6SO4         Terms in output =        135
-                         Bytes used      =       6684
+Time =       0.02 sec    Generated terms =        232
+        M66p6SO4         Terms in output =        232
+                         Bytes used      =      10284
 
-Time =       0.01 sec    Generated terms =        135
-        M88p6SO4         Terms in output =        135
-                         Bytes used      =       6684
+Time =       0.02 sec    Generated terms =        232
+        M88p6SO4         Terms in output =        232
+                         Bytes used      =      10284
 
-Time =       0.01 sec    Generated terms =          6
+Time =       0.02 sec    Generated terms =         10
         M12p4SP4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.01 sec    Generated terms =          6
-        M13p4SP4         Terms in output =          0
-                         Bytes used      =          4
+Time =       0.02 sec    Generated terms =         12
+        M13p4SP4         Terms in output =          2
+                         Bytes used      =         96
 
-Time =       0.01 sec    Generated terms =          6
+Time =       0.02 sec    Generated terms =         10
         M14p4SP4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.01 sec    Generated terms =          6
+Time =       0.02 sec    Generated terms =         10
         M15p4SP4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.01 sec    Generated terms =         92
+Time =       0.02 sec    Generated terms =        118
         M12p6SP4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.01 sec    Generated terms =         87
-        M13p6SP4         Terms in output =          8
-                         Bytes used      =        416
+Time =       0.02 sec    Generated terms =        127
+        M13p6SP4         Terms in output =         18
+                         Bytes used      =        812
 
-Time =       0.01 sec    Generated terms =         92
+Time =       0.02 sec    Generated terms =        118
         M14p6SP4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.01 sec    Generated terms =         92
+Time =       0.02 sec    Generated terms =        118
         M15p6SP4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.01 sec    Generated terms =         10
+Time =       0.02 sec    Generated terms =         10
         M12p4SO4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.01 sec    Generated terms =          8
-        M13p4SO4         Terms in output =          3
-                         Bytes used      =        136
+Time =       0.02 sec    Generated terms =         16
+        M13p4SO4         Terms in output =          7
+                         Bytes used      =        348
 
-Time =       0.01 sec    Generated terms =         10
+Time =       0.02 sec    Generated terms =         10
         M14p4SO4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.01 sec    Generated terms =         10
+Time =       0.02 sec    Generated terms =         10
         M15p4SO4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.01 sec    Generated terms =         10
-        M16p4SO4         Terms in output =          3
-                         Bytes used      =        152
+Time =       0.02 sec    Generated terms =         17
+        M16p4SO4         Terms in output =          7
+                         Bytes used      =        284
 
-Time =       0.01 sec    Generated terms =          8
-        M36p4SO4         Terms in output =          3
-                         Bytes used      =        152
+Time =       0.02 sec    Generated terms =         23
+        M36p4SO4         Terms in output =         12
+                         Bytes used      =        528
 
-Time =       0.01 sec    Generated terms =         10
+Time =       0.02 sec    Generated terms =         24
         M67p4SO4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.01 sec    Generated terms =         10
-        M18p4SO4         Terms in output =          3
-                         Bytes used      =        152
+Time =       0.02 sec    Generated terms =         17
+        M18p4SO4         Terms in output =          7
+                         Bytes used      =        284
 
-Time =       0.01 sec    Generated terms =          8
-        M38p4SO4         Terms in output =          3
-                         Bytes used      =        152
+Time =       0.02 sec    Generated terms =         23
+        M38p4SO4         Terms in output =         12
+                         Bytes used      =        528
 
-Time =       0.01 sec    Generated terms =         10
-        M68p4SO4         Terms in output =          3
-                         Bytes used      =        152
+Time =       0.02 sec    Generated terms =         24
+        M68p4SO4         Terms in output =          5
+                         Bytes used      =        236
 
-Time =       0.01 sec    Generated terms =         10
+Time =       0.02 sec    Generated terms =         24
         M89p4SO4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.01 sec    Generated terms =        258
+Time =       0.02 sec    Generated terms =        278
         M12p6SO4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.01 sec    Generated terms =        236
-        M13p6SO4         Terms in output =         96
-                         Bytes used      =       4900
+Time =       0.02 sec    Generated terms =        301
+        M13p6SO4         Terms in output =        117
+                         Bytes used      =       5656
 
-Time =       0.01 sec    Generated terms =        258
+Time =       0.02 sec    Generated terms =        278
         M14p6SO4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.01 sec    Generated terms =        258
+Time =       0.02 sec    Generated terms =        278
         M15p6SO4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.01 sec    Generated terms =        264
-        M16p6SO4         Terms in output =        131
-                         Bytes used      =       6224
+Time =       0.02 sec    Generated terms =        371
+        M16p6SO4         Terms in output =        219
+                         Bytes used      =       8616
 
-Time =       0.01 sec    Generated terms =        242
-        M36p6SO4         Terms in output =        130
-                         Bytes used      =       5936
+Time =       0.02 sec    Generated terms =        394
+        M36p6SO4         Terms in output =        231
+                         Bytes used      =       9156
 
-Time =       0.01 sec    Generated terms =        270
+Time =       0.02 sec    Generated terms =        464
         M67p6SO4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.01 sec    Generated terms =        264
-        M18p6SO4         Terms in output =        131
-                         Bytes used      =       6224
+Time =       0.02 sec    Generated terms =        371
+        M18p6SO4         Terms in output =        219
+                         Bytes used      =       8616
 
-Time =       0.01 sec    Generated terms =        242
-        M38p6SO4         Terms in output =        130
-                         Bytes used      =       5936
+Time =       0.02 sec    Generated terms =        394
+        M38p6SO4         Terms in output =        231
+                         Bytes used      =       9156
 
-Time =       0.02 sec    Generated terms =        270
-        M68p6SO4         Terms in output =        110
-                         Bytes used      =       5360
+Time =       0.02 sec    Generated terms =        464
+        M68p6SO4         Terms in output =        177
+                         Bytes used      =       7132
 
-Time =       0.02 sec    Generated terms =        270
+Time =       0.02 sec    Generated terms =        464
         M89p6SO4         Terms in output =          0
                          Bytes used      =          4
 
@@ -490,13 +491,13 @@ Time =       0.02 sec    Generated terms =          5
         F88p4SO4         Terms in output =          5
                          Bytes used      =        248
 
-Time =       0.02 sec    Generated terms =          3
-        F11p6SP4         Terms in output =          3
-                         Bytes used      =        132
+Time =       0.02 sec    Generated terms =         46
+        F11p6SP4         Terms in output =         46
+                         Bytes used      =       1888
 
-Time =       0.02 sec    Generated terms =          3
-        F33p6SP4         Terms in output =          3
-                         Bytes used      =        132
+Time =       0.02 sec    Generated terms =         41
+        F33p6SP4         Terms in output =         41
+                         Bytes used      =       1580
 
 Time =       0.02 sec    Generated terms =        129
         F11p6SO4         Terms in output =        129
@@ -642,61 +643,61 @@ Time =       0.02 sec    Generated terms =        270
     ;
     .end
 
-Time =       0.02 sec    Generated terms =          3
-        M11p4SP4         Terms in output =          3
-                         Bytes used      =        164
+Time =       0.02 sec    Generated terms =          5
+        M11p4SP4         Terms in output =          5
+                         Bytes used      =        228
 
-Time =       0.02 sec    Generated terms =          3
-        M33p4SP4         Terms in output =          3
-                         Bytes used      =        164
+Time =       0.02 sec    Generated terms =          7
+        M33p4SP4         Terms in output =          7
+                         Bytes used      =        308
 
 Time =       0.02 sec    Generated terms =          5
         M11p4SO4         Terms in output =          5
-                         Bytes used      =        268
+                         Bytes used      =        228
 
-Time =       0.02 sec    Generated terms =          3
-        M33p4SO4         Terms in output =          3
-                         Bytes used      =        164
+Time =       0.02 sec    Generated terms =         11
+        M33p4SO4         Terms in output =         11
+                         Bytes used      =        500
 
-Time =       0.02 sec    Generated terms =          5
-        M66p4SO4         Terms in output =          5
-                         Bytes used      =        260
+Time =       0.02 sec    Generated terms =         12
+        M66p4SO4         Terms in output =         12
+                         Bytes used      =        484
 
-Time =       0.02 sec    Generated terms =          5
-        M88p4SO4         Terms in output =          5
-                         Bytes used      =        260
+Time =       0.02 sec    Generated terms =         12
+        M88p4SO4         Terms in output =         12
+                         Bytes used      =        484
 
-Time =       0.02 sec    Generated terms =          3
-        M11p6SP4         Terms in output =          3
-                         Bytes used      =        164
+Time =       0.02 sec    Generated terms =         59
+        M11p6SP4         Terms in output =         59
+                         Bytes used      =       2156
 
-Time =       0.02 sec    Generated terms =          3
-        M33p6SP4         Terms in output =          3
-                         Bytes used      =        164
+Time =       0.02 sec    Generated terms =         68
+        M33p6SP4         Terms in output =         68
+                         Bytes used      =       2552
 
-Time =       0.02 sec    Generated terms =        129
-        M11p6SO4         Terms in output =        129
-                         Bytes used      =       5976
+Time =       0.02 sec    Generated terms =        139
+        M11p6SO4         Terms in output =        139
+                         Bytes used      =       6060
 
-Time =       0.02 sec    Generated terms =        107
-        M33p6SO4         Terms in output =        107
-                         Bytes used      =       4680
+Time =       0.02 sec    Generated terms =        162
+        M33p6SO4         Terms in output =        162
+                         Bytes used      =       6664
 
-Time =       0.02 sec    Generated terms =        135
-        M66p6SO4         Terms in output =        135
-                         Bytes used      =       5452
+Time =       0.02 sec    Generated terms =        232
+        M66p6SO4         Terms in output =        232
+                         Bytes used      =       8264
 
-Time =       0.02 sec    Generated terms =        135
-        M88p6SO4         Terms in output =        135
-                         Bytes used      =       5452
+Time =       0.02 sec    Generated terms =        232
+        M88p6SO4         Terms in output =        232
+                         Bytes used      =       8264
 
 Time =       0.02 sec    Generated terms =          0
         M12p4SP4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.02 sec    Generated terms =          0
-        M13p4SP4         Terms in output =          0
-                         Bytes used      =          4
+Time =       0.02 sec    Generated terms =          2
+        M13p4SP4         Terms in output =          2
+                         Bytes used      =        116
 
 Time =       0.02 sec    Generated terms =          0
         M14p4SP4         Terms in output =          0
@@ -710,9 +711,9 @@ Time =       0.02 sec    Generated terms =          0
         M12p6SP4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.02 sec    Generated terms =          8
-        M13p6SP4         Terms in output =          8
-                         Bytes used      =        496
+Time =       0.02 sec    Generated terms =         18
+        M13p6SP4         Terms in output =         18
+                         Bytes used      =        876
 
 Time =       0.02 sec    Generated terms =          0
         M14p6SP4         Terms in output =          0
@@ -726,9 +727,9 @@ Time =       0.02 sec    Generated terms =          0
         M12p4SO4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.02 sec    Generated terms =          3
-        M13p4SO4         Terms in output =          3
-                         Bytes used      =        172
+Time =       0.02 sec    Generated terms =          7
+        M13p4SO4         Terms in output =          7
+                         Bytes used      =        380
 
 Time =       0.02 sec    Generated terms =          0
         M14p4SO4         Terms in output =          0
@@ -738,29 +739,29 @@ Time =       0.02 sec    Generated terms =          0
         M15p4SO4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.02 sec    Generated terms =          3
-        M16p4SO4         Terms in output =          3
-                         Bytes used      =        196
+Time =       0.02 sec    Generated terms =          7
+        M16p4SO4         Terms in output =          7
+                         Bytes used      =        324
 
-Time =       0.02 sec    Generated terms =          3
-        M36p4SO4         Terms in output =          3
-                         Bytes used      =        196
+Time =       0.02 sec    Generated terms =         12
+        M36p4SO4         Terms in output =         12
+                         Bytes used      =        548
 
 Time =       0.02 sec    Generated terms =          0
         M67p4SO4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.02 sec    Generated terms =          3
-        M18p4SO4         Terms in output =          3
-                         Bytes used      =        196
+Time =       0.02 sec    Generated terms =          7
+        M18p4SO4         Terms in output =          7
+                         Bytes used      =        324
 
-Time =       0.02 sec    Generated terms =          3
-        M38p4SO4         Terms in output =          3
-                         Bytes used      =        196
+Time =       0.02 sec    Generated terms =         12
+        M38p4SO4         Terms in output =         12
+                         Bytes used      =        548
 
-Time =       0.02 sec    Generated terms =          3
-        M68p4SO4         Terms in output =          3
-                         Bytes used      =        196
+Time =       0.02 sec    Generated terms =          5
+        M68p4SO4         Terms in output =          5
+                         Bytes used      =        276
 
 Time =       0.02 sec    Generated terms =          0
         M89p4SO4         Terms in output =          0
@@ -770,9 +771,9 @@ Time =       0.02 sec    Generated terms =          0
         M12p6SO4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.02 sec    Generated terms =         96
-        M13p6SO4         Terms in output =         96
-                         Bytes used      =       4948
+Time =       0.02 sec    Generated terms =        117
+        M13p6SO4         Terms in output =        117
+                         Bytes used      =       5500
 
 Time =       0.02 sec    Generated terms =          0
         M14p6SO4         Terms in output =          0
@@ -782,29 +783,29 @@ Time =       0.02 sec    Generated terms =          0
         M15p6SO4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.02 sec    Generated terms =        131
-        M16p6SO4         Terms in output =        131
-                         Bytes used      =       6228
+Time =       0.02 sec    Generated terms =        219
+        M16p6SO4         Terms in output =        219
+                         Bytes used      =       8336
 
-Time =       0.02 sec    Generated terms =        130
-        M36p6SO4         Terms in output =        130
-                         Bytes used      =       5768
+Time =       0.02 sec    Generated terms =        231
+        M36p6SO4         Terms in output =        231
+                         Bytes used      =       8564
 
 Time =       0.02 sec    Generated terms =          0
         M67p6SO4         Terms in output =          0
                          Bytes used      =          4
 
-Time =       0.02 sec    Generated terms =        131
-        M18p6SO4         Terms in output =        131
-                         Bytes used      =       6228
+Time =       0.02 sec    Generated terms =        219
+        M18p6SO4         Terms in output =        219
+                         Bytes used      =       8336
 
-Time =       0.02 sec    Generated terms =        130
-        M38p6SO4         Terms in output =        130
-                         Bytes used      =       5768
+Time =       0.02 sec    Generated terms =        231
+        M38p6SO4         Terms in output =        231
+                         Bytes used      =       8564
 
-Time =       0.02 sec    Generated terms =        110
-        M68p6SO4         Terms in output =        110
-                         Bytes used      =       5204
+Time =       0.02 sec    Generated terms =        177
+        M68p6SO4         Terms in output =        177
+                         Bytes used      =       6812
 
 Time =       0.02 sec    Generated terms =          0
         M89p6SO4         Terms in output =          0
@@ -834,13 +835,13 @@ Time =       0.02 sec    Generated terms =          5
         F88p4SO4         Terms in output =          5
                          Bytes used      =        260
 
-Time =       0.02 sec    Generated terms =          3
-        F11p6SP4         Terms in output =          3
-                         Bytes used      =        164
+Time =       0.02 sec    Generated terms =         46
+        F11p6SP4         Terms in output =         46
+                         Bytes used      =       1736
 
-Time =       0.02 sec    Generated terms =          3
-        F33p6SP4         Terms in output =          3
-                         Bytes used      =        164
+Time =       0.02 sec    Generated terms =         41
+        F33p6SP4         Terms in output =         41
+                         Bytes used      =       1540
 
 Time =       0.02 sec    Generated terms =        129
         F11p6SO4         Terms in output =        129
@@ -979,340 +980,428 @@ Time =       0.02 sec    Generated terms =          0
                          Bytes used      =          4
 
    M11p4SP4 =
-       + F^-1*mp2 * ( 4*L5r + 16*L4r )
+       + F^-2*mp2^2 * ( 16*L8r + 64*L6r - 8*L5r - 32*L4r )
 
-       + Ab(mp2)*F^-1 * ( 1 );
+       + Ab(mp2)*F^-2*mp2 * (  - 3/4 );
 
    M33p4SP4 =
-       + F^-1*mp2 * ( 4*L5r + 16*L4r )
+       + F^-2*mp2^2 * ( 16*L8r + 16*L8r*rmq^2 + 64*L7r*rmq^2 + 64*L6r - 8*L5r
+          - 32*L4r )
 
-       + Ab(mp2)*F^-1 * ( 1 );
+       + Ab(mp2)*F^-2*mp2 * (  - 3/4 );
 
    M11p4SO4 =
-       + F^-1*mp2 * ( 4*L5r + 16*L4r )
+       + F^-2*mp2^2 * ( 16*L8r + 64*L6r - 8*L5r - 32*L4r )
 
-       + Ab(muu)*F^-1 * ( 1/4 )
-
-       + Ab(mdd)*F^-1 * ( 1/4 )
-
-       + Ab(mp2)*F^-1 * ( 1/2 );
+       + Ab(mp2)*F^-2*mp2 * ( 1/4 );
 
    M33p4SO4 =
-       + F^-1*mp2 * ( 4*L5r + 16*L4r )
+       + F^-2*mp2^2 * ( 16*L8r + 16*L8r*rmq^2 + 64*L7r*rmq^2 + 64*L6r - 8*L5r
+          - 32*L4r )
 
-       + Ab(mp2)*F^-1 * ( 1 );
+       + Ab(muu)*F^-2*mp2 * ( 1/2 + 1/2*rmq )
+
+       + Ab(mdd)*F^-2*mp2 * ( 1/2 - 1/2*rmq )
+
+       + Ab(mp2)*F^-2*mp2 * (  - 3/4 );
 
    M66p4SO4 =
-       + F^-1*mp2 * ( 4*L5r + 4*L5r*rmq + 16*L4r )
+       + F^-2*mp2^2 * ( 16*L8r + 32*L8r*rmq + 16*L8r*rmq^2 + 64*L6r + 64*L6r*
+         rmq - 8*L5r - 16*L5r*rmq - 8*L5r*rmq^2 - 32*L4r - 32*L4r*rmq )
 
-       + Ab(muu)*F^-1 * ( 1/2 )
-
-       + Ab(mp2)*F^-1 * ( 1/2 );
+       + Ab(mp2)*F^-2*mp2 * ( 1/4 + 1/4*rmq );
 
    M88p4SO4 =
-       + F^-1*mp2 * ( 4*L5r - 4*L5r*rmq + 16*L4r )
+       + F^-2*mp2^2 * ( 16*L8r - 32*L8r*rmq + 16*L8r*rmq^2 + 64*L6r - 64*L6r*
+         rmq - 8*L5r + 16*L5r*rmq - 8*L5r*rmq^2 - 32*L4r + 32*L4r*rmq )
 
-       + Ab(mdd)*F^-1 * ( 1/2 )
-
-       + Ab(mp2)*F^-1 * ( 1/2 );
+       + Ab(mp2)*F^-2*mp2 * ( 1/4 - 1/4*rmq );
 
    M11p6SP4 =
-       + F^-1*mp2 * ( 4*L5r + 16*L4r )
+       + F^-4*mp2^3*epsb2^-1*pi16^2 * (  - 21/32 )
 
-       + Ab(mp2)*F^-1 * ( 1 );
+       + F^-4*mp2^3*epsb1^-1*pi16 * ( 36*L8r - 4*L8r*rmq^2 - 16*L7r*rmq^2 + 
+         144*L6r - 24*L5r - 96*L4r + 22*L3r + 40*L2r + 88*L1r - 2*L0r )
+
+       + F^-4*mp2^3*epsb1^-1*pi16^2 * ( 79/96 )
+
+       + F^-4*mp2^3 * (  - 128*L5r*L8r - 512*L5r*L6r + 64*L5r^2 - 512*L4r*L8r
+          - 2048*L4r*L6r + 512*L4r*L5r + 1024*L4r^2 + 128*KK40 + 32*KK39 + 768
+         *KK27 + 192*KK26 + 64*KK26*rmq^2 + 48*KK25 + 48*KK25*rmq^2 - 16*KK23
+          + 16*KK23*rmq^2 - 256*KK22 - 64*KK21 - 64*KK21*rmq^2 - 64*KK20 - 16*
+         KK19 - 16*KK19*rmq^2 - 128*KK18 - 32*KK17 )
+
+       + F^-4*mp2^3*pi16 * ( 12*L8r + 4*L8r*rmq^2 + 16*L7r*rmq^2 + 48*L6r - 6*
+         L5r - 24*L4r + L3r + 12*L2r + 4*L1r + 5*L0r )
+
+       + F^-4*mp2^3*pi16^2 * ( 5/6 )
+
+       + Ab(mp2)*F^-4*mp2^2 * ( 4*L8r - 4*L8r*rmq^2 - 16*L7r*rmq^2 + 16*L6r - 
+         2*L5r - 8*L4r + 22*L3r + 40*L2r + 88*L1r - 2*L0r )
+
+       + Ab(mp2)*F^-4*mp2^2*pi16 * ( 3/2 )
+
+       + Ab(mp2)^2*F^-4*mp2 * ( 69/32 );
 
    M33p6SP4 =
-       + F^-1*mp2 * ( 4*L5r + 16*L4r )
+       + F^-4*mp2^3*epsb2^-1*pi16^2 * (  - 21/32 )
 
-       + Ab(mp2)*F^-1 * ( 1 );
+       + F^-4*mp2^3*epsb1^-1*pi16 * ( 36*L8r + 52*L8r*rmq^2 + 208*L7r*rmq^2 + 
+         144*L6r - 24*L5r - 96*L4r + 22*L3r + 40*L2r + 88*L1r - 2*L0r )
+
+       + F^-4*mp2^3*epsb1^-1*pi16^2 * ( 79/96 )
+
+       + F^-4*mp2^3 * (  - 128*L5r*L8r - 128*L5r*L8r*rmq^2 - 512*L5r*L7r*rmq^2
+          - 512*L5r*L6r + 64*L5r^2 - 512*L4r*L8r - 512*L4r*L8r*rmq^2 - 2048*
+         L4r*L7r*rmq^2 - 2048*L4r*L6r + 512*L4r*L5r + 1024*L4r^2 + 512*KK42*
+         rmq^2 + 256*KK41*rmq^2 + 128*KK40 + 128*KK40*rmq^2 + 32*KK39 + 96*
+         KK39*rmq^2 + 768*KK27 + 192*KK26 + 192*KK26*rmq^2 + 48*KK25 + 144*
+         KK25*rmq^2 - 64*KK24*rmq^2 - 16*KK23 - 16*KK23*rmq^2 - 256*KK22 - 64*
+         KK21 - 64*KK21*rmq^2 - 64*KK20 - 16*KK19 - 16*KK19*rmq^2 - 128*KK18
+          - 32*KK17 )
+
+       + F^-4*mp2^3*pi16 * ( 12*L8r - 4*L8r*rmq^2 - 16*L7r*rmq^2 + 48*L6r - 6*
+         L5r - 24*L4r + L3r + 12*L2r + 4*L1r + 5*L0r )
+
+       + F^-4*mp2^3*pi16^2 * ( 5/6 )
+
+       + Ab(mp2)*F^-4*mp2^2 * ( 4*L8r + 20*L8r*rmq^2 + 80*L7r*rmq^2 + 16*L6r
+          - 2*L5r - 8*L4r + 22*L3r + 40*L2r + 88*L1r - 2*L0r )
+
+       + Ab(mp2)*F^-4*mp2^2*pi16 * ( 3/2 )
+
+       + Ab(mp2)^2*F^-4*mp2 * ( 69/32 );
 
    M11p6SO4 =
-       + F^-3*mp2^2*epsb2^-1*pi16^2 * ( 1/8 + 1/8*rmq^2 )
+       + F^-4*mp2^3*epsb2^-1*pi16^2 * (  - 85/32 - 1/2*rmq^2 )
 
-       + F^-3*mp2^2*epsb1^-1*pi16 * ( 16*L8r + 12*L8r*rmq^2 + 16*L7r*rmq^2 + 
-         64*L6r + L5r - 4*L5r*rmq^2 + 4*L4r + 16*L4r*rmq^2 - 23*L3r - 10*L3r*
-         rmq^2 - 28*L2r - 8*L2r*rmq^2 - 76*L1r - 32*L1r*rmq^2 - 11*L0r - 4*L0r
-         *rmq^2 )
+       + F^-4*mp2^3*epsb1^-1*pi16 * ( 116*L8r + 28*L8r*rmq^2 - 16*L7r*rmq^2 + 
+         336*L6r + 64*L6r*rmq^2 - 56*L5r - 16*L5r*rmq^2 - 224*L4r - 64*L4r*
+         rmq^2 + 46*L3r + 20*L3r*rmq^2 + 56*L2r + 16*L2r*rmq^2 + 152*L1r + 64*
+         L1r*rmq^2 + 22*L0r + 8*L0r*rmq^2 )
 
-       + F^-3*mp2^2*epsb1^-1*pi16^2 * (  - 295/192 - 1/16*rmq^2 )
+       + F^-4*mp2^3*epsb1^-1*pi16^2 * ( 287/96 + 1/8*rmq^2 )
 
-       + F^-3*mp2^2 * (  - 8*L5r^2 - 64*L4r*L5r - 128*L4r^2 + 8*KK23 - 8*KK23*
-         rmq^2 + 128*KK22 + 32*KK21 + 32*KK21*rmq^2 + 32*KK20 + 8*KK19 + 8*
-         KK19*rmq^2 )
+       + F^-4*mp2^3 * (  - 128*L5r*L8r - 512*L5r*L6r + 64*L5r^2 - 512*L4r*L8r
+          - 2048*L4r*L6r + 512*L4r*L5r + 1024*L4r^2 + 128*KK40 + 32*KK39 + 768
+         *KK27 + 192*KK26 + 64*KK26*rmq^2 + 48*KK25 + 48*KK25*rmq^2 - 16*KK23
+          + 16*KK23*rmq^2 - 256*KK22 - 64*KK21 - 64*KK21*rmq^2 - 64*KK20 - 16*
+         KK19 - 16*KK19*rmq^2 - 128*KK18 - 32*KK17 )
 
-       + F^-3*mp2^2*pi16 * (  - 16*L8r - 12*L8r*rmq^2 - 16*L7r*rmq^2 - 64*L6r
-          + 8*L5r + 4*L5r*rmq^2 + 32*L4r - 5/2*L3r - L3r*rmq^2 - 10*L2r - 4*
-         L2r*rmq^2 - 2*L1r - 9/2*L0r - 2*L0r*rmq^2 )
+       + F^-4*mp2^3*pi16 * (  - 4*L8r + 4*L8r*rmq^2 + 16*L7r*rmq^2 - 16*L6r + 
+         2*L5r + 8*L4r + 5*L3r + 2*L3r*rmq^2 + 20*L2r + 8*L2r*rmq^2 + 4*L1r + 
+         9*L0r + 4*L0r*rmq^2 )
 
-       + F^-3*mp2^2*pi16^2 * ( 341/768 + 7/32*rmq^2 + 5/32*pi^2 + 1/24*pi^2*
+       + F^-4*mp2^3*pi16^2 * (  - 1745/1152 - 7/16*rmq^2 - 23/48*pi^2 - 1/12*
+         pi^2*rmq^2 )
+
+       + Ab(muu)*F^-4*mp2^2 * ( 16*L8r + 16*L8r*rmq + 32*L6r + 32*L6r*rmq - 8*
+         L5r - 8*L5r*rmq - 32*L4r - 32*L4r*rmq + 10*L3r + 10*L3r*rmq + 8*L2r
+          + 8*L2r*rmq + 32*L1r + 32*L1r*rmq + 4*L0r + 4*L0r*rmq )
+
+       + Ab(muu)*F^-4*mp2^2*pi16 * ( 5/8 )
+
+       + Ab(muu)^2*F^-4*mp2 * (  - 5/8 + 1/8*rmq )
+
+       + Ab(muu)^2*F^-4*mp2^2 * (  - 1/8*muu^-1 + 1/4*muu^-1*rmq - 1/8*muu^-1*
          rmq^2 )
 
-       + Ab(muu)*F^-3*mp2 * ( 4*L8r + 4*L8r*rmq + 16*L6r - L5r - 2*L5r*rmq - 4
-         *L4r + 8*L4r*rmq - 5*L3r - 5*L3r*rmq - 4*L2r - 4*L2r*rmq - 16*L1r - 
-         16*L1r*rmq - 2*L0r - 2*L0r*rmq )
+       + Ab(muu)*Ab(mdd)*F^-4*mp2 * (  - 1/4 )
 
-       + Ab(muu)*F^-3*mp2*pi16 * (  - 7/16 - 1/16*rmq )
+       + Ab(muu)*Ab(mp2)*F^-4*mp2 * (  - 5/8 - 1/8*rmq )
 
-       + Ab(muu)^2*F^-3 * ( 5/32 )
+       + Ab(mdd)*F^-4*mp2^2 * ( 16*L8r - 16*L8r*rmq + 32*L6r - 32*L6r*rmq - 8*
+         L5r + 8*L5r*rmq - 32*L4r + 32*L4r*rmq + 10*L3r - 10*L3r*rmq + 8*L2r
+          - 8*L2r*rmq + 32*L1r - 32*L1r*rmq + 4*L0r - 4*L0r*rmq )
 
-       + Ab(muu)^2*F^-3*mp2 * ( 1/16*muu^-1 - 1/16*muu^-1*rmq )
+       + Ab(mdd)*F^-4*mp2^2*pi16 * ( 5/8 )
 
-       + Ab(muu)*Ab(mdd)*F^-3 * ( 1/16 )
+       + Ab(mdd)^2*F^-4*mp2 * (  - 5/8 - 1/8*rmq )
 
-       + Ab(muu)*Ab(mp2)*F^-3 * ( 5/16 + 1/8*rmq )
+       + Ab(mdd)^2*F^-4*mp2^2 * (  - 1/8*mdd^-1 - 1/4*mdd^-1*rmq - 1/8*mdd^-1*
+         rmq^2 )
 
-       + Ab(mdd)*F^-3*mp2 * ( 4*L8r - 4*L8r*rmq + 16*L6r - L5r + 2*L5r*rmq - 4
-         *L4r - 8*L4r*rmq - 5*L3r + 5*L3r*rmq - 4*L2r + 4*L2r*rmq - 16*L1r + 
-         16*L1r*rmq - 2*L0r + 2*L0r*rmq )
+       + Ab(mdd)*Ab(mp2)*F^-4*mp2 * (  - 5/8 + 1/8*rmq )
 
-       + Ab(mdd)*F^-3*mp2*pi16 * (  - 7/16 + 1/16*rmq )
+       + Ab(mp2)*F^-4*mp2^2 * ( 52*L8r - 4*L8r*rmq^2 - 16*L7r*rmq^2 + 144*L6r
+          - 26*L5r - 104*L4r + 26*L3r + 40*L2r + 88*L1r + 14*L0r )
 
-       + Ab(mdd)^2*F^-3 * ( 5/32 )
+       + Ab(mp2)*F^-4*mp2^2*pi16 * ( 33/16 )
 
-       + Ab(mdd)^2*F^-3*mp2 * ( 1/16*mdd^-1 + 1/16*mdd^-1*rmq )
+       + Ab(mp2)^2*F^-4*mp2 * (  - 19/32 )
 
-       + Ab(mdd)*Ab(mp2)*F^-3 * ( 5/16 - 1/8*rmq )
+       + Hbb(muu,muu,mp2,mp2)*F^-4*mp2^2 * ( 1/4 + 1/4*rmq )
 
-       + Ab(mp2)*F^-3*mp2 * ( 8*L8r + 4*L8r*rmq^2 + 16*L7r*rmq^2 + 32*L6r - 
-         L5r - 4*L4r - 13*L3r - 20*L2r - 44*L1r - 7*L0r )
+       + Hbb(muu,mdd,mp2,mp2)*F^-4*mp2^2 * ( 1/4 )
 
-       + Ab(mp2)*F^-3*mp2*pi16 * (  - 13/12 )
+       + Hbb(muu,mp2,mp2,mp2)*F^-4*mp2^2 * ( 1/6 )
 
-       + Ab(mp2)^2*F^-3 * ( 1/8 )
+       + Hbb(mdd,mdd,mp2,mp2)*F^-4*mp2^2 * ( 1/4 - 1/4*rmq )
 
-       + Hbb(muu,muu,mp2,mp2)*F^-3*mp2 * (  - 1/8 - 1/8*rmq )
+       + Hbb(mdd,mp2,mp2,mp2)*F^-4*mp2^2 * ( 1/6 )
 
-       + Hbb(muu,mdd,mp2,mp2)*F^-3*mp2 * (  - 1/8 )
+       + H1bb(muu,mp2,mp2,mp2)*F^-4*mp2^2 * ( 1/3 )
 
-       + Hbb(muu,mp2,mp2,mp2)*F^-3*mp2 * (  - 1/8 )
+       + H1bb(mdd,mp2,mp2,mp2)*F^-4*mp2^2 * ( 1/3 )
 
-       + Hbb(mdd,mdd,mp2,mp2)*F^-3*mp2 * (  - 1/8 + 1/8*rmq )
+       + H1bb(mp2,muu,mp2,mp2)*F^-4*mp2^2 * (  - 1/3 )
 
-       + Hbb(mdd,mp2,mp2,mp2)*F^-3*mp2 * (  - 1/8 )
+       + H1bb(mp2,mdd,mp2,mp2)*F^-4*mp2^2 * (  - 1/3 )
 
-       + Hdd(muu,muu,mp2,mp2)*F^-3*mp2^2 * ( 1/8 + 1/8*rmq )
+       + H21bb(muu,muu,mp2,mp2)*F^-4*mp2^2 * ( 3/4 )
 
-       + Hdd(muu,mdd,mp2,mp2)*F^-3*mp2^2 * ( 1/8 )
+       + H21bb(mdd,mdd,mp2,mp2)*F^-4*mp2^2 * ( 3/4 )
 
-       + Hdd(muu,mp2,mp2,mp2)*F^-3*mp2^2 * ( 1/12 )
+       + H21bb(mp2,muu,mdd,mp2)*F^-4*mp2^2 * ( 3/4 )
 
-       + Hdd(mdd,mdd,mp2,mp2)*F^-3*mp2^2 * ( 1/8 - 1/8*rmq )
+       + H21bb(mp2,muu,mp2,mp2)*F^-4*mp2^2 * ( 3/4 )
 
-       + Hdd(mdd,mp2,mp2,mp2)*F^-3*mp2^2 * ( 1/12 )
-
-       + H1dd(muu,mp2,mp2,mp2)*F^-3*mp2^2 * ( 1/6 )
-
-       + H1dd(mdd,mp2,mp2,mp2)*F^-3*mp2^2 * ( 1/6 )
-
-       + H1dd(mp2,muu,mp2,mp2)*F^-3*mp2^2 * (  - 1/6 )
-
-       + H1dd(mp2,mdd,mp2,mp2)*F^-3*mp2^2 * (  - 1/6 )
-
-       + H21dd(muu,muu,mp2,mp2)*F^-3*mp2^2 * ( 3/8 )
-
-       + H21dd(mdd,mdd,mp2,mp2)*F^-3*mp2^2 * ( 3/8 )
-
-       + H21dd(mp2,muu,mdd,mp2)*F^-3*mp2^2 * ( 3/8 )
-
-       + H21dd(mp2,muu,mp2,mp2)*F^-3*mp2^2 * ( 3/8 )
-
-       + H21dd(mp2,mdd,mp2,mp2)*F^-3*mp2^2 * ( 3/8 );
+       + H21bb(mp2,mdd,mp2,mp2)*F^-4*mp2^2 * ( 3/4 );
 
    M33p6SO4 =
-       + F^-3*mp2^2*epsb2^-1*pi16^2 * ( 1/8 + 1/4*rmq^2 )
+       + F^-4*mp2^3*epsb2^-1*pi16^2 * (  - 85/32 - 11/2*rmq^2 )
 
-       + F^-3*mp2^2*epsb1^-1*pi16 * ( 16*L8r + 64*L6r + L5r + 4*L5r*rmq^2 + 4*
-         L4r + 16*L4r*rmq^2 - 23*L3r - 12*L3r*rmq^2 - 28*L2r - 8*L2r*rmq^2 - 
-         76*L1r - 32*L1r*rmq^2 - 11*L0r - 12*L0r*rmq^2 )
+       + F^-4*mp2^3*epsb1^-1*pi16 * ( 116*L8r + 292*L8r*rmq^2 + 464*L7r*rmq^2
+          + 336*L6r + 192*L6r*rmq^2 - 56*L5r - 80*L5r*rmq^2 - 224*L4r - 128*
+         L4r*rmq^2 + 46*L3r + 24*L3r*rmq^2 + 56*L2r + 16*L2r*rmq^2 + 152*L1r
+          + 64*L1r*rmq^2 + 22*L0r + 24*L0r*rmq^2 )
 
-       + F^-3*mp2^2*epsb1^-1*pi16^2 * (  - 295/192 - 5/16*rmq^2 )
+       + F^-4*mp2^3*epsb1^-1*pi16^2 * ( 287/96 + 25/8*rmq^2 )
 
-       + F^-3*mp2^2 * (  - 8*L5r^2 - 64*L4r*L5r - 128*L4r^2 + 32*KK24*rmq^2 + 
-         8*KK23 + 8*KK23*rmq^2 + 128*KK22 + 32*KK21 + 32*KK21*rmq^2 + 32*KK20
-          + 8*KK19 + 8*KK19*rmq^2 )
+       + F^-4*mp2^3 * (  - 128*L5r*L8r - 128*L5r*L8r*rmq^2 - 512*L5r*L7r*rmq^2
+          - 512*L5r*L6r + 64*L5r^2 - 512*L4r*L8r - 512*L4r*L8r*rmq^2 - 2048*
+         L4r*L7r*rmq^2 - 2048*L4r*L6r + 512*L4r*L5r + 1024*L4r^2 + 512*KK42*
+         rmq^2 + 256*KK41*rmq^2 + 128*KK40 + 128*KK40*rmq^2 + 32*KK39 + 96*
+         KK39*rmq^2 + 768*KK27 + 192*KK26 + 192*KK26*rmq^2 + 48*KK25 + 144*
+         KK25*rmq^2 - 64*KK24*rmq^2 - 16*KK23 - 16*KK23*rmq^2 - 256*KK22 - 64*
+         KK21 - 64*KK21*rmq^2 - 64*KK20 - 16*KK19 - 16*KK19*rmq^2 - 128*KK18
+          - 32*KK17 )
 
-       + F^-3*mp2^2*pi16 * (  - 16*L8r - 64*L6r + 8*L5r + 32*L4r - 5/2*L3r - 2
-         *L3r*rmq^2 - 10*L2r - 4*L2r*rmq^2 - 2*L1r - 9/2*L0r - 2*L0r*rmq^2 )
+       + F^-4*mp2^3*pi16 * (  - 4*L8r - 52*L8r*rmq^2 - 16*L7r*rmq^2 - 16*L6r
+          - 64*L6r*rmq^2 + 2*L5r + 24*L5r*rmq^2 + 8*L4r + 32*L4r*rmq^2 + 5*L3r
+          + 4*L3r*rmq^2 + 20*L2r + 8*L2r*rmq^2 + 4*L1r + 9*L0r + 4*L0r*rmq^2 )
 
-       + F^-3*mp2^2*pi16^2 * ( 11/48 + 3/16*rmq^2 + 1/8*pi^2 + 1/24*pi^2*rmq^2
-          )
+       + F^-4*mp2^3*pi16^2 * (  - 179/144 - 37/8*rmq^2 - 11/24*pi^2 - 19/24*
+         pi^2*rmq^2 )
 
-       + Ab(muu)*F^-3*mp2 * ( 2*L5r + 2*L5r*rmq + 8*L4r + 8*L4r*rmq - 6*L3r - 
-         6*L3r*rmq - 4*L2r - 4*L2r*rmq - 16*L1r - 16*L1r*rmq - 6*L0r - 6*L0r*
-         rmq )
+       + Ab(muu)*F^-4*mp2^2 * ( 40*L8r + 80*L8r*rmq + 40*L8r*rmq^2 + 64*L7r*
+         rmq + 64*L7r*rmq^2 + 96*L6r + 96*L6r*rmq - 20*L5r - 32*L5r*rmq - 12*
+         L5r*rmq^2 - 80*L4r - 80*L4r*rmq + 12*L3r + 12*L3r*rmq + 8*L2r + 8*L2r
+         *rmq + 32*L1r + 32*L1r*rmq + 12*L0r + 12*L0r*rmq )
 
-       + Ab(muu)^2*F^-3 * ( 1/8 )
+       + Ab(muu)*F^-4*mp2^2*pi16 * (  - 1/8 - 1/8*rmq )
 
-       + Ab(mdd)*F^-3*mp2 * ( 2*L5r - 2*L5r*rmq + 8*L4r - 8*L4r*rmq - 6*L3r + 
-         6*L3r*rmq - 4*L2r + 4*L2r*rmq - 16*L1r + 16*L1r*rmq - 6*L0r + 6*L0r*
-         rmq )
+       + Ab(muu)^2*F^-4*mp2 * (  - 3/4 - 1/2*rmq )
 
-       + Ab(mdd)^2*F^-3 * ( 1/8 )
+       + Ab(muu)*Ab(mp2)*F^-4*mp2 * (  - 5/8 - 5/8*rmq )
 
-       + Ab(mp2)*F^-3*mp2 * ( 16*L8r + 64*L6r - 7*L5r - 28*L4r - 11*L3r - 20*
-         L2r - 44*L1r + L0r )
+       + Ab(mdd)*F^-4*mp2^2 * ( 40*L8r - 80*L8r*rmq + 40*L8r*rmq^2 - 64*L7r*
+         rmq + 64*L7r*rmq^2 + 96*L6r - 96*L6r*rmq - 20*L5r + 32*L5r*rmq - 12*
+         L5r*rmq^2 - 80*L4r + 80*L4r*rmq + 12*L3r - 12*L3r*rmq + 8*L2r - 8*L2r
+         *rmq + 32*L1r - 32*L1r*rmq + 12*L0r - 12*L0r*rmq )
 
-       + Ab(mp2)*F^-3*mp2*pi16 * (  - 73/32 )
+       + Ab(mdd)*F^-4*mp2^2*pi16 * (  - 1/8 + 1/8*rmq )
 
-       + Ab(mp2)^2*F^-3 * ( 5/8 )
+       + Ab(mdd)^2*F^-4*mp2 * (  - 3/4 + 1/2*rmq )
 
-       + Hbb(muu,mp2,mp2,mp2)*F^-3*mp2 * (  - 1/4 - 1/4*rmq )
+       + Ab(mdd)*Ab(mp2)*F^-4*mp2 * (  - 5/8 + 5/8*rmq )
 
-       + Hbb(mdd,mp2,mp2,mp2)*F^-3*mp2 * (  - 1/4 + 1/4*rmq )
+       + Ab(mp2)*F^-4*mp2^2 * ( 4*L8r + 20*L8r*rmq^2 + 80*L7r*rmq^2 + 16*L6r
+          - 2*L5r - 8*L4r + 22*L3r + 40*L2r + 88*L1r - 2*L0r )
 
-       + Hdd(muu,muu,mp2,mp2)*F^-3*mp2^2 * ( 1/8 + 1/4*rmq + 1/8*rmq^2 )
+       + Ab(mp2)*F^-4*mp2^2*pi16 * ( 43/12 - 1/4*rmq^2 )
 
-       + Hdd(muu,mp2,mp2,mp2)*F^-3*mp2^2 * ( 1/6 + 5/12*rmq + 1/4*rmq^2 )
+       + Ab(mp2)^2*F^-4*mp2 * (  - 19/32 - 5/4*rmq^2 )
 
-       + Hdd(mdd,mdd,mp2,mp2)*F^-3*mp2^2 * ( 1/8 - 1/4*rmq + 1/8*rmq^2 )
+       + Hbb(muu,muu,mp2,mp2)*F^-4*mp2^2 * ( 1/4 + 1/2*rmq + 1/4*rmq^2 )
 
-       + Hdd(mdd,mp2,mp2,mp2)*F^-3*mp2^2 * ( 1/6 - 5/12*rmq + 1/4*rmq^2 )
+       + Hbb(muu,mp2,mp2,mp2)*F^-4*mp2^2 * ( 1/3 + 5/6*rmq + 1/2*rmq^2 )
 
-       + H1dd(muu,mp2,mp2,mp2)*F^-3*mp2^2 * (  - 2/3 - 2/3*rmq )
+       + Hbb(mdd,mdd,mp2,mp2)*F^-4*mp2^2 * ( 1/4 - 1/2*rmq + 1/4*rmq^2 )
 
-       + H1dd(mdd,mp2,mp2,mp2)*F^-3*mp2^2 * (  - 2/3 + 2/3*rmq )
+       + Hbb(mdd,mp2,mp2,mp2)*F^-4*mp2^2 * ( 1/3 - 5/6*rmq + 1/2*rmq^2 )
 
-       + H1dd(mp2,muu,mp2,mp2)*F^-3*mp2^2 * ( 2/3 + 2/3*rmq )
+       + H1bb(muu,mp2,mp2,mp2)*F^-4*mp2^2 * (  - 4/3 - 4/3*rmq )
 
-       + H1dd(mp2,mdd,mp2,mp2)*F^-3*mp2^2 * ( 2/3 - 2/3*rmq )
+       + H1bb(mdd,mp2,mp2,mp2)*F^-4*mp2^2 * (  - 4/3 + 4/3*rmq )
 
-       + H21dd(muu,mp2,mp2,mp2)*F^-3*mp2^2 * ( 3/4 )
+       + H1bb(mp2,muu,mp2,mp2)*F^-4*mp2^2 * ( 4/3 + 4/3*rmq )
 
-       + H21dd(mdd,mp2,mp2,mp2)*F^-3*mp2^2 * ( 3/4 );
+       + H1bb(mp2,mdd,mp2,mp2)*F^-4*mp2^2 * ( 4/3 - 4/3*rmq )
+
+       + H21bb(muu,mp2,mp2,mp2)*F^-4*mp2^2 * ( 3/2 )
+
+       + H21bb(mdd,mp2,mp2,mp2)*F^-4*mp2^2 * ( 3/2 );
 
    M66p6SO4 =
-       + F^-3*mp2^2*epsb2^-1*pi16^2 * ( 1/8 - 1/4*rmq + 3/16*rmq^2 )
+       + F^-4*mp2^3*epsb2^-1*pi16^2 * (  - 85/32 - 161/32*rmq - 61/16*rmq^2 - 
+         23/16*rmq^3 )
 
-       + F^-3*mp2^2*epsb1^-1*pi16 * ( 16*L8r + 16*L8r*rmq + 8*L8r*rmq^2 + 64*
-         L6r + 32*L6r*rmq + L5r + 5*L5r*rmq + 4*L4r - 16*L4r*rmq + 16*L4r*
-         rmq^2 - 23*L3r - 20*L3r*rmq - 10*L3r*rmq^2 - 28*L2r - 20*L2r*rmq - 18
-         *L2r*rmq^2 - 76*L1r - 8*L1r*rmq - 36*L1r*rmq^2 - 11*L0r - 8*L0r*rmq
-          - 4*L0r*rmq^2 )
+       + F^-4*mp2^3*epsb1^-1*pi16 * ( 116*L8r + 244*L8r*rmq + 180*L8r*rmq^2 + 
+         52*L8r*rmq^3 + 32*L7r*rmq + 48*L7r*rmq^2 + 16*L7r*rmq^3 + 336*L6r + 
+         464*L6r*rmq + 224*L6r*rmq^2 + 96*L6r*rmq^3 - 56*L5r - 114*L5r*rmq - 
+         82*L5r*rmq^2 - 24*L5r*rmq^3 - 224*L4r - 256*L4r*rmq - 96*L4r*rmq^2 - 
+         64*L4r*rmq^3 + 46*L3r + 86*L3r*rmq + 60*L3r*rmq^2 + 20*L3r*rmq^3 + 56
+         *L2r + 96*L2r*rmq + 76*L2r*rmq^2 + 36*L2r*rmq^3 + 152*L1r + 168*L1r*
+         rmq + 88*L1r*rmq^2 + 72*L1r*rmq^3 + 22*L0r + 38*L0r*rmq + 24*L0r*
+         rmq^2 + 8*L0r*rmq^3 )
 
-       + F^-3*mp2^2*epsb1^-1*pi16^2 * (  - 295/192 - 109/96*rmq - 109/192*
-         rmq^2 )
+       + F^-4*mp2^3*epsb1^-1*pi16^2 * ( 287/96 + 159/32*rmq + 93/32*rmq^2 + 89/
+         96*rmq^3 )
 
-       + F^-3*mp2^2 * (  - 8*L5r^2 - 16*L5r^2*rmq - 8*L5r^2*rmq^2 - 64*L4r*L5r
-          - 64*L4r*L5r*rmq - 128*L4r^2 + 8*KK23 + 16*KK23*rmq + 8*KK23*rmq^2
-          + 128*KK22 + 32*KK21 + 32*KK21*rmq^2 + 32*KK20 + 32*KK20*rmq + 8*
-         KK19 + 16*KK19*rmq + 8*KK19*rmq^2 )
+       + F^-4*mp2^3 * (  - 128*L5r*L8r - 384*L5r*L8r*rmq - 384*L5r*L8r*rmq^2
+          - 128*L5r*L8r*rmq^3 - 512*L5r*L6r - 1024*L5r*L6r*rmq - 512*L5r*L6r*
+         rmq^2 + 64*L5r^2 + 192*L5r^2*rmq + 192*L5r^2*rmq^2 + 64*L5r^2*rmq^3
+          - 512*L4r*L8r - 1024*L4r*L8r*rmq - 512*L4r*L8r*rmq^2 - 2048*L4r*L6r
+          - 2048*L4r*L6r*rmq + 512*L4r*L5r + 1024*L4r*L5r*rmq + 512*L4r*L5r*
+         rmq^2 + 1024*L4r^2 + 1024*L4r^2*rmq + 128*KK40 + 256*KK40*rmq + 128*
+         KK40*rmq^2 + 32*KK39 + 96*KK39*rmq + 96*KK39*rmq^2 + 32*KK39*rmq^3 + 
+         768*KK27 + 768*KK27*rmq + 192*KK26 + 320*KK26*rmq + 192*KK26*rmq^2 + 
+         64*KK26*rmq^3 + 48*KK25 + 144*KK25*rmq + 144*KK25*rmq^2 + 48*KK25*
+         rmq^3 - 16*KK23 - 48*KK23*rmq - 48*KK23*rmq^2 - 16*KK23*rmq^3 - 256*
+         KK22 - 256*KK22*rmq - 64*KK21 - 64*KK21*rmq - 64*KK21*rmq^2 - 64*KK21
+         *rmq^3 - 64*KK20 - 128*KK20*rmq - 64*KK20*rmq^2 - 16*KK19 - 48*KK19*
+         rmq - 48*KK19*rmq^2 - 16*KK19*rmq^3 - 128*KK18 - 256*KK18*rmq - 128*
+         KK18*rmq^2 - 32*KK17 - 96*KK17*rmq - 96*KK17*rmq^2 - 32*KK17*rmq^3 )
 
-       + F^-3*mp2^2*pi16 * (  - 16*L8r - 16*L8r*rmq - 8*L8r*rmq^2 - 64*L6r - 
-         32*L6r*rmq + 8*L5r + 8*L5r*rmq + 4*L5r*rmq^2 + 32*L4r + 16*L4r*rmq - 
-         5/2*L3r - 2*L3r*rmq - L3r*rmq^2 - 10*L2r - 2*L2r*rmq - 5*L2r*rmq^2 - 
-         2*L1r - 4*L1r*rmq - 2*L1r*rmq^2 - 9/2*L0r - 4*L0r*rmq - 2*L0r*rmq^2 )
+       + F^-4*mp2^3*pi16 * (  - 4*L8r - 4*L8r*rmq - 4*L8r*rmq^2 - 4*L8r*rmq^3
+          - 16*L7r*rmq^2 - 16*L7r*rmq^3 - 16*L6r - 16*L6r*rmq + 2*L5r + 2*L5r*
+         rmq + 8*L4r + 8*L4r*rmq + 5*L3r + 9*L3r*rmq + 6*L3r*rmq^2 + 2*L3r*
+         rmq^3 + 20*L2r + 24*L2r*rmq + 14*L2r*rmq^2 + 10*L2r*rmq^3 + 4*L1r + 
+         12*L1r*rmq + 12*L1r*rmq^2 + 4*L1r*rmq^3 + 9*L0r + 17*L0r*rmq + 12*L0r
+         *rmq^2 + 4*L0r*rmq^3 )
 
-       + F^-3*mp2^2*pi16^2 * ( 109/384 - 17/192*rmq + 31/384*rmq^2 + 1/8*pi^2
-          - 1/48*pi^2*rmq + 1/96*pi^2*rmq^2 )
+       + F^-4*mp2^3*pi16^2 * (  - 581/576 - 125/192*rmq + 157/192*rmq^2 + 265/
+         576*rmq^3 - 41/96*pi^2 - 59/96*pi^2*rmq - 25/96*pi^2*rmq^2 - 7/96*
+         pi^2*rmq^3 )
 
-       + Ab(muu)*F^-3*mp2 * ( 8*L8r + 8*L8r*rmq + 32*L6r - 2*L5r - 2*L5r*rmq
-          - 16*L4r + 8*L4r*rmq - 10*L3r - 10*L3r*rmq - 14*L2r - 14*L2r*rmq - 
-         20*L1r - 20*L1r*rmq - 4*L0r - 4*L0r*rmq )
+       + Ab(muu)*F^-4*mp2^2 * ( 32*L8r + 64*L8r*rmq + 32*L8r*rmq^2 + 64*L6r + 
+         128*L6r*rmq + 64*L6r*rmq^2 - 16*L5r - 32*L5r*rmq - 16*L5r*rmq^2 - 32*
+         L4r - 64*L4r*rmq - 32*L4r*rmq^2 + 20*L3r + 40*L3r*rmq + 20*L3r*rmq^2
+          + 28*L2r + 56*L2r*rmq + 28*L2r*rmq^2 + 40*L1r + 80*L1r*rmq + 40*L1r*
+         rmq^2 + 8*L0r + 16*L0r*rmq + 8*L0r*rmq^2 )
 
-       + Ab(muu)*F^-3*mp2*pi16 * (  - 23/16 - 19/16*rmq )
+       + Ab(muu)*F^-4*mp2^2*pi16 * ( 31/12 + 14/3*rmq + 25/12*rmq^2 )
 
-       + Ab(muu)^2*F^-3 * (  - 3/16 )
+       + Ab(muu)^2*F^-4*mp2 * ( 3/16 + 7/16*rmq )
 
-       + Ab(muu)^2*F^-3*mp2 * ( 1/16*muu^-1 - 1/16*muu^-1*rmq )
+       + Ab(muu)*Ab(mp2)*F^-4*mp2 * (  - 3/8 - 1/4*rmq + 1/8*rmq^2 )
 
-       + Ab(muu)*Ab(mp2)*F^-3 * ( 1/8 )
+       + Ab(mdd)*F^-4*mp2^2 * ( 32*L6r - 32*L6r*rmq^2 - 32*L4r + 32*L4r*rmq^2
+          + 8*L2r - 8*L2r*rmq^2 + 32*L1r - 32*L1r*rmq^2 )
 
-       + Ab(mdd)*F^-3*mp2 * ( 8*L4r - 8*L4r*rmq - 4*L2r + 4*L2r*rmq - 16*L1r
-          + 16*L1r*rmq )
+       + Ab(mdd)*F^-4*mp2^2*pi16 * (  - 1/8 + 1/8*rmq^2 )
 
-       + Ab(mdd)^2*F^-3 * ( 1/16 )
+       + Ab(mdd)^2*F^-4*mp2 * (  - 1/8 - 1/8*rmq )
 
-       + Ab(mp2)*F^-3*mp2 * ( 8*L8r + 32*L6r - L5r + 3*L5r*rmq - 4*L4r - 13*
-         L3r - 10*L2r - 40*L1r - 7*L0r )
+       + Ab(mdd)*Ab(mp2)*F^-4*mp2 * ( 1/8 - 1/8*rmq^2 )
 
-       + Ab(mp2)*F^-3*mp2*pi16 * (  - 7/8 - 1/8*rmq )
+       + Ab(mp2)*F^-4*mp2^2 * ( 52*L8r + 68*L8r*rmq + 20*L8r*rmq^2 + 4*L8r*
+         rmq^3 + 32*L7r*rmq + 48*L7r*rmq^2 + 16*L7r*rmq^3 + 112*L6r + 112*L6r*
+         rmq - 26*L5r - 30*L5r*rmq - 4*L5r*rmq^2 - 104*L4r - 104*L4r*rmq + 26*
+         L3r + 26*L3r*rmq + 20*L2r + 20*L2r*rmq + 80*L1r + 80*L1r*rmq + 14*L0r
+          + 14*L0r*rmq )
 
-       + Ab(mp2)^2*F^-3 * ( 13/16 - 1/8*rmq )
+       + Ab(mp2)*F^-4*mp2^2*pi16 * ( 19/16 + 15/16*rmq - 1/4*rmq^2 )
 
-       + Hbb(muu,mp2,mp2,muu)*F^-3*mp2 * (  - 1/4 )
+       + Ab(mp2)^2*F^-4*mp2 * (  - 89/32 - 105/32*rmq - 1/2*rmq^2 )
 
-       + Hbb(mdd,mp2,mp2,muu)*F^-3*mp2 * (  - 1/8 + 1/8*rmq )
+       + Hbb(muu,mp2,mp2,muu)*F^-4*mp2^2 * ( 5/8 + 3/4*rmq + 1/8*rmq^2 )
 
-       + Hbb(mp2,mp2,mp2,muu)*F^-3*mp2 * (  - 1/8 )
+       + Hbb(mdd,mp2,mp2,muu)*F^-4*mp2^2 * ( 1/4 - 1/4*rmq^2 )
 
-       + Hdd(muu,mp2,mp2,muu)*F^-3*mp2^2 * ( 5/16 + 3/8*rmq + 1/16*rmq^2 )
+       + Hbb(mp2,mp2,mp2,muu)*F^-4*mp2^2 * ( 1/6 + 1/12*rmq - 1/12*rmq^2 )
 
-       + Hdd(mdd,mp2,mp2,muu)*F^-3*mp2^2 * ( 1/8 - 1/8*rmq^2 )
+       + H21bb(mdd,mp2,mp2,muu)*F^-4*mp2^2 * ( 3/4 + 3/2*rmq + 3/4*rmq^2 )
 
-       + Hdd(mp2,mp2,mp2,muu)*F^-3*mp2^2 * ( 1/12 + 1/24*rmq - 1/24*rmq^2 )
+       + H21bb(mp2,muu,mp2,muu)*F^-4*mp2^2 * ( 3/2 + 3*rmq + 3/2*rmq^2 )
 
-       + H21dd(mdd,mp2,mp2,muu)*F^-3*mp2^2 * ( 3/8 + 3/4*rmq + 3/8*rmq^2 )
-
-       + H21dd(mp2,muu,mp2,muu)*F^-3*mp2^2 * ( 3/4 + 3/2*rmq + 3/4*rmq^2 )
-
-       + H21dd(mp2,mp2,mp2,muu)*F^-3*mp2^2 * ( 3/8 + 3/4*rmq + 3/8*rmq^2 );
+       + H21bb(mp2,mp2,mp2,muu)*F^-4*mp2^2 * ( 3/4 + 3/2*rmq + 3/4*rmq^2 );
 
    M88p6SO4 =
-       + F^-3*mp2^2*epsb2^-1*pi16^2 * ( 1/8 + 1/4*rmq + 3/16*rmq^2 )
+       + F^-4*mp2^3*epsb2^-1*pi16^2 * (  - 85/32 + 161/32*rmq - 61/16*rmq^2 + 
+         23/16*rmq^3 )
 
-       + F^-3*mp2^2*epsb1^-1*pi16 * ( 16*L8r - 16*L8r*rmq + 8*L8r*rmq^2 + 64*
-         L6r - 32*L6r*rmq + L5r - 5*L5r*rmq + 4*L4r + 16*L4r*rmq + 16*L4r*
-         rmq^2 - 23*L3r + 20*L3r*rmq - 10*L3r*rmq^2 - 28*L2r + 20*L2r*rmq - 18
-         *L2r*rmq^2 - 76*L1r + 8*L1r*rmq - 36*L1r*rmq^2 - 11*L0r + 8*L0r*rmq
-          - 4*L0r*rmq^2 )
+       + F^-4*mp2^3*epsb1^-1*pi16 * ( 116*L8r - 244*L8r*rmq + 180*L8r*rmq^2 - 
+         52*L8r*rmq^3 - 32*L7r*rmq + 48*L7r*rmq^2 - 16*L7r*rmq^3 + 336*L6r - 
+         464*L6r*rmq + 224*L6r*rmq^2 - 96*L6r*rmq^3 - 56*L5r + 114*L5r*rmq - 
+         82*L5r*rmq^2 + 24*L5r*rmq^3 - 224*L4r + 256*L4r*rmq - 96*L4r*rmq^2 + 
+         64*L4r*rmq^3 + 46*L3r - 86*L3r*rmq + 60*L3r*rmq^2 - 20*L3r*rmq^3 + 56
+         *L2r - 96*L2r*rmq + 76*L2r*rmq^2 - 36*L2r*rmq^3 + 152*L1r - 168*L1r*
+         rmq + 88*L1r*rmq^2 - 72*L1r*rmq^3 + 22*L0r - 38*L0r*rmq + 24*L0r*
+         rmq^2 - 8*L0r*rmq^3 )
 
-       + F^-3*mp2^2*epsb1^-1*pi16^2 * (  - 295/192 + 109/96*rmq - 109/192*
-         rmq^2 )
+       + F^-4*mp2^3*epsb1^-1*pi16^2 * ( 287/96 - 159/32*rmq + 93/32*rmq^2 - 89/
+         96*rmq^3 )
 
-       + F^-3*mp2^2 * (  - 8*L5r^2 + 16*L5r^2*rmq - 8*L5r^2*rmq^2 - 64*L4r*L5r
-          + 64*L4r*L5r*rmq - 128*L4r^2 + 8*KK23 - 16*KK23*rmq + 8*KK23*rmq^2
-          + 128*KK22 + 32*KK21 + 32*KK21*rmq^2 + 32*KK20 - 32*KK20*rmq + 8*
-         KK19 - 16*KK19*rmq + 8*KK19*rmq^2 )
+       + F^-4*mp2^3 * (  - 128*L5r*L8r + 384*L5r*L8r*rmq - 384*L5r*L8r*rmq^2
+          + 128*L5r*L8r*rmq^3 - 512*L5r*L6r + 1024*L5r*L6r*rmq - 512*L5r*L6r*
+         rmq^2 + 64*L5r^2 - 192*L5r^2*rmq + 192*L5r^2*rmq^2 - 64*L5r^2*rmq^3
+          - 512*L4r*L8r + 1024*L4r*L8r*rmq - 512*L4r*L8r*rmq^2 - 2048*L4r*L6r
+          + 2048*L4r*L6r*rmq + 512*L4r*L5r - 1024*L4r*L5r*rmq + 512*L4r*L5r*
+         rmq^2 + 1024*L4r^2 - 1024*L4r^2*rmq + 128*KK40 - 256*KK40*rmq + 128*
+         KK40*rmq^2 + 32*KK39 - 96*KK39*rmq + 96*KK39*rmq^2 - 32*KK39*rmq^3 + 
+         768*KK27 - 768*KK27*rmq + 192*KK26 - 320*KK26*rmq + 192*KK26*rmq^2 - 
+         64*KK26*rmq^3 + 48*KK25 - 144*KK25*rmq + 144*KK25*rmq^2 - 48*KK25*
+         rmq^3 - 16*KK23 + 48*KK23*rmq - 48*KK23*rmq^2 + 16*KK23*rmq^3 - 256*
+         KK22 + 256*KK22*rmq - 64*KK21 + 64*KK21*rmq - 64*KK21*rmq^2 + 64*KK21
+         *rmq^3 - 64*KK20 + 128*KK20*rmq - 64*KK20*rmq^2 - 16*KK19 + 48*KK19*
+         rmq - 48*KK19*rmq^2 + 16*KK19*rmq^3 - 128*KK18 + 256*KK18*rmq - 128*
+         KK18*rmq^2 - 32*KK17 + 96*KK17*rmq - 96*KK17*rmq^2 + 32*KK17*rmq^3 )
 
-       + F^-3*mp2^2*pi16 * (  - 16*L8r + 16*L8r*rmq - 8*L8r*rmq^2 - 64*L6r + 
-         32*L6r*rmq + 8*L5r - 8*L5r*rmq + 4*L5r*rmq^2 + 32*L4r - 16*L4r*rmq - 
-         5/2*L3r + 2*L3r*rmq - L3r*rmq^2 - 10*L2r + 2*L2r*rmq - 5*L2r*rmq^2 - 
-         2*L1r + 4*L1r*rmq - 2*L1r*rmq^2 - 9/2*L0r + 4*L0r*rmq - 2*L0r*rmq^2 )
+       + F^-4*mp2^3*pi16 * (  - 4*L8r + 4*L8r*rmq - 4*L8r*rmq^2 + 4*L8r*rmq^3
+          - 16*L7r*rmq^2 + 16*L7r*rmq^3 - 16*L6r + 16*L6r*rmq + 2*L5r - 2*L5r*
+         rmq + 8*L4r - 8*L4r*rmq + 5*L3r - 9*L3r*rmq + 6*L3r*rmq^2 - 2*L3r*
+         rmq^3 + 20*L2r - 24*L2r*rmq + 14*L2r*rmq^2 - 10*L2r*rmq^3 + 4*L1r - 
+         12*L1r*rmq + 12*L1r*rmq^2 - 4*L1r*rmq^3 + 9*L0r - 17*L0r*rmq + 12*L0r
+         *rmq^2 - 4*L0r*rmq^3 )
 
-       + F^-3*mp2^2*pi16^2 * ( 109/384 + 17/192*rmq + 31/384*rmq^2 + 1/8*pi^2
-          + 1/48*pi^2*rmq + 1/96*pi^2*rmq^2 )
+       + F^-4*mp2^3*pi16^2 * (  - 581/576 + 125/192*rmq + 157/192*rmq^2 - 265/
+         576*rmq^3 - 41/96*pi^2 + 59/96*pi^2*rmq - 25/96*pi^2*rmq^2 + 7/96*
+         pi^2*rmq^3 )
 
-       + Ab(muu)*F^-3*mp2 * ( 8*L4r + 8*L4r*rmq - 4*L2r - 4*L2r*rmq - 16*L1r
-          - 16*L1r*rmq )
+       + Ab(muu)*F^-4*mp2^2 * ( 32*L6r - 32*L6r*rmq^2 - 32*L4r + 32*L4r*rmq^2
+          + 8*L2r - 8*L2r*rmq^2 + 32*L1r - 32*L1r*rmq^2 )
 
-       + Ab(muu)^2*F^-3 * ( 1/16 )
+       + Ab(muu)*F^-4*mp2^2*pi16 * (  - 1/8 + 1/8*rmq^2 )
 
-       + Ab(mdd)*F^-3*mp2 * ( 8*L8r - 8*L8r*rmq + 32*L6r - 2*L5r + 2*L5r*rmq
-          - 16*L4r - 8*L4r*rmq - 10*L3r + 10*L3r*rmq - 14*L2r + 14*L2r*rmq - 
-         20*L1r + 20*L1r*rmq - 4*L0r + 4*L0r*rmq )
+       + Ab(muu)^2*F^-4*mp2 * (  - 1/8 + 1/8*rmq )
 
-       + Ab(mdd)*F^-3*mp2*pi16 * (  - 23/16 + 19/16*rmq )
+       + Ab(muu)*Ab(mp2)*F^-4*mp2 * ( 1/8 - 1/8*rmq^2 )
 
-       + Ab(mdd)^2*F^-3 * (  - 3/16 )
+       + Ab(mdd)*F^-4*mp2^2 * ( 32*L8r - 64*L8r*rmq + 32*L8r*rmq^2 + 64*L6r - 
+         128*L6r*rmq + 64*L6r*rmq^2 - 16*L5r + 32*L5r*rmq - 16*L5r*rmq^2 - 32*
+         L4r + 64*L4r*rmq - 32*L4r*rmq^2 + 20*L3r - 40*L3r*rmq + 20*L3r*rmq^2
+          + 28*L2r - 56*L2r*rmq + 28*L2r*rmq^2 + 40*L1r - 80*L1r*rmq + 40*L1r*
+         rmq^2 + 8*L0r - 16*L0r*rmq + 8*L0r*rmq^2 )
 
-       + Ab(mdd)^2*F^-3*mp2 * ( 1/16*mdd^-1 + 1/16*mdd^-1*rmq )
+       + Ab(mdd)*F^-4*mp2^2*pi16 * ( 31/12 - 14/3*rmq + 25/12*rmq^2 )
 
-       + Ab(mdd)*Ab(mp2)*F^-3 * ( 1/8 )
+       + Ab(mdd)^2*F^-4*mp2 * ( 3/16 - 7/16*rmq )
 
-       + Ab(mp2)*F^-3*mp2 * ( 8*L8r + 32*L6r - L5r - 3*L5r*rmq - 4*L4r - 13*
-         L3r - 10*L2r - 40*L1r - 7*L0r )
+       + Ab(mdd)*Ab(mp2)*F^-4*mp2 * (  - 3/8 + 1/4*rmq + 1/8*rmq^2 )
 
-       + Ab(mp2)*F^-3*mp2*pi16 * (  - 7/8 + 1/8*rmq )
+       + Ab(mp2)*F^-4*mp2^2 * ( 52*L8r - 68*L8r*rmq + 20*L8r*rmq^2 - 4*L8r*
+         rmq^3 - 32*L7r*rmq + 48*L7r*rmq^2 - 16*L7r*rmq^3 + 112*L6r - 112*L6r*
+         rmq - 26*L5r + 30*L5r*rmq - 4*L5r*rmq^2 - 104*L4r + 104*L4r*rmq + 26*
+         L3r - 26*L3r*rmq + 20*L2r - 20*L2r*rmq + 80*L1r - 80*L1r*rmq + 14*L0r
+          - 14*L0r*rmq )
 
-       + Ab(mp2)^2*F^-3 * ( 13/16 + 1/8*rmq )
+       + Ab(mp2)*F^-4*mp2^2*pi16 * ( 19/16 - 15/16*rmq - 1/4*rmq^2 )
 
-       + Hbb(muu,mp2,mp2,mdd)*F^-3*mp2 * (  - 1/8 - 1/8*rmq )
+       + Ab(mp2)^2*F^-4*mp2 * (  - 89/32 + 105/32*rmq - 1/2*rmq^2 )
 
-       + Hbb(mdd,mp2,mp2,mdd)*F^-3*mp2 * (  - 1/4 )
+       + Hbb(muu,mp2,mp2,mdd)*F^-4*mp2^2 * ( 1/4 - 1/4*rmq^2 )
 
-       + Hbb(mp2,mp2,mp2,mdd)*F^-3*mp2 * (  - 1/8 )
+       + Hbb(mdd,mp2,mp2,mdd)*F^-4*mp2^2 * ( 5/8 - 3/4*rmq + 1/8*rmq^2 )
 
-       + Hdd(muu,mp2,mp2,mdd)*F^-3*mp2^2 * ( 1/8 - 1/8*rmq^2 )
+       + Hbb(mp2,mp2,mp2,mdd)*F^-4*mp2^2 * ( 1/6 - 1/12*rmq - 1/12*rmq^2 )
 
-       + Hdd(mdd,mp2,mp2,mdd)*F^-3*mp2^2 * ( 5/16 - 3/8*rmq + 1/16*rmq^2 )
+       + H21bb(muu,mp2,mp2,mdd)*F^-4*mp2^2 * ( 3/4 - 3/2*rmq + 3/4*rmq^2 )
 
-       + Hdd(mp2,mp2,mp2,mdd)*F^-3*mp2^2 * ( 1/12 - 1/24*rmq - 1/24*rmq^2 )
+       + H21bb(mp2,mdd,mp2,mdd)*F^-4*mp2^2 * ( 3/2 - 3*rmq + 3/2*rmq^2 )
 
-       + H21dd(muu,mp2,mp2,mdd)*F^-3*mp2^2 * ( 3/8 - 3/4*rmq + 3/8*rmq^2 )
-
-       + H21dd(mp2,mdd,mp2,mdd)*F^-3*mp2^2 * ( 3/4 - 3/2*rmq + 3/4*rmq^2 )
-
-       + H21dd(mp2,mp2,mp2,mdd)*F^-3*mp2^2 * ( 3/8 - 3/4*rmq + 3/8*rmq^2 );
+       + H21bb(mp2,mp2,mp2,mdd)*F^-4*mp2^2 * ( 3/4 - 3/2*rmq + 3/4*rmq^2 );
 
    F11p4SP4 =
        + F^-1*mp2 * ( 4*L5r + 16*L4r )
@@ -1353,14 +1442,52 @@ Time =       0.02 sec    Generated terms =          0
        + Ab(mp2)*F^-1 * ( 1/2 );
 
    F11p6SP4 =
-       + F^-1*mp2 * ( 4*L5r + 16*L4r )
+       + F^-3*mp2^2*epsb2^-1*pi16^2 * ( 7/8 )
 
-       + Ab(mp2)*F^-1 * ( 1 );
+       + F^-3*mp2^2*epsb1^-1*pi16 * ( 16*L8r + 4*L8r*rmq^2 + 16*L7r*rmq^2 + 64
+         *L6r - 3*L5r - 12*L4r - 11*L3r - 20*L2r - 44*L1r + L0r )
+
+       + F^-3*mp2^2*epsb1^-1*pi16^2 * (  - 95/192 )
+
+       + F^-3*mp2^2 * (  - 8*L5r^2 - 64*L4r*L5r - 128*L4r^2 + 8*KK23 - 8*KK23*
+         rmq^2 + 128*KK22 + 32*KK21 + 32*KK21*rmq^2 + 32*KK20 + 8*KK19 + 8*
+         KK19*rmq^2 )
+
+       + F^-3*mp2^2*pi16 * (  - 16*L8r - 4*L8r*rmq^2 - 16*L7r*rmq^2 - 64*L6r
+          + 8*L5r + 32*L4r - 1/2*L3r - 6*L2r - 2*L1r - 5/2*L0r )
+
+       + F^-3*mp2^2*pi16^2 * (  - 5/96 )
+
+       + Ab(mp2)*F^-3*mp2 * ( 16*L8r + 4*L8r*rmq^2 + 16*L7r*rmq^2 + 64*L6r - 7
+         *L5r - 28*L4r - 11*L3r - 20*L2r - 44*L1r + L0r )
+
+       + Ab(mp2)*F^-3*mp2*pi16 * (  - 43/96 )
+
+       + Ab(mp2)^2*F^-3 * (  - 11/8 );
 
    F33p6SP4 =
-       + F^-1*mp2 * ( 4*L5r + 16*L4r )
+       + F^-3*mp2^2*epsb2^-1*pi16^2 * ( 7/8 )
 
-       + Ab(mp2)*F^-1 * ( 1 );
+       + F^-3*mp2^2*epsb1^-1*pi16 * ( 16*L8r + 64*L6r - 3*L5r - 12*L4r - 11*
+         L3r - 20*L2r - 44*L1r + L0r )
+
+       + F^-3*mp2^2*epsb1^-1*pi16^2 * (  - 95/192 )
+
+       + F^-3*mp2^2 * (  - 8*L5r^2 - 64*L4r*L5r - 128*L4r^2 + 32*KK24*rmq^2 + 
+         8*KK23 + 8*KK23*rmq^2 + 128*KK22 + 32*KK21 + 32*KK21*rmq^2 + 32*KK20
+          + 8*KK19 + 8*KK19*rmq^2 )
+
+       + F^-3*mp2^2*pi16 * (  - 16*L8r - 64*L6r + 8*L5r + 32*L4r - 1/2*L3r - 6
+         *L2r - 2*L1r - 5/2*L0r )
+
+       + F^-3*mp2^2*pi16^2 * (  - 5/96 )
+
+       + Ab(mp2)*F^-3*mp2 * ( 16*L8r + 64*L6r - 7*L5r - 28*L4r - 11*L3r - 20*
+         L2r - 44*L1r + L0r )
+
+       + Ab(mp2)*F^-3*mp2*pi16 * (  - 43/96 )
+
+       + Ab(mp2)^2*F^-3 * (  - 11/8 );
 
    F11p6SO4 =
        + F^-3*mp2^2*epsb2^-1*pi16^2 * ( 1/8 + 1/8*rmq^2 )
@@ -1650,4 +1777,4 @@ Time =       0.02 sec    Generated terms =          0
 
        + H21dd(mp2,mp2,mp2,mdd)*F^-3*mp2^2 * ( 3/8 - 3/4*rmq + 3/8*rmq^2 );
 
-  0.02 sec out of 0.02 sec
+  0.02 sec out of 0.04 sec
