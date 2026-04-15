@@ -49,6 +49,9 @@ id p2ext = -p1ext;
 *b means bracket
 b A,F,i_,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,H1,H2,sqrt2;
 Print FF1x`ext1'`ext2'`SX4';
+
+
+
 .store
 save save/FF1_`ext1'`ext2'`SX4'.sav 
    FF1x`ext1'`ext2'`SX4';
