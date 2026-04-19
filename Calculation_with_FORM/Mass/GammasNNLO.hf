@@ -54,9 +54,9 @@ id gamma14 = -((gamma10 *(-1 - RatioR^2))/RatioR^2) - (1/(
 
 #elseif `SX4'==SP4
 
-*id gamma2 = pi16^2 * (  + 21/32 );
-*id gamma1 =-( pi16 * ( 36*Lr8 + 144*Lr6 - 24*Lr5 - 96*Lr4 + 22*Lr3 + 
-*         40*Lr2 + 88*Lr1 - 2*Lr0 )+ pi16^2 * ( 79/96 )) ;
+id gamma2 = pi16^2 * (  + 21/32 );
+id gamma1 =-( pi16 * ( 36*Lr8 + 144*Lr6 - 24*Lr5 - 96*Lr4 + 22*Lr3 + 
+         40*Lr2 + 88*Lr1 - 2*Lr0 )+ pi16^2 * ( 79/96 )) ;
 
 
 id gamma11 = -(gamma10/RatioR^2) - (1/(

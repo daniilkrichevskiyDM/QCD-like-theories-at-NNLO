@@ -52,3 +52,4 @@ symbol SymmetryFactorMass1,...,SymmetryFactorMass9;
 symbol SymmetryFactorDecay1,...,SymmetryFactorDecay9; 
 symbol Lambda;
 vector Pol1;
+symbol rF,rFr, gamma2, gamma1;

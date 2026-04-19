@@ -4,7 +4,6 @@ cfunction ABar, LOmass, L, LOmass,Ab, Bb,B1b,B21b,spi,B22b,B31b,B32b,Hbb,H1bb,H2
 symbol m1,m2,m3,m4;
 symbol P2, aux1, n;
 
-
 #include symbols.hf
 #include setexternal.hf
 
@@ -85,7 +84,7 @@ endargument;
 .sort
 
 *we now consider  the \eps dependense and renormalization
-#include Gammas.hf
+#include GammasNLO.hf
 
 .sort
 #include HtoHb.hf
@@ -125,6 +124,10 @@ id KK40 = 1/128*rMT-1/128*(32*KK39 + 768 *KK27 + 192*KK26 + 48*KK25 - 16*KK23 - 
 id rMT = rMTr + gamma2*eps^(-2)+2*gamma1*(log4pi-2*logmu)+2*gamma2*(log4pi-2*logmu)^2
 +1/eps*(gamma1+2*log4pi*gamma2-4*gamma2*logmu);
 
+*id gamma2 = pi16^2 * (  + 21/32 );
+*id gamma1 =-( pi16 * ( 36*Lr8 + 144*Lr6 - 24*Lr5 - 96*Lr4 + 22*Lr3 + 
+*         40*Lr2 + 88*Lr1 - 2*Lr0 )+ pi16^2 * ( 79/96 )) ;
+
 .sort
 id dim^-1 =1/4 + eps/8 + eps^2/16;
 .sort
@@ -133,7 +136,7 @@ id eps^n?{1,2,3,4} = 0;
 
 id L(mp2?) = - ABar(mp2)/mp2;
 
-#include GammasNNLO.hf
+*#include GammasNNLO.hf
  
 id sqrt2^-2 = 1/2;
 
@@ -142,7 +145,9 @@ G NNLOmassNormalized = NNLOmass*F^4/mp2;
 .sort
 b F,mp2, eps, ABar, pi16;
 
-
+.sort
+b  eps;
 
 Print NLOmass,  NNLOmassNormalized;
 
+.end

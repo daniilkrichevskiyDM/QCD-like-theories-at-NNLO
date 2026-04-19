@@ -1,11 +1,12 @@
 Off statistics;
 
 symbol Lr0,Lr1,Lr2,Lr3,Lr4,Lr5,Lr6,Lr7,Lr8,Lr9,Lr10,Hr1,Hr2;
-cfunction ABar, LOmass, L, log, LOmass,Ab, Bb,B1b,B21b,spi,B22b,B31b,B32b,Hbb,H1bb,H21bb,Hd,Hdd,H1d,H1dd,H21d,H21dd;
+cfunction ABar, LOmass, L, log, LOmass,Ab, Bb,B1b,B21b,spi,B22b,B31b,B32b,Hbb,H1bb,H21bb,Hd,Hdd,H1d,H1dd,H21d,H21dd, H22d;
 symbol m1,m2,m3,m4;
 symbol P2, aux1, n;
 symbol Lambda, lambda0, lambda1, lambda2;
-symbol logmu, Lr0;
+symbol logmu;
+symbol const1;
 
 
 #include symbols.hf
@@ -77,28 +78,69 @@ endargument;
 
 .sort
 
+
+*************
 #procedure derivative(expr,var)
 .sort
 skip;
 nskip `expr';
-* derivative of powers
-  id `var'^n? = n*`var'^(n-1);
+multiply aa;
+
 .sort
+
+#define letterd "d"
+* derivative of powers
+*id `var'^n? = n*`var'^(n-1);
+id aa*H(m1?,m2?,m3?,`var') = Hd(m1,m2,m3,`var') + H(m1,m2,m3,`var')*aa;
+id aa*H21(m1?,m2?,m3?,`var') = H21d(m1,m2,m3,`var') + H21(m1,m2,m3,`var')*aa;
+*id aa*H22(m1?,m2?,m3?,`var') = H22d(m1,m2,m3,`var') + H22(m1,m2,m3,`var')*aa;
+id aa*`var'^n? = n*`var'^(n-1) + `var'^n*aa;
+.sort
+id aa = 0; 
 #endprocedure
+*************
+
+****
+id H22(m1?,m2?,m3?,m4?) =
+ 1/dim*(m1*H(m1,m2,m3,m4)+A(m2)*A(m3)
+         -m4*H21(m1,m2,m3,m4));
+****
 
 
-
+.sort
 *now we take derivative of sigma4
-G DerSigma4 = Sigma4;
+G DerSigma4 = Sigma4; 
 
 
+.sort
 #call derivative(DerSigma4,P2)
+
+
+.sort
+* we take second derivative of sigma4
+G DerDerSigma4 = DerSigma4;
+#call derivative(DerDerSigma4,P2)
+
+
+.sort
+
+
+*we have to take 1st derivative of SigmaNNLO (i.e. Sigma6). 
+G DerSigma6 = Sigma6;
+
+#call derivative(DerSigma6,P2)
+.sort
+
+
+G NLOmass =  - Sigma4; 
+G SigmaPrimeNLO = DerSigma4;
+G SigmaPrimeNNLO = NLOmass*DerDerSigma4 + DerSigma6;
 
 .sort
 G LOdecay =  MpionVectorLO;
-G NLOdecay =  MpionVectorNLO - 1/2*MpionVectorLO*DerSigma4;
+G NLOdecay =  MpionVectorNLO - 1/2*MpionVectorLO*SigmaPrimeNLO;
+G NNLOdecay = MpionVectorNNLO - 1/2*MpionVectorNLO*SigmaPrimeNLO  +  1/8*MpionVectorLO*(3*(SigmaPrimeNLO)^2-4*SigmaPrimeNNLO);
 .sort
-
 
 
 *we now set the p^2 to the LO mass
@@ -155,10 +197,14 @@ id epsb^(-1) = 1/eps + log4pi;
 *finite part of A
 id Ab(mp2?) = -mp2*L(mp2) - 2*mp2*pi16*logmu;
 
-*id KK40 = 1/128*rMT-1/128*(32*KK39 + 768 *KK27 + 192*KK26 + 48*KK25 - 16*KK23 - 256*KK22 - 64*KK21 - 64*KK20- 16*KK19 - 128*KK18 - 32*KK17);
+id KK20 = 1/32* (-8 *KK19-32 *KK21-128* KK22-8*KK23+rF);
 
-*id rMT = rMTr + gamma2*eps^(-2)+2*gamma1*(log4pi-2*logmu)+2*gamma2*(log4pi-2*logmu)^2
-*+1/eps*(gamma1+2*log4pi*gamma2-4*gamma2*logmu);
+id rF = rFr + gamma2*eps^(-2)+2*gamma1*(log4pi-2*logmu)+2*gamma2*(log4pi-2*logmu)^2
++1/eps*(gamma1+2*log4pi*gamma2-4*gamma2*logmu);
+
+id gamma2 = -7*pi16^2/8;
+
+id gamma1 = 1/192 *(-192* Lr0 *pi16+8448* Lr1 *pi16+3840* Lr2* pi16+2112 *Lr3 *pi16+2304* Lr4 *pi16+576 *Lr5* pi16-12288 *Lr6* pi16-3072* Lr8* pi16+95* pi16^2);
 
 .sort
 id dim^-1 =1/4 + eps/8 + eps^2/16;
@@ -170,7 +216,7 @@ id L(mp2?) = - ABar(mp2)/mp2;
 
 *#include GammasNNLO.hf
  
-id sqrt2^-2 = 1/2;
+
 id p1ext.Pol1 = 1;
 
 .sort
@@ -183,9 +229,5 @@ id sqrt2^-2 = 1/2;
 b F,mp2, eps, ABar, pi16;
 
 
-
-Print LOdecay, NLOdecay;
+Print LOdecay, NLOdecay, NNLOdecay;
 .end
-
-*,  NNLOmassNormalized;
-
