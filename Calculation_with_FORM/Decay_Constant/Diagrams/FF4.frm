@@ -16,9 +16,9 @@ Off Statistics;
 #include setexternal.hf
 
 
-#define ext1 "1"
-#define ext2 "1"
-#define SX4 "SP4"
+*#define ext1 "1"
+*#define ext2 "1"
+*#define SX4 "SP4"
 #define diagram "A5Mp2" 
 *we take here the 6-point  LO (p^2) Lagrangian  
 

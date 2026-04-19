@@ -1,0 +1,23 @@
+
+   FF6x33SO4 =
+
+       + A(mp2)*F^-3 * (
+          - 32/3*p1ext.Pol1*sqrt2^-1*mdd*L5
+          - 128/3*p1ext.Pol1*sqrt2^-1*mdd*L4
+          - 32/3*p1ext.Pol1*sqrt2^-1*muu*L5
+          - 128/3*p1ext.Pol1*sqrt2^-1*muu*L4
+          )
+
+       + B(mp2,mp2,0)*F^-3 * (
+          - 32/3*p1ext.Pol1*sqrt2^-1*mdd*mp2*L5
+          - 128/3*p1ext.Pol1*sqrt2^-1*mdd*mp2*L4
+          + 32/3*p1ext.Pol1*sqrt2^-1*mdd^2*L8
+          + 128/3*p1ext.Pol1*sqrt2^-1*mdd^2*L6
+          - 32/3*p1ext.Pol1*sqrt2^-1*muu*mp2*L5
+          - 128/3*p1ext.Pol1*sqrt2^-1*muu*mp2*L4
+          + 64/3*p1ext.Pol1*sqrt2^-1*muu*mdd*L8
+          + 256/3*p1ext.Pol1*sqrt2^-1*muu*mdd*L6
+          + 32/3*p1ext.Pol1*sqrt2^-1*muu^2*L8
+          + 128/3*p1ext.Pol1*sqrt2^-1*muu^2*L6
+          );
+

@@ -1,0 +1,18 @@
+
+   FF7x11SP4 =
+
+       + A(mp2)*F^-3 * (
+          - 16*p1ext.Pol1*dim^-1*sqrt2^-1*mp2*L3
+          - 192*p1ext.Pol1*dim^-1*sqrt2^-1*mp2*L2
+          - 64*p1ext.Pol1*dim^-1*sqrt2^-1*mp2*L1
+          - 80*p1ext.Pol1*dim^-1*sqrt2^-1*mp2*L0
+          - 40*p1ext.Pol1*sqrt2^-1*mp2*L3
+          - 32*p1ext.Pol1*sqrt2^-1*mp2*L2
+          - 160*p1ext.Pol1*sqrt2^-1*mp2*L1
+          + 24*p1ext.Pol1*sqrt2^-1*mp2*L0
+          + 62/3*p1ext.Pol1*sqrt2^-1*mdd*L5
+          + 248/3*p1ext.Pol1*sqrt2^-1*mdd*L4
+          + 62/3*p1ext.Pol1*sqrt2^-1*muu*L5
+          + 248/3*p1ext.Pol1*sqrt2^-1*muu*L4
+          );
+

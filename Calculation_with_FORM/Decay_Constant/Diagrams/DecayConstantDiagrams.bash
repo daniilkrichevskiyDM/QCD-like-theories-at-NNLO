@@ -25,14 +25,14 @@ do
         echo '#define ext2 "'$eext2'"' >> setexternal.hf #append to the file
         echo '#define SX4 "'$SX4'"' >> setexternal.hf #append to the file
 
-        # NEW LOOP over MM1 → MM9
-        for mm in $(seq 1 9)
+        # NEW LOOP over FF1 → FF9
+        for ff in $(seq 1 9)
         do
-            infile="MM${mm}.frm"
-            logfile="MM${mm}.log"
+            infile="FF${ff}.frm"
+            logfile="FF${ff}.log"
 
             $FORM "$infile"
-            mv "$logfile" log/${eext1}${eext2}${indextheory}_MM${mm}.log
+            mv "$logfile" log/${eext1}${eext2}${indextheory}_FF${ff}.log
         done 
     
     done

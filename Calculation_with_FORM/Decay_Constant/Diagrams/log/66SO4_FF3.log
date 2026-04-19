@@ -1,0 +1,11 @@
+
+   FF3x66SO4 =
+
+       + A(muu)*F^-1 * (
+          + 4/3*p1ext.Pol1*sqrt2^-1
+          )
+
+       + A(mp2)*F^-1 * (
+          + 4/3*p1ext.Pol1*sqrt2^-1
+          );
+

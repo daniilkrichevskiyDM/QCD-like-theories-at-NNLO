@@ -17,9 +17,9 @@ Off Statistics;
 
 
 
-#define ext1 "1"
-#define ext2 "1"
-#define SX4 "SP4"
+*#define ext1 "1"
+*#define ext2 "1"
+*#define SX4 "SP4"
 
 *the diagrams are always the same
 #define diagramLower "A3Mp2" 

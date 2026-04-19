@@ -17,9 +17,9 @@ Off Statistics;
 
 #define diagram "A3Mp4"
 
-#define ext1 "1"
-#define ext2 "1"
-#define SX4 "SP4"
+*#define ext1 "1"
+*#define ext2 "1"
+*#define SX4 "SP4"
 
 load ../../Expanded_Lagrangians/Saved_Lagrangians_with_Vectors/vertex`diagram'`SX4'.sav;
 

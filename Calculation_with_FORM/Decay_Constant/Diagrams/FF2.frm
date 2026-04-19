@@ -12,9 +12,9 @@ Off statistics;
 #include setexternal.hf
 #define diagram "A1Mp4"
 
-#define ext1 "1"
-#define ext2 "1"
-#define SX4 "SP4"
+*#define ext1 "1"
+*#define ext2 "1"
+*#define SX4 "SP4"
 
 
 

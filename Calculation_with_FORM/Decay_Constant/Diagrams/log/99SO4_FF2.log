@@ -1,0 +1,6 @@
+
+   FF2x99SO4 =
+       + sqrt2*F^-1*L5 * ( 8*p1ext.Pol1*mdd )
+
+       + sqrt2*F^-1*L4 * ( 16*p1ext.Pol1*mdd + 16*p1ext.Pol1*muu );
+

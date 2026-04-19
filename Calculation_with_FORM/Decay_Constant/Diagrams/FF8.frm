@@ -14,9 +14,9 @@ Off Statistics;
 #include symbols.hf
 #include setexternal.hf  
 
-#define ext1 "1"
-#define ext2 "1"
-#define SX4 "SP4"
+*#define ext1 "1"
+*#define ext2 "1"
+*#define SX4 "SP4"
 
 *we just take the LO 4-point diagram
 #define diagram1 "4Mp2" 

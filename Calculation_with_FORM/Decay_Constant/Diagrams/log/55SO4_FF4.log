@@ -1,0 +1,27 @@
+
+   FF4x55SO4 =
+
+       + A(muu)^2*F^-3 * (
+          + 2/15*p1ext.Pol1*sqrt2^-1
+          )
+
+       + A(muu)*A(mdd)*F^-3 * (
+          + 2/5*p1ext.Pol1*sqrt2^-1
+          )
+
+       + A(muu)*A(mp2)*F^-3 * (
+          + p1ext.Pol1*sqrt2^-1
+          )
+
+       + A(mdd)^2*F^-3 * (
+          + 2/15*p1ext.Pol1*sqrt2^-1
+          )
+
+       + A(mdd)*A(mp2)*F^-3 * (
+          + p1ext.Pol1*sqrt2^-1
+          )
+
+       + A(mp2)^2*F^-3 * (
+          + 4/5*p1ext.Pol1*sqrt2^-1
+          );
+

@@ -1,0 +1,11 @@
+
+   FF9x22SO4 =
+       + sqrt2^-1*F^-3 * ( 128*p1ext.p1ext*p1ext.Pol1*mdd*KK18 + 32*
+         p1ext.p1ext*p1ext.Pol1*mdd*KK17 + 128*p1ext.p1ext*p1ext.Pol1*muu*KK18
+          + 32*p1ext.p1ext*p1ext.Pol1*muu*KK17 + 128*p1ext.Pol1*mdd^2*KK22 + 
+         64*p1ext.Pol1*mdd^2*KK21 + 32*p1ext.Pol1*mdd^2*KK20 + 16*p1ext.Pol1*
+         mdd^2*KK19 + 32*p1ext.Pol1*muu*mdd*KK23 + 256*p1ext.Pol1*muu*mdd*KK22
+          + 64*p1ext.Pol1*muu*mdd*KK20 + 128*p1ext.Pol1*muu^2*KK22 + 64*
+         p1ext.Pol1*muu^2*KK21 + 32*p1ext.Pol1*muu^2*KK20 + 16*p1ext.Pol1*
+         muu^2*KK19 );
+

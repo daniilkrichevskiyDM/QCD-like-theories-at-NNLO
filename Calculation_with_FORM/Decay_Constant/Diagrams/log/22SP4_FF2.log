@@ -1,0 +1,6 @@
+
+   FF2x22SP4 =
+       + sqrt2*F^-1*L5 * ( 4*p1ext.Pol1*mdd + 4*p1ext.Pol1*muu )
+
+       + sqrt2*F^-1*L4 * ( 16*p1ext.Pol1*mdd + 16*p1ext.Pol1*muu );
+

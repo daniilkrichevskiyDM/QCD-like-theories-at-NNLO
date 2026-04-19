@@ -1,0 +1,42 @@
+
+   FF7x11SO4 =
+
+       + A(muu)*F^-3 * (
+          - 16*p1ext.Pol1*dim^-1*sqrt2^-1*muu*L3
+          - 64*p1ext.Pol1*dim^-1*sqrt2^-1*muu*L2
+          - 32*p1ext.Pol1*dim^-1*sqrt2^-1*muu*L0
+          + 8/3*p1ext.Pol1*sqrt2^-1*mdd*L5
+          + 32/3*p1ext.Pol1*sqrt2^-1*mdd*L4
+          + 32/3*p1ext.Pol1*sqrt2^-1*muu*L5
+          + 128/3*p1ext.Pol1*sqrt2^-1*muu*L4
+          - 16*p1ext.Pol1*sqrt2^-1*muu*L3
+          - 64*p1ext.Pol1*sqrt2^-1*muu*L1
+          )
+
+       + A(mdd)*F^-3 * (
+          - 16*p1ext.Pol1*dim^-1*sqrt2^-1*mdd*L3
+          - 64*p1ext.Pol1*dim^-1*sqrt2^-1*mdd*L2
+          - 32*p1ext.Pol1*dim^-1*sqrt2^-1*mdd*L0
+          + 32/3*p1ext.Pol1*sqrt2^-1*mdd*L5
+          + 128/3*p1ext.Pol1*sqrt2^-1*mdd*L4
+          - 16*p1ext.Pol1*sqrt2^-1*mdd*L3
+          - 64*p1ext.Pol1*sqrt2^-1*mdd*L1
+          + 8/3*p1ext.Pol1*sqrt2^-1*muu*L5
+          + 32/3*p1ext.Pol1*sqrt2^-1*muu*L4
+          )
+
+       + A(mp2)*F^-3 * (
+          - 48*p1ext.Pol1*dim^-1*sqrt2^-1*mp2*L3
+          - 192*p1ext.Pol1*dim^-1*sqrt2^-1*mp2*L2
+          - 64*p1ext.Pol1*dim^-1*sqrt2^-1*mp2*L1
+          - 80*p1ext.Pol1*dim^-1*sqrt2^-1*mp2*L0
+          - 40*p1ext.Pol1*sqrt2^-1*mp2*L3
+          - 32*p1ext.Pol1*sqrt2^-1*mp2*L2
+          - 160*p1ext.Pol1*sqrt2^-1*mp2*L1
+          - 8*p1ext.Pol1*sqrt2^-1*mp2*L0
+          + 46/3*p1ext.Pol1*sqrt2^-1*mdd*L5
+          + 184/3*p1ext.Pol1*sqrt2^-1*mdd*L4
+          + 46/3*p1ext.Pol1*sqrt2^-1*muu*L5
+          + 184/3*p1ext.Pol1*sqrt2^-1*muu*L4
+          );
+

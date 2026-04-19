@@ -1,0 +1,15 @@
+
+   FF4x33SO4 =
+
+       + A(muu)*A(mp2)*F^-3 * (
+          + 4/15*p1ext.Pol1*sqrt2^-1
+          )
+
+       + A(mdd)*A(mp2)*F^-3 * (
+          + 4/15*p1ext.Pol1*sqrt2^-1
+          )
+
+       + A(mp2)^2*F^-3 * (
+          + 44/15*p1ext.Pol1*sqrt2^-1
+          );
+
