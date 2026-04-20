@@ -211,7 +211,7 @@ id KK22 = 1/128*(-8*KK19-32*KK20-32*KK21-8*KK23+rF0);
 
 .sort
 
-#if `ext1'==1
+#if ((`ext1'==1) || (`ext1'==2) || (`ext1'==4) || (`ext1'==5))
 id KK23 = 1/8*(8*KK19 + 32*KK21 - rF1);
 #endif
 
@@ -219,27 +219,37 @@ id KK23 = 1/8*(8*KK19 + 32*KK21 - rF1);
 id KK23 = 1/8*(-8*KK19-32*KK21-32*KK24+rF2);
 #endif
 
-#if `ext1'==6
+#if ((`ext1' == 6) || (`ext1' == 7))
 id KK20= 1/32*(-16 *KK19-16 *KK23+rF2);
 id KK19 = 1/8 *(-32 *KK21-8 *KK23+rF3);
 #endif
 
-#if `ext1'==8
+#if ((`ext1' == 8) || (`ext1'== 9))
 id KK20= 1/32*(-16 *KK19-16 *KK23+rF2);
 id KK19 = 1/8 *(-32 *KK21-8 *KK23+rF3);
-#endif
-
 
 #endif
 
-*id rF2 = rF2r + gamma22*eps^(-2)+2*gamma12*(log4pi-2*logmu)+2*gamma22*(log4pi-2*logmu)^2
-*+1/eps*(gamma12+2*log4pi*gamma22-4*gamma22*logmu);
+.sort
 
-*id rF3 = rF3r + gamma23*eps^(-2)+2*gamma13*(log4pi-2*logmu)+2*gamma23*(log4pi-2*logmu)^2
-*+1/eps*(gamma13+2*log4pi*gamma23-4*gamma23*logmu);
 
-*id rF4 = rF4r + gamma24*eps^(-2)+2*gamma14*(log4pi-2*logmu)+2*gamma24*(log4pi-2*logmu)^2
-*+1/eps*(gamma14+2*log4pi*gamma24-4*gamma24*logmu);
+id rF0 = rF0r + gamma20*eps^(-2)+2*gamma10*(log4pi-2*logmu)+2*gamma20*(log4pi-2*logmu)^2
++1/eps*(gamma10+2*log4pi*gamma20-4*gamma20*logmu);
+
+id rF1 = rF1r + gamma21*eps^(-2)+2*gamma11*(log4pi-2*logmu)+2*gamma21*(log4pi-2*logmu)^2+1/eps*(gamma11+2*log4pi*gamma21-4*gamma21*logmu);
+
+id rF2 = rF2r + gamma22*eps^(-2)+2*gamma12*(log4pi-2*logmu)+2*gamma22*(log4pi-2*logmu)^2
++1/eps*(gamma12+2*log4pi*gamma22-4*gamma22*logmu);
+
+id rF3 = rF3r + gamma23*eps^(-2)+2*gamma13*(log4pi-2*logmu)+2*gamma23*(log4pi-2*logmu)^2
++1/eps*(gamma13+2*log4pi*gamma23-4*gamma23*logmu);
+
+id rF4 = rF4r + gamma24*eps^(-2)+2*gamma14*(log4pi-2*logmu)+2*gamma24*(log4pi-2*logmu)^2
++1/eps*(gamma14+2*log4pi*gamma24-4*gamma24*logmu);
+
+
+#endif
+
 
 .sort
 id dim^-1 =1/4 + eps/8 + eps^2/16;
@@ -322,7 +332,7 @@ id H1dd(m1?,mdd,muu,m4?) = H1dd(m1,muu,mdd,m4);
 .sort
 
 *#include degeneratelimit.hf
-
+id logmu = 0;
 .sort
 b F,mp2, eps, ABar, pi16, RatioR;
 

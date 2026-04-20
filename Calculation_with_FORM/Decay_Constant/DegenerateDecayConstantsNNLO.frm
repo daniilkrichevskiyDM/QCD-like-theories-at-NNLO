@@ -13,8 +13,8 @@ symbol const1;
 #include symbols.hf
 #include setexternal.hf
 
-#define ext1 "1"
-#define ext2 "1"
+#define ext1 "9"
+#define ext2 "9"
 #define SX4 "SP4"
 
 *firstly, we upload the mass diagrams
