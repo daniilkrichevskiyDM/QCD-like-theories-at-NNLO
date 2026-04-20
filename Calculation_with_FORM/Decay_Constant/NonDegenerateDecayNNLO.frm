@@ -5,9 +5,11 @@ cfunction ABar, LOmass, L, log, LOmass,Ab, Bb,B1b,B21b,spi,B22b,B31b,B32b,Hbb,H1
 symbol m1,m2,m3,m4;
 symbol P2, aux1, n;
 symbol Lambda, lambda0, lambda1, lambda2;
+symbol gamma10, gamma20, gamma11, gamma21, gamma12, gamma22, gamma13, gamma23,gamma14, gamma24;
 symbol logmu;
 symbol RatioR;
-
+symbol RbarM,RbarP;
+symbol rF0r,rF1r,rF2r,rF3r,rF4r, rF0, rF1, rF2, rF3, rF4;
 
 #include symbols.hf
 #include setexternal.hf
@@ -152,10 +154,6 @@ endargument;
 #include setLOmass.hf
 
 
-
-*DEGENERATE CASE
-***
-
 .sort
 
 *we now consider  the \eps dependense and renormalization
@@ -169,7 +167,7 @@ endargument;
 .sort
 #include reduceHbb0.hf
 
-id Bb(mp2,?a) = - pi16 + Ab(mp2)/mp2;
+id Bb(mp2?, mp2?, 0) = - pi16 + Ab(mp2)/mp2;
 id lambda1 = lambda0  + log4pi;
 id lambda2 =  lambda0^2 + log4pi^2;
 .sort
@@ -194,14 +192,54 @@ id epsb^(-1) = 1/eps + log4pi;
 *finite part of A
 id Ab(mp2?) = -mp2*L(mp2) - 2*mp2*pi16*logmu;
 
-id KK20 = 1/32* (-8 *KK19-32 *KK21-128* KK22-8*KK23+rF);
 
-id rF = rFr + gamma2*eps^(-2)+2*gamma1*(log4pi-2*logmu)+2*gamma2*(log4pi-2*logmu)^2
-+1/eps*(gamma1+2*log4pi*gamma2-4*gamma2*logmu);
+#if `SX4'==SP4
+id KK24 = -((8* KK19 *(RatioR^2+1)+32* KK20+32* KK21* RatioR^2+32*KK21+128*KK22+8 *KK23 *RatioR^2+8 *KK23-rF1)/(32 *RatioR^2));
 
-id gamma2 = -7*pi16^2/8;
+id KK20 = 1/32*(-8*KK19*RatioR^2-8*KK19-32*KK21*RatioR^2-32*KK21-128*KK22+8*KK23*RatioR^2-8*KK23+rF0);
 
-id gamma1 = 1/192 *(-192* Lr0 *pi16+8448* Lr1 *pi16+3840* Lr2* pi16+2112 *Lr3 *pi16+2304* Lr4 *pi16+576 *Lr5* pi16-12288 *Lr6* pi16-3072* Lr8* pi16+95* pi16^2);
+id rF0 = rF0r + gamma20*eps^(-2)+2*gamma10*(log4pi-2*logmu)+2*gamma20*(log4pi-2*logmu)^2
++1/eps*(gamma10+2*log4pi*gamma20-4*gamma20*logmu);
+
+id rF1 = rF1r + gamma21*eps^(-2)+2*gamma11*(log4pi-2*logmu)+2*gamma21*(log4pi-2*logmu)^2+1/eps*(gamma11+2*log4pi*gamma21-4*gamma21*logmu);
+
+#endif
+
+
+#if `SX4'==SO4
+id KK22 = 1/128*(-8*KK19-32*KK20-32*KK21-8*KK23+rF0);
+
+.sort
+
+#if `ext1'==1
+id KK23 = 1/8*(8*KK19 + 32*KK21 - rF1);
+#endif
+
+#if `ext1'==3
+id KK23 = 1/8*(-8*KK19-32*KK21-32*KK24+rF2);
+#endif
+
+#if `ext1'==6
+id KK20= 1/32*(-16 *KK19-16 *KK23+rF2);
+id KK19 = 1/8 *(-32 *KK21-8 *KK23+rF3);
+#endif
+
+#if `ext1'==8
+id KK20= 1/32*(-16 *KK19-16 *KK23+rF2);
+id KK19 = 1/8 *(-32 *KK21-8 *KK23+rF3);
+#endif
+
+
+#endif
+
+*id rF2 = rF2r + gamma22*eps^(-2)+2*gamma12*(log4pi-2*logmu)+2*gamma22*(log4pi-2*logmu)^2
+*+1/eps*(gamma12+2*log4pi*gamma22-4*gamma22*logmu);
+
+*id rF3 = rF3r + gamma23*eps^(-2)+2*gamma13*(log4pi-2*logmu)+2*gamma23*(log4pi-2*logmu)^2
+*+1/eps*(gamma13+2*log4pi*gamma23-4*gamma23*logmu);
+
+*id rF4 = rF4r + gamma24*eps^(-2)+2*gamma14*(log4pi-2*logmu)+2*gamma24*(log4pi-2*logmu)^2
+*+1/eps*(gamma14+2*log4pi*gamma24-4*gamma24*logmu);
 
 .sort
 id dim^-1 =1/4 + eps/8 + eps^2/16;
@@ -211,7 +249,7 @@ id eps^n?{1,2,3,4} = 0;
 
 id L(mp2?) = - ABar(mp2)/mp2;
 
-*#include GammasNNLO.hf
+#include GammasNNLO.hf
  
 
 id p1ext.Pol1 = 1;
@@ -225,11 +263,70 @@ id sqrt2^-2 = 1/2;
 .sort
 id mdd = -mp2*(-1 + RatioR);
 id muu = mp2*(1 + RatioR);
-
-*G NNLOmassNormalized = NNLOmass*F^4/mp2;
 .sort
-b F,mp2, eps, ABar, pi16;
 
+id mdd^(-1) = -mp2^(-1)*RbarM;
+id muu^(-1) = mp2^(-1)*RbarP;
+.sort
+
+repeat;
+id RatioR * RbarP = 1 - RbarP;
+id RatioR * RbarM = 1 + RbarM;
+endrepeat;
+
+
+*use some symmetries
+*The function H is fully symmetric in m21, m22 and m23. Same for the derivative.
+
+id Hbb(muu,mp2,muu,m4?) = Hbb(muu,muu,mp2,m4);
+id Hbb(mdd,mp2,mdd,m4?) = Hbb(mdd,mdd,mp2,m4);
+id Hbb(mp2,muu,mp2,m4?) = Hbb(muu,mp2,mp2,m4);
+id Hbb(mp2,mdd,mp2,m4?) = Hbb(mdd,mp2,mp2,m4);
+id Hbb(mp2,mp2,muu,m4?) = Hbb(muu,mp2,mp2,m4);
+id Hbb(mp2,mp2,mdd,m4?) = Hbb(mdd,mp2,mp2,m4);
+id Hbb(mp2,muu,mdd,m4?) = Hbb(muu,mdd,mp2,m4);
+id Hbb(mp2,mdd,muu,m4?) = Hbb(muu,mdd,mp2,m4);
+id Hbb(mp2,mdd,mdd,m4?) = Hbb(mdd,mdd,mp2,m4);
+id Hbb(mp2,muu,muu,m4?) = Hbb(muu,muu,mp2,m4);
+
+id Hdd(muu,mp2,muu,m4?) = Hdd(muu,muu,mp2,m4);
+id Hdd(mdd,mp2,mdd,m4?) = Hdd(mdd,mdd,mp2,m4);
+id Hdd(mp2,muu,mp2,m4?) = Hdd(muu,mp2,mp2,m4);
+id Hdd(mp2,mdd,mp2,m4?) = Hdd(mdd,mp2,mp2,m4);
+id Hdd(mp2,mp2,muu,m4?) = Hdd(muu,mp2,mp2,m4);
+id Hdd(mp2,mp2,mdd,m4?) = Hdd(mdd,mp2,mp2,m4);
+id Hdd(mp2,muu,mdd,m4?) = Hdd(muu,mdd,mp2,m4);
+id Hdd(mp2,mdd,muu,m4?) = Hdd(muu,mdd,mp2,m4);
+id Hdd(mp2,mdd,mdd,m4?) = Hdd(mdd,mdd,mp2,m4);
+id Hdd(mp2,muu,muu,m4?) = Hdd(muu,muu,mp2,m4);
+
+.sort
+*H1, H21 and H22 are symmetric under the interchange of m2 and m3. Same for the 
+* derivatives.
+id H21bb(m1?,mp2,muu,m4?) = H21bb(m1,muu,mp2,m4);
+id H21bb(m1?,mp2,mdd,m4?) = H21bb(m1,mdd,mp2,m4);
+id H21bb(m1?,mdd,muu,m4?) = H21bb(m1,muu,mdd,m4);
+
+id H1bb(m1?,mp2,muu,m4?) = H1bb(m1,muu,mp2,m4);
+id H1bb(m1?,mp2,mdd,m4?) = H1bb(m1,mdd,mp2,m4);
+id H1bb(m1?,mdd,muu,m4?) = H1bb(m1,muu,mdd,m4);
+
+id H21dd(m1?,mp2,muu,m4?) = H21dd(m1,muu,mp2,m4);
+id H21dd(m1?,mp2,mdd,m4?) = H21dd(m1,mdd,mp2,m4);
+id H21dd(m1?,mdd,muu,m4?) = H21dd(m1,muu,mdd,m4);
+
+id H1dd(m1?,mp2,muu,m4?) = H1dd(m1,muu,mp2,m4);
+id H1dd(m1?,mp2,mdd,m4?) = H1dd(m1,mdd,mp2,m4);
+id H1dd(m1?,mdd,muu,m4?) = H1dd(m1,muu,mdd,m4);
+
+.sort
+
+*#include degeneratelimit.hf
+
+.sort
+b F,mp2, eps, ABar, pi16, RatioR;
+
+*b eps;
 
 Print LOdecay, NLOdecay, NNLOdecay;
 .end

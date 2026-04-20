@@ -87,7 +87,7 @@ endargument;
 .sort
 #include reduceHbb0.hf
 
-*id Bb(mp2,?a) = - pi16 + Ab(mp2)/mp2;
+
 id Bb(mp2?, mp2?, 0) = - pi16 + Ab(mp2)/mp2;
 id lambda1 = lambda0  + log4pi;
 id lambda2 =  lambda0^2 + log4pi^2;

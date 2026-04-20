@@ -1,38 +1,92 @@
 Off statistics;
 #include symbols.hf
-symbol P2, n, m1, m2, m3, m4,n;
-function ABar, LOmass, L, log, LOmass,Ab, Bb,B1b,B21b,spi,B22b,B31b,B32b,Hbb,H1bb,H21bb,Hd,Hdd,H1d,H1dd,H21d,H21dd,H22d;
-cfunction func;
 
-#define ext1 "1"
-#define ext2 "1"
-#define SX4 "SP4"
+symbol Lr0,Lr1,Lr2,Lr3,Lr4,Lr5,Lr6,Lr7,Lr8,Lr9,Lr10,Hr1,Hr2;
+cfunction ABar, LOmass, L, log, LOmass,Ab, Bb,B1b,B21b,spi,B22b,B31b,B32b,Hbb,H1bb,H21bb,Hd,Hdd,H1d,H1dd,H21d,H21dd, H22d;
+symbol m1,m2,m3,m4;
+symbol P2, aux1, n;
+symbol Lambda, lambda0, lambda1, lambda2;
+symbol gamma10, gamma20, gamma11, gamma21, gamma12, gamma22, gamma13, gamma23,gamma14, gamma24;
+symbol logmu;
+symbol RatioR;
+symbol RbarM,RbarP;
+symbol rF0r,rF1r,rF2r,rF3r,rF4r, rF0, rF1, rF2, rF3, rF4;
 
-L aux1 =2*H21(mp2,mp2,mp2,P2)*P2^2*F^-4 ;
-print aux1;
 
+L Dec1 =  + F^-3*mp2^2 * ( rF0r - 8*Lr5^2 - 64*Lr4*Lr5 - 128*Lr4^2 )
 
-#procedure derivative(expr,var)
+       + F^-3*mp2^2*pi16 * (  - 16*Lr8 - 4*Lr8*RatioR^2 - 16*Lr7*RatioR^2 - 64
+         *Lr6 + 8*Lr5 + 32*Lr4 - 1/2*Lr3 - 6*Lr2 - 2*Lr1 - 5/2*Lr0 )
+
+       + F^-3*mp2^2*pi16^2 * (  - 5/96 )
+
+       + ABar(mp2)*F^-3*mp2 * ( 16*Lr8 + 4*Lr8*RatioR^2 + 16*Lr7*RatioR^2 + 64
+         *Lr6 - 7*Lr5 - 28*Lr4 - 11*Lr3 - 20*Lr2 - 44*Lr1 + Lr0 )
+
+       + ABar(mp2)*F^-3*mp2*pi16 * (  - 43/96 )
+
+       + ABar(mp2)^2*F^-3 * (  - 11/8 );
+
+L Dec2 = F^-3*mp2^2 * ( rF0r - 8*Lr5^2 - 64*Lr4*Lr5 - 128*Lr4^2 )
+
+       + F^-3*mp2^2*pi16 * (  - 16*Lr8 - 4*Lr8*RatioR^2 - 16*Lr7*RatioR^2 - 64
+         *Lr6 + 8*Lr5 + 32*Lr4 - 1/2*Lr3 - 6*Lr2 - 2*Lr1 - 5/2*Lr0 )
+
+       + F^-3*mp2^2*pi16^2 * (  - 5/96 )
+
+       + ABar(mp2)*F^-3*mp2 * ( 16*Lr8 + 4*Lr8*RatioR^2 + 16*Lr7*RatioR^2 + 64
+         *Lr6 - 7*Lr5 - 28*Lr4 - 11*Lr3 - 20*Lr2 - 44*Lr1 + Lr0 )
+
+       + ABar(mp2)*F^-3*mp2*pi16 * (  - 43/96 )
+
+       + ABar(mp2)^2*F^-3 * (  - 11/8 );
+
+L Dec3 =    + F^-3*mp2^2 * ( rF1r - 8*Lr5^2 - 64*Lr4*Lr5 - 128*Lr4^2 )
+
+       + F^-3*mp2^2*pi16 * (  - 16*Lr8 - 64*Lr6 + 8*Lr5 + 32*Lr4 - 1/2*Lr3 - 6
+         *Lr2 - 2*Lr1 - 5/2*Lr0 )
+
+       + F^-3*mp2^2*pi16^2 * (  - 5/96 )
+
+       + ABar(mp2)*F^-3*mp2 * ( 16*Lr8 + 64*Lr6 - 7*Lr5 - 28*Lr4 - 11*Lr3 - 20
+         *Lr2 - 44*Lr1 + Lr0 )
+
+       + ABar(mp2)*F^-3*mp2*pi16 * (  - 43/96 )
+
+       + ABar(mp2)^2*F^-3 * (  - 11/8 );
+
+L Dec4 = + F^-3*mp2^2 * ( rF0r - 8*Lr5^2 - 64*Lr4*Lr5 - 128*Lr4^2 )
+
+       + F^-3*mp2^2*pi16 * (  - 16*Lr8 - 4*Lr8*RatioR^2 - 16*Lr7*RatioR^2 - 64
+         *Lr6 + 8*Lr5 + 32*Lr4 - 1/2*Lr3 - 6*Lr2 - 2*Lr1 - 5/2*Lr0 )
+
+       + F^-3*mp2^2*pi16^2 * (  - 5/96 )
+
+       + ABar(mp2)*F^-3*mp2 * ( 16*Lr8 + 4*Lr8*RatioR^2 + 16*Lr7*RatioR^2 + 64
+         *Lr6 - 7*Lr5 - 28*Lr4 - 11*Lr3 - 20*Lr2 - 44*Lr1 + Lr0 )
+
+       + ABar(mp2)*F^-3*mp2*pi16 * (  - 43/96 )
+
+       + ABar(mp2)^2*F^-3 * (  - 11/8 );
+
+L Dec5 = + F^-3*mp2^2 * ( rF0r - 8*Lr5^2 - 64*Lr4*Lr5 - 128*Lr4^2 )
+
+       + F^-3*mp2^2*pi16 * (  - 16*Lr8 - 4*Lr8*RatioR^2 - 16*Lr7*RatioR^2 - 64
+         *Lr6 + 8*Lr5 + 32*Lr4 - 1/2*Lr3 - 6*Lr2 - 2*Lr1 - 5/2*Lr0 )
+
+       + F^-3*mp2^2*pi16^2 * (  - 5/96 )
+
+       + ABar(mp2)*F^-3*mp2 * ( 16*Lr8 + 4*Lr8*RatioR^2 + 16*Lr7*RatioR^2 + 64
+         *Lr6 - 7*Lr5 - 28*Lr4 - 11*Lr3 - 20*Lr2 - 44*Lr1 + Lr0 )
+
+       + ABar(mp2)*F^-3*mp2*pi16 * (  - 43/96 )
+
+       + ABar(mp2)^2*F^-3 * (  - 11/8 ); 
+
 .sort
-skip;
-nskip `expr';
-multiply aa;
 
-#define letterd "d"
-* derivative of powers
-*id `var'^n? = n*`var'^(n-1);
-*id aa*func?{H,H21,H22}(m1?,m2?,m3?,`var') = func`letterd'(m1,m2,m3,`var') + func(m1,m2,m3,`var')*aa;
-id aa*H(m1?,m2?,m3?,`var') = Hd(m1,m2,m3,`var') + H(m1,m2,m3,`var')*aa;
-id aa*H21(m1?,m2?,m3?,`var') = H21d(m1,m2,m3,`var') + H21(m1,m2,m3,`var')*aa;
-id aa*H22(m1?,m2?,m3?,`var') = H22d(m1,m2,m3,`var') + H22(m1,m2,m3,`var')*aa;
-id aa*`var'^n? = n*`var'^(n-1) + `var'^n*aa;
-.sort
-id aa = 0; 
-#endprocedure
+L diff = Dec1 - Dec3;
+b F,mp2, eps, ABar, pi16;
+print diff;
 
-
-#call derivative(aux1,P2)
-.sort
-
-print aux1;
 .end

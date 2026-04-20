@@ -1,7 +1,5 @@
 #if `SX4'==SO4
-*id gamma2  = - pi16^2 * (  - 335/96 + 5/3*sqrt2^-2 );
-*id gamma1 = -(pi16 * ( 116*Lr8 + 336*Lr6 - 56*Lr5 - 224*Lr4 + 46*Lr3
-*          + 56*Lr2 + 152*Lr1 + 22*Lr0 )+pi16^2 * ( 173/96 + 19/8*sqrt2^-2 ));
+
 
 
 id gamma21 = -(gamma20/RatioR^2) + (pi16^2* (85 + 16* RatioR^2))/(32 *RatioR^2);
@@ -54,25 +52,16 @@ id gamma14 = -((gamma10 *(-1 - RatioR^2))/RatioR^2) - (1/(
 
 #elseif `SX4'==SP4
 
-*id gamma2 = pi16^2 * (  + 21/32 );
-*id gamma1 =-( pi16 * ( 36*Lr8 + 144*Lr6 - 24*Lr5 - 96*Lr4 + 22*Lr3 + 
-*         40*Lr2 + 88*Lr1 - 2*Lr0 )+ pi16^2 * ( 79/96 )) ;
+id gamma20 = -(7*pi16^2)/8;
+id gamma10 = 1/192* (-192* Lr0 *pi16 + 8448* Lr1 *pi16 + 3840* Lr2 *pi16 + 
+     2112* Lr3 *pi16 + 2304* Lr4 *pi16 + 576* Lr5 *pi16 - 12288* Lr6 *pi16 - 
+     3072* Lr7 *pi16* RatioR^2 - 768* Lr8 *pi16* RatioR^2 - 3072* Lr8 *pi16 + 
+     95* pi16^2);
 
+id gamma21 = -(7*pi16^2)/8;
 
-id gamma11 = -(gamma10/RatioR^2) - (1/(
-  96* RatioR^2))*(-192 *Lr0* pi16 + 8448* Lr1* pi16 + 3840* Lr2* pi16 + 
-    2112 *Lr3* pi16 - 9216* Lr4* pi16 - 2304* Lr5 *pi16 + 13824* Lr6 *pi16 + 
-    3456* Lr8* pi16 + 79* pi16^2 - 1536* Lr7* pi16 *RatioR^2 - 
-    384* Lr8* pi16* RatioR^2);
-
-id gamma21 = -(gamma20/RatioR^2) + (21* pi16^2)/(32* RatioR^2);
-
-id gamma12 = -(gamma10/RatioR^2) - (1/(
-  96* RatioR^2))*(-192* Lr0 *pi16 + 8448 *Lr1 *pi16 + 3840* Lr2 *pi16 + 
-    2112 *Lr3* pi16 - 9216* Lr4* pi16 - 2304* Lr5 *pi16 + 13824* Lr6 *pi16 + 
-    3456* Lr8 *pi16 + 79 *pi16^2 + 19968* Lr7* pi16* RatioR^2 + 
-    4992* Lr8* pi16 *RatioR^2);
-
-id gamma22 = -(gamma20/RatioR^2) + (21* pi16^2)/(32 *RatioR^2);
+id gamma11 = 1/192* (-192* Lr0 *pi16 + 8448 *Lr1 *pi16 + 3840* Lr2 *pi16 + 
+    2112* Lr3 *pi16 + 2304* Lr4 *pi16 + 576* Lr5 *pi16 - 12288* Lr6 *pi16 - 
+    3072* Lr8 *pi16 + 95* pi16^2);
 
 #endif
