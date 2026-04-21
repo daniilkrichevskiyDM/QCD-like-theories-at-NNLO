@@ -1,0 +1,6 @@
+
+   VV3x2SP4 =
+       + i_*F^-2 * ( 384*B0*mdd^2*KK27 + 192*B0*mdd^2*KK26 + 96*B0*mdd^2*KK25
+          + 768*B0*muu*mdd*KK27 + 128*B0*muu*mdd*KK26 + 384*B0*muu^2*KK27 + 64
+         *B0*muu^2*KK26 );
+

@@ -1,0 +1,15 @@
+id RatioR = 0;
+argument;
+id muu = mp2;
+id mdd = mp2;
+endargument;
+#include reduceHbb0.hf
+
+id Ab(mp2?) = -mp2*L(mp2) - 2*mp2*pi16*logmu;
+id L(mp2?) = - ABar(mp2)/mp2;
+id RbarM=(-1 )^(-1);
+id RbarP=(1 )^(-1);
+.sort
+id RatioR = 0;
+id pi^2 = 1/16*1/pi16; 
+.sort

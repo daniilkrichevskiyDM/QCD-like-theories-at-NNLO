@@ -10,6 +10,7 @@ id gamma11 =
     85 * pi16^2);
 
 id gamma21 = (3 * pi16^2)/8;
+****
 
 id gamma12 = 1/96 * (768 * Lr0 * pi16 + 768 * Lr1 * pi16 + 1920 * Lr2 * pi16 + 
  1920 * Lr3 * pi16 + 1536 * Lr4 * pi16 - 480 * Lr5 * pi16 - 
@@ -17,11 +18,19 @@ id gamma12 = 1/96 * (768 * Lr0 * pi16 + 768 * Lr1 * pi16 + 1920 * Lr2 * pi16 +
 
 id gamma22 = pi16^2/4;
 
-id gamma13 = 1/64 * (768 * Lr1 * pi16 + 1920 * Lr2 * pi16 + 1152 * Lr3 * pi16 + 
+id gamma13 = 1/96 * (768 * Lr0 * pi16 + 768 * Lr1 * pi16 + 1920 * Lr2 * pi16 + 
+ 1920 * Lr3 * pi16 + 1536 * Lr4 * pi16 - 480 * Lr5 * pi16 - 
+ 3072 * Lr6 * pi16 - 1536 * Lr8 * pi16 + 109 * pi16^2);
+
+id gamma23 = pi16^2/4;
+
+id gamma14 = 1/64 * (768 * Lr1 * pi16 + 1920 * Lr2 * pi16 + 1152 * Lr3 * pi16 + 
  1024 * Lr4 * pi16 - 64 * Lr5 * pi16 - 2048 * Lr6 * pi16 - 
  1536 * Lr8 * pi16 + 89 * pi16^2);
 
-id gamma23 = (5 * pi16^2)/16;
+id gamma24 = (5 * pi16^2)/16;
+
+
 
 
 #elseif `SX4'==SP4

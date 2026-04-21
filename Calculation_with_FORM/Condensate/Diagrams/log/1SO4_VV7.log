@@ -1,0 +1,87 @@
+
+   ComplexUnitFactor = 0;
+
+   VV7x1SO42Mp4 = 0;
+
+   VV7x1SO4S2Mp2 = 0;
+
+   product =
+
+       + A(muu)*i_*F^-2 * (
+          - 32*B0*mdd*L4
+          - 16*B0*muu*L5
+          - 32*B0*muu*L4
+          )
+
+       + A(mp2)*i_*F^-2 * (
+          - 10*B0*mdd*L5
+          - 40*B0*mdd*L4
+          - 10*B0*muu*L5
+          - 40*B0*muu*L4
+          )
+
+       + B(muu,muu,0)*i_*F^-2 * (
+          + 64*B0*muu*mdd*L6
+          - 32*B0*muu*mdd*L4
+          + 32*B0*muu^2*L8
+          + 64*B0*muu^2*L6
+          - 16*B0*muu^2*L5
+          - 32*B0*muu^2*L4
+          )
+
+       + B(mp2,mp2,0)*i_*F^-2 * (
+          - 10*B0*mdd*mp2*L5
+          - 40*B0*mdd*mp2*L4
+          + 12*B0*mdd^2*L8
+          + 8*B0*mdd^2*L7
+          + 40*B0*mdd^2*L6
+          - 10*B0*muu*mp2*L5
+          - 40*B0*muu*mp2*L4
+          + 16*B0*muu*mdd*L8
+          - 16*B0*muu*mdd*L7
+          + 80*B0*muu*mdd*L6
+          + 12*B0*muu^2*L8
+          + 8*B0*muu^2*L7
+          + 40*B0*muu^2*L6
+          );
+
+   VV7x1SO4 =
+
+       + A(muu)*i_*F^-2 * (
+          - 32*B0*mdd*L4
+          - 16*B0*muu*L5
+          - 32*B0*muu*L4
+          )
+
+       + A(mp2)*i_*F^-2 * (
+          - 10*B0*mdd*L5
+          - 40*B0*mdd*L4
+          - 10*B0*muu*L5
+          - 40*B0*muu*L4
+          )
+
+       + B(muu,muu,0)*i_*F^-2 * (
+          + 64*B0*muu*mdd*L6
+          - 32*B0*muu*mdd*L4
+          + 32*B0*muu^2*L8
+          + 64*B0*muu^2*L6
+          - 16*B0*muu^2*L5
+          - 32*B0*muu^2*L4
+          )
+
+       + B(mp2,mp2,0)*i_*F^-2 * (
+          - 10*B0*mdd*mp2*L5
+          - 40*B0*mdd*mp2*L4
+          + 12*B0*mdd^2*L8
+          + 8*B0*mdd^2*L7
+          + 40*B0*mdd^2*L6
+          - 10*B0*muu*mp2*L5
+          - 40*B0*muu*mp2*L4
+          + 16*B0*muu*mdd*L8
+          - 16*B0*muu*mdd*L7
+          + 80*B0*muu*mdd*L6
+          + 12*B0*muu^2*L8
+          + 8*B0*muu^2*L7
+          + 40*B0*muu^2*L6
+          );
+

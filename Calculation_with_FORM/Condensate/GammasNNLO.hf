@@ -1,0 +1,21 @@
+#if `SX4'==SO4
+
+
+id gamma10 = 1/4* (-gamma11 *RatioR^2-2* gamma11* RatioR+128* Lr4 *pi16* RatioR^2+256* Lr4* pi16* RatioR+864* Lr4* pi16+96* Lr5 *pi16* RatioR^2+192* Lr5* pi16 *RatioR+216* Lr5 *pi16-256 *Lr6 *pi16 *RatioR^2-512 *Lr6* pi16* RatioR-1728* Lr6 *pi16-64* Lr7 *pi16* RatioR^2-128 *Lr7* pi16* RatioR-208* Lr8 *pi16* RatioR^2-416* Lr8 *pi16 *RatioR-432* Lr8 *pi16);
+id gamma20 = 1/32 *(-8 *gamma21* RatioR^2-16 *gamma21* RatioR+8* pi16^2 *RatioR^2+16* pi16^2* RatioR+27 *pi16^2);
+id gamma21 = pi16^2;
+id gamma11 = 16 * (8 *Lr4 *pi16+6* Lr5* pi16-16* Lr6* pi16-4* Lr7* pi16-13 *Lr8 *pi16);
+
+
+#elseif `SX4'==SP4
+
+id gamma10 = 1/2*1/2* (-gamma11* RatioR^2+2* gamma11 *RatioR+480 *Lr4* pi16+120* Lr5* pi16-960* Lr6* pi16-64* Lr7 *pi16* RatioR^2+128*Lr7* pi16* RatioR-16 *Lr8* pi16* RatioR^2+32 *Lr8 *pi16* RatioR-240* Lr8* pi16);
+
+
+id gamma20 = 1/2*1/16 *(-8 *gamma21 *RatioR^2+16 *gamma21 *RatioR-45 *pi16^2);
+
+id gamma21=0;
+
+id gamma11 = -16 * (4 *Lr7 *pi16+Lr8 *pi16); 
+
+#endif

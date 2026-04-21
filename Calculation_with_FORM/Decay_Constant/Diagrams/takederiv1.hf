@@ -1,6 +1,0 @@
-repeat;
-* just takes derivative 
-  id phi?{phi,phiP,phiS}(mu?lorentz,?a,p1?)= i_*p1(mu)*phi(?a,p1);
-* it can happen that p1(mu)phi(mu,p3) is rewritten as phi(p1,p3). then we want to restore the normal form
-  id phi?{phi,phiP,phiS}(p3?,?a,p1?)= i_*p1.p3*phi(?a,p1);
-endrepeat;

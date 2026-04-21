@@ -153,7 +153,7 @@ endrepeat;
 
 *use some symmetries
 *The function H is fully symmetric in m21, m22 and m23
-#include HansM11p6SO4.hf
+#include HansMassesSO4.hf
 
 
 id Hbb(muu,mp2,muu,m4?) = Hbb(muu,muu,mp2,m4);

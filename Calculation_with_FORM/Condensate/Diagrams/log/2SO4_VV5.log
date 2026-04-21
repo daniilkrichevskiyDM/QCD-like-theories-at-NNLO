@@ -1,0 +1,24 @@
+
+   VV5x2SO4 =
+       + A(muu)*i_*F^-2*L6 * ( 64*B0*muu )
+
+       + A(muu)*i_*F^-2*L4 * (  - 32*B0*muu )
+
+       + A(mdd)*i_*F^-2*L8 * ( 64*B0*mdd )
+
+       + A(mdd)*i_*F^-2*L6 * ( 128*B0*mdd + 64*B0*muu )
+
+       + A(mdd)*i_*F^-2*L5 * (  - 16*B0*mdd )
+
+       + A(mdd)*i_*F^-2*L4 * (  - 32*B0*mdd )
+
+       + A(mp2)*i_*F^-2*L8 * ( 48*B0*mdd + 32*B0*muu )
+
+       + A(mp2)*i_*F^-2*L7 * ( 32*B0*mdd - 32*B0*muu )
+
+       + A(mp2)*i_*F^-2*L6 * ( 160*B0*mdd + 160*B0*muu )
+
+       + A(mp2)*i_*F^-2*L5 * (  - 20*B0*mp2 )
+
+       + A(mp2)*i_*F^-2*L4 * (  - 80*B0*mp2 );
+

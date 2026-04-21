@@ -26,7 +26,7 @@ Off Statistics;
 
 
 load ../../Expanded_Lagrangians/Saved_Lagrangians/vertex`diagram'`SX4'.sav;
-*we have here i_^5. One i_ is for the i*L_int, two i_ are for 2 propagateors and 2 i_ are to compensate 2 1/i_ in the
+*we have here i_^5. One i_ is for the i*L_int, two i_ are for 2 propagators and 2 i_ are to compensate 2 1/i_ in the
 *definition of A(p^2)
 
 G MM4x`ext1'`ext2'`SX4'= i_^5*SymmetryFactorMass4*(

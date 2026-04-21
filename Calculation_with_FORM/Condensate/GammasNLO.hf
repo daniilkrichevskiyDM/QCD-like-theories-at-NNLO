@@ -1,0 +1,35 @@
+G NF = 2; 
+
+#if `SX4'==SO4
+L Gamma0  = (NF+4)/48;
+L Gamma1  = 1/32;
+L Gamma2  = 1/16;
+L Gamma3  = (NF-2)/24;
+L Gamma4  = 1/16;
+L Gamma5  = NF/8;
+L Gamma6  = (NF^2+1)/(32*NF^2);
+L Gamma7  = 0;
+L Gamma8  = (NF^2+NF-2)/(16*NF);
+L Gamma9  = (NF+1)/2;
+L Gamma10 = -(NF+1)/2;
+L Gamma11 = -(NF+1)/4;
+L Gamma12 = (NF^2+NF-2)/(8*NF);
+
+
+#elseif `SX4'==SP4
+
+L Gamma0  = (NF-4)/48;
+L Gamma1  = 1/32;
+L Gamma2  = 1/16;
+L Gamma3  = (NF+2)/24;
+L Gamma4  = 1/16;
+L Gamma5  = NF/8;
+L Gamma6  = (NF^2+1)/(32*NF^2);
+L Gamma7  = 0;
+L Gamma8  = (NF^2-NF-2)/(16*NF);
+L Gamma9  = (NF-1)/2;
+L Gamma10 = -(NF-1)/2;
+L Gamma11 = -(NF+1)/4;
+L Gamma12 = (NF^2-NF-2)/(8*NF);
+
+#endif

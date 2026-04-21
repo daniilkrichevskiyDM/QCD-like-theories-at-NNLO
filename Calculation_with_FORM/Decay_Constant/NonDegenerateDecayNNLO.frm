@@ -14,8 +14,8 @@ symbol rF0r,rF1r,rF2r,rF3r,rF4r, rF0, rF1, rF2, rF3, rF4;
 #include symbols.hf
 #include setexternal.hf
 
-#define ext1 "8"
-#define ext2 "8"
+#define ext1 "3"
+#define ext2 "3"
 #define SX4 "SO4"
 
 *firstly, we upload the mass diagrams
@@ -94,8 +94,8 @@ multiply aa;
 * derivative of powers
 *id `var'^n? = n*`var'^(n-1);
 id aa*H(m1?,m2?,m3?,`var') = Hd(m1,m2,m3,`var') + H(m1,m2,m3,`var')*aa;
+id aa*HH1(m1?,m2?,m3?,`var') = H1d(m1,m2,m3,`var') + HH1(m1,m2,m3,`var')*aa;
 id aa*H21(m1?,m2?,m3?,`var') = H21d(m1,m2,m3,`var') + H21(m1,m2,m3,`var')*aa;
-*id aa*H22(m1?,m2?,m3?,`var') = H22d(m1,m2,m3,`var') + H22(m1,m2,m3,`var')*aa;
 id aa*`var'^n? = n*`var'^(n-1) + `var'^n*aa;
 .sort
 id aa = 0; 
@@ -220,13 +220,13 @@ id KK23 = 1/8*(-8*KK19-32*KK21-32*KK24+rF2);
 #endif
 
 #if ((`ext1' == 6) || (`ext1' == 7))
-id KK20= 1/32*(-16 *KK19-16 *KK23+rF2);
-id KK19 = 1/8 *(-32 *KK21-8 *KK23+rF3);
+id KK20= 1/32*(-16 *KK19-16 *KK23+rF3);
+id KK19 = 1/8 *(-32 *KK21-8 *KK23+rF4);
 #endif
 
 #if ((`ext1' == 8) || (`ext1'== 9))
-id KK20= 1/32*(-16 *KK19-16 *KK23+rF2);
-id KK19 = 1/8 *(-32 *KK21-8 *KK23+rF3);
+id KK20= 1/32*(-16 *KK19-16 *KK23+rF3);
+id KK19 = 1/8 *(-32 *KK21-8 *KK23+rF4);
 
 #endif
 
@@ -332,11 +332,15 @@ id H1dd(m1?,mdd,muu,m4?) = H1dd(m1,muu,mdd,m4);
 .sort
 
 *#include degeneratelimit.hf
+.sort
 id logmu = 0;
+.sort
+G NNLOdecayNormalized = F^3*NNLOdecay;
 .sort
 b F,mp2, eps, ABar, pi16, RatioR;
 
 *b eps;
 
-Print LOdecay, NLOdecay, NNLOdecay;
+
+Print LOdecay, NLOdecay,  NNLOdecayNormalized;
 .end
