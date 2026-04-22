@@ -14,8 +14,8 @@ symbol rV0r,rV1r,rV2r,rV3r,rV4r, rV0, rV1, rV2, rV3, rV4;
 
 #include symbols.hf
 
-#define ext1 "1"
-#define SX4 "SP4"
+#define ext1 "2"
+#define SX4 "SO4"
 
 *firstly, we upload the condensate diagrams
 load Diagrams/save/VV1_`ext1'`SX4'.sav;
@@ -156,7 +156,7 @@ endrepeat;
 *id logmu = 0;
 
 G CondensateNLONorm =CondensateNLO/( -F^2*B0 * ( 2 ));
-G CondensateNNLONorm = CondensateNNLO/(- F^2*B0 * ( 2 ));
+G CondensateNNLONorm = CondensateNNLO/(- F^2*B0 * ( 2 ))*F^4;
 
 .sort
 
