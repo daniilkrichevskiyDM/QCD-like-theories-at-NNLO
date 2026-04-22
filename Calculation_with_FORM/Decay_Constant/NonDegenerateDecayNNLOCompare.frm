@@ -319,6 +319,9 @@ G differenceNLO = HansNLO - NLOdecay;
 G differenceNNLO = (HansNNLO - NNLOdecay)*F^3;
 
 .sort
+id log(mp2?) = -1/pi16*1/mp2*Ab(mp2);
+
+.sort
 b F,mp2, eps, Ab, pi16, RatioR;
 
 *b eps;

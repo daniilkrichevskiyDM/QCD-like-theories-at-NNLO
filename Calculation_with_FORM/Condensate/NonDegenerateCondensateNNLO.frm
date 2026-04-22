@@ -155,7 +155,7 @@ endrepeat;
 .sort
 *id logmu = 0;
 
-G CondensateNLONorm =CondensateNLO/( -F^2*B0 * ( 2 ));
+G CondensateNLONorm =CondensateNLO/( -F^2*B0 * ( 2 ))*F^2;
 G CondensateNNLONorm = CondensateNNLO/(- F^2*B0 * ( 2 ))*F^4;
 
 .sort

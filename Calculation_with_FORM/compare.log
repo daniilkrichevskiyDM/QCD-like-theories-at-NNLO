@@ -1,4 +1,4 @@
-FORM 5.0.0 (Jan 27 2026, v5.0.0)                 Run: Mon Apr 13 13:15:07 2026
+FORM 5.0.0 (Jan 27 2026, v5.0.0)                 Run: Wed Apr 22 15:37:00 2026
     * just looking at the final nonrenormalized results
     #include symbols.hf
     * symbols etc needed for the SU(4)/SO(4) and SU(4)/Sp(4) case
@@ -190,6 +190,23 @@ FORM 5.0.0 (Jan 27 2026, v5.0.0)                 Run: Mon Apr 13 13:15:07 2026
  Fpi4x99SO4 loaded
  Fpi6x99SO4 loaded
     
+    load save/Sall_1SP4.sav;
+ SS2x1SP4 loaded
+ SS4x1SP4 loaded
+ SS6x1SP4 loaded
+    load save/Sall_2SP4.sav;
+ SS2x2SP4 loaded
+ SS4x2SP4 loaded
+ SS6x2SP4 loaded
+    load save/Sall_1SO4.sav;
+ SS2x1SO4 loaded
+ SS4x1SO4 loaded
+ SS6x1SO4 loaded
+    load save/Sall_2SO4.sav;
+ SS2x2SO4 loaded
+ SS4x2SO4 loaded
+ SS6x2SO4 loaded
+    
     * the individual results for the different cases
     L M11p4SP4 = Mass4x11SP4;
     L M33p4SP4 = Mass4x33SP4;
@@ -296,7 +313,21 @@ FORM 5.0.0 (Jan 27 2026, v5.0.0)                 Run: Mon Apr 13 13:15:07 2026
     L F68p6SO4 = Fpi6x66SO4-Fpi6x88SO4;
     L F89p6SO4 = Fpi6x88SO4-Fpi6x99SO4;
     
-    *L TESTSO4 = M11p4SO4-1/2*(M66p4SO4+M88p4SO4);
+    
+    L S1p2SP4 = SS2x1SP4;
+    L S1p4SP4 = SS4x1SP4;
+    L S1p6SP4 = SS6x1SP4;
+    L S2p2SP4 = SS2x2SP4;
+    L S2p4SP4 = SS4x2SP4;
+    L S2p6SP4 = SS6x2SP4;
+    
+    L S1p2SO4 = SS2x1SO4;
+    L S1p4SO4 = SS4x1SO4;
+    L S1p6SO4 = SS6x1SO4;
+    L S2p2SO4 = SS2x2SO4;
+    L S2p4SO4 = SS4x2SO4;
+    L S2p6SO4 = SS6x2SO4;
+    
     .sort
 
 Time =       0.01 sec    Generated terms =          5
@@ -335,11 +366,11 @@ Time =       0.01 sec    Generated terms =        139
         M11p6SO4         Terms in output =        139
                          Bytes used      =       7236
 
-Time =       0.02 sec    Generated terms =        162
+Time =       0.01 sec    Generated terms =        162
         M33p6SO4         Terms in output =        162
                          Bytes used      =       8324
 
-Time =       0.02 sec    Generated terms =        232
+Time =       0.01 sec    Generated terms =        232
         M66p6SO4         Terms in output =        232
                          Bytes used      =      10284
 
@@ -634,12 +665,62 @@ Time =       0.02 sec    Generated terms =        270
 Time =       0.02 sec    Generated terms =        270
         F89p6SO4         Terms in output =          0
                          Bytes used      =          4
+
+Time =       0.02 sec    Generated terms =          1
+         S1p2SP4         Terms in output =          1
+                         Bytes used      =         44
+
+Time =       0.02 sec    Generated terms =          6
+         S1p4SP4         Terms in output =          6
+                         Bytes used      =        312
+
+Time =       0.02 sec    Generated terms =         32
+         S1p6SP4         Terms in output =         32
+                         Bytes used      =       1508
+
+Time =       0.02 sec    Generated terms =          1
+         S2p2SP4         Terms in output =          1
+                         Bytes used      =         44
+
+Time =       0.02 sec    Generated terms =          6
+         S2p4SP4         Terms in output =          6
+                         Bytes used      =        312
+
+Time =       0.02 sec    Generated terms =         32
+         S2p6SP4         Terms in output =         32
+                         Bytes used      =       1508
+
+Time =       0.02 sec    Generated terms =          1
+         S1p2SO4         Terms in output =          1
+                         Bytes used      =         44
+
+Time =       0.02 sec    Generated terms =          7
+         S1p4SO4         Terms in output =          7
+                         Bytes used      =        352
+
+Time =       0.02 sec    Generated terms =         76
+         S1p6SO4         Terms in output =         76
+                         Bytes used      =       3976
+
+Time =       0.02 sec    Generated terms =          1
+         S2p2SO4         Terms in output =          1
+                         Bytes used      =         44
+
+Time =       0.02 sec    Generated terms =          7
+         S2p4SO4         Terms in output =          7
+                         Bytes used      =        352
+
+Time =       0.02 sec    Generated terms =         76
+         S2p6SO4         Terms in output =         76
+                         Bytes used      =       3976
     b F,mp2,Ab,Bb,Hbb,H1bb,H21bb,Hdd,H1dd,H21dd,epsb2,epsb1,pi16;
     print
      M11p4SP4,M33p4SP4,M11p4SO4,M33p4SO4,M66p4SO4,M88p4SO4,
      M11p6SP4,M33p6SP4,M11p6SO4,M33p6SO4,M66p6SO4,M88p6SO4,
      F11p4SP4,F33p4SP4,F11p4SO4,F33p4SO4,F66p4SO4,F88p4SO4,
-     F11p6SP4,F33p6SP4,F11p6SO4,F33p6SO4,F66p6SO4,F88p6SO4
+     F11p6SP4,F33p6SP4,F11p6SO4,F33p6SO4,F66p6SO4,F88p6SO4,
+     S1p2SP4,S1p4SP4,S1p6SP4,S2p2SP4,S2p4SP4,S2p6SP4,
+     S1p2SO4,S1p4SO4,S1p6SO4,S2p2SO4,S2p4SO4,S2p6SO4
     ;
     .end
 
@@ -978,6 +1059,54 @@ Time =       0.02 sec    Generated terms =        110
 Time =       0.02 sec    Generated terms =          0
         F89p6SO4         Terms in output =          0
                          Bytes used      =          4
+
+Time =       0.02 sec    Generated terms =          1
+         S1p2SP4         Terms in output =          1
+                         Bytes used      =         64
+
+Time =       0.02 sec    Generated terms =          6
+         S1p4SP4         Terms in output =          6
+                         Bytes used      =        312
+
+Time =       0.02 sec    Generated terms =         32
+         S1p6SP4         Terms in output =         32
+                         Bytes used      =       1360
+
+Time =       0.02 sec    Generated terms =          1
+         S2p2SP4         Terms in output =          1
+                         Bytes used      =         64
+
+Time =       0.02 sec    Generated terms =          6
+         S2p4SP4         Terms in output =          6
+                         Bytes used      =        312
+
+Time =       0.02 sec    Generated terms =         32
+         S2p6SP4         Terms in output =         32
+                         Bytes used      =       1360
+
+Time =       0.02 sec    Generated terms =          1
+         S1p2SO4         Terms in output =          1
+                         Bytes used      =         64
+
+Time =       0.02 sec    Generated terms =          7
+         S1p4SO4         Terms in output =          7
+                         Bytes used      =        364
+
+Time =       0.02 sec    Generated terms =         76
+         S1p6SO4         Terms in output =         76
+                         Bytes used      =       3056
+
+Time =       0.02 sec    Generated terms =          1
+         S2p2SO4         Terms in output =          1
+                         Bytes used      =         64
+
+Time =       0.02 sec    Generated terms =          7
+         S2p4SO4         Terms in output =          7
+                         Bytes used      =        364
+
+Time =       0.02 sec    Generated terms =         76
+         S2p6SO4         Terms in output =         76
+                         Bytes used      =       3056
 
    M11p4SP4 =
        + F^-2*mp2^2 * ( 16*L8r + 64*L6r - 8*L5r - 32*L4r )
@@ -1777,4 +1906,144 @@ Time =       0.02 sec    Generated terms =          0
 
        + H21dd(mp2,mp2,mp2,mdd)*F^-3*mp2^2 * ( 3/8 - 3/4*rmq + 3/8*rmq^2 );
 
-  0.02 sec out of 0.04 sec
+   S1p2SP4 =
+       + F^2 * (  - 2*B0 );
+
+   S1p4SP4 =
+       + mp2 * (  - 8*B0*H2r - 8*B0*H2r*rmq - 16*B0*L8r - 16*B0*L8r*rmq - 128*
+         B0*L6r )
+
+       + Ab(mp2) * (  - 5/2*B0 );
+
+   S1p6SP4 =
+       + F^-2*mp2^2*epsb2^-1*pi16^2 * (  - 45/16*B0 )
+
+       + F^-2*mp2^2*epsb1^-1*pi16 * (  - 120*B0*L8r - 16*B0*L8r*rmq - 8*B0*L8r
+         *rmq^2 - 64*B0*L7r*rmq - 32*B0*L7r*rmq^2 - 480*B0*L6r + 60*B0*L5r + 
+         240*B0*L4r )
+
+       + F^-2*mp2^2 * (  - 1536*B0*KK27 - 384*B0*KK26 - 256*B0*KK26*rmq - 128*
+         B0*KK26*rmq^2 - 96*B0*KK25 - 192*B0*KK25*rmq - 96*B0*KK25*rmq^2 )
+
+       + F^-2*mp2^2*pi16 * ( 40*B0*L8r + 8*B0*L8r*rmq^2 + 32*B0*L7r*rmq^2 + 
+         160*B0*L6r - 20*B0*L5r - 80*B0*L4r + 120*log(mp2)*B0*L8r + 16*log(mp2
+         )*B0*L8r*rmq + 8*log(mp2)*B0*L8r*rmq^2 + 64*log(mp2)*B0*L7r*rmq + 32*
+         log(mp2)*B0*L7r*rmq^2 + 480*log(mp2)*B0*L6r - 60*log(mp2)*B0*L5r - 
+         240*log(mp2)*B0*L4r )
+
+       + F^-2*mp2^2*pi16^2 * ( 15/8*log(mp2)*B0 + 45/16*log(mp2)^2*B0 );
+
+   S2p2SP4 =
+       + F^2 * (  - 2*B0 );
+
+   S2p4SP4 =
+       + mp2 * (  - 8*B0*H2r + 8*B0*H2r*rmq - 16*B0*L8r + 16*B0*L8r*rmq - 128*
+         B0*L6r )
+
+       + Ab(mp2) * (  - 5/2*B0 );
+
+   S2p6SP4 =
+       + F^-2*mp2^2*epsb2^-1*pi16^2 * (  - 45/16*B0 )
+
+       + F^-2*mp2^2*epsb1^-1*pi16 * (  - 120*B0*L8r + 16*B0*L8r*rmq - 8*B0*L8r
+         *rmq^2 + 64*B0*L7r*rmq - 32*B0*L7r*rmq^2 - 480*B0*L6r + 60*B0*L5r + 
+         240*B0*L4r )
+
+       + F^-2*mp2^2 * (  - 1536*B0*KK27 - 384*B0*KK26 + 256*B0*KK26*rmq - 128*
+         B0*KK26*rmq^2 - 96*B0*KK25 + 192*B0*KK25*rmq - 96*B0*KK25*rmq^2 )
+
+       + F^-2*mp2^2*pi16 * ( 40*B0*L8r + 8*B0*L8r*rmq^2 + 32*B0*L7r*rmq^2 + 
+         160*B0*L6r - 20*B0*L5r - 80*B0*L4r + 120*log(mp2)*B0*L8r - 16*log(mp2
+         )*B0*L8r*rmq + 8*log(mp2)*B0*L8r*rmq^2 - 64*log(mp2)*B0*L7r*rmq + 32*
+         log(mp2)*B0*L7r*rmq^2 + 480*log(mp2)*B0*L6r - 60*log(mp2)*B0*L5r - 
+         240*log(mp2)*B0*L4r )
+
+       + F^-2*mp2^2*pi16^2 * ( 15/8*log(mp2)*B0 + 45/16*log(mp2)^2*B0 );
+
+   S1p2SO4 =
+       + F^2 * (  - 2*B0 );
+
+   S1p4SO4 =
+       + mp2 * (  - 8*B0*H2r - 8*B0*H2r*rmq - 16*B0*L8r - 16*B0*L8r*rmq - 128*
+         B0*L6r )
+
+       + Ab(muu) * (  - 2*B0 )
+
+       + Ab(mp2) * (  - 5/2*B0 );
+
+   S1p6SO4 =
+       + F^-2*mp2^2*epsb2^-1*pi16^2 * ( 27/16*B0 + B0*rmq + 1/2*B0*rmq^2 )
+
+       + F^-2*mp2^2*epsb1^-1*pi16 * (  - 216*B0*L8r - 208*B0*L8r*rmq - 104*B0*
+         L8r*rmq^2 - 64*B0*L7r*rmq - 32*B0*L7r*rmq^2 - 864*B0*L6r - 256*B0*L6r
+         *rmq - 128*B0*L6r*rmq^2 + 108*B0*L5r + 96*B0*L5r*rmq + 48*B0*L5r*
+         rmq^2 + 432*B0*L4r + 128*B0*L4r*rmq + 64*B0*L4r*rmq^2 )
+
+       + F^-2*mp2^2 * (  - 1536*B0*KK27 - 384*B0*KK26 - 256*B0*KK26*rmq - 128*
+         B0*KK26*rmq^2 - 96*B0*KK25 - 192*B0*KK25*rmq - 96*B0*KK25*rmq^2 )
+
+       + F^-2*mp2^2*pi16 * ( 72*B0*L8r + 64*B0*L8r*rmq + 40*B0*L8r*rmq^2 + 32*
+         B0*L7r*rmq^2 + 288*B0*L6r + 128*B0*L6r*rmq - 36*B0*L5r - 32*B0*L5r*
+         rmq - 16*B0*L5r*rmq^2 - 144*B0*L4r - 64*B0*L4r*rmq + 96*log(muu)*B0*
+         L8r + 192*log(muu)*B0*L8r*rmq + 96*log(muu)*B0*L8r*rmq^2 + 320*log(
+         muu)*B0*L6r + 384*log(muu)*B0*L6r*rmq + 64*log(muu)*B0*L6r*rmq^2 - 48
+         *log(muu)*B0*L5r - 96*log(muu)*B0*L5r*rmq - 48*log(muu)*B0*L5r*rmq^2
+          - 160*log(muu)*B0*L4r - 192*log(muu)*B0*L4r*rmq - 32*log(muu)*B0*L4r
+         *rmq^2 + 64*log(mdd)*B0*L6r - 128*log(mdd)*B0*L6r*rmq + 64*log(mdd)*
+         B0*L6r*rmq^2 - 32*log(mdd)*B0*L4r + 64*log(mdd)*B0*L4r*rmq - 32*log(
+         mdd)*B0*L4r*rmq^2 + 120*log(mp2)*B0*L8r + 16*log(mp2)*B0*L8r*rmq + 8*
+         log(mp2)*B0*L8r*rmq^2 + 64*log(mp2)*B0*L7r*rmq + 32*log(mp2)*B0*L7r*
+         rmq^2 + 480*log(mp2)*B0*L6r - 60*log(mp2)*B0*L5r - 240*log(mp2)*B0*
+         L4r )
+
+       + F^-2*mp2^2*pi16^2 * (  - 1/4*log(muu)*B0 - 1/2*log(muu)*B0*rmq - 1/4*
+         log(muu)*B0*rmq^2 - 5/4*log(muu)*log(mp2)*B0 - 3/2*log(muu)*log(mp2)*
+         B0*rmq - 1/4*log(muu)*log(mp2)*B0*rmq^2 - 1/4*log(mdd)*B0 + 1/2*log(
+         mdd)*B0*rmq - 1/4*log(mdd)*B0*rmq^2 - 1/4*log(mdd)*log(mp2)*B0 + 1/2*
+         log(mdd)*log(mp2)*B0*rmq - 1/4*log(mdd)*log(mp2)*B0*rmq^2 - 5/8*log(
+         mp2)*B0 - 1/2*log(mp2)*B0*rmq - 3/16*log(mp2)^2*B0 );
+
+   S2p2SO4 =
+       + F^2 * (  - 2*B0 );
+
+   S2p4SO4 =
+       + mp2 * (  - 8*B0*H2r + 8*B0*H2r*rmq - 16*B0*L8r + 16*B0*L8r*rmq - 128*
+         B0*L6r )
+
+       + Ab(mdd) * (  - 2*B0 )
+
+       + Ab(mp2) * (  - 5/2*B0 );
+
+   S2p6SO4 =
+       + F^-2*mp2^2*epsb2^-1*pi16^2 * ( 27/16*B0 - B0*rmq + 1/2*B0*rmq^2 )
+
+       + F^-2*mp2^2*epsb1^-1*pi16 * (  - 216*B0*L8r + 208*B0*L8r*rmq - 104*B0*
+         L8r*rmq^2 + 64*B0*L7r*rmq - 32*B0*L7r*rmq^2 - 864*B0*L6r + 256*B0*L6r
+         *rmq - 128*B0*L6r*rmq^2 + 108*B0*L5r - 96*B0*L5r*rmq + 48*B0*L5r*
+         rmq^2 + 432*B0*L4r - 128*B0*L4r*rmq + 64*B0*L4r*rmq^2 )
+
+       + F^-2*mp2^2 * (  - 1536*B0*KK27 - 384*B0*KK26 + 256*B0*KK26*rmq - 128*
+         B0*KK26*rmq^2 - 96*B0*KK25 + 192*B0*KK25*rmq - 96*B0*KK25*rmq^2 )
+
+       + F^-2*mp2^2*pi16 * ( 72*B0*L8r - 64*B0*L8r*rmq + 40*B0*L8r*rmq^2 + 32*
+         B0*L7r*rmq^2 + 288*B0*L6r - 128*B0*L6r*rmq - 36*B0*L5r + 32*B0*L5r*
+         rmq - 16*B0*L5r*rmq^2 - 144*B0*L4r + 64*B0*L4r*rmq + 64*log(muu)*B0*
+         L6r + 128*log(muu)*B0*L6r*rmq + 64*log(muu)*B0*L6r*rmq^2 - 32*log(muu
+         )*B0*L4r - 64*log(muu)*B0*L4r*rmq - 32*log(muu)*B0*L4r*rmq^2 + 96*
+         log(mdd)*B0*L8r - 192*log(mdd)*B0*L8r*rmq + 96*log(mdd)*B0*L8r*rmq^2
+          + 320*log(mdd)*B0*L6r - 384*log(mdd)*B0*L6r*rmq + 64*log(mdd)*B0*L6r
+         *rmq^2 - 48*log(mdd)*B0*L5r + 96*log(mdd)*B0*L5r*rmq - 48*log(mdd)*B0
+         *L5r*rmq^2 - 160*log(mdd)*B0*L4r + 192*log(mdd)*B0*L4r*rmq - 32*log(
+         mdd)*B0*L4r*rmq^2 + 120*log(mp2)*B0*L8r - 16*log(mp2)*B0*L8r*rmq + 8*
+         log(mp2)*B0*L8r*rmq^2 - 64*log(mp2)*B0*L7r*rmq + 32*log(mp2)*B0*L7r*
+         rmq^2 + 480*log(mp2)*B0*L6r - 60*log(mp2)*B0*L5r - 240*log(mp2)*B0*
+         L4r )
+
+       + F^-2*mp2^2*pi16^2 * (  - 1/4*log(muu)*B0 - 1/2*log(muu)*B0*rmq - 1/4*
+         log(muu)*B0*rmq^2 - 1/4*log(muu)*log(mp2)*B0 - 1/2*log(muu)*log(mp2)*
+         B0*rmq - 1/4*log(muu)*log(mp2)*B0*rmq^2 - 1/4*log(mdd)*B0 + 1/2*log(
+         mdd)*B0*rmq - 1/4*log(mdd)*B0*rmq^2 - 5/4*log(mdd)*log(mp2)*B0 + 3/2*
+         log(mdd)*log(mp2)*B0*rmq - 1/4*log(mdd)*log(mp2)*B0*rmq^2 - 5/8*log(
+         mp2)*B0 + 1/2*log(mp2)*B0*rmq - 3/16*log(mp2)^2*B0 );
+
+  0.03 sec out of 0.04 sec
