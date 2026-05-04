@@ -1,0 +1,369 @@
+id BB2(ss?,tt?,uu?) =
+       +  ( 1/3 )
+
+       + uu * ( 1/6 )
+
+       + tt * (  - 1/3 )
+
+       + ss * ( 1/6 );
+
+id BP4(ss?,tt?,uu?) =       
+         +  ( nf^-1*Lp + nf^-1*pi16 + 7/6*Lp + 16*L8r + 16*L0r + 19/18*pi16
+          - 2/3*nf*Lp - 5/9*nf*pi16 )
+
+       + (ss-uu)^2 * (  - 1/24*Lp + L3r - 5/144*pi16 - 1/48*nf*Lp - 1/36*nf*
+         pi16 )
+
+       + tt * (  - 2/3*Lp - 4*L5r - 16*L0r - 5/9*pi16 + 5/12*nf*Lp + 11/36*
+         nf*pi16 )
+
+       + tt^2 * ( 1/8*Lp + L3r + 4*L0r + 5/48*pi16 - 1/16*nf*Lp - 1/24*nf*
+         pi16 );
+
+id C4P(ss?,tt?,uu?) =
+       +  (  - 1/2*nf^-2*Lp - 1/2*nf^-2*pi16 + 32*L6r - 32*L4r + 32*L1r )
+
+       + (tt-uu)^2 * (  - 1/16*Lp + 2*L2r - 1/16*pi16 )
+
+       + ss * ( 16*L4r - 32*L1r )
+
+       + ss^2 * (  - 3/16*Lp + 2*L2r + 8*L1r - 3/16*pi16 );
+
+id B6P(ss?,tt?,uu?) =
+       +  (  - 49/8*nf^-2*epsb2^-1*pi16^2 + 23/6*nf^-2*epsb1^-1*pi16^2 + 
+         19/4*nf^-2*Lp^2 + nf^-2*pi16*Lp - 35/8*nf^-2*pi16^2 - 25/4*nf^-1*
+         epsb2^-1*pi16^2 - 520/3*nf^-1*epsb1^-1*pi16*L8r + 220/3*nf^-1*
+         epsb1^-1*pi16*L5r - 80/3*nf^-1*epsb1^-1*pi16*L3r - 80/3*nf^-1*
+         epsb1^-1*pi16*L0r + 10/3*nf^-1*epsb1^-1*pi16^2 + 17/4*nf^-1*Lp^2 + 
+         112*nf^-1*L8r*Lp - 48*nf^-1*L5r*Lp + 32/3*nf^-1*L3r*Lp + 32/3*nf^-1*
+         L0r*Lp + nf^-1*pi16*Lp + 96*nf^-1*pi16*L8r - 32*nf^-1*pi16*L5r + 128/
+         9*nf^-1*pi16*L3r + 128/9*nf^-1*pi16*L0r - 27/8*nf^-1*pi16^2 - 49/24*
+         epsb2^-1*pi16^2 - 376/3*epsb1^-1*pi16*L8r + 32*epsb1^-1*pi16*L7r + 
+         272/3*epsb1^-1*pi16*L6r + 116/3*epsb1^-1*pi16*L5r + 88/3*epsb1^-1*
+         pi16*L4r - 104/3*epsb1^-1*pi16*L3r + 96*epsb1^-1*pi16*L2r + 160/3*
+         epsb1^-1*pi16*L1r - 128/3*epsb1^-1*pi16*L0r + 25/216*epsb1^-1*pi16^2
+          + 19/12*Lp^2 + 80*L8r*Lp - 512*L8r^2 - 32*L7r*Lp - 160*L6r*Lp - 64/3
+         *L5r*Lp + 256*L5r*L8r + 64/3*L4r*Lp + 56/3*L3r*Lp - 224/3*L2r*Lp - 64
+         *L1r*Lp + 80/3*L0r*Lp + 96*KK39 - 64*KK37 + 96*KK25 - 96*KK17 + 32*
+         KK13 + 64*KK3 + 155/108*pi16*Lp + 64*pi16*L8r - 128*pi16*L6r - 136/9*
+         pi16*L5r + 256/9*pi16*L4r + 56/9*pi16*L3r - 368/9*pi16*L2r - 32/3*
+         pi16*L1r + 224/9*pi16*L0r - 2149/1296*pi16^2 + 13/54*pi^2*pi16^2 + 49/
+         18*nf*epsb2^-1*pi16^2 + 80*nf*epsb1^-1*pi16*L8r - 48*nf*epsb1^-1*pi16
+         *L6r - 88/3*nf*epsb1^-1*pi16*L5r + 104/3*nf*epsb1^-1*pi16*L4r + 104/3
+         *nf*epsb1^-1*pi16*L3r - 16/3*nf*epsb1^-1*pi16*L2r - 64/3*nf*epsb1^-1*
+         pi16*L1r + 112/3*nf*epsb1^-1*pi16*L0r - 25/36*nf*epsb1^-1*pi16^2 - 83/
+         36*nf*Lp^2 - 64*nf*L8r*Lp - 1024*nf*L6r*L8r + 40/3*nf*L5r*Lp + 512*nf
+         *L4r*L8r - 8*nf*L3r*Lp - 80/3*nf*L0r*Lp + 64*nf*KK40 + 64*nf*KK26 - 
+         192*nf*KK18 + 64*nf*KK14 - 623/216*nf*pi16*Lp - 32*nf*pi16*L8r + 64/9
+         *nf*pi16*L5r - 8/3*nf*pi16*L3r - 80/9*nf*pi16*L0r - 10763/5184*nf*
+         pi16^2 - 19/18*nf^2*epsb2^-1*pi16^2 + 64/3*nf^2*epsb1^-1*pi16*L6r - 
+         32*nf^2*epsb1^-1*pi16*L4r + 32/3*nf^2*epsb1^-1*pi16*L2r + 128/3*nf^2*
+         epsb1^-1*pi16*L1r + 107/216*nf^2*epsb1^-1*pi16^2 + 29/36*nf^2*Lp^2 + 
+         229/216*nf^2*pi16*Lp + 1645/1728*nf^2*pi16^2 + 1/27*nf^2*pi^2*pi16^2
+          )
+
+       + (ss-uu)^2 * (  - 10/3*nf^-1*epsb1^-1*pi16*L3r - 10/3*nf^-1*epsb1^-1*
+         pi16*L0r + 10/3*nf^-1*L3r*Lp + 10/3*nf^-1*L0r*Lp + 28/9*nf^-1*pi16*
+         L3r + 28/9*nf^-1*pi16*L0r + 7/96*epsb2^-1*pi16^2 + 2/3*epsb1^-1*pi16*
+         L5r - 8/3*epsb1^-1*pi16*L4r - 4/3*epsb1^-1*pi16*L3r + 4/3*epsb1^-1*
+         pi16*L2r - 4/3*epsb1^-1*pi16*L0r + 77/3456*epsb1^-1*pi16^2 - 7/96*
+         Lp^2 - 2/3*L5r*Lp + 8/3*L4r*Lp + 4/3*L3r*Lp - 4/3*L2r*Lp + 4/3*L0r*Lp
+          + 4*KK31 + 2*KK11 + 2*KK7 + 8*KK5 - 137/1728*pi16*Lp - 5/9*pi16*L5r
+          + 20/9*pi16*L4r + 19/9*pi16*L3r - 31/9*pi16*L2r - 10/3*pi16*L1r + 13/
+         9*pi16*L0r - 1091/20736*pi16^2 - 11/1728*pi^2*pi16^2 - 1/72*nf*
+         epsb2^-1*pi16^2 + 1/3*nf*epsb1^-1*pi16*L5r + 2*nf*epsb1^-1*pi16*L3r
+          + 4/3*nf*epsb1^-1*pi16*L0r - 5/288*nf*epsb1^-1*pi16^2 + 1/72*nf*Lp^2
+          - 1/3*nf*L5r*Lp - 2*nf*L3r*Lp - 4/3*nf*L0r*Lp + 8*nf*KK18 + 4*nf*KK8
+          + 23/864*nf*pi16*Lp - 4/9*nf*pi16*L5r - 11/6*nf*pi16*L3r - 13/9*nf*
+         pi16*L0r + 289/10368*nf*pi16^2 + 1/288*nf*pi^2*pi16^2 - 11/288*nf^2*
+         epsb2^-1*pi16^2 - 23/864*nf^2*epsb1^-1*pi16^2 + 11/288*nf^2*Lp^2 + 29/
+         216*nf^2*pi16*Lp + 421/3456*nf^2*pi16^2 - 1/108*nf^2*pi^2*pi16^2 )
+
+       + tt * ( 3/8*nf^-2*epsb2^-1*pi16^2 - 7/16*nf^-2*epsb1^-1*pi16^2 - 3/
+         8*nf^-2*Lp^2 + 3/4*nf^-2*pi16^2 + 3/8*nf^-1*epsb2^-1*pi16^2 - 2*nf^-1
+         *epsb1^-1*pi16*L3r - 2*nf^-1*epsb1^-1*pi16*L0r - 7/16*nf^-1*epsb1^-1*
+         pi16^2 - 3/8*nf^-1*Lp^2 + 8*nf^-1*L3r*Lp + 8*nf^-1*L0r*Lp - 8*nf^-1*
+         pi16*L3r - 8*nf^-1*pi16*L0r + 3/4*nf^-1*pi16^2 + 45/16*epsb2^-1*
+         pi16^2 + 12*epsb1^-1*pi16*L8r - 48*epsb1^-1*pi16*L6r + 14/3*epsb1^-1*
+         pi16*L5r - 44/3*epsb1^-1*pi16*L4r + 50/3*epsb1^-1*pi16*L3r - 272/3*
+         epsb1^-1*pi16*L2r - 164/3*epsb1^-1*pi16*L1r + 98/3*epsb1^-1*pi16*L0r
+          - 1/432*epsb1^-1*pi16^2 - 43/16*Lp^2 - 12*L8r*Lp + 48*L6r*Lp - 14/3*
+         L5r*Lp + 64*L5r*L8r - 32*L5r^2 + 32/3*L4r*Lp - 32/3*L3r*Lp + 248/3*
+         L2r*Lp + 176/3*L1r*Lp - 80/3*L0r*Lp + 32*KK37 - 16*KK33 - 32*KK28 - 
+         16*KK23 - 16*KK19 + 64*KK17 - 32*KK13 - 96*KK3 - 743/216*pi16*Lp - 12
+         *pi16*L8r + 48*pi16*L6r - 26/9*pi16*L5r + 32/9*pi16*L4r - 38/9*pi16*
+         L3r + 512/9*pi16*L2r + 80/9*pi16*L1r - 272/9*pi16*L0r - 853/1296*
+         pi16^2 - 91/432*pi^2*pi16^2 - 161/144*nf*epsb2^-1*pi16^2 - 4*nf*
+         epsb1^-1*pi16*L8r - 14/3*nf*epsb1^-1*pi16*L5r - 4*nf*epsb1^-1*pi16*
+         L4r - 34/3*nf*epsb1^-1*pi16*L3r + 2*nf*epsb1^-1*pi16*L2r + 8*nf*
+         epsb1^-1*pi16*L1r - 28*nf*epsb1^-1*pi16*L0r - 791/1728*nf*epsb1^-1*
+         pi16^2 + 85/72*nf*Lp^2 + 8*nf*L8r*Lp + 20/3*nf*L5r*Lp + 128*nf*L5r*
+         L6r - 64*nf*L4r*L5r + 4/3*nf*L3r*Lp + 24*nf*L0r*Lp - 16*nf*KK20 + 128
+         *nf*KK18 - 64*nf*KK14 + 317/108*nf*pi16*Lp + 8*nf*pi16*L8r + 8/9*nf*
+         pi16*L5r + 16/9*nf*pi16*L3r + 8*nf*pi16*L0r + 1837/3456*nf*pi16^2 + 
+         35/216*nf*pi^2*pi16^2 + 77/144*nf^2*epsb2^-1*pi16^2 + 8*nf^2*epsb1^-1
+         *pi16*L6r + 4*nf^2*epsb1^-1*pi16*L4r - 4*nf^2*epsb1^-1*pi16*L2r - 16*
+         nf^2*epsb1^-1*pi16*L1r + 3/64*nf^2*epsb1^-1*pi16^2 - 17/36*nf^2*Lp^2
+          - 445/432*nf^2*pi16*Lp - 3865/10368*nf^2*pi16^2 - 5/72*nf^2*pi^2*
+         pi16^2 )
+
+       + tt*(ss-uu)^2 * ( 5/96*epsb2^-1*pi16^2 + 5/24*epsb1^-1*pi16*L3r - 25/12
+         *epsb1^-1*pi16*L2r - 5/6*epsb1^-1*pi16*L1r + 5/6*epsb1^-1*pi16*L0r - 
+         29/6912*epsb1^-1*pi16^2 - 5/96*Lp^2 - 5/24*L3r*Lp + 25/12*L2r*Lp + 5/
+         6*L1r*Lp - 5/6*L0r*Lp - 4*KK5 + 3*KK1 - 307/3456*pi16*Lp - 7/36*pi16*
+         L3r + 35/18*pi16*L2r + 7/9*pi16*L1r - 7/9*pi16*L0r + 71/41472*pi16^2
+          - 19/3456*pi^2*pi16^2 + 1/768*nf*epsb2^-1*pi16^2 - 23/24*nf*epsb1^-1
+         *pi16*L3r - 7/12*nf*epsb1^-1*pi16*L0r + 5/13824*nf*epsb1^-1*pi16^2 - 
+         1/768*nf*Lp^2 + 23/24*nf*L3r*Lp + 7/12*nf*L0r*Lp - 65/6912*nf*pi16*Lp
+          + 17/18*nf*pi16*L3r + 4/9*nf*pi16*L0r - 5299/165888*nf*pi16^2 + 11/
+         3456*nf*pi^2*pi16^2 + 5/384*nf^2*epsb2^-1*pi16^2 + 35/13824*nf^2*
+         epsb1^-1*pi16^2 - 5/384*nf^2*Lp^2 - 203/6912*nf^2*pi16*Lp - 1933/
+         165888*nf^2*pi16^2 - 1/3456*nf^2*pi^2*pi16^2 )
+
+       + tt^2 * (  - 10/3*nf^-1*epsb1^-1*pi16*L3r - 10/3*nf^-1*epsb1^-1*
+         pi16*L0r + 10/3*nf^-1*L3r*Lp + 10/3*nf^-1*L0r*Lp + 28/9*nf^-1*pi16*
+         L3r + 28/9*nf^-1*pi16*L0r - 101/96*epsb2^-1*pi16^2 - 2*epsb1^-1*pi16*
+         L5r + 8*epsb1^-1*pi16*L4r - 6*epsb1^-1*pi16*L3r + 40*epsb1^-1*pi16*
+         L2r + 56/3*epsb1^-1*pi16*L1r - 16*epsb1^-1*pi16*L0r + 1/3456*epsb1^-1
+         *pi16^2 + 101/96*Lp^2 + 2*L5r*Lp - 8*L4r*Lp + 6*L3r*Lp - 40*L2r*Lp - 
+         56/3*L1r*Lp + 16*L0r*Lp - 4*KK31 + 16*KK28 - 16*KK17 + 8*KK13 + 2*
+         KK11 + 2*KK7 + 8*KK5 + 48*KK3 + 2867/1728*pi16*Lp + 5/3*pi16*L5r - 20/
+         3*pi16*L4r + 3*pi16*L3r - 31*pi16*L2r - 62/9*pi16*L1r + 43/3*pi16*L0r
+          + 2705/20736*pi16^2 + 185/1728*pi^2*pi16^2 + 23/72*nf*epsb2^-1*
+         pi16^2 + nf*epsb1^-1*pi16*L5r + 8/3*nf*epsb1^-1*pi16*L3r + 8*nf*
+         epsb1^-1*pi16*L0r + 49/432*nf*epsb1^-1*pi16^2 - 23/72*nf*Lp^2 - nf*
+         L5r*Lp - 8/3*nf*L3r*Lp - 8*nf*L0r*Lp - 24*nf*KK18 + 16*nf*KK14 + 4*nf
+         *KK8 - 503/864*nf*pi16*Lp - 2/3*nf*pi16*L5r - 25/18*nf*pi16*L3r - 7/3
+         *nf*pi16*L0r + 59/288*nf*pi16^2 - 67/864*nf*pi^2*pi16^2 - 29/288*nf^2
+         *epsb2^-1*pi16^2 - 19/288*nf^2*epsb1^-1*pi16^2 + 29/288*nf^2*Lp^2 + 
+         49/216*nf^2*pi16*Lp + 445/5184*nf^2*pi16^2 + 1/72*nf^2*pi^2*pi16^2 )
+
+       + tt^3 * ( 5/32*epsb2^-1*pi16^2 + 5/8*epsb1^-1*pi16*L3r - 25/4*
+         epsb1^-1*pi16*L2r - 5/2*epsb1^-1*pi16*L1r + 5/2*epsb1^-1*pi16*L0r - 
+         29/2304*epsb1^-1*pi16^2 - 5/32*Lp^2 - 5/8*L3r*Lp + 25/4*L2r*Lp + 5/2*
+         L1r*Lp - 5/2*L0r*Lp - 4*KK5 - 8*KK3 + KK1 - 307/1152*pi16*Lp - 7/12*
+         pi16*L3r + 35/6*pi16*L2r + 7/3*pi16*L1r - 7/3*pi16*L0r + 71/13824*
+         pi16^2 - 19/1152*pi^2*pi16^2 - 55/2304*nf*epsb2^-1*pi16^2 - 5/24*nf*
+         epsb1^-1*pi16*L3r - 5/12*nf*epsb1^-1*pi16*L0r + 119/13824*nf*epsb1^-1
+         *pi16^2 + 55/2304*nf*Lp^2 + 5/24*nf*L3r*Lp + 5/12*nf*L0r*Lp + 13/768*
+         nf*pi16*Lp + 5/18*nf*pi16*L3r + 2/9*nf*pi16*L0r - 10313/165888*nf*
+         pi16^2 + 29/3456*nf*pi^2*pi16^2 + 5/1152*nf^2*epsb2^-1*pi16^2 + 1/
+         13824*nf^2*epsb1^-1*pi16^2 - 5/1152*nf^2*Lp^2 - 19/2304*nf^2*pi16*Lp
+          - 1015/165888*nf^2*pi16^2 + 1/3456*nf^2*pi^2*pi16^2 );
+
+id  C6P(ss?,tt?,uu?) =
+       +  ( 9/4*nf^-3*epsb2^-1*pi16^2 - nf^-3*epsb1^-1*pi16^2 - 7/4*nf^-3*
+         Lp^2 - 3/2*nf^-3*pi16*Lp + 5/4*nf^-3*pi16^2 + 3/2*nf^-2*epsb2^-1*
+         pi16^2 + 64*nf^-2*epsb1^-1*pi16*L8r - 32*nf^-2*epsb1^-1*pi16*L5r + 48
+         *nf^-2*epsb1^-1*pi16*L3r + 48*nf^-2*epsb1^-1*pi16*L0r - 1/2*nf^-2*
+         epsb1^-1*pi16^2 - nf^-2*Lp^2 - 48*nf^-2*L8r*Lp + 24*nf^-2*L5r*Lp - 48
+         *nf^-2*L3r*Lp - 48*nf^-2*L0r*Lp - nf^-2*pi16*Lp - 48*nf^-2*pi16*L8r
+          + 16*nf^-2*pi16*L5r - 16*nf^-2*pi16*L3r - 16*nf^-2*pi16*L0r + 1/2*
+         nf^-2*pi16^2 - 1/2*nf^-1*epsb2^-1*pi16^2 - 32*nf^-1*epsb1^-1*pi16*L7r
+          - 32*nf^-1*epsb1^-1*pi16*L6r + 48*nf^-1*epsb1^-1*pi16*L4r - 16*nf^-1
+         *epsb1^-1*pi16*L2r - 64*nf^-1*epsb1^-1*pi16*L1r + 1/2*nf^-1*Lp^2 + 32
+         *nf^-1*L7r*Lp + 32*nf^-1*L6r*Lp - 48*nf^-1*L4r*Lp + 16*nf^-1*L2r*Lp
+          + 64*nf^-1*L1r*Lp + nf^-1*pi16*Lp + 32*nf^-1*pi16*L6r - 32*nf^-1*
+         pi16*L4r + 32*nf^-1*pi16*L1r + 3/4*nf^-1*pi16^2 + 1/2*epsb2^-1*pi16^2
+          + 16*epsb1^-1*pi16*L8r - 64*epsb1^-1*pi16*L6r - 8*epsb1^-1*pi16*L5r
+          + 64*epsb1^-1*pi16*L4r - 16*epsb1^-1*pi16*L2r - 64*epsb1^-1*pi16*L1r
+          - 1/2*epsb1^-1*pi16^2 - 1/2*Lp^2 - 16*L8r*Lp + 32*L6r*Lp - 1024*L6r*
+         L8r + 8*L5r*Lp + 512*L5r*L6r - 48*L4r*Lp + 512*L4r*L8r - 256*L4r*L5r
+          + 16*L2r*Lp + 64*L1r*Lp + 128*KK40 - 128*KK35 + 128*KK26 - 128*KK21
+          - 64*KK20 - 128*KK18 + 64*KK9 + 128*KK2 + pi16*Lp + 32*pi16*L6r - 32
+         *pi16*L4r + 32*pi16*L1r + 1/6*pi16^2 + 64*nf*epsb1^-1*pi16*L6r - 64*
+         nf*epsb1^-1*pi16*L4r + 64*nf*epsb1^-1*pi16*L1r - 64*nf*L6r*Lp - 2048*
+         nf*L6r^2 + 64*nf*L4r*Lp + 2048*nf*L4r*L6r - 512*nf*L4r^2 - 64*nf*L1r*
+         Lp + 384*nf*KK27 - 256*nf*KK22 + 128*nf*KK10 )
+
+       + (tt-uu)^2 * ( 1/24*epsb2^-1*pi16^2 + epsb1^-1*pi16*L5r + 2*epsb1^-1*
+         pi16*L0r + 5/96*epsb1^-1*pi16^2 - 1/24*Lp^2 - L5r*Lp - 2*L0r*Lp + 8*
+         KK29 + 4*KK15 - 7/48*pi16*Lp - pi16*L5r + pi16*L3r - 11/192*pi16^2 - 
+         1/288*pi^2*pi16^2 - 5/48*nf*epsb2^-1*pi16^2 + 4*nf*epsb1^-1*pi16*L2r
+          - 1/96*nf*epsb1^-1*pi16^2 + 5/48*nf*Lp^2 - 4*nf*L2r*Lp + 8*nf*KK16
+          + 1/16*nf*pi16*Lp + 7/64*nf*pi16^2 + 1/288*nf*pi^2*pi16^2 )
+
+       + ss * (  - 104/3*nf^-2*epsb1^-1*pi16*L3r - 104/3*nf^-2*epsb1^-1*
+         pi16*L0r + 104/3*nf^-2*L3r*Lp + 104/3*nf^-2*L0r*Lp + 152/9*nf^-2*pi16
+         *L3r + 152/9*nf^-2*pi16*L0r + nf^-1*epsb2^-1*pi16^2 - 24*nf^-1*
+         epsb1^-1*pi16*L4r + 32/3*nf^-1*epsb1^-1*pi16*L2r + 48*nf^-1*epsb1^-1*
+         pi16*L1r - 5/8*nf^-1*epsb1^-1*pi16^2 - 3/4*nf^-1*Lp^2 + 16*nf^-1*L4r*
+         Lp - 32/3*nf^-1*L2r*Lp - 48*nf^-1*L1r*Lp - 1/4*nf^-1*pi16*Lp + 16*
+         nf^-1*pi16*L4r - 8/9*nf^-1*pi16*L2r - 32*nf^-1*pi16*L1r + 25/16*nf^-1
+         *pi16^2 - 1/12*nf^-1*pi^2*pi16^2 + 1/18*epsb2^-1*pi16^2 + 32*epsb1^-1
+         *pi16*L8r - 16*epsb1^-1*pi16*L5r - 24*epsb1^-1*pi16*L4r + 64/3*
+         epsb1^-1*pi16*L3r + 32/3*epsb1^-1*pi16*L2r + 48*epsb1^-1*pi16*L1r + 8
+         *epsb1^-1*pi16*L0r - 8/27*epsb1^-1*pi16^2 + 7/36*Lp^2 - 24*L8r*Lp + 
+         12*L5r*Lp + 16*L4r*Lp - 256*L4r*L8r + 128*L4r*L5r - 64/3*L3r*Lp - 32/
+         3*L2r*Lp - 48*L1r*Lp - 8*L0r*Lp - 32*KK38 + 64*KK35 - 32*KK32 + 64*
+         KK21 + 32*KK20 + 128*KK18 - 64*KK9 - 192*KK2 + 5/18*pi16*Lp - 24*pi16
+         *L8r + 12*pi16*L5r + 16*pi16*L4r - 88/9*pi16*L3r - 8/9*pi16*L2r - 32*
+         pi16*L1r + 565/648*pi16^2 + 5/216*pi^2*pi16^2 - 37/72*nf*epsb2^-1*
+         pi16^2 + 48*nf*epsb1^-1*pi16*L6r - 24*nf*epsb1^-1*pi16*L4r + 16*nf*
+         epsb1^-1*pi16*L2r + 323/432*nf*epsb1^-1*pi16^2 + 37/72*nf*Lp^2 - 32*
+         nf*L6r*Lp + 16*nf*L4r*Lp - 512*nf*L4r*L6r + 256*nf*L4r^2 - 16*nf*L2r*
+         Lp + 128*nf*KK22 - 128*nf*KK10 - 31/24*nf*pi16*Lp - 32*nf*pi16*L6r + 
+         32*nf*pi16*L4r - 32*nf*pi16*L1r - 373/2592*nf*pi16^2 - 1/27*nf*pi^2*
+         pi16^2 )
+
+       + ss*(tt-uu)^2 * ( 1/48*epsb2^-1*pi16^2 + 1/2*epsb1^-1*pi16*L3r + 3/2*
+         epsb1^-1*pi16*L0r - 13/2304*epsb1^-1*pi16^2 - 1/48*Lp^2 - 1/2*L3r*Lp
+          - 3/2*L0r*Lp - 2*KK6 + 6*KK4 - 13/384*pi16*Lp - 5/12*pi16*L3r - 3/2*
+         pi16*L0r - 349/13824*pi16^2 + 1/1152*pi^2*pi16^2 - 5/384*nf*epsb2^-1*
+         pi16^2 + 19/2304*nf*epsb1^-1*pi16^2 + 5/384*nf*Lp^2 + 1/128*nf*pi16*
+         Lp - 437/13824*nf*pi16^2 + 5/1152*nf*pi^2*pi16^2 )
+
+       + ss^2 * ( 20/3*nf^-2*epsb1^-1*pi16*L3r + 20/3*nf^-2*epsb1^-1*pi16*
+         L0r - 20/3*nf^-2*L3r*Lp - 20/3*nf^-2*L0r*Lp - 56/9*nf^-2*pi16*L3r - 
+         56/9*nf^-2*pi16*L0r - 8/3*nf^-1*epsb1^-1*pi16*L2r - 8*nf^-1*epsb1^-1*
+         pi16*L1r + 8/3*nf^-1*L2r*Lp + 8*nf^-1*L1r*Lp + 20/9*nf^-1*pi16*L2r + 
+         8*nf^-1*pi16*L1r + 49/144*epsb2^-1*pi16^2 + 3*epsb1^-1*pi16*L5r - 44/
+         3*epsb1^-1*pi16*L3r - 8/3*epsb1^-1*pi16*L2r - 8*epsb1^-1*pi16*L1r - 
+         10/3*epsb1^-1*pi16*L0r + 103/864*epsb1^-1*pi16^2 - 49/144*Lp^2 - 3*
+         L5r*Lp + 44/3*L3r*Lp + 8/3*L2r*Lp + 8*L1r*Lp + 10/3*L0r*Lp + 16*KK32
+          - 8*KK29 - 32*KK18 + 4*KK15 + 16*KK9 + 96*KK2 - 115/144*pi16*Lp - 3*
+         pi16*L5r + 83/9*pi16*L3r + 20/9*pi16*L2r + 8*pi16*L1r + 4/9*pi16*L0r
+          - 1451/5184*pi16^2 - 17/864*pi^2*pi16^2 + 13/72*nf*epsb2^-1*pi16^2
+          + 16*nf*epsb1^-1*pi16*L4r - 20/3*nf*epsb1^-1*pi16*L2r - 32*nf*
+         epsb1^-1*pi16*L1r - 107/432*nf*epsb1^-1*pi16^2 - 13/72*nf*Lp^2 - 16*
+         nf*L4r*Lp + 20/3*nf*L2r*Lp + 32*nf*L1r*Lp + 8*nf*KK16 + 32*nf*KK10 + 
+         11/24*nf*pi16*Lp - 16*nf*pi16*L4r + 8/9*nf*pi16*L2r + 32*nf*pi16*L1r
+          + 625/2592*nf*pi16^2 - 25/864*nf*pi^2*pi16^2 )
+
+       + ss^3 * (  - 1/48*epsb2^-1*pi16^2 + 17/6*epsb1^-1*pi16*L3r + 11/6*
+         epsb1^-1*pi16*L0r + 13/2304*epsb1^-1*pi16^2 + 1/48*Lp^2 - 17/6*L3r*Lp
+          - 11/6*L0r*Lp + 2*KK6 + 2*KK4 - 16*KK2 + 13/384*pi16*Lp - 97/36*pi16
+         *L3r - 29/18*pi16*L0r + 349/13824*pi16^2 - 1/1152*pi^2*pi16^2 - 55/
+         384*nf*epsb2^-1*pi16^2 + 8/3*nf*epsb1^-1*pi16*L2r + 8*nf*epsb1^-1*
+         pi16*L1r + 5/2304*nf*epsb1^-1*pi16^2 + 55/384*nf*Lp^2 - 8/3*nf*L2r*Lp
+          - 8*nf*L1r*Lp + 101/384*nf*pi16*Lp - 20/9*nf*pi16*L2r - 8*nf*pi16*
+         L1r - 115/13824*nf*pi16^2 + 19/1152*nf*pi^2*pi16^2 );
+
+id  B4S(ss?,tmu?) =
+       + Jb(ss)* (  - 1/2*nf^-1 - 1/12*tmu - 1/4*ss + 1/48*ss*tmu + 1/16*
+         ss^2 + 1/12*nf*tmu - 1/48*nf*ss*tmu + 1/16*nf*ss^2 );
+
+id  B4T(tt?) =
+       + Jb(tt)* (  - 1/2 + 1/2*tt - 1/8*tt^2 );
+
+id  C4S(ss?) =
+       + Jb(ss)* ( 1/2*nf^-2 + 1/8*ss^2 );
+
+id  C4T(tt?) =
+       + Jb(tt)* ( 1/2 - 1/2*tt + 1/8*tt^2 );
+
+id  B6S(ss?,tmu?) =
+       + Jb(ss)* (  - 3*nf^-2*Lp - 1/4*nf^-2*Lp*ss + 5*nf^-2*pi16 - 1/8*
+         nf^-2*pi16*tmu + 1/2*nf^-2*pi16*ss - 5/2*nf^-1*Lp - 1/4*nf^-1*Lp*ss
+          - 48*nf^-1*L8r + 16*nf^-1*L5r - 80/3*nf^-1*L3r + 64/3*nf^-1*L3r*ss
+          - 20/3*nf^-1*L3r*ss^2 - 80/3*nf^-1*L0r + 64/3*nf^-1*L0r*ss - 20/3*
+         nf^-1*L0r*ss^2 + 4*nf^-1*pi16 - 1/8*nf^-1*pi16*tmu + 1/2*nf^-1*pi16*
+         ss + 19/18*Lp - 1/6*Lp*tmu - 97/72*Lp*ss - 1/24*Lp*ss*tmu + 31/36*Lp*
+         ss^2 + 1/48*Lp*ss^2*tmu - 19/144*Lp*ss^3 - 16*L8r - 4*L8r*ss + 16*L6r
+         *ss + 8*L5r - 4/3*L5r*tmu - 2*L5r*ss + 1/3*L5r*ss*tmu + L5r*ss^2 + 16/
+         3*L4r*tmu - 4/3*L4r*ss*tmu - 4*L4r*ss^2 - 32/3*L3r + 8*L3r*ss + 2/3*
+         L3r*ss*tmu - 2*L3r*ss^2 - 1/6*L3r*ss^2*tmu - 1/3*L3r*ss^3 + 32/3*L2r*
+         ss + 4/3*L2r*ss*tmu - 28/3*L2r*ss^2 - 1/3*L2r*ss^2*tmu + 8/3*L2r*ss^3
+          + 16/3*L1r*ss - 8/3*L1r*ss*tmu - 8/3*L1r*ss^2 + 2/3*L1r*ss^2*tmu + 4/
+         3*L1r*ss^3 - 16/3*L0r - 4/3*L0r*ss - 4/3*L0r*ss*tmu + 8/3*L0r*ss^2 + 
+         1/3*L0r*ss^2*tmu - L0r*ss^3 + 2/9*pi16 + 3/8*pi16*tmu + 13/16*pi16*ss
+          + 155/864*pi16*ss*tmu - 55/72*pi16*ss^2 - 43/1728*pi16*ss^2*tmu + 29/
+         192*pi16*ss^3 + 5/18*nf*Lp + 1/12*nf*Lp*tmu + 17/72*nf*Lp*ss + 1/16*
+         nf*Lp*ss*tmu + 13/144*nf*Lp*ss^2 - 1/48*nf*Lp*ss^2*tmu - 1/96*nf*Lp*
+         ss^3 + 8*nf*L8r*ss + 4/3*nf*L5r*tmu - 4*nf*L5r*ss - 1/3*nf*L5r*ss*tmu
+          + nf*L5r*ss^2 + 16/3*nf*L3r*ss - 2/3*nf*L3r*ss*tmu - 14/3*nf*L3r*
+         ss^2 + 1/6*nf*L3r*ss^2*tmu + 4/3*nf*L3r*ss^3 + 8/3*nf*L0r*ss + 4/3*nf
+         *L0r*ss*tmu - 4/3*nf*L0r*ss^2 - 1/3*nf*L0r*ss^2*tmu + 2/3*nf*L0r*ss^3
+          - 5/6*nf*pi16 + 59/144*nf*pi16*tmu - 1/24*nf*pi16*ss - 253/864*nf*
+         pi16*ss*tmu - 19/288*nf*pi16*ss^2 + 47/1728*nf*pi16*ss^2*tmu + 1/288*
+         nf*pi16*ss^3 - 1/12*nf^2*Lp*tmu - 5/36*nf^2*Lp*ss + 1/48*nf^2*Lp*ss*
+         tmu + 7/144*nf^2*Lp*ss^2 - 5/144*nf^2*Lp*ss^3 - 11/48*nf^2*pi16*tmu
+          + 5/12*nf^2*pi16*ss + 17/216*nf^2*pi16*ss*tmu - 35/144*nf^2*pi16*
+         ss^2 - 1/432*nf^2*pi16*ss^2*tmu + 17/576*nf^2*pi16*ss^3 )
+
+       + K1(ss)* ( 1/24 + nf^-2 + 1/8*nf^-2*ss + 3/4*nf^-1 + 1/8*nf^-1*ss
+          + 5/48*tmu + 31/144*ss + 1/48*ss*tmu - 3/32*ss^2 - 5/576*ss^2*tmu + 
+         11/576*ss^3 - 1/6*nf + 1/24*nf*tmu - 1/144*nf*ss - 1/32*nf*ss*tmu + 
+         11/288*nf*ss^2 + 1/144*nf*ss^2*tmu - 1/96*nf*ss^3 - 1/48*nf^2*tmu + 1/
+         12*nf^2*ss - 1/96*nf^2*ss*tmu - 17/288*nf^2*ss^2 + 1/576*nf^2*ss^2*
+         tmu + 1/576*nf^2*ss^3 )
+
+       + K2(ss)* ( 1/2*nf^-2 + 1/2*nf^-1 - 1/36*tmu + 3/16*ss + 1/72*ss*
+         tmu - 9/32*ss^2 - 1/576*ss^2*tmu + 3/64*ss^3 + 1/18*nf*tmu - 1/36*nf*
+         ss*tmu - 3/32*nf*ss^2 + 1/288*nf*ss^2*tmu + 1/64*nf*ss^3 - 1/36*nf^2*
+         tmu + 1/72*nf^2*ss*tmu - 1/576*nf^2*ss^2*tmu + 1/64*nf^2*ss^3 )
+
+       + K3(ss)* (  - 1/36 - 2/3*nf^-2 + 1/12*nf^-2*tmu - 1/12*nf^-2*ss - 
+         1/2*nf^-1 + 1/12*nf^-1*tmu - 1/12*nf^-1*ss - 7/72*tmu + 1/18*ss - 1/
+         48*ss*tmu - 1/48*ss^2 + 1/9*nf - 1/72*nf*tmu + 1/24*nf*ss + 1/24*nf*
+         ss*tmu + 1/36*nf^2*tmu - 1/18*nf^2*ss - 1/48*nf^2*ss*tmu + 1/48*nf^2*
+         ss^2 )
+
+       + K4(ss)* ( 1/2*nf^-2*tmu + 1/2*nf^-1*tmu - 1/6*tmu + 1/12*nf*tmu
+          + 1/12*nf^2*tmu );
+
+id  B6T(tt?) =
+       + Jb(tt)* (  - nf^-2*Lp + 1/2*nf^-2*Lp*tt + 2*nf^-2*pi16 - nf^-2*
+         pi16*tt - nf^-1*Lp + 1/2*nf^-1*Lp*tt + 2*nf^-1*pi16 - nf^-1*pi16*tt
+          - 65/18*Lp + 151/36*Lp*tt - 31/18*Lp*tt^2 + 19/72*Lp*tt^3 - 16*L8r
+          + 8*L8r*tt + 64*L6r - 32*L6r*tt + 4*L5r*tt - 2*L5r*tt^2 - 16*L4r*tt
+          + 8*L4r*tt^2 - 16/3*L3r + 16/3*L3r*tt - 8/3*L3r*tt^2 + 2/3*L3r*tt^3
+          + 128/3*L2r - 176/3*L2r*tt + 88/3*L2r*tt^2 - 16/3*L2r*tt^3 + 64/3*
+         L1r - 64/3*L1r*tt + 32/3*L1r*tt^2 - 8/3*L1r*tt^3 - 16*L0r + 24*L0r*tt
+          - 12*L0r*tt^2 + 2*L0r*tt^3 + 55/18*pi16 - 27/8*pi16*tt + 55/36*pi16*
+         tt^2 - 29/96*pi16*tt^3 + 7/9*nf*Lp - 31/36*nf*Lp*tt + 11/36*nf*Lp*
+         tt^2 - 5/144*nf*Lp*tt^3 + 5/9*nf*pi16 - 29/72*nf*pi16*tt - 1/18*nf*
+         pi16*tt^2 + 17/288*nf*pi16*tt^3 )
+
+       + K1(tt)* ( 5/12 + 1/2*nf^-2 - 1/4*nf^-2*tt + 1/2*nf^-1 - 1/4*nf^-1
+         *tt - 31/72*tt + 3/16*tt^2 - 11/288*tt^3 + 1/12*nf + 1/72*nf*tt - 1/
+         16*nf*tt^2 + 5/288*nf*tt^3 )
+
+       + K2(tt)* ( 3/4 - 9/8*tt + 9/16*tt^2 - 3/32*tt^3 )
+
+       + K3(tt)* (  - 5/18 - 1/3*nf^-2 + 1/6*nf^-2*tt - 1/3*nf^-1 + 1/6*
+         nf^-1*tt + 1/18*tt + 1/24*tt^2 - 1/18*nf + 1/9*nf*tt - 1/24*nf*tt^2 )
+         ;
+
+id  C6S(ss?) =
+       + Jb(ss)* ( 7/2*nf^-3*Lp - 11/2*nf^-3*pi16 + 2*nf^-2*Lp + 48*nf^-2*
+         L8r - 16*nf^-2*L5r + 80/3*nf^-2*L3r - 64/3*nf^-2*L3r*ss + 20/3*nf^-2*
+         L3r*ss^2 + 80/3*nf^-2*L0r - 64/3*nf^-2*L0r*ss + 20/3*nf^-2*L0r*ss^2
+          - 3*nf^-2*pi16 - nf^-1*Lp + nf^-1*Lp*ss - 32*nf^-1*L6r + 32*nf^-1*
+         L4r - 16*nf^-1*L4r*ss - 32/3*nf^-1*L2r + 16/3*nf^-1*L2r*ss - 8/3*
+         nf^-1*L2r*ss^2 - 32*nf^-1*L1r + 32*nf^-1*L1r*ss - 8*nf^-1*L1r*ss^2 - 
+         7/4*nf^-1*pi16*ss + 1/3*Lp + 1/9*Lp*ss + 35/72*Lp*ss^2 - 1/18*Lp*ss^3
+          + 16*L8r*ss - 32*L6r - 8*L5r*ss + 2*L5r*ss^2 + 32*L4r - 16*L4r*ss + 
+         32/3*L3r*ss - 28/3*L3r*ss^2 + 8/3*L3r*ss^3 - 32/3*L2r + 16/3*L2r*ss
+          - 8/3*L2r*ss^2 - 32*L1r + 32*L1r*ss - 8*L1r*ss^2 + 16/3*L0r*ss - 8/3
+         *L0r*ss^2 + 4/3*L0r*ss^3 - 10/9*pi16 - 89/72*pi16*ss - 3/16*pi16*ss^2
+          + 19/288*pi16*ss^3 - 11/18*nf*Lp*ss + 19/72*nf*Lp*ss^2 - 5/18*nf*Lp*
+         ss^3 + 32*nf*L6r*ss - 32*nf*L4r*ss + 16*nf*L4r*ss^2 + 32/3*nf*L2r*ss
+          - 16/3*nf*L2r*ss^2 + 8/3*nf*L2r*ss^3 + 32*nf*L1r*ss - 32*nf*L1r*ss^2
+          + 8*nf*L1r*ss^3 + 35/18*nf*pi16*ss - 7/12*nf*pi16*ss^2 + 85/288*nf*
+         pi16*ss^3 )
+
+       + K1(ss)* (  - 1/4 - nf^-3 - 1/2*nf^-2 - 1/2*nf^-1*ss - 1/4*ss + 1/
+         72*ss^2 - 1/288*ss^3 + 5/12*nf*ss - 23/144*nf*ss^2 + 13/288*nf*ss^3 )
+
+       + K2(ss)* (  - 3/4*nf^-3 - 1/2*nf^-2 - 3/16*ss^2 + 1/32*ss^3 + 3/32
+         *nf*ss^3 )
+
+       + K3(ss)* ( 1/6 + 2/3*nf^-3 + 1/3*nf^-2 + 1/6*nf^-1*ss + 7/36*ss - 
+         1/24*ss^2 - 5/18*nf*ss + 1/24*nf*ss^2 );
+
+id  C6T(tt?) =
+       + Jb(tt)* ( nf^-1*Lp - 1/2*nf^-1*Lp*tt - 2*nf^-1*pi16 + nf^-1*pi16*
+         tt + 17/18*Lp - 37/36*Lp*tt + 7/18*Lp*tt^2 - 1/18*Lp*tt^3 + 16*L8r - 
+         8*L8r*tt - 4*L5r*tt + 2*L5r*tt^2 + 16/3*L3r - 16/3*L3r*tt + 8/3*L3r*
+         tt^2 - 2/3*L3r*tt^3 + 16*L0r - 24*L0r*tt + 12*L0r*tt^2 - 2*L0r*tt^3
+          + 1/6*pi16 - 13/72*pi16*tt - 1/12*pi16*tt^2 + 19/288*pi16*tt^3 - 7/9
+         *nf*Lp + 31/36*nf*Lp*tt - 11/36*nf*Lp*tt^2 + 5/144*nf*Lp*tt^3 - 5/9*
+         nf*pi16 + 29/72*nf*pi16*tt + 1/18*nf*pi16*tt^2 - 17/288*nf*pi16*tt^3
+          ) + K1(tt)* ( 1/12 - 1/2*nf^-1 + 1/4*nf^-1*tt - 11/72*tt + 1/16*tt^2
+          - 1/288*tt^3 - 1/12*nf - 1/72*nf*tt + 1/16*nf*tt^2 - 5/288*nf*tt^3 )
+
+       + K2(tt)* (  - 1/4 + 3/8*tt - 3/16*tt^2 + 1/32*tt^3 )
+
+       + K3(tt)* (  - 1/18 + 1/3*nf^-1 - 1/6*nf^-1*tt + 1/9*tt - 1/24*tt^2
+          + 1/18*nf - 1/9*nf*tt + 1/24*nf*tt^2 );

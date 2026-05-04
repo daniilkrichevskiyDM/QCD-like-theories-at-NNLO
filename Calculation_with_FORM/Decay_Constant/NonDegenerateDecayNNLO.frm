@@ -14,9 +14,9 @@ symbol rF0r,rF1r,rF2r,rF3r,rF4r, rF0, rF1, rF2, rF3, rF4;
 #include symbols.hf
 #include setexternal.hf
 
-#define ext1 "3"
-#define ext2 "3"
-#define SX4 "SO4"
+#define ext1 "1"
+#define ext2 "1"
+#define SX4 "SP4"
 
 *firstly, we upload the mass diagrams
 load ../Mass/NewDiagrams/save/MM1_`ext1'`ext2'`SX4'.sav;
@@ -194,14 +194,24 @@ id Ab(mp2?) = -mp2*L(mp2) - 2*mp2*pi16*logmu;
 
 
 #if `SX4'==SP4
-id KK24 = -((8* KK19 *(RatioR^2+1)+32* KK20+32* KK21* RatioR^2+32*KK21+128*KK22+8 *KK23 *RatioR^2+8 *KK23-rF1)/(32 *RatioR^2));
 
-id KK20 = 1/32*(-8*KK19*RatioR^2-8*KK19-32*KK21*RatioR^2-32*KK21-128*KK22+8*KK23*RatioR^2-8*KK23+rF0);
+id KK20 = (1/32)*(-(8*KK19) - 32*KK21 - 128*KK22 - 8*KK23 + rF0);
 
-id rF0 = rF0r + gamma20*eps^(-2)+2*gamma10*(log4pi-2*logmu)+2*gamma20*(log4pi-2*logmu)^2
-+1/eps*(gamma10+2*log4pi*gamma20-4*gamma20*logmu);
+#if ((`ext1'==1) || (`ext1'==2) || (`ext1'==4) || (`ext1'==5))
+id KK21 = (1/32)*(-(8*KK19) + 8*KK23 + rF1);
+#endif
+
+#if `ext1'==3
+id KK21 = (1/32)*(-(8*KK19) - 8*KK23 - 32*KK24 + rF2);
+#endif
+
+
+
+id rF0 = rF0r + gamma20*eps^(-2)+2*gamma10*(log4pi-2*logmu)+2*gamma20*(log4pi-2*logmu)^2+1/eps*(gamma10+2*log4pi*gamma20-4*gamma20*logmu);
 
 id rF1 = rF1r + gamma21*eps^(-2)+2*gamma11*(log4pi-2*logmu)+2*gamma21*(log4pi-2*logmu)^2+1/eps*(gamma11+2*log4pi*gamma21-4*gamma21*logmu);
+
+id rF2 = rF2r + gamma22*eps^(-2)+2*gamma12*(log4pi-2*logmu)+2*gamma22*(log4pi-2*logmu)^2+1/eps*(gamma12+2*log4pi*gamma22-4*gamma22*logmu);
 
 #endif
 
@@ -336,11 +346,14 @@ id H1dd(m1?,mdd,muu,m4?) = H1dd(m1,muu,mdd,m4);
 id logmu = 0;
 .sort
 G NNLOdecayNormalized = F^3*NNLOdecay;
+
+G FullDecay =  LOdecay + NLOdecay + NNLOdecay;
 .sort
 b F,mp2, eps, ABar, pi16, RatioR;
 
 *b eps;
 
-
-Print LOdecay, NLOdecay,  NNLOdecayNormalized;
+*Print LOdecay, NLOdecay,  NNLOdecayNormalized;
+Print FullDecay;
+*Print NNLOdecay;
 .end

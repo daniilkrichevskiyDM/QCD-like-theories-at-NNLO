@@ -1,0 +1,89 @@
+id gamma2NNLO1 = (4*gamma2NNLO5)/3 - (41*pi16^2)/1152; 
+id gamma2NNLO3 = (13*pi16^2)/1152 - gamma2NNLO5/3; 
+id gamma2NNLO4 = (5*pi16^2)/128 + 2*gamma2NNLO2; 
+id gamma2NNLO6 = (11*pi16^2)/96 + 6*gamma2NNLO2; 
+id gamma2NNLO27 = -((29*pi16^2)/24576) - gamma2NNLO10/3 + 
+        gamma2NNLO18/6 - gamma2NNLO2/6 + gamma2NNLO20/12 + 
+        gamma2NNLO21/6 + (2*gamma2NNLO22)/3 - gamma2NNLO26/6 + 
+        gamma2NNLO35/6 - gamma2NNLO40/6 - gamma2NNLO9/12; 
+id gamma2NNLO28 = (55*pi16^2)/2304 - gamma2NNLO11/4 - 
+        gamma2NNLO13/2 - 2*gamma2NNLO14 + gamma2NNLO17 + 
+        2*gamma2NNLO18 - gamma2NNLO7/4 - gamma2NNLO8; 
+id gamma2NNLO29 = pi16^2/48 - gamma2NNLO15/2 - 2*gamma2NNLO16; 
+id gamma2NNLO31 = (31*pi16^2)/1152 - gamma2NNLO11/2 - 
+        4*gamma2NNLO18 - 2*gamma2NNLO5 - gamma2NNLO7/2 - 
+        2*gamma2NNLO8;
+id gamma2NNLO32 = -((77*pi16^2)/2304) - 
+        4*gamma2NNLO10 - gamma2NNLO15/2 - 2*gamma2NNLO16 + 
+        2*gamma2NNLO18 - 6*gamma2NNLO2 - gamma2NNLO9; 
+id gamma2NNLO33 = (331*pi16^2)/4608 + gamma2NNLO11/2 - 
+        gamma2NNLO13 - 4*gamma2NNLO14 + 2*gamma2NNLO17 + 
+        12*gamma2NNLO18 - gamma2NNLO19 - 2*gamma2NNLO20 - 
+        gamma2NNLO23 + 2*gamma2NNLO37 + 2*gamma2NNLO5 + 
+        gamma2NNLO7/2 + 2*gamma2NNLO8;
+id gamma2NNLO38 = 
+      (43*pi16^2)/2304 - 4*gamma2NNLO10 + gamma2NNLO15/2 + 
+        2*gamma2NNLO16 + 2*gamma2NNLO18 + gamma2NNLO20 + 
+        2*gamma2NNLO21 + 8*gamma2NNLO22 + 2*gamma2NNLO35 - 
+        gamma2NNLO9;
+id gamma2NNLO39 = (1369*pi16^2)/27648 - 
+        gamma2NNLO13/3 - (4*gamma2NNLO14)/3 + gamma2NNLO17 + 
+        4*gamma2NNLO18 - gamma2NNLO25 - (4*gamma2NNLO26)/3 + 
+        (2*gamma2NNLO37)/3 - (4*gamma2NNLO40)/3 + (2*gamma2NNLO5)/9; 
+id gamma1NNLO1 = (4*gamma1NNLO5)/3 + 
+        (-23*pi16^2 + 1152*L0r*pi16 + 2880*L1r*pi16 + 
+      7200*L2r*pi16 + 
+             5904*L3r*pi16)/10368;
+id gamma1NNLO3 = 
+      (7*pi16^2 + 4608*L0r*pi16 - 5760*L1r*pi16 - 14400*L2r*pi16 + 
+             2016*L3r*pi16)/20736 - gamma1NNLO5/3; 
+id gamma1NNLO4 = 2*gamma1NNLO2 + (1/384)*(-pi16^2 - 160*L0r*pi16 - 
+             768*L1r*pi16 - 256*L2r*pi16 - 160*L3r*pi16); 
+id gamma1NNLO6 = 6*gamma1NNLO2 + (-11*pi16^2 - 2304*L0r*pi16 - 
+             27648*L1r*pi16 - 9216*L2r*pi16 - 4608*L3r*pi16)/4608; 
+id gamma1NNLO27 = -(gamma1NNLO10/3) + gamma1NNLO18/6 - 
+        gamma1NNLO2/6 + gamma1NNLO20/12 + gamma1NNLO21/6 + 
+        (2*gamma1NNLO22)/3 - gamma1NNLO26/6 + gamma1NNLO35/6 - 
+        gamma1NNLO40/6 - gamma1NNLO9/12 + 
+        (1/3072)*(3*pi16^2 - 48*L0r*pi16 - 128*L1r*pi16 + 
+             96*L2r*pi16 - 48*L3r*pi16 + 160*L4r*pi16 + 
+      64*L5r*pi16 - 
+             192*L6r*pi16 + 64*L7r*pi16 - 128*L8r*pi16); 
+id gamma1NNLO28 = -(gamma1NNLO11/4) - gamma1NNLO13/2 - 
+        2*gamma1NNLO14 + gamma1NNLO17 + 2*gamma1NNLO18 - 
+        gamma1NNLO7/4 - gamma1NNLO8 + (241*pi16^2 - 14976*L0r*pi16 - 
+             9216*L1r*pi16 - 13824*L2r*pi16 - 5760*L3r*pi16 - 
+             9216*L4r*pi16 - 2304*L5r*pi16)/27648; 
+id gamma1NNLO29 = -(gamma1NNLO15/2) - 2*gamma1NNLO16 + 
+        (1/256)*(-pi16^2 - 64*L0r*pi16 - 256*L2r*pi16 - 
+      32*L5r*pi16); 
+id gamma1NNLO31 = -(gamma1NNLO11/2) - 4*gamma1NNLO18 - 
+        2*gamma1NNLO5 - gamma1NNLO7/2 - 2*gamma1NNLO8 + 
+        (137*pi16^2 + 384*L0r*pi16 - 1536*L2r*pi16 - 1152*L3r*pi16 + 
+             3072*L4r*pi16 - 1536*L5r*pi16)/4608; 
+id gamma1NNLO32 = -4*gamma1NNLO10 - gamma1NNLO15/2 - 
+        2*gamma1NNLO16 + 2*gamma1NNLO18 - 6*gamma1NNLO2 - 
+        gamma1NNLO9 + (149*pi16^2 - 144*L0r*pi16 + 32832*L1r*pi16 + 
+             4032*L2r*pi16 + 5616*L3r*pi16 - 13824*L4r*pi16 - 
+             1728*L5r*pi16)/6912;
+id gamma1NNLO33 = 
+      gamma1NNLO11/2 - gamma1NNLO13 - 4*gamma1NNLO14 + 
+        2*gamma1NNLO17 + 12*gamma1NNLO18 - gamma1NNLO19 - 
+        2*gamma1NNLO20 - gamma1NNLO23 + 2*gamma1NNLO37 + 
+        2*gamma1NNLO5 + gamma1NNLO7/2 + 2*gamma1NNLO8 + 
+        (1/3072)*(-263*pi16^2 - 5440*L0r*pi16 - 12544*L1r*pi16 - 
+             3840*L2r*pi16 - 1856*L3r*pi16 + 768*L4r*pi16 - 
+             384*L5r*pi16 - 3072*L6r*pi16 + 768*L8r*pi16); 
+id gamma1NNLO38 = -4*gamma1NNLO10 + gamma1NNLO15/2 + 
+        2*gamma1NNLO16 + 2*gamma1NNLO18 + gamma1NNLO20 + 
+        2*gamma1NNLO21 + 8*gamma1NNLO22 + 2*gamma1NNLO35 - 
+        gamma1NNLO9 + (1/13824)*(85*pi16^2 - 34560*L1r*pi16 + 
+             12672*L2r*pi16 - 5760*L3r*pi16 - 8640*L4r*pi16 - 
+             3456*L5r*pi16 + 41472*L6r*pi16 + 13824*L8r*pi16); 
+id gamma1NNLO39 = -(gamma1NNLO13/3) - (4*gamma1NNLO14)/3 + 
+        gamma1NNLO17 + 4*gamma1NNLO18 - gamma1NNLO25 - 
+        (4*gamma1NNLO26)/3 + (2*gamma1NNLO37)/3 - (4*gamma1NNLO40)/3 + 
+        (2*gamma1NNLO5)/9 + (1/31104)*(-1087*pi16^2 - 10656*L0r*pi16 - 
+             52992*L1r*pi16 - 27072*L2r*pi16 - 8928*L3r*pi16 + 
+             9504*L4r*pi16 - 5400*L5r*pi16 - 25920*L6r*pi16 - 
+             10368*L7r*pi16 + 16848*L8r*pi16);

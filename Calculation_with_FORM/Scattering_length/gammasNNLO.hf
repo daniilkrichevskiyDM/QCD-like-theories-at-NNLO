@@ -1,0 +1,78 @@
+id gamma2NNLO3 = -((1/(9216*(tt - 2)^3))*(-145*pi16^2*tt^3 + 
+             940*pi16^2*tt^2 - 3452*pi16^2*tt - 123*pi16^2*ss^2*tt - 
+             123*pi16^2*uu^2*tt + 246*pi16^2*ss*uu*tt + 
+      6308*pi16^2 + 
+             124*pi16^2*ss^2 + 124*pi16^2*uu^2 - 248*pi16^2*ss*uu)); 
+id  gamma2NNLO2 = -((1/(9216*(ss - 2)^3))*(177*pi16^2*ss^3 - 
+             404*pi16^2*ss^2 + 272*pi16^2*ss + 3*pi16^2*tt^2*ss + 
+             3*pi16^2*uu^2*ss - 6*pi16^2*tt*uu*ss - 522*pi16^2 + 
+             96*pi16^2*tt^2 + 96*pi16^2*uu^2 - 192*pi16^2*tt*uu)); 
+id gamma1NNLO3 = -((1/(27648*(tt - 2)^3))*(-17*pi16^2*tt^3 - 
+             5760*L0r*pi16*tt^3 + 8640*L1r*pi16*tt^3 + 
+      21600*L2r*pi16*tt^3 - 
+             720*L3r*pi16*tt^3 + 127*pi16^2*tt^2 + 
+      5760*L0r*pi16*tt^2 - 
+             64512*L1r*pi16*tt^2 - 138240*L2r*pi16*tt^2 + 
+      8064*L3r*pi16*tt^2 - 
+             27648*L4r*pi16*tt^2 + 3658*pi16^2*tt - 
+      23*pi16^2*ss^2*tt + 
+             1152*L0r*pi16*ss^2*tt + 2880*L1r*pi16*ss^2*tt + 
+             7200*L2r*pi16*ss^2*tt + 5904*L3r*pi16*ss^2*tt - 
+      23*pi16^2*uu^2*tt + 
+             1152*L0r*pi16*uu^2*tt + 2880*L1r*pi16*uu^2*tt + 
+             7200*L2r*pi16*uu^2*tt + 5904*L3r*pi16*uu^2*tt + 
+      84096*L0r*pi16*tt + 
+             354816*L1r*pi16*tt + 354816*L2r*pi16*tt + 
+      24192*L3r*pi16*tt + 
+             23040*L4r*pi16*tt + 16128*L5r*pi16*tt + 
+      55296*L6r*pi16*tt - 
+             13824*L8r*pi16*tt + 46*pi16^2*ss*uu*tt - 
+      2304*L0r*pi16*ss*uu*tt - 
+             5760*L1r*pi16*ss*uu*tt - 14400*L2r*pi16*ss*uu*tt - 
+             11808*L3r*pi16*ss*uu*tt - 11520*pi16^2 + 
+      411*pi16^2*ss^2 + 
+             1152*L0r*pi16*ss^2 - 4608*L2r*pi16*ss^2 - 
+      3456*L3r*pi16*ss^2 + 
+             9216*L4r*pi16*ss^2 - 4608*L5r*pi16*ss^2 + 
+      411*pi16^2*uu^2 + 
+             1152*L0r*pi16*uu^2 - 4608*L2r*pi16*uu^2 - 
+      3456*L3r*pi16*uu^2 + 
+             9216*L4r*pi16*uu^2 - 4608*L5r*pi16*uu^2 - 
+      64512*L0r*pi16 - 
+             626688*L1r*pi16 - 442368*L2r*pi16 - 73728*L3r*pi16 + 
+             101376*L4r*pi16 - 57600*L5r*pi16 - 276480*L6r*pi16 - 
+             110592*L7r*pi16 + 179712*L8r*pi16 - 822*pi16^2*ss*uu - 
+             2304*L0r*pi16*ss*uu + 9216*L2r*pi16*ss*uu + 
+      6912*L3r*pi16*ss*uu - 
+             18432*L4r*pi16*ss*uu + 9216*L5r*pi16*ss*uu)); 
+id gamma1NNLO2 = -((1/(110592*(ss - 2)^3))*(-69*pi16^2*ss^3 - 
+             12672*L0r*pi16*ss^3 - 110592*L1r*pi16*ss^3 - 
+      36864*L2r*pi16*ss^3 - 
+             19584*L3r*pi16*ss^3 + 2600*pi16^2*ss^2 + 
+      11520*L0r*pi16*ss^2 + 
+             525312*L1r*pi16*ss^2 + 119808*L2r*pi16*ss^2 + 
+      89856*L3r*pi16*ss^2 - 
+             221184*L4r*pi16*ss^2 - 20736*L5r*pi16*ss^2 - 
+      6128*pi16^2*ss - 
+             75*pi16^2*tt^2*ss - 10368*L0r*pi16*tt^2*ss - 
+             3456*L3r*pi16*tt^2*ss - 75*pi16^2*uu^2*ss - 
+      10368*L0r*pi16*uu^2*
+               ss - 3456*L3r*pi16*uu^2*ss + 4608*L0r*pi16*ss - 
+             497664*L1r*pi16*ss - 331776*L2r*pi16*ss - 
+      87552*L3r*pi16*ss + 
+             580608*L4r*pi16*ss + 110592*L5r*pi16*ss - 
+      663552*L6r*pi16*ss - 
+             221184*L8r*pi16*ss + 150*pi16^2*tt*uu*ss + 
+      20736*L0r*pi16*tt*uu*
+               ss + 6912*L3r*pi16*tt*uu*ss + 5184*pi16^2 - 
+      216*pi16^2*tt^2 - 
+             13824*L0r*pi16*tt^2 - 55296*L2r*pi16*tt^2 - 
+      6912*L5r*pi16*tt^2 - 
+             216*pi16^2*uu^2 - 13824*L0r*pi16*uu^2 - 
+      55296*L2r*pi16*uu^2 - 
+             6912*L5r*pi16*uu^2 - 82944*L0r*pi16 - 221184*L1r*pi16 + 
+             165888*L2r*pi16 - 82944*L3r*pi16 + 276480*L4r*pi16 + 
+             110592*L5r*pi16 - 331776*L6r*pi16 + 110592*L7r*pi16 - 
+             221184*L8r*pi16 + 432*pi16^2*tt*uu + 
+      27648*L0r*pi16*tt*uu + 
+             110592*L2r*pi16*tt*uu + 13824*L5r*pi16*tt*uu));

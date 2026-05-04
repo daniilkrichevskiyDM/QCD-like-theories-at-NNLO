@@ -8,8 +8,8 @@ symbol gamma10, gamma20, gamma11, gamma21, gamma12, gamma22, rM0r,rM1r,rM2r, rM0
 #include symbols.hf
 #include setexternal.hf
 
-#define ext1 "1"
-#define ext2 "1"
+#define ext1 "3"
+#define ext2 "3"
 #define SX4 "SP4"
 
 
@@ -144,7 +144,7 @@ id eps^n?{1,2,3,4} = 0;
 
 id L(mp2?) = - ABar(mp2)/mp2;
 
-*#include GammasNNLO.hf
+#include GammasNNLO.hf
 .sort
 
 
@@ -157,6 +157,9 @@ id sqrt2^-2 = 1/2;
 G NLOmassNorm = NLOmass*F^2/mp2;
 G NNLOmassNorm = NNLOmass*F^4/mp2;
 
+G MassFull = LOmass(`ext1') + NLOmass +  NNLOmass;
+#include setLOmass.hf
+
 id mdd = -mp2*(-1 + RatioR);
 id muu = mp2*(1 + RatioR);
 
@@ -168,13 +171,14 @@ b F, mp2, eps, ABar, pi16, RatioR;
 
 
 
-Print NLOmassNorm,  NNLOmassNorm;
+*Print NLOmass,  NNLOmass;
+Print MassFull;
 .sort
 G NLOmass`ext1'`SX4' = NLOmass;
 G NNLOmass`ext1'`SX4' = NNLOmass;
 
 .store
-save save/Mass_`ext1'`SX4'.sav NLOmass`ext1'`SX4',NNLOmass`ext1'`SX4';
+*save save/Mass_`ext1'`SX4'.sav NLOmass`ext1'`SX4',NNLOmass`ext1'`SX4';
 
 .end
 
