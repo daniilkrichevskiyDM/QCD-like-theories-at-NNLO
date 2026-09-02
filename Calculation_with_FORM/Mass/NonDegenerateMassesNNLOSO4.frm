@@ -11,8 +11,8 @@ symbol RbarM,RbarP;
 #include symbols.hf
 #include setexternal.hf
 
-#define ext1 "1"
-#define ext2 "1"
+#define ext1 "8"
+#define ext2 "8"
 #define SX4 "SO4"
 
 
@@ -38,6 +38,9 @@ G Diagram9 = MM9x`ext1'`ext2'`SX4';
 
 G Sigma4 = (Diagram2 + Diagram3)/i_;
 G Sigma6 = (Diagram4 + Diagram5 + Diagram6 + Diagram7 + Diagram8 + Diagram9)/i_;
+
+.sort
+
 
 
 id p1ext.p1ext = P2;
@@ -100,6 +103,10 @@ id C = log4pi;
 id log(mp2?) = L(mp2)/pi16+2*logmu;
 id pi^2 = 1/16*1/pi16; 
 
+.sort
+
+
+
 #do indexLECs = 0, 10
 id L`indexLECs' = - Gamma`indexLECs'*pi16/(2*eps) + ( Lr`indexLECs'  + Gamma`indexLECs'*pi16*(- log4pi/2 + logmu))
 -1/4*((log4pi-2*logmu)*(-4*Lr`indexLECs'+log4pi*Gamma`indexLECs'*pi16-2*Gamma`indexLECs'*pi16*logmu))*eps;
@@ -112,6 +119,9 @@ id L`indexLECs' = - Gamma`indexLECs'*pi16/(2*eps) + ( Lr`indexLECs'  + Gamma`ind
 id epsb^(-1) = 1/eps + log4pi;
 *finite part of A
 id Ab(mp2?) = -mp2*L(mp2) - 2*mp2*pi16*logmu;
+
+.sort
+
 
 
 id KK42 = 1/512*(16* KK19 + 64* KK21 + 16 *KK23 + 64 *KK24 - 144 *KK25 - 192* KK26 - 
@@ -188,7 +198,8 @@ id RatioR * RbarM = 1 + RbarM;
 endrepeat;
 
 *we can pretend that logmu =0 and is defined within the H
-
+.sort
+id logmu = 0;
 .sort
 *CHECK DEGENERATE LIMIT
 *#include degeneratelimit.hf
@@ -224,7 +235,7 @@ b F, mp2, eps, ABar, pi16, RatioR;
 *b eps;
 
 
-Print NLOmassNorm,  NNLOmassNorm;
+Print NLOmass, NNLOmass;
 .sort
 G NLOmass`ext1'`SX4' = NLOmass;
 G NNLOmass`ext1'`SX4' = NNLOmass;

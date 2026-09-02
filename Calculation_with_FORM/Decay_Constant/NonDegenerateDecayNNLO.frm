@@ -10,13 +10,14 @@ symbol logmu;
 symbol RatioR;
 symbol RbarM,RbarP;
 symbol rF0r,rF1r,rF2r,rF3r,rF4r, rF0, rF1, rF2, rF3, rF4;
+symbol l2r, l1r, l3r, l4r, h3r, l5r, h3r, l6r, l7r, h1r, h2r;
 
 #include symbols.hf
 #include setexternal.hf
 
-#define ext1 "1"
-#define ext2 "1"
-#define SX4 "SP4"
+#define ext1 "8"
+#define ext2 "8"
+#define SX4 "SO4"
 
 *firstly, we upload the mass diagrams
 load ../Mass/NewDiagrams/save/MM1_`ext1'`ext2'`SX4'.sav;
@@ -341,11 +342,27 @@ id H1dd(m1?,mdd,muu,m4?) = H1dd(m1,muu,mdd,m4);
 
 .sort
 
+#if `SX4'==SP4
+id Lr2 = l2r-Lr0/2;
+id Lr3 = Lr0 + 4*l1r-4*Lr1;
+id Lr5 = 4*l3r - 4*Lr4;
+id Lr6 = 1/2*(2*l4r-h3r);
+id Lr7 = 1/2*(2*l5r-h3r);
+id Lr8 = 2*h3r;
+id Lr9 = l6r;
+id Lr10 = l7r;
+id Hr1  = h1r;
+id Hr2 = h2r;
+
+#endif 
+
+
 *#include degeneratelimit.hf
 .sort
 id logmu = 0;
 .sort
 G NNLOdecayNormalized = F^3*NNLOdecay;
+G NLOdecayNormalized = F^1*NLOdecay;
 
 G FullDecay =  LOdecay + NLOdecay + NNLOdecay;
 .sort
@@ -353,7 +370,7 @@ b F,mp2, eps, ABar, pi16, RatioR;
 
 *b eps;
 
-*Print LOdecay, NLOdecay,  NNLOdecayNormalized;
-Print FullDecay;
-*Print NNLOdecay;
+*Print NLOdecay;
+*Print FullDecay;
+Print NLOdecay, NNLOdecay;
 .end

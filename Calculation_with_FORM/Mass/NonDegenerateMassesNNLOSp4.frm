@@ -4,6 +4,8 @@ cfunction ABar, LOmass,Ab, L,  Bb,B1b,B21b,spi,B22b,B31b,B32b,Hbb,H1bb,H21bb,Hd,
 symbol m1,m2,m3,m4;
 symbol P2, aux1, n, QuarkMassRatio, RatioR;
 symbol gamma10, gamma20, gamma11, gamma21, gamma12, gamma22, rM0r,rM1r,rM2r, rM0,rM1,rM2;
+symbol l2r, l1r, l3r, l4r, h3r, l5r, h3r, l6r, l7r, h1r, h2r;
+
 
 #include symbols.hf
 #include setexternal.hf
@@ -99,6 +101,9 @@ id C = log4pi;
 id log(mp2) = L(mp2)/pi16+2*logmu;
 id pi^2 = 1/16*1/pi16; 
 
+
+
+
 #do indexLECs = 0, 10
 id L`indexLECs' = - Gamma`indexLECs'*pi16/(2*eps) + ( Lr`indexLECs'  + Gamma`indexLECs'*pi16*(- log4pi/2 + logmu))
 -1/4*((log4pi-2*logmu)*(-4*Lr`indexLECs'+log4pi*Gamma`indexLECs'*pi16-2*Gamma`indexLECs'*pi16*logmu))*eps;
@@ -113,6 +118,8 @@ id L`indexLECs' = - Gamma`indexLECs'*pi16/(2*eps) + ( Lr`indexLECs'  + Gamma`ind
 id epsb^(-1) = 1/eps + log4pi;
 *finite part of A
 id Ab(mp2?) = -mp2*L(mp2) - 2*mp2*pi16*logmu;
+
+
 
 id KK42 = 1/512*(16* KK19 + 64* KK21 + 16 *KK23 + 64 *KK24 - 144 *KK25 - 192* KK26 - 
    96* KK39 - 128 *KK40 - 256* KK41 + rM2);
@@ -142,6 +149,10 @@ id dim^-1 =1/4 + eps/8 + eps^2/16;
 id eps^n?{1,2,3,4} = 0;
 
 
+.sort
+
+
+
 id L(mp2?) = - ABar(mp2)/mp2;
 
 #include GammasNNLO.hf
@@ -167,12 +178,28 @@ id muu = mp2*(1 + RatioR);
 *CHECK DEGENERATE LIMIT
 *id RatioR = 0;
 .sort
+
+*change for new LECs
+.sort
+id Lr2 = l2r-Lr0/2;
+id Lr3 = Lr0 + 4*l1r-4*Lr1;
+id Lr5 = 4*l3r - 4*Lr4;
+id Lr6 = 1/2*(2*l4r-h3r);
+id Lr7 = 1/2*(2*l5r-h3r);
+id Lr8 = 2*h3r;
+id Lr9 = l6r;
+id Lr10 = l7r;
+id Hr1  = h1r;
+id Hr2 = h2r;
+
+.sort
+
 b F, mp2, eps, ABar, pi16, RatioR;
 
 
 
-*Print NLOmass,  NNLOmass;
-Print MassFull;
+Print NLOmass,  NNLOmass;
+*Print MassFull;
 .sort
 G NLOmass`ext1'`SX4' = NLOmass;
 G NNLOmass`ext1'`SX4' = NNLOmass;

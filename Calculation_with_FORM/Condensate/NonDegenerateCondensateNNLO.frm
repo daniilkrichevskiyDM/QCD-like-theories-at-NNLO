@@ -10,6 +10,7 @@ symbol logmu;
 symbol RatioR;
 symbol RbarM,RbarP;
 symbol rV0r,rV1r,rV2r,rV3r,rV4r, rV0, rV1, rV2, rV3, rV4;
+symbol l2r, l1r, l3r, l4r, h3r, l5r, h3r, l6r, l7r, h1r, h2r;
 
 
 #include symbols.hf
@@ -159,12 +160,24 @@ G CondensateNLONorm =CondensateNLO/( -F^2*B0 * ( 2 ))*F^2;
 G CondensateNNLONorm = CondensateNNLO/(- F^2*B0 * ( 2 ))*F^4;
 
 .sort
-
+#if `SX4'==SP4
+id Lr2 = l2r-Lr0/2;
+id Lr3 = Lr0 + 4*l1r-4*Lr1;
+id Lr5 = 4*l3r - 4*Lr4;
+id Lr6 = 1/2*(2*l4r-h3r);
+id Lr7 = 1/2*(2*l5r-h3r);
+id Lr8 = 2*h3r;
+id Lr9 = l6r;
+id Lr10 = l7r;
+id Hr1  = h1r;
+id Hr2 = h2r;
+#endif
+.sort
 
 b F,mp2, eps, ABar, pi16, RatioR, B0;
 
 *b eps;
 
 
-Print CondensateLO, CondensateNLONorm ,  CondensateNNLONorm;
+Print CondensateLO, CondensateNLO ,  CondensateNNLO;
 .end

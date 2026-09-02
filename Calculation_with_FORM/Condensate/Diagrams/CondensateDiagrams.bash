@@ -23,7 +23,7 @@ do
         echo '#define ext1 "'$eext1'"' >| setexternal.hf #this symbol means overwrite the file (creates or replaces the file)
         echo '#define SX4 "'$SX4'"' >> setexternal.hf #append to the file
 
-        # NEW LOOP over FF1 → FF9
+        # NEW LOOP over 8 diagrams
         for vv in $(seq 1 8)
         do
             infile="VV${vv}.frm"
